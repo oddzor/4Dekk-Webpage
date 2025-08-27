@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "quote": "4Dekk Auto Repair saved me hundreds of dollars on my brake repair. Their honest assessment and quality work made me a customer for life.",
+    "name": "Sarah Johnson",
+    "rating": 5,
+    "title": "Regular Customer",
+    "photo": "/images/testimonials/sarah.jpg",
+    "service": "Brake Repair"
+  },
+  {
+    "id": 2,
+    "quote": "Fast, professional service and fair pricing. They diagnosed my engine problem quickly and had me back on the road the same day.",
+    "name": "Mike Rodriguez",
+    "rating": 5,
+    "title": "First-time Customer",
+    "photo": "/images/testimonials/mike.jpg",
+    "service": "Engine Diagnostics"
+  },
+  {
+    "id": 3,
+    "quote": "The best tire service in town! They have all the major brands and their mounting and balancing is top-notch.",
+    "name": "Jennifer Davis",
+    "rating": 5,
+    "title": "Returning Customer",
+    "photo": "/images/testimonials/jennifer.jpg",
+    "service": "Tire Services"
+  },
+  {
+    "id": 4,
+    "quote": "I appreciate their transparency and attention to detail. They explained everything clearly and didn't try to upsell unnecessary services.",
+    "name": "Robert Wilson",
+    "rating": 5,
+    "title": "Satisfied Customer",
+    "photo": "/images/testimonials/robert.jpg",
+    "service": "Oil Change"
+  },
+  {
+    "id": 5,
+    "quote": "Excellent work on my transmission. The team was professional, kept me updated throughout the process, and the price was fair.",
+    "name": "Lisa Thompson",
+    "rating": 5,
+    "title": "Loyal Customer",
+    "photo": "/images/testimonials/lisa.jpg",
+    "service": "Transmission Service"
+  },
+  {
+    "id": 6,
+    "quote": "My AC was blowing hot air and they fixed it in just a few hours. Great service and reasonable pricing.",
+    "name": "David Chen",
+    "rating": 5,
+    "title": "Happy Customer",
+    "photo": "/images/testimonials/david.jpg",
+    "service": "AC & Heating"
+  },
+  {
+    "id": 7,
+    "quote": "They've been taking care of my family's cars for years. Always reliable, honest, and professional.",
+    "name": "Maria Garcia",
+    "rating": 5,
+    "title": "Long-term Customer",
+    "photo": "/images/testimonials/maria.jpg",
+    "service": "Multiple Services"
+  },
+  {
+    "id": 8,
+    "quote": "Quick oil change and they caught a potential brake issue during the inspection. Saved me from a bigger problem later.",
+    "name": "James Brown",
+    "rating": 5,
+    "title": "Appreciative Customer",
+    "photo": "/images/testimonials/james.jpg",
+    "service": "Oil Change & Inspection"
+  }
+] 

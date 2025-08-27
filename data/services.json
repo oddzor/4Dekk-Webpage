@@ -1,0 +1,104 @@
+[
+  {
+    "id": "tires",
+    "title": "Tire Services",
+    "description": "Complete tire services including sales, mounting, balancing, rotation, and repair. All major brands available.",
+    "longDescription": "We offer comprehensive tire services to keep your vehicle safe and performing at its best. Our certified technicians can handle everything from simple tire rotations to complex tire repairs and replacements. We carry all major tire brands and can help you choose the right tires for your vehicle and driving needs.",
+    "icon": "🛞",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Tire Sales & Installation",
+      "Tire Mounting & Balancing",
+      "Tire Rotation",
+      "Tire Repair",
+      "Wheel Alignment",
+      "Tire Pressure Monitoring"
+    ],
+    "pricing": "Starting at $25 for rotation, $15 for mounting per tire"
+  },
+  {
+    "id": "brakes",
+    "title": "Brake Repair",
+    "description": "Professional brake inspection, repair, and replacement services. Safety is our top priority.",
+    "longDescription": "Your safety is our top priority. Our brake services include comprehensive inspections, repairs, and replacements for all brake system components. We use only high-quality parts and follow manufacturer specifications to ensure your brakes perform reliably.",
+    "icon": "🛑",
+    "image": "/images/brake-repair.webp",
+    "features": [
+      "Brake Inspection",
+      "Brake Pad Replacement",
+      "Rotor Resurfacing/Replacement",
+      "Caliper Repair",
+      "Brake Fluid Service",
+      "ABS System Repair"
+    ],
+    "pricing": "Starting at $150 for brake pad replacement"
+  },
+  {
+    "id": "oil-change",
+    "title": "Oil Change",
+    "description": "Quick and reliable oil change services with premium quality oils and filters for all vehicle types.",
+    "longDescription": "Regular oil changes are essential for maintaining your engine's health and performance. We offer quick, reliable oil change services using premium quality oils and filters. Our technicians will also perform a multi-point inspection to catch potential issues early.",
+    "icon": "🛢️",
+    "image": "/images/oil-change.webp",
+    "features": [
+      "Conventional Oil Change",
+      "Synthetic Oil Change",
+      "Oil Filter Replacement",
+      "Multi-Point Inspection",
+      "Fluid Level Check",
+      "Tire Pressure Check"
+    ],
+    "pricing": "Starting at $35 for conventional, $65 for synthetic"
+  },
+  {
+    "id": "diagnostics",
+    "title": "Engine Diagnostics",
+    "description": "Advanced diagnostic services to identify and resolve engine problems quickly and accurately.",
+    "longDescription": "Modern vehicles are equipped with sophisticated computer systems that can help identify problems quickly. Our advanced diagnostic equipment can read trouble codes, monitor system performance, and help us pinpoint issues before they become major problems.",
+    "icon": "🔧",
+    "image": "/images/engine-diagnostics.webp",
+    "features": [
+      "Computer Diagnostics",
+      "Trouble Code Reading",
+      "System Performance Testing",
+      "Engine Performance Analysis",
+      "Emission System Testing",
+      "Electrical System Diagnosis"
+    ],
+    "pricing": "Starting at $75 for diagnostic service"
+  },
+  {
+    "id": "ac-heating",
+    "title": "AC & Heating",
+    "description": "Complete air conditioning and heating system services to keep you comfortable year-round.",
+    "longDescription": "Stay comfortable in any weather with our comprehensive AC and heating services. From simple recharging to complex system repairs, our technicians can handle all your climate control needs.",
+    "icon": "❄️",
+    "image": "/images/hero-image-1.webp",
+    "features": [
+      "AC System Inspection",
+      "Refrigerant Recharge",
+      "Compressor Repair",
+      "Heater Core Replacement",
+      "Blower Motor Repair",
+      "Thermostat Replacement"
+    ],
+    "pricing": "Starting at $89 for AC recharge"
+  },
+  {
+    "id": "transmission",
+    "title": "Transmission Service",
+    "description": "Professional transmission maintenance and repair services for all vehicle types.",
+    "longDescription": "Your transmission is one of the most complex and expensive components in your vehicle. Regular maintenance and prompt repairs can extend its life and prevent costly replacements. Our transmission specialists use the latest equipment and techniques.",
+    "icon": "⚙️",
+    "image": "/images/transmission.webp",
+    "features": [
+      "Transmission Fluid Change",
+      "Transmission Filter Replacement",
+      "Transmission Repair",
+      "Clutch Replacement",
+      "CV Joint Service",
+      "Driveshaft Repair"
+    ],
+    "pricing": "Starting at $150 for fluid change"
+  }
+] 
