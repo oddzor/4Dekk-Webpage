@@ -179,7 +179,7 @@ The website is optimized for:
 ## 📞 Support
 
 For questions or support:
-- Email: info@4dekk.com
+- Email: 4dekk4@gmail.com
 - Phone: (555) 123-4567
 
 ## 📄 License

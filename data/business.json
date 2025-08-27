@@ -1,0 +1,40 @@
+{
+  "name": "4Dekk Larvik",
+  "address": {
+    "street": "Haakon VII's vei 9",
+    "city": "Larvik",
+    "postalCode": "3269",
+    "country": "Norge"
+  },
+  "contact": {
+    "phone": "93 99 55 55",
+    "email": "4dekk4@gmail.com",
+    "website": "https://4dekk.no"
+  },
+  "hours": {
+    "monday": "8:00 - 16:00",
+    "tuesday": "8:00 - 16:00",
+    "wednesday": "8:00 - 16:00",
+    "thursday": "8:00 - 16:00",
+    "friday": "8:00 - 16:00",
+    "saturday": "Stengt",
+    "sunday": "Stengt"
+  },
+  "location": {
+    "latitude": 59.0533,
+    "longitude": 10.0297,
+    "googleMapsUrl": "https://www.google.com/maps/place/4Dekk+Larvik/@59.0533,10.0297,17z",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d10.0275!3d59.0533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4646b8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2sHaakon%20VII%27s%20vei%209%2C%203269%20Larvik%2C%20Norway!5e0!3m2!1sno!2sno!4v1234567890"
+  },
+  "services": [
+    "Dekkservice",
+    "Bilreparasjon",
+    "Oljeskifte",
+    "Bremse Reparasjon",
+    "Motor Diagnostikk",
+    "Girkasse Service",
+    "AC & Varme",
+    "Inspeksjon"
+  ],
+  "description": "4Dekk Larvik tilbyr profesjonell bilreparasjon og dekk-service i Larvik. Med over 20 års erfaring og sertifiserte teknikere, gir vi deg kvalitetsarbeid til rettferdige priser."
+}

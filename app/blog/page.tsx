@@ -2,75 +2,75 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog - 4Dekk Auto Repair',
-  description: 'Auto maintenance tips, repair advice, and industry insights from 4Dekk Auto Repair. Stay informed about your vehicle\'s health.',
-  keywords: 'auto repair blog, car maintenance tips, vehicle care, automotive advice, 4Dekk blog',
+  title: 'Blogg - 4Dekk Auto Repair',
+  description: 'Bilvedlikehold tips, reparasjonsråd og bransjeinnsikt fra 4Dekk Auto Repair. Hold deg informert om kjøretøyets helse.',
+  keywords: 'bilreparasjon blogg, bilvedlikehold tips, kjøretøypleie, bilråd, 4Dekk blogg',
 }
 
 const blogPosts = [
   {
     id: 1,
-    title: "Essential Car Maintenance Tips for Winter",
-    excerpt: "Prepare your vehicle for the cold weather with these essential maintenance tips that will keep you safe on the road.",
+    title: "Viktige Bilvedlikehold Tips for Vinteren",
+    excerpt: "Forbered kjøretøyet ditt på det kalde været med disse viktige vedlikeholdstipsene som vil holde deg trygg på veien.",
     date: "2024-01-15",
-    category: "Maintenance",
-    readTime: "5 min read",
+    category: "Vedlikehold",
+    readTime: "5 min lesing",
     image: "/images/hero-image-1.webp"
   },
   {
     id: 2,
-    title: "When to Replace Your Brake Pads",
-    excerpt: "Learn the signs that indicate it's time to replace your brake pads and why regular brake maintenance is crucial for safety.",
+    title: "Når Du Skal Erstatte Bremseklossene",
+    excerpt: "Lær tegnene som indikerer at det er tid til å erstatte bremseklossene dine og hvorfor regelmessig bremsevedlikehold er avgjørende for sikkerhet.",
     date: "2024-01-10",
-    category: "Brakes",
-    readTime: "4 min read",
+    category: "Bremser",
+    readTime: "4 min lesing",
     image: "/images/brake-repair.webp"
   },
   {
     id: 3,
-    title: "The Importance of Regular Oil Changes",
-    excerpt: "Discover why regular oil changes are vital for your engine's longevity and performance, and how often you should schedule them.",
+    title: "Viktigheten av Regelmessige Oljeskifter",
+    excerpt: "Oppdag hvorfor regelmessige oljeskifter er avgjørende for motorens levetid og ytelse, og hvor ofte du bør bestille dem.",
     date: "2024-01-05",
-    category: "Engine",
-    readTime: "6 min read",
+    category: "Motor",
+    readTime: "6 min lesing",
     image: "/images/oil-change.webp"
   },
   {
     id: 4,
-    title: "Tire Safety: What You Need to Know",
-    excerpt: "Everything you need to know about tire safety, including tread depth, pressure, and when to replace your tires.",
+    title: "Dekksikkerhet: Det Du Trenger å Vite",
+    excerpt: "Alt du trenger å vite om dekk-sikkerhet, inkludert mønsterdybde, trykk og når du skal erstatte dekkene dine.",
     date: "2023-12-28",
-    category: "Tires",
-    readTime: "7 min read",
+    category: "Dekk",
+    readTime: "7 min lesing",
     image: "/images/tire-service.webp"
   },
   {
     id: 5,
-    title: "Understanding Your Check Engine Light",
-    excerpt: "Don't ignore that check engine light! Learn what it means and when you should bring your vehicle in for diagnostics.",
+    title: "Forstå Din Motorvarslingslampe",
+    excerpt: "Ikke ignorer den motorvarslingslampen! Lær hva den betyr og når du bør ta med kjøretøyet ditt for diagnostikk.",
     date: "2023-12-20",
-    category: "Diagnostics",
-    readTime: "5 min read",
+    category: "Diagnostikk",
+    readTime: "5 min lesing",
     image: "/images/engine-diagnostics.webp"
   },
   {
     id: 6,
-    title: "Summer Car Care: Keeping Your Vehicle Cool",
-    excerpt: "Beat the heat with these summer car care tips that will help your vehicle perform its best in hot weather.",
+    title: "Sommer Bilpleie: Hold Kjøretøyet Ditt Kjølig",
+    excerpt: "Slå varmen med disse sommer bilpleietipsene som vil hjelpe kjøretøyet ditt å yte sitt beste i varmt vær.",
     date: "2023-12-15",
-    category: "Maintenance",
-    readTime: "4 min read",
+    category: "Vedlikehold",
+    readTime: "4 min lesing",
     image: "/images/hero-image-1.webp"
   }
 ]
 
 const categories = [
-  { name: "All", count: blogPosts.length },
-  { name: "Maintenance", count: 2 },
-  { name: "Brakes", count: 1 },
-  { name: "Engine", count: 1 },
-  { name: "Tires", count: 1 },
-  { name: "Diagnostics", count: 1 }
+  { name: "Alle", count: blogPosts.length },
+  { name: "Vedlikehold", count: 2 },
+  { name: "Bremser", count: 1 },
+  { name: "Motor", count: 1 },
+  { name: "Dekk", count: 1 },
+  { name: "Diagnostikk", count: 1 }
 ]
 
 export default function BlogPage() {
@@ -80,10 +80,10 @@ export default function BlogPage() {
       <section className="bg-gradient-dark text-white py-20">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headings font-bold mb-6">
-            Blog
+            Blogg
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Auto maintenance tips, repair advice, and industry insights to help you keep your vehicle in top condition.
+            Bilvedlikehold tips, reparasjonsråd og bransjeinnsikt for å hjelpe deg med å holde kjøretøyet ditt i toppform.
           </p>
         </div>
       </section>
@@ -106,31 +106,30 @@ export default function BlogPage() {
                     
                     {/* Post Content */}
                     <div className="p-6">
-                      {/* Category and Date */}
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-accent font-medium">{post.category}</span>
-                        <span className="text-sm text-gray-400">{post.readTime}</span>
+                      <div className="flex items-center mb-3 text-sm text-gray-400">
+                        <span>{post.category}</span>
+                        <span className="mx-2">•</span>
+                        <span>{post.readTime}</span>
                       </div>
                       
-                      {/* Title */}
-                      <h2 className="text-xl font-headings font-semibold text-headings mb-3 hover:text-accent transition-colors duration-200">
-                        <Link href={`/blog/${post.id}`}>
-                          {post.title}
-                        </Link>
+                      <h2 className="text-xl font-headings font-semibold text-headings mb-3 line-clamp-2">
+                        {post.title}
                       </h2>
                       
-                      {/* Excerpt */}
                       <p className="text-text mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
                       
-                      {/* Date */}
-                      <div className="text-sm text-gray-400">
-                        {new Date(post.date).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-400">
+                          {new Date(post.date).toLocaleDateString('nb-NO')}
+                        </span>
+                        <Link
+                          href={`/blog/${post.id}`}
+                          className="text-accent hover:text-accent-dark font-medium transition-colors duration-200"
+                        >
+                          Les Mer →
+                        </Link>
                       </div>
                     </div>
                   </article>
@@ -143,64 +142,73 @@ export default function BlogPage() {
               {/* Categories */}
               <div className="card-dark p-6 mb-8">
                 <h3 className="text-lg font-headings font-semibold text-headings mb-4">
-                  Categories
+                  Kategorier
                 </h3>
-                <ul className="space-y-2">
+                <div className="space-y-2">
                   {categories.map((category) => (
-                    <li key={category.name}>
-                      <Link
-                        href={`/blog?category=${category.name.toLowerCase()}`}
-                        className="flex items-center justify-between text-text hover:text-accent transition-colors duration-200"
-                      >
-                        <span>{category.name}</span>
-                        <span className="text-sm text-gray-400">({category.count})</span>
-                      </Link>
-                    </li>
+                    <Link
+                      key={category.name}
+                      href={`/blog?category=${category.name.toLowerCase()}`}
+                      className="flex items-center justify-between text-text hover:text-accent transition-colors duration-200"
+                    >
+                      <span>{category.name}</span>
+                      <span className="text-sm text-gray-400">({category.count})</span>
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
 
-              {/* Newsletter Signup */}
-              <div className="bg-gradient-dark text-white rounded-lg shadow-lg p-6">
-                <h3 className="text-lg font-headings font-semibold mb-4">
-                  Stay Updated
+              {/* Recent Posts */}
+              <div className="card-dark p-6">
+                <h3 className="text-lg font-headings font-semibold text-headings mb-4">
+                  Siste Innlegg
                 </h3>
-                <p className="text-gray-200 mb-4">
-                  Get the latest auto maintenance tips and repair advice delivered to your inbox.
-                </p>
-                <form className="space-y-3">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="w-full px-3 py-2 rounded text-gray-darker"
-                  />
-                  <button type="submit" className="w-full btn-accent">
-                    Subscribe
-                  </button>
-                </form>
+                <div className="space-y-4">
+                  {blogPosts.slice(0, 3).map((post) => (
+                    <div key={post.id} className="border-b border-gray-600 pb-4 last:border-b-0">
+                      <Link
+                        href={`/blog/${post.id}`}
+                        className="text-headings hover:text-accent transition-colors duration-200"
+                      >
+                        <h4 className="font-medium line-clamp-2 mb-1">
+                          {post.title}
+                        </h4>
+                      </Link>
+                      <p className="text-sm text-gray-400">
+                        {new Date(post.date).toLocaleDateString('nb-NO')}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-light section-padding">
+      {/* Newsletter Section */}
+      <section className="section-padding bg-gradient-dark text-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-headings font-bold text-headings mb-6">
-            Need Professional Auto Repair?
+          <h2 className="text-3xl md:text-4xl font-headings font-bold mb-6">
+            Hold Deg Oppdatert
           </h2>
-          <p className="text-lg text-text mb-8 max-w-2xl mx-auto">
-            While our blog provides helpful tips, some repairs require professional expertise. 
-            Contact us for quality auto repair services you can trust.
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Få de nyeste bilvedlikehold tipsene og nyhetene direkte i innboksen din.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/booking" className="btn-accent">
-              Book Appointment
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              Contact Us
-            </Link>
+          <div className="max-w-md mx-auto">
+            <div className="flex gap-4">
+              <input
+                type="email"
+                placeholder="Din e-post adresse"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-darker focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+              <button className="btn-accent px-6 py-3">
+                Abonner
+              </button>
+            </div>
+            <p className="text-sm text-gray-300 mt-2">
+              Vi respekterer ditt personvern. Avmeld når som helst.
+            </p>
           </div>
         </div>
       </section>

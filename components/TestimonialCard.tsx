@@ -12,7 +12,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, name, photo, rating, title }: TestimonialCardProps) {
   return (
-    <div className="card-dark p-6 md:p-8">
+    <div className="p-6 card-dark md:p-8">
       {/* Rating */}
       {rating && (
         <div className="flex mb-4">

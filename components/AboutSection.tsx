@@ -2,55 +2,56 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { BuildingOfficeIcon, WrenchScrewdriverIcon, UserGroupIcon, HeartIcon } from '@heroicons/react/24/outline'
 
 export default function AboutSection() {
   return (
     <section className="section-padding section-light">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-headings font-bold text-headings mb-6">
-              About 4Dekk Auto Repair
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
+              Om 4Dekk Auto Repair
             </h2>
-            <p className="text-lg text-text mb-6 leading-relaxed">
-              For over 20 years, 4Dekk Auto Repair has been the trusted choice for automotive services in our community. 
-              We started as a small family-owned shop with a simple mission: to provide honest, reliable, and affordable 
-              auto repair services to our neighbors.
+            <p className="mb-6 text-lg leading-relaxed text-text">
+              I over 20 år har 4Dekk Auto Repair vært det pålitelige valget for bilservice i vårt samfunn. 
+              Vi startet som et lite familieeid verksted med et enkelt oppdrag: å tilby ærlig, pålitelig og rimelig 
+              bilreparasjon til våre naboer.
             </p>
-            <p className="text-lg text-text mb-8 leading-relaxed">
-              Today, we've grown into a full-service automotive repair facility, but we've never lost sight of our roots. 
-              Our team of certified technicians combines decades of experience with the latest diagnostic equipment to 
-              ensure your vehicle receives the best care possible.
+            <p className="mb-8 text-lg leading-relaxed text-text">
+              I dag har vi vokst til et fullservice bilreparasjonsanlegg, men vi har aldri mistet synet på våre røtter. 
+              Vårt team av sertifiserte teknikere kombinerer tiår med erfaring med det nyeste diagnostiske utstyret for 
+              å sikre at kjøretøyet ditt får den beste omsorgen mulig.
             </p>
             
             {/* Key Features */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
               <div className="flex items-center">
-                <div className="text-accent text-2xl mr-3">✅</div>
-                <span className="text-text">Certified Technicians</span>
+                <div className="mr-3 text-2xl text-accent">✅</div>
+                <span className="text-text">Sertifiserte Teknikere</span>
               </div>
               <div className="flex items-center">
-                <div className="text-accent text-2xl mr-3">✅</div>
-                <span className="text-text">Quality Guarantee</span>
+                <div className="mr-3 text-2xl text-accent">✅</div>
+                <span className="text-text">Kvalitetsgaranti</span>
               </div>
               <div className="flex items-center">
-                <div className="text-accent text-2xl mr-3">✅</div>
-                <span className="text-text">Competitive Pricing</span>
+                <div className="mr-3 text-2xl text-accent">✅</div>
+                <span className="text-text">Konkurransedyktig Prising</span>
               </div>
               <div className="flex items-center">
-                <div className="text-accent text-2xl mr-3">✅</div>
-                <span className="text-text">Emergency Service</span>
+                <div className="mr-3 text-2xl text-accent">✅</div>
+                <span className="text-text">Akutt Service</span>
               </div>
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Link href="/about" className="btn-primary">
-                Learn More
+                Lær Mer
               </Link>
               <Link href="/contact" className="btn-secondary">
-                Contact Us
+                Kontakt Oss
               </Link>
             </div>
           </div>
@@ -60,7 +61,7 @@ export default function AboutSection() {
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl card-dark">
               <Image
                 src="/images/about-shop.jpg"
-                alt="4Dekk Auto Repair shop interior"
+                alt="4Dekk Auto Repair verksted interiør"
                 fill
                 className="object-cover"
                 onError={(e) => {
@@ -71,8 +72,10 @@ export default function AboutSection() {
                   target.parentElement!.innerHTML = `
                     <div class="flex items-center justify-center h-full text-gray-400">
                       <div class="text-center">
-                        <div class="text-6xl mb-4">🏗️</div>
-                        <div class="text-lg">Shop Image</div>
+                        <svg class="w-24 h-24 mx-auto mb-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <div class="text-lg">Verksted Bilde</div>
                       </div>
                     </div>
                   `
@@ -81,9 +84,9 @@ export default function AboutSection() {
             </div>
             
             {/* Experience Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-accent text-gray-darker px-6 py-4 rounded-lg shadow-lg">
-              <div className="text-2xl font-headings font-bold">20+</div>
-              <div className="text-sm">Years of Experience</div>
+            <div className="absolute px-6 py-4 rounded-lg shadow-lg -bottom-6 -left-6 bg-accent text-gray-darker">
+              <div className="text-2xl font-bold font-headings">10</div>
+              <div className="text-sm">Års Erfaring</div>
             </div>
           </div>
         </div>

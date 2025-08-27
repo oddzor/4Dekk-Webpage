@@ -1,74 +1,74 @@
 [
   {
     "id": 1,
-    "quote": "4Dekk Auto Repair saved me hundreds of dollars on my brake repair. Their honest assessment and quality work made me a customer for life.",
+    "quote": "4Dekk Auto Repair sparte meg hundrevis av kroner på bremsereparasjonen min. Deres ærlige vurdering og kvalitetsarbeid gjorde meg til en kunde for livet.",
     "name": "Sarah Johnson",
     "rating": 5,
-    "title": "Regular Customer",
+    "title": "Regelmessig Kunde",
     "photo": "/images/testimonials/sarah.jpg",
-    "service": "Brake Repair"
+    "service": "Bremse Reparasjon"
   },
   {
     "id": 2,
-    "quote": "Fast, professional service and fair pricing. They diagnosed my engine problem quickly and had me back on the road the same day.",
+    "quote": "Rask, profesjonell service og rettferdig prising. De diagnostiserte motorproblemet mitt raskt og hadde meg tilbake på veien samme dag.",
     "name": "Mike Rodriguez",
     "rating": 5,
-    "title": "First-time Customer",
+    "title": "Førstegangs Kunde",
     "photo": "/images/testimonials/mike.jpg",
-    "service": "Engine Diagnostics"
+    "service": "Motor Diagnostikk"
   },
   {
     "id": 3,
-    "quote": "The best tire service in town! They have all the major brands and their mounting and balancing is top-notch.",
+    "quote": "Den beste dekk-service i byen! De har alle store merker og deres montering og balansering er førsteklasses.",
     "name": "Jennifer Davis",
     "rating": 5,
-    "title": "Returning Customer",
+    "title": "Tilbakevendende Kunde",
     "photo": "/images/testimonials/jennifer.jpg",
-    "service": "Tire Services"
+    "service": "Dekkservice"
   },
   {
     "id": 4,
-    "quote": "I appreciate their transparency and attention to detail. They explained everything clearly and didn't try to upsell unnecessary services.",
+    "quote": "Jeg setter pris på deres åpenhet og oppmerksomhet på detaljer. De forklarte alt tydelig og prøvde ikke å selge unødvendige tjenester.",
     "name": "Robert Wilson",
     "rating": 5,
-    "title": "Satisfied Customer",
+    "title": "Fornøyd Kunde",
     "photo": "/images/testimonials/robert.jpg",
-    "service": "Oil Change"
+    "service": "Oljeskifte"
   },
   {
     "id": 5,
-    "quote": "Excellent work on my transmission. The team was professional, kept me updated throughout the process, and the price was fair.",
+    "quote": "Utmerket arbeid på girkassen min. Teamet var profesjonelt, holdt meg oppdatert gjennom hele prosessen, og prisen var rettferdig.",
     "name": "Lisa Thompson",
     "rating": 5,
-    "title": "Loyal Customer",
+    "title": "Lojal Kunde",
     "photo": "/images/testimonials/lisa.jpg",
-    "service": "Transmission Service"
+    "service": "Girkasse Service"
   },
   {
     "id": 6,
-    "quote": "My AC was blowing hot air and they fixed it in just a few hours. Great service and reasonable pricing.",
+    "quote": "AC-en min blåste varm luft og de fikset det på bare noen timer. Flott service og rimelig prising.",
     "name": "David Chen",
     "rating": 5,
-    "title": "Happy Customer",
+    "title": "Glad Kunde",
     "photo": "/images/testimonials/david.jpg",
-    "service": "AC & Heating"
+    "service": "AC & Varme"
   },
   {
     "id": 7,
-    "quote": "They've been taking care of my family's cars for years. Always reliable, honest, and professional.",
+    "quote": "De har tatt seg av familiens biler i årevis. Alltid pålitelig, ærlig og profesjonell.",
     "name": "Maria Garcia",
     "rating": 5,
-    "title": "Long-term Customer",
+    "title": "Langtid Kunde",
     "photo": "/images/testimonials/maria.jpg",
-    "service": "Multiple Services"
+    "service": "Flere Tjenester"
   },
   {
     "id": 8,
-    "quote": "Quick oil change and they caught a potential brake issue during the inspection. Saved me from a bigger problem later.",
+    "quote": "Raskt oljeskifte og de fanget opp et potensielt bremseproblem under inspeksjonen. Sparte meg fra et større problem senere.",
     "name": "James Brown",
     "rating": 5,
-    "title": "Appreciative Customer",
+    "title": "Takknemlig Kunde",
     "photo": "/images/testimonials/james.jpg",
-    "service": "Oil Change & Inspection"
+    "service": "Oljeskifte & Inspeksjon"
   }
 ] 

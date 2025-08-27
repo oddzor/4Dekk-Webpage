@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import CalendlyWidget from '@/components/CalendlyWidget'
 
 export const metadata: Metadata = {
-  title: 'Book an Appointment - 4Dekk Auto Repair',
-  description: 'Schedule your auto repair or maintenance appointment online. Quick and easy booking for all your automotive service needs.',
-  keywords: 'book appointment, schedule service, auto repair booking, online booking, service appointment',
+  title: 'Bestill en Time - 4Dekk Auto Repair',
+  description: 'Bestill din bilreparasjon eller vedlikeholdstime online. Rask og enkel bestilling for alle dine bilservice behov.',
+  keywords: 'bestill time, planlegg service, bilreparasjon bestilling, online bestilling, service time',
 }
 
 export default function BookingPage() {
@@ -14,10 +14,10 @@ export default function BookingPage() {
       <section className="py-20 text-white bg-gradient-dark">
         <div className="text-center container-custom">
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl font-headings">
-            Book an Appointment
+            Bestill en Time
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-gray-200">
-            Schedule your auto repair or maintenance service online. Quick, easy, and convenient booking.
+            Bestill din bilreparasjon eller vedlikeholdsservice online. Rask, enkel og praktisk bestilling.
           </p>
         </div>
       </section>
@@ -28,10 +28,10 @@ export default function BookingPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 text-center">
               <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
-                How to Book Your Service
+                Hvordan Bestille Din Service
               </h2>
               <p className="text-lg text-text">
-                Follow these simple steps to schedule your appointment:
+                Følg disse enkle stegene for å bestille din time:
               </p>
             </div>
 
@@ -42,10 +42,10 @@ export default function BookingPage() {
                   1
                 </div>
                 <h3 className="mb-3 text-xl font-semibold font-headings text-headings">
-                  Select Your Service
+                  Velg Din Service
                 </h3>
                 <p className="text-text">
-                  Choose from our comprehensive list of auto repair and maintenance services.
+                  Velg fra vår omfattende liste over bilreparasjon og vedlikeholdstjenester.
                 </p>
               </div>
               <div className="p-6 text-center card-dark">
@@ -53,10 +53,10 @@ export default function BookingPage() {
                   2
                 </div>
                 <h3 className="mb-3 text-xl font-semibold font-headings text-headings">
-                  Pick Your Time
+                  Velg Ditt Tidspunkt
                 </h3>
                 <p className="text-text">
-                  Select a convenient date and time that works best for your schedule.
+                  Velg et passende dato og tidspunkt som passer best for din timeplan.
                 </p>
               </div>
               <div className="p-6 text-center card-dark">
@@ -64,10 +64,10 @@ export default function BookingPage() {
                   3
                 </div>
                 <h3 className="mb-3 text-xl font-semibold font-headings text-headings">
-                  Confirm & Arrive
+                  Bekreft & Kom
                 </h3>
                 <p className="text-text">
-                  Receive confirmation and bring your vehicle in for service.
+                  Motta bekreftelse og ta med kjøretøyet ditt for service.
                 </p>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function BookingPage() {
             {/* Calendly Booking Widget */}
             <div className="p-8 card-dark">
               <h3 className="mb-6 text-2xl font-semibold text-center font-headings text-headings">
-                Schedule Your Appointment
+                Bestill Din Time
               </h3>
               
               {/* Calendly Widget */}
@@ -90,54 +90,54 @@ export default function BookingPage() {
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
-              Our Service Types
+              Våre Servicetyper
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-text">
-              We offer various service types with different durations to accommodate your needs.
+              Vi tilbyr ulike servicetyper med forskjellige varigheter for å imøtekomme dine behov.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="p-6 card-dark">
               <div className="mb-4 text-3xl">🔍</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">EU Control</h3>
-              <p className="mb-3 text-text">Annual vehicle inspection and safety check</p>
-              <div className="font-semibold text-accent">Duration: 60 minutes</div>
+              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">EU Kontroll</h3>
+              <p className="mb-3 text-text">Årlig kjøretøyinspeksjon og sikkerhetskontroll</p>
+              <div className="font-semibold text-accent">Varighet: 60 minutter</div>
             </div>
             
             <div className="p-6 card-dark">
               <div className="mb-4 text-3xl">🛞</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Tire Change</h3>
-              <p className="mb-3 text-text">Quick tire replacement service</p>
-              <div className="font-semibold text-accent">Duration: 15-30 minutes</div>
+              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Dekkskifte</h3>
+              <p className="mb-3 text-text">Rask dekkerskift service</p>
+              <div className="font-semibold text-accent">Varighet: 15-30 minutter</div>
             </div>
             
             <div className="p-6 card-dark">
               <div className="mb-4 text-3xl">🛢️</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Oil Change</h3>
-              <p className="mb-3 text-text">Complete oil and filter replacement</p>
-              <div className="font-semibold text-accent">Duration: 30 minutes</div>
+              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Oljeskifte</h3>
+              <p className="mb-3 text-text">Komplett olje og filter erstatning</p>
+              <div className="font-semibold text-accent">Varighet: 30 minutter</div>
             </div>
             
             <div className="p-6 card-dark">
               <div className="mb-4 text-3xl">🛑</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Brake Service</h3>
-              <p className="mb-3 text-text">Brake inspection and repair</p>
-              <div className="font-semibold text-accent">Duration: 90 minutes</div>
+              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Bremseservice</h3>
+              <p className="mb-3 text-text">Bremseinspeksjon og reparasjon</p>
+              <div className="font-semibold text-accent">Varighet: 90 minutter</div>
             </div>
             
             <div className="p-6 card-dark">
               <div className="mb-4 text-3xl">🔧</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Engine Diagnostics</h3>
-              <p className="mb-3 text-text">Computer diagnostics and troubleshooting</p>
-              <div className="font-semibold text-accent">Duration: 45 minutes</div>
+              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Motordiagnostikk</h3>
+              <p className="mb-3 text-text">Datamaskin diagnostikk og feilsøking</p>
+              <div className="font-semibold text-accent">Varighet: 45 minutter</div>
             </div>
             
             <div className="p-6 card-dark">
               <div className="mb-4 text-3xl">🚨</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Emergency Service</h3>
-              <p className="mb-3 text-text">Urgent repairs and roadside assistance</p>
-              <div className="font-semibold text-accent">Duration: 120 minutes</div>
+              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Akutt Service</h3>
+              <p className="mb-3 text-text">Haste reparasjoner og veihjelp</p>
+              <div className="font-semibold text-accent">Varighet: 120 minutter</div>
             </div>
           </div>
         </div>
@@ -147,20 +147,20 @@ export default function BookingPage() {
       <section className="section-light section-padding">
         <div className="text-center container-custom">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
-            Prefer to Call?
+            Foretrekker å Ringe?
           </h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg text-text">
-            If you prefer to schedule your appointment over the phone or have questions about our services, 
-            we're here to help.
+            Hvis du foretrekker å bestille din time over telefon eller har spørsmål om våre tjenester, 
+            er vi her for å hjelpe.
           </p>
           <div className="grid max-w-4xl grid-cols-1 gap-8 mx-auto md:grid-cols-2">
             <div className="p-6 card-dark">
               <div className="mb-4 text-4xl">📞</div>
               <h3 className="mb-3 text-xl font-semibold font-headings text-headings">
-                Call Us
+                Ring Oss
               </h3>
               <p className="mb-4 text-text">
-                Speak directly with our service advisors
+                Snakk direkte med våre servicerådgivere
               </p>
               <a href="tel:+15551234567" className="text-xl font-semibold text-accent hover:text-accent-dark">
                 (555) 123-4567
@@ -169,10 +169,10 @@ export default function BookingPage() {
             <div className="p-6 card-dark">
               <div className="mb-4 text-4xl">✉️</div>
               <h3 className="mb-3 text-xl font-semibold font-headings text-headings">
-                Email Us
+                E-post Oss
               </h3>
               <p className="mb-4 text-text">
-                Send us a message for inquiries
+                Send oss en melding for henvendelser
               </p>
               <a href="mailto:service@4dekk.com" className="text-xl font-semibold text-accent hover:text-accent-dark">
                 service@4dekk.com
@@ -188,33 +188,33 @@ export default function BookingPage() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             <div>
               <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings">
-                Business Hours
+                Åpningstider
               </h2>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>8:00 AM - 4:00 PM</span>
+                  <span>Mandag - Fredag</span>
+                  <span>08:00 - 16:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>9:00 AM - 2:00 PM</span>
+                  <span>Lørdag</span>
+                  <span>09:00 - 14:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
+                  <span>Søndag</span>
+                  <span>Stengt</span>
                 </div>
               </div>
             </div>
             <div>
               <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings">
-                Location
+                Plassering
               </h2>
               <p className="mb-4 text-gray-200">
-                123 Main Street<br />
-                City, State 12345
+                123 Hovedgaten<br />
+                By, Fylke 12345
               </p>
               <p className="text-gray-200">
-                Easy access from major highways with plenty of parking available.
+                Enkel tilgang fra hovedveier med god parkering tilgjengelig.
               </p>
             </div>
           </div>

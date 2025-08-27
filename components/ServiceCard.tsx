@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { WrenchScrewdriverIcon, CheckCircleIcon, BeakerIcon, CogIcon, BuildingOfficeIcon, Cog6ToothIcon } from '@heroicons/react/24/outline'
 
 interface ServiceCardProps {
   title: string
@@ -35,7 +36,15 @@ export default function ServiceCard({ title, description, icon, image, href }: S
       <div className="p-6">
         {/* Icon */}
         <div className="flex items-center mb-4">
-          <div className="mr-3 text-3xl">{icon}</div>
+          <div className="mr-3 text-accent">
+            {icon === 'tire' && <CogIcon className="w-8 h-8" />}
+            {icon === 'check' && <CheckCircleIcon className="w-8 h-8" />}
+            {icon === 'oil' && <BeakerIcon className="w-8 h-8" />}
+            {icon === 'wrench' && <WrenchScrewdriverIcon className="w-8 h-8" />}
+            {icon === 'hotel' && <BuildingOfficeIcon className="w-8 h-8" />}
+            {icon === 'transmission' && <Cog6ToothIcon className="w-8 h-8" />}
+            {icon === 'clock' && <CheckCircleIcon className="w-8 h-8" />}
+          </div>
           <h3 className="text-xl font-semibold font-headings text-headings">{title}</h3>
         </div>
         
@@ -47,7 +56,7 @@ export default function ServiceCard({ title, description, icon, image, href }: S
           href={href}
           className="inline-flex items-center font-medium transition-colors duration-200 text-accent hover:text-accent-dark"
         >
-          Learn More
+          Lær Mer
           <svg
             className="w-4 h-4 ml-2"
             fill="none"

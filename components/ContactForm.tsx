@@ -40,16 +40,16 @@ export default function ContactForm() {
       {/* Name Field */}
       <div>
         <label htmlFor="name" className="block mb-2 text-sm font-medium text-headings">
-          Full Name *
+          Fullt Navn *
         </label>
         <input
           type="text"
           id="name"
-          {...register('name', { required: 'Name is required' })}
+          {...register('name', { required: 'Navn er påkrevd' })}
           className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary ${
             errors.name ? 'border-red-500' : 'border-gray-300'
           }`}
-          placeholder="Your full name"
+          placeholder="Ditt fulle navn"
         />
         {errors.name && (
           <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -59,22 +59,22 @@ export default function ContactForm() {
       {/* Email Field */}
       <div>
         <label htmlFor="email" className="block mb-2 text-sm font-medium text-headings">
-          Email Address *
+          E-post Adresse *
         </label>
         <input
           type="email"
           id="email"
           {...register('email', { 
-            required: 'Email is required',
+            required: 'E-post er påkrevd',
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: 'Invalid email address'
+              message: 'Ugyldig e-post adresse'
             }
           })}
           className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary ${
             errors.email ? 'border-red-500' : 'border-gray-300'
           }`}
-          placeholder="your.email@example.com"
+          placeholder="din.epost@eksempel.com"
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -84,7 +84,7 @@ export default function ContactForm() {
       {/* Phone Field */}
       <div>
         <label htmlFor="phone" className="block mb-2 text-sm font-medium text-headings">
-          Phone Number
+          Telefonnummer
         </label>
         <input
           type="tel"
@@ -98,16 +98,16 @@ export default function ContactForm() {
       {/* Message Field */}
       <div>
         <label htmlFor="message" className="block mb-2 text-sm font-medium text-headings">
-          Message *
+          Melding *
         </label>
         <textarea
           id="message"
           rows={5}
-          {...register('message', { required: 'Message is required' })}
+          {...register('message', { required: 'Melding er påkrevd' })}
           className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none ${
             errors.message ? 'border-red-500' : 'border-gray-300'
           }`}
-          placeholder="Tell us about your automotive needs or questions..."
+          placeholder="Fortell oss om dine bilbehov eller spørsmål..."
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
@@ -120,17 +120,17 @@ export default function ContactForm() {
         disabled={isSubmitting}
         className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? 'Sender...' : 'Send Melding'}
       </button>
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
         <div className="p-4 border border-green-200 rounded-lg bg-green-50">
           <p className="text-green-800">
-            Thank you! Your message has been received. We'll get back to you soon.
+            Takk! Din melding er mottatt. Vi kommer tilbake til deg snart.
           </p>
           <p className="mt-2 text-sm text-green-700">
-            For immediate assistance, please call us at (555) 123-4567.
+            For umiddelbar hjelp, vennligst ring oss på (555) 123-4567.
           </p>
         </div>
       )}
@@ -138,7 +138,7 @@ export default function ContactForm() {
       {submitStatus === 'error' && (
         <div className="p-4 border border-red-200 rounded-lg bg-red-50">
           <p className="text-red-800">
-            Sorry, there was an error processing your message. Please try calling us directly.
+            Beklager, det oppstod en feil ved behandling av din melding. Vennligst prøv å ringe oss direkte.
           </p>
         </div>
       )}
@@ -146,18 +146,18 @@ export default function ContactForm() {
       {/* Contact Information */}
       <div className="p-4 rounded-lg bg-gray-50">
         <p className="mb-2 text-sm text-gray-600">
-          <strong>Prefer to contact us directly?</strong>
+          <strong>Foretrekker å kontakte oss direkte?</strong>
         </p>
         <div className="space-y-1 text-sm text-gray-600">
-          <p>📞 Call us: (555) 123-4567</p>
-          <p>✉️ Email us: info@4dekk.com</p>
-          <p>📍 Visit us: 123 Main Street, City, State 12345</p>
+          <p>📞 Ring oss: (555) 123-4567</p>
+          <p>✉️ E-post oss: 4dekk4@gmail.com</p>
+          <p>📍 Besøk oss: 123 Hovedgaten, By, Fylke 12345</p>
         </div>
       </div>
 
       {/* Privacy Notice */}
       <p className="text-sm text-gray-600">
-        By submitting this form, you agree to our privacy policy and consent to being contacted regarding your inquiry.
+        Ved å sende inn dette skjemaet godtar du vår personvernpolicy og samtykker til å bli kontaktet angående din henvendelse.
       </p>
     </form>
   )

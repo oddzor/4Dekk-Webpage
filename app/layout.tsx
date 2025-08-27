@@ -7,15 +7,15 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '4Dekk Auto Repair & Tire Shop',
-  description: 'Professional auto repair, tire service, and mechanic services. Quality workmanship, competitive pricing, and exceptional customer service.',
-  keywords: 'auto repair, tire service, mechanic, car maintenance, brake service, oil change, auto shop',
+  title: '4Dekk Auto Repair & Dekkservice',
+  description: 'Profesjonell bilreparasjon, dekk-service og mekanikertjenester. Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice.',
+  keywords: 'bilreparasjon, dekk-service, mekaniker, bilvedlikehold, bremseservice, oljeskifte, bilverksted',
   authors: [{ name: '4Dekk Auto Repair' }],
   openGraph: {
-    title: '4Dekk Auto Repair & Tire Shop',
-    description: 'Professional auto repair, tire service, and mechanic services.',
+    title: '4Dekk Auto Repair & Dekkservice',
+    description: 'Profesjonell bilreparasjon, dekk-service og mekanikertjenester.',
     type: 'website',
-    locale: 'en_US',
+    locale: 'nb_NO',
   },
   robots: {
     index: true,
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="nb">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -1,8 +1,30 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3000',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/webp'],
+  },
+  // Disable experimental features that might cause issues on Windows
+  experimental: {
+    // Disable some features that might cause file system issues
+    optimizePackageImports: [],
+  },
+  // Reduce file watching to prevent permission issues
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+      }
+    }
+    return config
   },
   async headers() {
     return [

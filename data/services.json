@@ -1,104 +1,244 @@
 [
   {
-    "id": "tires",
-    "title": "Tire Services",
-    "description": "Complete tire services including sales, mounting, balancing, rotation, and repair. All major brands available.",
-    "longDescription": "We offer comprehensive tire services to keep your vehicle safe and performing at its best. Our certified technicians can handle everything from simple tire rotations to complex tire repairs and replacements. We carry all major tire brands and can help you choose the right tires for your vehicle and driving needs.",
-    "icon": "🛞",
-    "image": "/images/tire-service.webp",
-    "features": [
-      "Tire Sales & Installation",
-      "Tire Mounting & Balancing",
-      "Tire Rotation",
-      "Tire Repair",
-      "Wheel Alignment",
-      "Tire Pressure Monitoring"
-    ],
-    "pricing": "Starting at $25 for rotation, $15 for mounting per tire"
-  },
-  {
-    "id": "brakes",
-    "title": "Brake Repair",
-    "description": "Professional brake inspection, repair, and replacement services. Safety is our top priority.",
-    "longDescription": "Your safety is our top priority. Our brake services include comprehensive inspections, repairs, and replacements for all brake system components. We use only high-quality parts and follow manufacturer specifications to ensure your brakes perform reliably.",
-    "icon": "🛑",
+    "id": "eu-control",
+    "title": "EU Kontroll",
+    "description": "EU godkjenning av kjøretøy, direkte koblet til Statens Vegvesen.",
+    "longDescription": "Vi tilbyr EU kontroll av kjøretøy direkte koblet til Statens Vegvesen. Våre sertifiserte kontrollører utfører grundige inspeksjoner for å sikre at kjøretøyet ditt oppfyller alle sikkerhetskrav.",
+    "icon": "check",
     "image": "/images/brake-repair.webp",
     "features": [
-      "Brake Inspection",
-      "Brake Pad Replacement",
-      "Rotor Resurfacing/Replacement",
-      "Caliper Repair",
-      "Brake Fluid Service",
-      "ABS System Repair"
+      "EU Kontroll",
+      "Etterkontroll",
+      "4Hjulskontroll",
+      "Sikkerhetsinspeksjon",
+      "Emission Testing",
+      "Dokumentasjon"
     ],
-    "pricing": "Starting at $150 for brake pad replacement"
+    "pricing": "1150,-",
+    "pricingDescription": "Komplett EU kontroll av kjøretøy, direkte forbindelse med Statens Vegvesen"
   },
   {
-    "id": "oil-change",
-    "title": "Oil Change",
-    "description": "Quick and reliable oil change services with premium quality oils and filters for all vehicle types.",
-    "longDescription": "Regular oil changes are essential for maintaining your engine's health and performance. We offer quick, reliable oil change services using premium quality oils and filters. Our technicians will also perform a multi-point inspection to catch potential issues early.",
-    "icon": "🛢️",
-    "image": "/images/oil-change.webp",
+    "id": "after-control",
+    "title": "Etterkontroll",
+    "description": "Etterkontroll etter reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll.",
+    "longDescription": "Etterkontroll utføres når en bil ikke består EU kontroll og reparasjoner må gjøres. Vi hjelper deg med å få bilen godkjent.",
+    "icon": "check",
+    "image": "/images/brake-repair.webp",
     "features": [
-      "Conventional Oil Change",
-      "Synthetic Oil Change",
-      "Oil Filter Replacement",
-      "Multi-Point Inspection",
-      "Fluid Level Check",
-      "Tire Pressure Check"
+      "Etterkontroll",
+      "Reparasjonsverifikasjon",
+      "Dokumentasjon",
+      "Godkjenning"
     ],
-    "pricing": "Starting at $35 for conventional, $65 for synthetic"
+    "pricing": "400,-",
+    "pricingDescription": "Etterkontroll reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
+  },
+  {
+    "id": "wheel-alignment",
+    "title": "4Hjulskontroll",
+    "description": "Kontroll og justering av hjulstillingsvinkel på bilen din.",
+    "longDescription": "Hjuljustering er viktig for både sikkerhet og dekklevetid. Vi bruker moderne utstyr for å sikre nøyaktig justering.",
+    "icon": "check",
+    "image": "/images/brake-repair.webp",
+    "features": [
+      "Hjuljustering",
+      "Kamber Kontroll",
+      "Toe Justering",
+      "Caster Kontroll"
+    ],
+    "pricing": "1875,-",
+    "pricingDescription": "Kontroll og justering av hjulstillingsvinkel på bilen din"
+  },
+  {
+    "id": "workshop-hourly",
+    "title": "Timepris på verksted",
+    "description": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner.",
+    "longDescription": "Transparente priser for all verkstedarbeid. Vi fakturerer kun for faktisk arbeidstid.",
+    "icon": "clock",
+    "image": "/images/engine-diagnostics.webp",
+    "features": [
+      "Arbeidstid",
+      "Diagnostikk",
+      "Reparasjoner",
+      "Vedlikehold"
+    ],
+    "pricing": "1400,-",
+    "pricingDescription": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
   },
   {
     "id": "diagnostics",
-    "title": "Engine Diagnostics",
-    "description": "Advanced diagnostic services to identify and resolve engine problems quickly and accurately.",
-    "longDescription": "Modern vehicles are equipped with sophisticated computer systems that can help identify problems quickly. Our advanced diagnostic equipment can read trouble codes, monitor system performance, and help us pinpoint issues before they become major problems.",
-    "icon": "🔧",
+    "title": "Diagnose av Bilproblemer",
+    "description": "Avansert diagnostisktjeneste for å identifisere og løse motorproblemer raskt og nøyaktig.",
+    "longDescription": "Moderne kjøretøy er utstyrt med sofistikerte datasystemer som kan hjelpe med å identifisere problemer raskt. Vårt avanserte diagnostiske utstyr kan lese feilkoder, overvåke systemytelse og hjelpe oss å finne problemer før de blir store problemer.",
+    "icon": "wrench",
     "image": "/images/engine-diagnostics.webp",
     "features": [
-      "Computer Diagnostics",
-      "Trouble Code Reading",
-      "System Performance Testing",
-      "Engine Performance Analysis",
+      "Datamaskin Diagnostikk",
+      "Feilkode Lesing",
+      "Systemytelse Testing",
+      "Motor Ytelse Analyse",
       "Emission System Testing",
-      "Electrical System Diagnosis"
+      "Elektrisk System Diagnose"
     ],
-    "pricing": "Starting at $75 for diagnostic service"
+    "pricing": "Fra 750 kr for diagnostisk service"
   },
   {
-    "id": "ac-heating",
-    "title": "AC & Heating",
-    "description": "Complete air conditioning and heating system services to keep you comfortable year-round.",
-    "longDescription": "Stay comfortable in any weather with our comprehensive AC and heating services. From simple recharging to complex system repairs, our technicians can handle all your climate control needs.",
-    "icon": "❄️",
-    "image": "/images/hero-image-1.webp",
+    "id": "tire-balancing",
+    "title": "Balansering av dekk",
+    "description": "Komplett rebalansering av dekk, her brukes digital maskin for å sikre balansering innenfor 5 gram.",
+    "longDescription": "Vi bruker moderne digital utstyr for å sikre nøyaktig balansering av dekkene dine.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
     "features": [
-      "AC System Inspection",
-      "Refrigerant Recharge",
-      "Compressor Repair",
-      "Heater Core Replacement",
-      "Blower Motor Repair",
-      "Thermostat Replacement"
+      "Digital Balansering",
+      "Nøyaktig Justering",
+      "Kvalitetskontroll"
     ],
-    "pricing": "Starting at $89 for AC recharge"
+    "pricing": "500,-",
+    "pricingDescription": "Komplett rebalansering av dekk, her brukes digital maskin for å sikre balansering innenfor 5 gram"
+  },
+  {
+    "id": "tires",
+    "title": "Dekkservice",
+    "description": "Komplett dekk-service inkludert salg, montering, balansering, rotasjon og reparasjon. Alle store merker tilgjengelig.",
+    "longDescription": "Vi tilbyr omfattende dekk-service for å holde kjøretøyet ditt sikkert og ytende på sitt beste. Våre sertifiserte teknikere kan håndtere alt fra enkle dekkrotasjoner til komplekse dekkreparasjoner og -erstatninger. Vi fører alle store dekkmerker og kan hjelpe deg med å velge riktige dekk for kjøretøyet og kjørselsbehovene dine.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Dekksalg & Installasjon",
+      "Dekkmontering & Balansering",
+      "Dekkrotasjon",
+      "Dekkreparasjon",
+      "Hjuljustering",
+      "Dekktrykkovervåking"
+    ],
+    "pricing": "Fra 250 kr for rotasjon, 150 kr for montering per dekk"
+  },
+  {
+    "id": "tire-mounting-car",
+    "title": "Omlegging av dekk på bil",
+    "description": "Dersom du har nye dekk du ønsker å få lagt om, som deretter monteres tilbake på bilen.",
+    "longDescription": "Vi hjelper deg med å legge om dekkene dine og montere dem tilbake på bilen.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Dekkomlegging",
+      "Montering",
+      "Kvalitetskontroll"
+    ],
+    "pricing": "1500,-",
+    "pricingDescription": "Dersom du har nye dekk du ønsker å få lagt om, som deretter monteres tilbake på bilen"
+  },
+  {
+    "id": "tire-mounting-internet",
+    "title": "Omlegging av dekk (Internettbestilling)",
+    "description": "Dekk bestilt igjennom leverandører som kan levere direkte til oss, her inkluderer vi også balansering og montering.",
+    "longDescription": "Vi samarbeider med flere dekkleverandører og kan håndtere dekk bestilt på internett.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Dekkomlegging",
+      "Balansering",
+      "Montering",
+      "Kvalitetskontroll"
+    ],
+    "pricing": "1800,-",
+    "pricingDescription": "Dekk bestilt igjennom leverandører som kan levere direkte til oss, her inkluderer vi også balansering og montering"
+  },
+  {
+    "id": "tire-plugging-external",
+    "title": "Plugging av dekk utvendig",
+    "description": "Midlertidig løsning, egnet for slitte dekk. Kan fungere som nødløsning dersom du er nødt til å komme deg fra A-B",
+    "longDescription": "Utvendig plugging er en midlertidig løsning for mindre punkteringer.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Utvendig Plugging",
+      "Midlertidig Reparasjon"
+    ],
+    "pricing": "300,-",
+    "pricingDescription": "Midlertidig løsning, pluggemateriale stikkes inn i hullet og limes på plass. Egner seg best for slitte dekk som snart skal byttes ut, eller for korte avstander"
+  },
+  {
+    "id": "tire-plugging-internal",
+    "title": "Plugging av dekk innvendig",
+    "description": "Permanent reparasjon, her brukes spesialprodukter som trekkes igjennom hullet og festes fra innsiden",
+    "longDescription": "Dekket demonteres og plugges fra innsiden. Her er det produkter som er laget for å være en permanent løsning for et dekk.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Innvendig Plugging",
+      "Permanent Reparasjon"
+    ],
+    "pricing": "600,-",
+    "pricingDescription": "Permanent reparasjon, her demonteres dekket og klargjøres for plugg som festes fra innsiden med lim og gummisement. Egner seg for dekk som har lang levetid igjen og ønskes å beholde"
+  },
+  {
+    "id": "tire-hotel",
+    "title": "Dekkhotell",
+    "description": "Sikker lagring av sommer- og vinterdekk når de ikke er i bruk.",
+    "longDescription": "Vårt dekkhotell tilbyr sikker og praktisk lagring av sommer- og vinterdekk når de ikke er i bruk. Vi tar oss av lagring, vask og omlegging av dekk, så du slipper å tenke på det.",
+    "icon": "hotel",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Sikker Lagring",
+      "Dekkvask",
+      "Omlegging av Dekk",
+      "Hjulskift",
+      "Dekktrykk Kontroll",
+      "Lagring av Hjul"
+    ],
+    "pricing": "400,-",
+    "pricingDescription": "Enkel og trygg lagring av dekkene dine når du bytter over for sesongen"
+  },
+  {
+    "id": "tire-hotel-complete",
+    "title": "Total for Dekkhotell",
+    "description": "Inkluderer dekkhotell, hjulvask og hjulskift for sesongen, (+50,- for SUV, +100,- for Bobil <3,5T).",
+    "longDescription": "Komplett pakke for dekkhotell inkludert vask og skift.",
+    "icon": "hotel",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Dekkhotell",
+      "Hjulvask",
+      "Hjulskift",
+      "Lagring"
+    ],
+    "pricing": "1100,-",
+    "pricingDescription": "Inkluderer dekkhotell, hjulvask og hjulskift for sesongen, (+50,- for SUV, +100,- for Bobil <3,5T)"
+  },
+  {
+    "id": "oil-change",
+    "title": "Oljeskifte",
+    "description": "Rask og pålitelig oljeskifte med premium kvalitetsoljer og filtre for alle kjøretøytyper.",
+    "longDescription": "Regelmessige oljeskifter er avgjørende for å opprettholde motorens helse og ytelse. Vi tilbyr rask, pålitelig oljeskift med premium kvalitetsoljer og filtre. Våre teknikere vil også utføre en flerpunkts inspeksjon for å fange opp potensielle problemer tidlig.",
+    "icon": "oil",
+    "image": "/images/oil-change.webp",
+    "features": [
+      "Konvensjonelt Oljeskifte",
+      "Syntetisk Oljeskifte",
+      "Oljefilter Erstatning",
+      "Flerpunkts Inspeksjon",
+      "Væskenivå Kontroll",
+      "Dekktrykk Kontroll"
+    ],
+    "pricing": "Fra 350 kr for konvensjonell, 650 kr for syntetisk"
   },
   {
     "id": "transmission",
-    "title": "Transmission Service",
-    "description": "Professional transmission maintenance and repair services for all vehicle types.",
-    "longDescription": "Your transmission is one of the most complex and expensive components in your vehicle. Regular maintenance and prompt repairs can extend its life and prevent costly replacements. Our transmission specialists use the latest equipment and techniques.",
-    "icon": "⚙️",
+    "title": "Girkasse Service",
+    "description": "Profesjonell girkasse vedlikehold og reparasjonstjenester for alle kjøretøytyper.",
+    "longDescription": "Girkassen din er en av de mest komplekse og dyre komponentene i kjøretøyet ditt. Regelmessig vedlikehold og raske reparasjoner kan forlenge levetiden og forhindre kostbare erstatninger. Våre girkassespesialister bruker det nyeste utstyret og teknikkene.",
+    "icon": "transmission",
     "image": "/images/transmission.webp",
     "features": [
-      "Transmission Fluid Change",
-      "Transmission Filter Replacement",
-      "Transmission Repair",
-      "Clutch Replacement",
-      "CV Joint Service",
-      "Driveshaft Repair"
+      "Girkassevæske Skifte",
+      "Girkassefilter Erstatning",
+      "Girkasse Reparasjon",
+      "Kobling Erstatning",
+      "CV Ledd Service",
+      "Drivaksel Reparasjon"
     ],
-    "pricing": "Starting at $150 for fluid change"
+    "pricing": "Fra 1500 kr for væskeskifte"
   }
 ] 
