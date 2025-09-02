@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import businessData from '../data/business.json'
 
 interface FormData {
   name: string
@@ -91,7 +92,7 @@ export default function ContactForm() {
           id="phone"
           {...register('phone')}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="(555) 123-4567"
+          placeholder={businessData.contact.phone}
         />
       </div>
 
@@ -130,7 +131,7 @@ export default function ContactForm() {
             Takk! Din melding er mottatt. Vi kommer tilbake til deg snart.
           </p>
           <p className="mt-2 text-sm text-green-700">
-            For umiddelbar hjelp, vennligst ring oss på (555) 123-4567.
+            For umiddelbar hjelp, vennligst ring oss på {businessData.contact.phone}.
           </p>
         </div>
       )}
@@ -149,9 +150,9 @@ export default function ContactForm() {
           <strong>Foretrekker å kontakte oss direkte?</strong>
         </p>
         <div className="space-y-1 text-sm text-gray-600">
-          <p>📞 Ring oss: (555) 123-4567</p>
-          <p>✉️ E-post oss: 4dekk4@gmail.com</p>
-          <p>📍 Besøk oss: 123 Hovedgaten, By, Fylke 12345</p>
+          <p>📞 Ring oss: {businessData.contact.phone}</p>
+          <p>✉️ E-post oss: {businessData.contact.email}</p>
+          <p>📍 Besøk oss: {businessData.address.street}, {businessData.address.postalCode} {businessData.address.city}</p>
         </div>
       </div>
 

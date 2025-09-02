@@ -23,11 +23,11 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
-              src="/images/4dekk-logo.png"
+              src="/images/4dekk-logo-white-red.png"
               alt="4Dekk Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              width={200}
+              height={60}
+              className="h-14 w-auto"
               priority
             />
           </Link>
@@ -74,11 +74,11 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <Image
-                  src="/images/4dekk-logo.png"
+                  src="/images/4dekk-logo-white-red.png"
                   alt="4Dekk Logo"
-                  width={100}
-                  height={35}
-                  className="h-8 w-auto"
+                  width={140}
+                  height={45}
+                  className="h-12 w-auto"
                   priority
                 />
               </Link>

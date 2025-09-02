@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-dark">
+    <section className="relative flex items-start justify-center h-screen overflow-hidden bg-gradient-dark pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 z-10 bg-black/70" />
@@ -15,6 +15,7 @@ export default function HeroSection() {
           fill
           className="object-cover"
           priority
+          quality={90}
           onError={(e) => {
             // Fallback to a solid color if image fails to load
             const target = e.target as HTMLImageElement
@@ -25,17 +26,23 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 px-4 text-center text-white">
+      <div className="relative z-20 px-4 text-center text-white mt-8">
         {/* Logo */}
         <div className="flex justify-center mb-8">
-          <Image
-            src="/images/4dekk-logo.png"
-            alt="4Dekk Logo"
-            width={300}
-            height={100}
-            className="w-auto h-24 md:h-32 lg:h-40"
-            priority
-          />
+          <div className="relative w-96 h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56">
+            <Image
+              src="/images/4dekk-logo-white-red.png"
+              alt="4Dekk Logo"
+              fill
+              className="object-contain"
+              priority
+              quality={100}
+              sizes="(max-width: 768px) 384px, (max-width: 1024px) 448px, 512px"
+              style={{
+                imageRendering: 'crisp-edges'
+              }}
+            />
+          </div>
         </div>
         <h1 className="mb-6 text-4xl font-bold md:text-6xl lg:text-7xl font-headings text-shadow-lg">
           Bilverksted og Dekkservice
@@ -51,9 +58,9 @@ export default function HeroSection() {
           <Link href="/booking" className="px-8 py-4 text-lg btn-accent border-glow">
             Bestill Time Nå
           </Link>
-          <Link href="/services" className="px-8 py-4 text-lg btn-secondary">
+          <a href="#services" className="px-8 py-4 text-lg btn-secondary">
             Se Våre Tjenester
-          </Link>
+          </a>
         </div>
 
         {/* Trust Indicators */}

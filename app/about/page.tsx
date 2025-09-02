@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { BuildingOfficeIcon, WrenchScrewdriverIcon, UserGroupIcon, HeartIcon } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'Om Oss - 4Dekk Auto Repair',
-  description: 'Lær om 4Dekk Auto Repair\'s 20+ års erfaring, vårt team av sertifiserte teknikere, og vårt engasjement for kvalitets bilreparasjonstjenester.',
+  title: 'Om Oss - 4Dekk AS',
+  description: 'Lær om 4Dekk AS\'s 10 års erfaring, vårt team av sertifiserte teknikere, og vårt engasjement for kvalitets bilreparasjonstjenester.',
   keywords: 'om 4Dekk, bilreparasjon historie, sertifiserte teknikere, bilreparasjon team, oppdrag verdier',
 }
 

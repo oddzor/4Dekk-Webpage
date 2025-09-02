@@ -12,24 +12,21 @@ export default function AboutSection() {
           {/* Content */}
           <div>
             <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
-              Om 4Dekk Auto Repair
+              Om 4Dekk AS
             </h2>
             <p className="mb-6 text-lg leading-relaxed text-text">
-              I over 20 år har 4Dekk Auto Repair vært det pålitelige valget for bilservice i vårt samfunn. 
-              Vi startet som et lite familieeid verksted med et enkelt oppdrag: å tilby ærlig, pålitelig og rimelig 
-              bilreparasjon til våre naboer.
+              I 10 år har 4Dekk AS vært det pålitelige valget for bil og dekk-service i Larvik. 
+              Det startet som en dekk og felg bedrift, men har nå vokst til et godkjent bilverksted med godkjenning fra Statens Vegvesen.
             </p>
             <p className="mb-8 text-lg leading-relaxed text-text">
-              I dag har vi vokst til et fullservice bilreparasjonsanlegg, men vi har aldri mistet synet på våre røtter. 
-              Vårt team av sertifiserte teknikere kombinerer tiår med erfaring med det nyeste diagnostiske utstyret for 
-              å sikre at kjøretøyet ditt får den beste omsorgen mulig.
+              I dag har vi to bukker for verkstedet, èn for dekkservice og kan tilby alt fra EU kontroll, full service, bremseservice, girkasseservice, diagnostikk og masse annet.
             </p>
             
             {/* Key Features */}
             <div className="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Sertifiserte Teknikere</span>
+                <span className="text-text">Erfarne Teknikere</span>
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
@@ -37,11 +34,11 @@ export default function AboutSection() {
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Konkurransedyktig Prising</span>
+                <span className="text-text">Konkurransedyktige Priser</span>
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Akutt Service</span>
+                <span className="text-text">Rask Service</span>
               </div>
             </div>
             
@@ -60,7 +57,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl card-dark">
               <Image
-                src="/images/about-shop.jpg"
+                src="/images/om-4dekk.webp"
                 alt="4Dekk Auto Repair verksted interiør"
                 fill
                 className="object-cover"

@@ -121,14 +121,7 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Map Overlay Info */}
-            <div className="absolute p-4 border border-gray-600 rounded-lg shadow-lg top-4 left-4 bg-gray-darker/90 backdrop-blur-sm">
-              <div className="text-sm">
-                <div className="font-semibold font-headings text-headings">{businessData.name}</div>
-                <div className="text-text">{businessData.address.street}</div>
-                <div className="text-text">{businessData.address.postalCode} {businessData.address.city}</div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

@@ -161,10 +161,10 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center">
                   <div className="mr-4 text-accent">
-                    <ExclamationTriangleIcon className="w-8 h-8" />
+                    <PhoneIcon className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">Akutt Service</h3>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">Telefon</h3>
                     <a href={`tel:${businessData.contact.phone}`} className="text-xl font-semibold text-accent hover:text-accent-dark">
                       {businessData.contact.phone}
                     </a>

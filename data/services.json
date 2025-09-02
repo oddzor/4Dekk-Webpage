@@ -5,13 +5,13 @@
     "description": "EU godkjenning av kjøretøy, direkte koblet til Statens Vegvesen.",
     "longDescription": "Vi tilbyr EU kontroll av kjøretøy direkte koblet til Statens Vegvesen. Våre sertifiserte kontrollører utfører grundige inspeksjoner for å sikre at kjøretøyet ditt oppfyller alle sikkerhetskrav.",
     "icon": "check",
-    "image": "/images/brake-repair.webp",
+    "image": "/images/eucontrol.webp",
     "features": [
       "EU Kontroll",
       "Etterkontroll",
       "4Hjulskontroll",
       "Sikkerhetsinspeksjon",
-      "Emission Testing",
+      "Utslippstesting",
       "Dokumentasjon"
     ],
     "pricing": "1150,-",
@@ -23,7 +23,7 @@
     "description": "Etterkontroll etter reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll.",
     "longDescription": "Etterkontroll utføres når en bil ikke består EU kontroll og reparasjoner må gjøres. Vi hjelper deg med å få bilen godkjent.",
     "icon": "check",
-    "image": "/images/brake-repair.webp",
+    "image": "/images/etterkontroll.webp",
     "features": [
       "Etterkontroll",
       "Reparasjonsverifikasjon",
@@ -39,7 +39,7 @@
     "description": "Kontroll og justering av hjulstillingsvinkel på bilen din.",
     "longDescription": "Hjuljustering er viktig for både sikkerhet og dekklevetid. Vi bruker moderne utstyr for å sikre nøyaktig justering.",
     "icon": "check",
-    "image": "/images/brake-repair.webp",
+    "image": "/images/4hjulskontroll.webp",
     "features": [
       "Hjuljustering",
       "Kamber Kontroll",
@@ -51,11 +51,11 @@
   },
   {
     "id": "workshop-hourly",
-    "title": "Timepris på verksted",
+    "title": "Bilreparasjoner og Service",
     "description": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner.",
     "longDescription": "Transparente priser for all verkstedarbeid. Vi fakturerer kun for faktisk arbeidstid.",
     "icon": "clock",
-    "image": "/images/engine-diagnostics.webp",
+    "image": "/images/timeprisverksted.webp",
     "features": [
       "Arbeidstid",
       "Diagnostikk",
@@ -88,7 +88,7 @@
     "description": "Komplett rebalansering av dekk, her brukes digital maskin for å sikre balansering innenfor 5 gram.",
     "longDescription": "Vi bruker moderne digital utstyr for å sikre nøyaktig balansering av dekkene dine.",
     "icon": "tire",
-    "image": "/images/tire-service.webp",
+    "image": "/images/balansering.webp",
     "features": [
       "Digital Balansering",
       "Nøyaktig Justering",
@@ -116,11 +116,11 @@
   },
   {
     "id": "tire-mounting-car",
-    "title": "Omlegging av dekk på bil",
+    "title": "Omlegging av dekk",
     "description": "Dersom du har nye dekk du ønsker å få lagt om, som deretter monteres tilbake på bilen.",
     "longDescription": "Vi hjelper deg med å legge om dekkene dine og montere dem tilbake på bilen.",
     "icon": "tire",
-    "image": "/images/tire-service.webp",
+    "image": "/images/omlegging.webp",
     "features": [
       "Dekkomlegging",
       "Montering",
@@ -130,20 +130,20 @@
     "pricingDescription": "Dersom du har nye dekk du ønsker å få lagt om, som deretter monteres tilbake på bilen"
   },
   {
-    "id": "tire-mounting-internet",
-    "title": "Omlegging av dekk (Internettbestilling)",
-    "description": "Dekk bestilt igjennom leverandører som kan levere direkte til oss, her inkluderer vi også balansering og montering.",
-    "longDescription": "Vi samarbeider med flere dekkleverandører og kan håndtere dekk bestilt på internett.",
+    "id": "hjulskift",
+    "title": "Hjulskift",
+    "description": "Komplett hjulskift inkludert montering av sommer- og vinterdekk.",
+    "longDescription": "Vi hjelper deg med å skifte mellom sommer- og vinterdekk. Tjenesten inkluderer montering, balansering og kontroll av dekkene.",
     "icon": "tire",
-    "image": "/images/tire-service.webp",
+    "image": "/images/hjulskift.webp",
     "features": [
-      "Dekkomlegging",
+      "Hjulskift",
+      "Dekkmontering",
       "Balansering",
-      "Montering",
-      "Kvalitetskontroll"
+      "Dekktrykk Kontroll"
     ],
-    "pricing": "1800,-",
-    "pricingDescription": "Dekk bestilt igjennom leverandører som kan levere direkte til oss, her inkluderer vi også balansering og montering"
+    "pricing": "500,-",
+    "pricingDescription": "Komplett hjulskift inkludert montering av sommer- og vinterdekk"
   },
   {
     "id": "tire-plugging-external",
@@ -160,26 +160,12 @@
     "pricingDescription": "Midlertidig løsning, pluggemateriale stikkes inn i hullet og limes på plass. Egner seg best for slitte dekk som snart skal byttes ut, eller for korte avstander"
   },
   {
-    "id": "tire-plugging-internal",
-    "title": "Plugging av dekk innvendig",
-    "description": "Permanent reparasjon, her brukes spesialprodukter som trekkes igjennom hullet og festes fra innsiden",
-    "longDescription": "Dekket demonteres og plugges fra innsiden. Her er det produkter som er laget for å være en permanent løsning for et dekk.",
-    "icon": "tire",
-    "image": "/images/tire-service.webp",
-    "features": [
-      "Innvendig Plugging",
-      "Permanent Reparasjon"
-    ],
-    "pricing": "600,-",
-    "pricingDescription": "Permanent reparasjon, her demonteres dekket og klargjøres for plugg som festes fra innsiden med lim og gummisement. Egner seg for dekk som har lang levetid igjen og ønskes å beholde"
-  },
-  {
     "id": "tire-hotel",
     "title": "Dekkhotell",
     "description": "Sikker lagring av sommer- og vinterdekk når de ikke er i bruk.",
     "longDescription": "Vårt dekkhotell tilbyr sikker og praktisk lagring av sommer- og vinterdekk når de ikke er i bruk. Vi tar oss av lagring, vask og omlegging av dekk, så du slipper å tenke på det.",
     "icon": "hotel",
-    "image": "/images/tire-service.webp",
+    "image": "/images/dekkhotell.webp",
     "features": [
       "Sikker Lagring",
       "Dekkvask",
@@ -190,55 +176,5 @@
     ],
     "pricing": "400,-",
     "pricingDescription": "Enkel og trygg lagring av dekkene dine når du bytter over for sesongen"
-  },
-  {
-    "id": "tire-hotel-complete",
-    "title": "Total for Dekkhotell",
-    "description": "Inkluderer dekkhotell, hjulvask og hjulskift for sesongen, (+50,- for SUV, +100,- for Bobil <3,5T).",
-    "longDescription": "Komplett pakke for dekkhotell inkludert vask og skift.",
-    "icon": "hotel",
-    "image": "/images/tire-service.webp",
-    "features": [
-      "Dekkhotell",
-      "Hjulvask",
-      "Hjulskift",
-      "Lagring"
-    ],
-    "pricing": "1100,-",
-    "pricingDescription": "Inkluderer dekkhotell, hjulvask og hjulskift for sesongen, (+50,- for SUV, +100,- for Bobil <3,5T)"
-  },
-  {
-    "id": "oil-change",
-    "title": "Oljeskifte",
-    "description": "Rask og pålitelig oljeskifte med premium kvalitetsoljer og filtre for alle kjøretøytyper.",
-    "longDescription": "Regelmessige oljeskifter er avgjørende for å opprettholde motorens helse og ytelse. Vi tilbyr rask, pålitelig oljeskift med premium kvalitetsoljer og filtre. Våre teknikere vil også utføre en flerpunkts inspeksjon for å fange opp potensielle problemer tidlig.",
-    "icon": "oil",
-    "image": "/images/oil-change.webp",
-    "features": [
-      "Konvensjonelt Oljeskifte",
-      "Syntetisk Oljeskifte",
-      "Oljefilter Erstatning",
-      "Flerpunkts Inspeksjon",
-      "Væskenivå Kontroll",
-      "Dekktrykk Kontroll"
-    ],
-    "pricing": "Fra 350 kr for konvensjonell, 650 kr for syntetisk"
-  },
-  {
-    "id": "transmission",
-    "title": "Girkasse Service",
-    "description": "Profesjonell girkasse vedlikehold og reparasjonstjenester for alle kjøretøytyper.",
-    "longDescription": "Girkassen din er en av de mest komplekse og dyre komponentene i kjøretøyet ditt. Regelmessig vedlikehold og raske reparasjoner kan forlenge levetiden og forhindre kostbare erstatninger. Våre girkassespesialister bruker det nyeste utstyret og teknikkene.",
-    "icon": "transmission",
-    "image": "/images/transmission.webp",
-    "features": [
-      "Girkassevæske Skifte",
-      "Girkassefilter Erstatning",
-      "Girkasse Reparasjon",
-      "Kobling Erstatning",
-      "CV Ledd Service",
-      "Drivaksel Reparasjon"
-    ],
-    "pricing": "Fra 1500 kr for væskeskifte"
   }
 ] 

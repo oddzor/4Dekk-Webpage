@@ -26,7 +26,7 @@ export default function PricingSection() {
   }
 
   return (
-    <section className="section-padding section-light">
+    <section id="pricing" className="section-padding section-light">
       <div className="container-custom">
         {/* Section Header */}
         <div className="mb-16 text-center">

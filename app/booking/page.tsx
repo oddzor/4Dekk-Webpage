@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import CalendlyWidget from '@/components/CalendlyWidget'
+import businessData from '../../data/business.json'
 
 export const metadata: Metadata = {
   title: 'Bestill en Time - 4Dekk Auto Repair',
@@ -133,12 +134,7 @@ export default function BookingPage() {
               <div className="font-semibold text-accent">Varighet: 45 minutter</div>
             </div>
             
-            <div className="p-6 card-dark">
-              <div className="mb-4 text-3xl">🚨</div>
-              <h3 className="mb-2 text-xl font-semibold font-headings text-headings">Akutt Service</h3>
-              <p className="mb-3 text-text">Haste reparasjoner og veihjelp</p>
-              <div className="font-semibold text-accent">Varighet: 120 minutter</div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -162,8 +158,8 @@ export default function BookingPage() {
               <p className="mb-4 text-text">
                 Snakk direkte med våre servicerådgivere
               </p>
-              <a href="tel:+15551234567" className="text-xl font-semibold text-accent hover:text-accent-dark">
-                (555) 123-4567
+              <a href={`tel:${businessData.contact.phone}`} className="text-xl font-semibold text-accent hover:text-accent-dark">
+                {businessData.contact.phone}
               </a>
             </div>
             <div className="p-6 card-dark">
@@ -174,8 +170,8 @@ export default function BookingPage() {
               <p className="mb-4 text-text">
                 Send oss en melding for henvendelser
               </p>
-              <a href="mailto:service@4dekk.com" className="text-xl font-semibold text-accent hover:text-accent-dark">
-                service@4dekk.com
+              <a href={`mailto:${businessData.contact.email}`} className="text-xl font-semibold text-accent hover:text-accent-dark">
+                {businessData.contact.email}
               </a>
             </div>
           </div>
@@ -192,16 +188,32 @@ export default function BookingPage() {
               </h2>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span>Mandag - Fredag</span>
-                  <span>08:00 - 16:00</span>
+                  <span>Mandag</span>
+                  <span>{businessData.hours.monday}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Tirsdag</span>
+                  <span>{businessData.hours.tuesday}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Onsdag</span>
+                  <span>{businessData.hours.wednesday}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Torsdag</span>
+                  <span>{businessData.hours.thursday}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Fredag</span>
+                  <span>{businessData.hours.friday}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Lørdag</span>
-                  <span>09:00 - 14:00</span>
+                  <span>{businessData.hours.saturday}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Søndag</span>
-                  <span>Stengt</span>
+                  <span>{businessData.hours.sunday}</span>
                 </div>
               </div>
             </div>
@@ -210,8 +222,8 @@ export default function BookingPage() {
                 Plassering
               </h2>
               <p className="mb-4 text-gray-200">
-                123 Hovedgaten<br />
-                By, Fylke 12345
+                {businessData.address.street}<br />
+                {businessData.address.postalCode} {businessData.address.city}
               </p>
               <p className="text-gray-200">
                 Enkel tilgang fra hovedveier med god parkering tilgjengelig.
