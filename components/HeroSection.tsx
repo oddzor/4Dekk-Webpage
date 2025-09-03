@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
   return (
-    <section className="relative flex items-start justify-center h-screen overflow-hidden bg-gradient-dark pt-16">
+    <section className="relative flex items-start justify-center h-screen pt-16 overflow-hidden bg-gradient-dark">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 z-10 bg-black/70" />
@@ -26,7 +26,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 px-4 text-center text-white mt-8">
+      <div className="relative z-20 px-4 mt-8 text-center text-white">
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="relative w-96 h-40 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56">
@@ -39,8 +39,9 @@ export default function HeroSection() {
               quality={100}
               sizes="(max-width: 768px) 384px, (max-width: 1024px) 448px, 512px"
               style={{
-                imageRendering: 'crisp-edges'
+                imageRendering: 'auto'
               }}
+              unoptimized={false}
             />
           </div>
         </div>
@@ -50,7 +51,7 @@ export default function HeroSection() {
 
         <p className="max-w-2xl mx-auto mb-12 text-lg text-gray-200 md:text-xl text-shadow">
           Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice. 
-          Din pålitelige partner for alle dine bilbehov.
+          Din samarbeidspartner for bil-og-dekkservice i Larvik.
         </p>
         
         {/* CTA Buttons */}

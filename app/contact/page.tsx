@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { PhoneIcon, ExclamationTriangleIcon, MapPinIcon, TruckIcon, BoltIcon, TagIcon, ClipboardDocumentIcon } from '@heroicons/react/24/outline'
+import { PhoneIcon, MapPinIcon, TruckIcon, BoltIcon, TagIcon, ClipboardDocumentIcon } from '@heroicons/react/24/outline'
 import businessData from '../../data/business.json'
 
 export const metadata: Metadata = {

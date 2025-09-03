@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '4Dekk Auto Repair & Dekkservice',
+  title: '4Dekk AS, Larvik',
   description: 'Profesjonell bilreparasjon, dekk-service og mekanikertjenester. Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice.',
   keywords: 'bilreparasjon, dekk-service, mekaniker, bilvedlikehold, bremseservice, oljeskifte, bilverksted',
   authors: [{ name: '4Dekk Auto Repair' }],
@@ -36,7 +36,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={`${inter.className} font-body text-text bg-background`}>
-        <div className="min-h-screen flex flex-col">
+        <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
             {children}

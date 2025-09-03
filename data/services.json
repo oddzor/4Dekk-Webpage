@@ -2,33 +2,32 @@
   {
     "id": "eu-control",
     "title": "EU Kontroll",
-    "description": "EU godkjenning av kjøretøy, direkte koblet til Statens Vegvesen.",
-    "longDescription": "Vi tilbyr EU kontroll av kjøretøy direkte koblet til Statens Vegvesen. Våre sertifiserte kontrollører utfører grundige inspeksjoner for å sikre at kjøretøyet ditt oppfyller alle sikkerhetskrav.",
+    "description": "Pålagt sikkerhetskontroll av kjøretøy, direkte koblet til Statens Vegvesen.",
+    "longDescription": "EU-kontroll sjekker bilens trafikksikkerhet og miljøpåvirkning gjennom ca. 150 kontrollpunkter",
     "icon": "check",
     "image": "/images/eucontrol.webp",
     "features": [
-      "EU Kontroll",
-      "Etterkontroll",
-      "4Hjulskontroll",
-      "Sikkerhetsinspeksjon",
-      "Utslippstesting",
-      "Dokumentasjon"
+      "Bremser og styring",
+      "Lys og elektrisk system",
+      "Dekk og hjuloppheng",
+      "Avgasser og miljøkontroll",
+      "Sikkerhetsutstyr",
+      "med mer..."
     ],
     "pricing": "1150,-",
-    "pricingDescription": "Komplett EU kontroll av kjøretøy, direkte forbindelse med Statens Vegvesen"
+    "pricingDescription": "Komplett EU kontroll med ca. 150 kontrollpunkter, direkte forbindelse med Statens Vegvesen"
   },
   {
     "id": "after-control",
     "title": "Etterkontroll",
-    "description": "Etterkontroll etter reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll.",
-    "longDescription": "Etterkontroll utføres når en bil ikke består EU kontroll og reparasjoner må gjøres. Vi hjelper deg med å få bilen godkjent.",
+    "description": "Kontroll etter reparasjoner fra ikke-godkjent EU Kontroll.",
+    "longDescription": "Etterkontroll utføres når reparasjoner er gjort etter ikke-bestått EU kontroll.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
     "features": [
       "Etterkontroll",
       "Reparasjonsverifikasjon",
-      "Dokumentasjon",
-      "Godkjenning"
+      "Dokumentasjon"
     ],
     "pricing": "400,-",
     "pricingDescription": "Etterkontroll reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
@@ -36,15 +35,15 @@
   {
     "id": "wheel-alignment",
     "title": "4Hjulskontroll",
-    "description": "Kontroll og justering av hjulstillingsvinkel på bilen din.",
-    "longDescription": "Hjuljustering er viktig for både sikkerhet og dekklevetid. Vi bruker moderne utstyr for å sikre nøyaktig justering.",
+    "description": "Kontroll og justering av hjulstillingsvinkel.",
+    "longDescription": "Nøyaktig hjuljustering for optimal sikkerhet og dekklevetid.",
     "icon": "check",
     "image": "/images/4hjulskontroll.webp",
     "features": [
       "Hjuljustering",
-      "Kamber Kontroll",
-      "Toe Justering",
-      "Caster Kontroll"
+      "Kamber kontroll",
+      "Toe justering",
+      "Caster kontroll"
     ],
     "pricing": "1875,-",
     "pricingDescription": "Kontroll og justering av hjulstillingsvinkel på bilen din"
@@ -52,15 +51,15 @@
   {
     "id": "workshop-hourly",
     "title": "Bilreparasjoner og Service",
-    "description": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner.",
-    "longDescription": "Transparente priser for all verkstedarbeid. Vi fakturerer kun for faktisk arbeidstid.",
+    "description": "Konkurransedyktig timepris for verkstedarbeid og reparasjoner.",
+    "longDescription": "Transparente priser og fakturering kun for faktisk arbeidstid.",
     "icon": "clock",
     "image": "/images/timeprisverksted.webp",
     "features": [
-      "Arbeidstid",
       "Diagnostikk",
       "Reparasjoner",
-      "Vedlikehold"
+      "Vedlikehold",
+      "med mer..."
     ],
     "pricing": "1400,-",
     "pricingDescription": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
@@ -68,31 +67,30 @@
   {
     "id": "diagnostics",
     "title": "Diagnose av Bilproblemer",
-    "description": "Avansert diagnostisktjeneste for å identifisere og løse motorproblemer raskt og nøyaktig.",
-    "longDescription": "Moderne kjøretøy er utstyrt med sofistikerte datasystemer som kan hjelpe med å identifisere problemer raskt. Vårt avanserte diagnostiske utstyr kan lese feilkoder, overvåke systemytelse og hjelpe oss å finne problemer før de blir store problemer.",
+    "description": "Avansert diagnostikk for identifisering av bilproblemer.",
+    "longDescription": "Moderne diagnostisk utstyr og god gammeldags mekanikererfaring for rask identifisering av bil og systemproblemer.",
     "icon": "wrench",
     "image": "/images/engine-diagnostics.webp",
     "features": [
-      "Datamaskin Diagnostikk",
-      "Feilkode Lesing",
-      "Systemytelse Testing",
-      "Motor Ytelse Analyse",
-      "Emission System Testing",
-      "Elektrisk System Diagnose"
+      "Feilkode lesing",
+      "Systemytelse testing",
+      "Motor analyse",
+      "Testkjøring",
+      "Manuell diagnose"
     ],
     "pricing": "Fra 750 kr for diagnostisk service"
   },
   {
     "id": "tire-balancing",
     "title": "Balansering av dekk",
-    "description": "Komplett rebalansering av dekk, her brukes digital maskin for å sikre balansering innenfor 5 gram.",
-    "longDescription": "Vi bruker moderne digital utstyr for å sikre nøyaktig balansering av dekkene dine.",
+    "description": "Digital balansering av dekk med høy nøyaktighet.",
+    "longDescription": "Digitalt utstyr for å gi deg nøyaktig dekkbalansering.",
     "icon": "tire",
     "image": "/images/balansering.webp",
     "features": [
-      "Digital Balansering",
-      "Nøyaktig Justering",
-      "Kvalitetskontroll"
+      "Digital måling",
+      "Nøyaktig justering",
+      "Kan hjelpe med vibrasjoner og levetiden av dekkene dine"
     ],
     "pricing": "500,-",
     "pricingDescription": "Komplett rebalansering av dekk, her brukes digital maskin for å sikre balansering innenfor 5 gram"
@@ -100,25 +98,23 @@
   {
     "id": "tires",
     "title": "Dekkservice",
-    "description": "Komplett dekk-service inkludert salg, montering, balansering, rotasjon og reparasjon. Alle store merker tilgjengelig.",
-    "longDescription": "Vi tilbyr omfattende dekk-service for å holde kjøretøyet ditt sikkert og ytende på sitt beste. Våre sertifiserte teknikere kan håndtere alt fra enkle dekkrotasjoner til komplekse dekkreparasjoner og -erstatninger. Vi fører alle store dekkmerker og kan hjelpe deg med å velge riktige dekk for kjøretøyet og kjørselsbehovene dine.",
+    "description": "Komplett dekkservice - salg, montering, balansering og reparasjoner.",
+    "longDescription": "Gode priser på dekk og tjenester, store leverandører med mange ulike dekkprodusenter og dimensjoner som kan skaffes på kort varsel.",
     "icon": "tire",
     "image": "/images/tire-service.webp",
     "features": [
-      "Dekksalg & Installasjon",
-      "Dekkmontering & Balansering",
-      "Dekkrotasjon",
-      "Dekkreparasjon",
-      "Hjuljustering",
-      "Dekktrykkovervåking"
+      "Dekksalg",
+      "Omlegging og balansering",
+      "Reparasjoner",
+      "Kjøpshjelp"
     ],
     "pricing": "Fra 250 kr for rotasjon, 150 kr for montering per dekk"
   },
   {
     "id": "tire-mounting-car",
     "title": "Omlegging av dekk",
-    "description": "Dersom du har nye dekk du ønsker å få lagt om, som deretter monteres tilbake på bilen.",
-    "longDescription": "Vi hjelper deg med å legge om dekkene dine og montere dem tilbake på bilen.",
+    "description": "Omlegging av nye dekk som monteres tilbake på bilen.",
+    "longDescription": "Profesjonell omlegging og montering av dine nye dekk.",
     "icon": "tire",
     "image": "/images/omlegging.webp",
     "features": [
@@ -132,48 +128,32 @@
   {
     "id": "hjulskift",
     "title": "Hjulskift",
-    "description": "Komplett hjulskift inkludert montering av sommer- og vinterdekk.",
-    "longDescription": "Vi hjelper deg med å skifte mellom sommer- og vinterdekk. Tjenesten inkluderer montering, balansering og kontroll av dekkene.",
+    "description": "Hjulskift mellom sommer- og vinterdekk.",
+    "longDescription": "Rask hjulskift med montering, balansering og kontroll.",
     "icon": "tire",
     "image": "/images/hjulskift.webp",
     "features": [
       "Hjulskift",
-      "Dekkmontering",
       "Balansering",
-      "Dekktrykk Kontroll"
+      "Dekktrykk kontroll"
     ],
     "pricing": "500,-",
     "pricingDescription": "Komplett hjulskift inkludert montering av sommer- og vinterdekk"
   },
-  {
-    "id": "tire-plugging-external",
-    "title": "Plugging av dekk utvendig",
-    "description": "Midlertidig løsning, egnet for slitte dekk. Kan fungere som nødløsning dersom du er nødt til å komme deg fra A-B",
-    "longDescription": "Utvendig plugging er en midlertidig løsning for mindre punkteringer.",
-    "icon": "tire",
-    "image": "/images/tire-service.webp",
-    "features": [
-      "Utvendig Plugging",
-      "Midlertidig Reparasjon"
-    ],
-    "pricing": "300,-",
-    "pricingDescription": "Midlertidig løsning, pluggemateriale stikkes inn i hullet og limes på plass. Egner seg best for slitte dekk som snart skal byttes ut, eller for korte avstander"
-  },
+
   {
     "id": "tire-hotel",
     "title": "Dekkhotell",
-    "description": "Sikker lagring av sommer- og vinterdekk når de ikke er i bruk.",
-    "longDescription": "Vårt dekkhotell tilbyr sikker og praktisk lagring av sommer- og vinterdekk når de ikke er i bruk. Vi tar oss av lagring, vask og omlegging av dekk, så du slipper å tenke på det.",
+    "description": "Sikker lagring av sommer- og vinterdekk.",
+    "longDescription": "Praktisk lagring med vask og omlegging av dekk når du trenger det.",
     "icon": "hotel",
     "image": "/images/dekkhotell.webp",
     "features": [
-      "Sikker Lagring",
+      "Sikker lagring",
       "Dekkvask",
-      "Omlegging av Dekk",
-      "Hjulskift",
-      "Dekktrykk Kontroll",
-      "Lagring av Hjul"
-    ],
+      "Kontroll av dekkslitasje",
+      "Hjulskift"
+      ],
     "pricing": "400,-",
     "pricingDescription": "Enkel og trygg lagring av dekkene dine når du bytter over for sesongen"
   }

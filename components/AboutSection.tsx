@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { BuildingOfficeIcon, WrenchScrewdriverIcon, UserGroupIcon, HeartIcon } from '@heroicons/react/24/outline'
 
 export default function AboutSection() {
   return (

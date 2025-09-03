@@ -8,7 +8,7 @@ import Link from 'next/link'
 const featuredServices = [
   {
     title: 'EU Kontroll',
-    description: 'EU godkjenning av kjøretøy, direkte koblet til Statens Vegvesen.',
+    description: 'Årlig sikkerhetskontroll av kjøretøy, direkte koblet til Statens Vegvesen.',
     image: '/images/eucontrol.webp',
     serviceId: 'eu-control'
   },
@@ -52,7 +52,7 @@ export default function ServicesSection() {
   const remainingServices = services.filter(service => !featuredServiceIds.includes(service.id))
 
   return (
-    <section className="section-padding section-dark">
+    <section id="services" className="section-padding section-dark">
       <div className="container-custom">
         {/* Section Header */}
         <div className="mb-16 text-center">

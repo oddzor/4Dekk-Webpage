@@ -1,13 +1,5 @@
 import { CheckCircleIcon, CogIcon, WrenchScrewdriverIcon, BuildingOfficeIcon, ClockIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
-import services from '@/data/services.json'
-
-// Filter services that have pricing information
-const pricingItems = services.filter(service => service.pricing && service.pricingDescription).map(service => ({
-  service: service.title,
-  price: service.pricing,
-  icon: service.icon,
-  description: service.pricingDescription
-}))
+import pricingItems from '@/data/pricing.json'
 
 export default function PricingSection() {
   const getIcon = (iconType: string) => {
@@ -20,6 +12,8 @@ export default function PricingSection() {
         return <BuildingOfficeIcon className="w-6 h-6" />
       case 'clock':
         return <ClockIcon className="w-6 h-6" />
+      case 'wrench':
+        return <WrenchScrewdriverIcon className="w-6 h-6" />
       default:
         return <CurrencyDollarIcon className="w-6 h-6" />
     }
@@ -67,19 +61,16 @@ export default function PricingSection() {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <div className="p-6 mx-auto max-w-2xl card-dark">
-            <h3 className="mb-4 text-xl font-semibold font-headings text-headings">
+          <div className="max-w-2xl p-6 mx-auto card-dark">
+            <h3 className="mb-4 text-xl font-semibold font-headings text-accent">
               Viktig Informasjon
             </h3>
             <div className="space-y-2 text-sm text-text">
-              <p>• Alle priser er inkludert mva og materialer</p>
-              <p>• Priser kan variere avhengig av kjøretøytype og kompleksitet</p>
-              <p>• Kontakt oss for spesialtilbud på større oppdrag</p>
-              <p>• Gratis kostnadsoverslag på forespørsel</p>
+              <p>• Dersom du ikke finner det du leter etter, kontakt oss gjerne for et uforpliktende pristilbud</p>
+              <p>• Siden delelageret vårt er ganske begrenset, må ofte deler bestilles i forveien for din time</p>
             </div>
           </div>
         </div>
-
         {/* CTA */}
         <div className="mt-12 text-center">
           <p className="mb-6 text-lg text-text">

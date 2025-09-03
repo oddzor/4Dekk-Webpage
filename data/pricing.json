@@ -1,0 +1,75 @@
+[
+  {
+    "service": "EU Kontroll",
+    "price": "1150,-",
+    "icon": "check",
+    "description": "Komplett EU kontroll med ca. 150 kontrollpunkter, direkte forbindelse med Statens Vegvesen"
+  },
+  {
+    "service": "Etterkontroll",
+    "price": "400,-",
+    "icon": "check",
+    "description": "Etterkontroll reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
+  },
+  {
+    "service": "4Hjulskontroll",
+    "price": "1875,-",
+    "icon": "check",
+    "description": "Kontroll og justering av hjulstillingsvinkel på bilen din"
+  },
+  {
+    "service": "Verkstedarbeid",
+    "price": "1400,- per time",
+    "icon": "clock",
+    "description": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
+  },
+  {
+    "service": "Diagnose av Bilproblemer",
+    "price": "Fra 700,-",
+    "icon": "wrench",
+    "description": "Avansert diagnostikk og inspeksjon for identifisering av bilproblemer"
+  },
+  {
+    "service": "Balansering av dekk",
+    "price": "500,-",
+    "icon": "tire",
+    "description": "Digital balansering av dekk med høy nøyaktighet"
+  },
+
+  {
+    "service": "Omlegging av dekk",
+    "price": "1500,-",
+    "icon": "tire",
+    "description": "Omlegging av nye dekk med balansering og hjulskift."
+  },
+  {
+    "service": "Hjulskift",
+    "price": "500,-",
+    "icon": "tire",
+    "description": "Sesongbytte eller generell hjulskift"
+  },
+      {
+      "service": "Plugging av dekk (utvendig)",
+      "price": "300,-",
+      "icon": "tire",
+      "description": "Midlertidig reparasjon av punktering utenfra, ikke en permanent reparasjon men ofte et rimelig alternativ for godt brukte dekk"
+    },
+    {
+      "service": "Plugging av dekk (innvendig)",
+      "price": "600,-",
+      "icon": "tire",
+      "description": "Profesjonell reparasjon av punktering innenfra, godkjent som en permanent reparasjon, men varierer selvfølgelig med dekkslitasje"
+    },
+    {
+      "service": "Omlegging av dekk (Dekkonline, Dekk365 osv)",
+      "price": "1800,-",
+      "icon": "tire",
+      "description": "Omlegging av dekk levert til oss gjennom eksterne leverandører, inkluderer full montering og balansering"
+    },
+    {
+      "service": "Dekkhotell",
+      "price": "400,-",
+      "icon": "hotel",
+      "description": "Totalpris per sesong 1100,- (inkl hjulskift og hjulvask), (SUV 1150,-, Bobil <3,5T 1200,-)"
+    }
+  ]
