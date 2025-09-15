@@ -33,7 +33,7 @@ Components are kept small, reusable, and composable to ensure maintainability an
 ### Home Page Components
 - **HeroSection**: Full-width background image or video (e.g., technicians at work), shop name, tagline, and a prominent “Book Now” CTA button linking to the Booking Page.
 - **ServicesSection**: Grid of 3–4 `ServiceCard` components, each with an icon/image, title, short description, and “Learn More” link to the Services Page.
-- **TestimonialSection**: Carousel of `TestimonialCard` components, each displaying a customer quote, name, and optional photo/rating.
+- **GoogleReviews**: Carousel of real Google reviews using `TestimonialCard` components, each displaying a customer quote, name, and rating.
 - **AboutSection**: Short paragraph about the shop with a “Read More” link to the About Us Page.
 - **ContactSection**: Displays address, phone, email, and a small embedded Google Map with a “Contact Us” link.
 

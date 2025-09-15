@@ -1,0 +1,162 @@
+[
+  {
+    "id": "eu-control",
+    "title": "EU Inspection",
+    "description": "Mandatory safety inspection of vehicles.",
+    "longDescription": "EU inspection checks the vehicle's traffic safety and environmental impact through approximately 150 control points",
+    "icon": "check",
+    "image": "/images/eucontrol.webp",
+    "features": [
+      "Brakes and steering",
+      "Lights and electrical system",
+      "Tires and wheel suspension",
+      "Exhaust and environmental control",
+      "Safety equipment",
+      "and more..."
+    ],
+    "pricing": "1150,-",
+    "pricingDescription": "Complete EU inspection with approximately 150 control points, direct connection with the Norwegian Public Roads Administration"
+  },
+  {
+    "id": "after-control",
+    "title": "Re-inspection",
+    "description": "If you have made repairs in connection with a failed EU Inspection",
+    "longDescription": "We go through the car to see that the faults discovered during the EU inspection have been repaired.",
+    "icon": "check",
+    "image": "/images/etterkontroll.webp",
+    "features": [
+      "Re-inspection",
+      "Repair verification",
+      "Approval"
+    ],
+    "pricing": "400,-",
+    "pricingDescription": "Re-inspection of repairs made in connection with a failed EU Inspection"
+  },
+  {
+    "id": "wheel-alignment",
+    "title": "4-Wheel Alignment",
+    "description": "Control and adjustment of wheel alignment angle.",
+    "longDescription": "Precise wheel alignment for optimal safety and tire life.",
+    "icon": "check",
+    "image": "/images/4hjulskontroll.webp",
+    "features": [
+      "Wheel alignment",
+      "Camber control",
+      "Toe-in",
+      "Caster control"
+    ],
+    "pricing": "1875,-",
+    "pricingDescription": "Control and adjustment of wheel alignment angle on your car"
+  },
+  {
+    "id": "workshop-hourly",
+    "title": "Oil Change",
+    "description": "Changing oil and oil filter, optional air filter change.",
+    "longDescription": "Regular oil changes are crucial for engine life and performance. We use quality oils and filters for optimal protection.",
+    "icon": "wrench",
+    "image": "/images/oil-change.webp",
+    "features": [
+      "Oil change with quality oil",
+      "Oil filter replacement",
+      "Optional air filter replacement"
+    ],
+    "pricing": "From 1500,-",
+    "pricingDescription": "Oil change including oil and filter, price depends on car type and oil type"
+  },
+  {
+    "id": "diagnostics",
+    "title": "Car Diagnostics",
+    "description": "Advanced diagnostics for identifying car problems.",
+    "longDescription": "Modern diagnostic equipment and good old-fashioned mechanic experience for quick identification of car and system problems.",
+    "icon": "wrench",
+    "image": "/images/engine-diagnostics.webp",
+    "features": [
+      "Error code reading",
+      "Testing of car systems and performance",
+      "Technical inspection",
+      "Careful troubleshooting"
+    ],
+    "pricing": "From 750 kr for diagnostic service"
+  },
+  {
+    "id": "tires",
+    "title": "Tire Service",
+    "description": "Complete tire service - mounting, balancing, fitting and repairs.",
+    "longDescription": "Good prices on tires and services, large suppliers with many different tire manufacturers and dimensions that can be obtained at short notice. We also offer balancing with digital equipment for precise adjustment and tire fitting on your rims.",
+    "icon": "tire",
+    "image": "/images/tire-service.webp",
+    "features": [
+      "Tire sales",
+      "Fitting and balancing",
+      "Digital balancing within 5 grams",
+      "Repairs",
+      "Purchase assistance",
+      "Air pressure check"
+    ],
+    "pricing": "From 250 kr for rotation, 150 kr for mounting per tire, 500 kr for balancing"
+  },
+  {
+    "id": "hjulskift",
+    "title": "Tire Change",
+    "description": "Tire change between summer and winter tires.",
+    "longDescription": "Quick tire change with hydraulic jack",
+    "icon": "tire",
+    "image": "/images/hjulskift.webp",
+    "features": [
+      "Fast",
+      "Tire inspection",
+      "Air pressure check if desired"
+    ],
+    "pricing": "500,-",
+    "pricingDescription": "Complete tire change of summer and winter tires"
+  },
+  {
+    "id": "tire-hotel",
+    "title": "Tire Hotel",
+    "description": "Safe storage of summer and winter tires.",
+    "longDescription": "Practical storage with washing and tire change when you need it.",
+    "icon": "hotel",
+    "image": "/images/dekkhotell.webp",
+    "features": [
+        "Safe storage",
+        "Tire washing",
+        "Tire wear check",
+        "Tire change"
+      ],
+    "pricing": "400,-",
+    "pricingDescription": "Simple and safe storage of your tires when you switch over for the season"
+  },
+  {
+    "id": "bilreparasjoner",
+    "title": "Car Repairs",
+    "description": "Maintenance and repairs with very competitive hourly rates.",
+    "longDescription": "Transparent prices and broad experience with different car types and manufacturers. We can handle everything from small repairs to major maintenance work.",
+    "icon": "wrench",
+    "image": "/images/brake-repair.webp",
+    "features": [
+      "Diagnostics",
+      "Repairs",
+      "Maintenance",
+      "Contact us for more information"
+    ],
+    "pricing": "1400,-",
+    "pricingDescription": "Our competitive hourly rate for workshop work and repairs"
+  },
+  {
+    "id": "generell-service",
+    "title": "General Service",
+    "description": "Complete service and maintenance of your car.",
+    "longDescription": "Regular service is crucial for the car's performance and life. We offer comprehensive service packages tailored to your car type and driving pattern.",
+    "icon": "wrench",
+    "image": "/images/timeprisverksted.webp",
+    "features": [
+      "Complete service package",
+      "Check of all fluids",
+      "Filter replacement",
+      "Inspection of brakes and wheel suspension",
+      "Contact us for customized offers"
+    ],
+    "pricing": "From 2500,-",
+    "pricingDescription": "Price depends on car type and service package"
+  }
+]

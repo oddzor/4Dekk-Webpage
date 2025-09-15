@@ -44,9 +44,16 @@ export async function GET(request: NextRequest) {
     const rating = data.rating || 0
     const totalRatings = data.userRatingCount || 0
 
+    // Sort reviews by publication date (newest first)
+    const sortedReviews = reviews.sort((a: any, b: any) => {
+      const dateA = new Date(a.publishTime || a.time || 0)
+      const dateB = new Date(b.publishTime || b.time || 0)
+      return dateB.getTime() - dateA.getTime() // Newest first
+    })
+
     return NextResponse.json({
       success: true,
-      reviews,
+      reviews: sortedReviews,
       rating,
       totalRatings
     })

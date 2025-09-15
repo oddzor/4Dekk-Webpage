@@ -1,27 +1,11 @@
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FullScreenLoader from '@/components/FullScreenLoader'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: '4Dekk AS, Larvik',
-  description: 'Profesjonell bilreparasjon, dekk-service og mekanikertjenester. Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice.',
-  keywords: 'bilreparasjon, dekk-service, mekaniker, bilvedlikehold, bremseservice, oljeskifte, bilverksted',
-  authors: [{ name: '4Dekk Auto Repair' }],
-  openGraph: {
-    title: '4Dekk Auto Repair & Dekkservice',
-    description: 'Profesjonell bilreparasjon, dekk-service og mekanikertjenester.',
-    type: 'website',
-    locale: 'nb_NO',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
 
 export default function RootLayout({
   children,
@@ -29,20 +13,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nb">
+    <html lang="no">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={`${inter.className} font-body text-text bg-background`}>
-        <div className="flex flex-col min-h-screen">
+        <LanguageProvider>
+          <FullScreenLoader />
           <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
+          {children}
           <Footer />
-        </div>
+        </LanguageProvider>
       </body>
     </html>
   )

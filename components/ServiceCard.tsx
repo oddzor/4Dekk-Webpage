@@ -1,7 +1,8 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
-import { ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import Icon from './Icon';
 
 interface ServiceCardProps {
   id: string;
@@ -14,20 +15,47 @@ interface ServiceCardProps {
   features?: string[];
   isExpanded: boolean;
   onExpand: (cardId: string) => void;
+  bookingLink?: string;
+  bookingLinks?: { label: string; url: string }[];
+  showContactButton?: boolean;
+  language?: 'no' | 'en';
 }
 
 export default function ServiceCard({
   id,
   title,
   description,
-  pricing,
+  // pricing, // Unused for now
   image,
-  href,
+  // href, // Unused for now
   longDescription,
   features,
   isExpanded,
-  onExpand
+  onExpand,
+  bookingLink,
+  bookingLinks,
+  showContactButton,
+  language = 'no'
 }: ServiceCardProps) {
+  
+  const content = {
+    no: {
+      readMore: "Les Mer",
+      bookButton: "Bestill Time",
+      contactButton: "Kontakt Oss",
+      description: "Beskrivelse",
+      overview: "Oversikt"
+    },
+    en: {
+      readMore: "Read More",
+      bookButton: "Book Appointment",
+      contactButton: "Contact Us",
+      description: "Description",
+      overview: "Overview"
+    }
+  }
+  
+  const t = content[language]
   const handleToggle = () => {
     onExpand(id);
   };
@@ -44,7 +72,7 @@ export default function ServiceCard({
         <div className="absolute inset-0 w-full h-full backface-hidden">
           <div className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out card-dark hover:shadow-xl border-glow">
             {/* Image */}
-            <div className="relative w-full h-52 overflow-hidden bg-gray-dark">
+            <div className="relative w-full overflow-hidden h-52 bg-gray-dark">
               <Image
                 src={image}
                 alt={title}
@@ -56,21 +84,22 @@ export default function ServiceCard({
             </div>
             
             {/* Content */}
-            <div className="flex flex-col flex-grow p-6 min-h-0">
+            <div className="flex flex-col flex-grow min-h-0 p-6">
               {/* Title */}
               <h3 className="mb-3 text-xl font-semibold font-headings text-headings line-clamp-2">{title}</h3>
               
               {/* Description */}
-              <p className="flex-grow mb-4 text-sm text-text line-clamp-3 leading-relaxed">{description}</p>
+              <p className="flex-grow mb-4 text-sm leading-relaxed text-text line-clamp-3">{description}</p>
               
               {/* Button */}
-              <div className="mt-auto pt-2">
+              <div className="pt-2 mt-auto">
                 <button
                   onClick={handleToggle}
                   className="inline-flex items-center font-medium transition-colors duration-200 text-accent hover:text-accent-dark"
+                  aria-label={`Les mer om ${title}`}
                 >
                   Les Mer
-                  <ChevronDownIcon className="w-4 h-4 ml-2" />
+                  <Icon name="chevron" className="w-4 h-4 ml-2" />
                 </button>
               </div>
             </div>
@@ -86,8 +115,9 @@ export default function ServiceCard({
               <button
                 onClick={handleToggle}
                 className="inline-flex items-center justify-center w-8 h-8 transition-all duration-200 rounded-full bg-accent/10 hover:bg-accent/20 text-accent hover:text-accent-dark hover:scale-105"
+                aria-label="Lukk tjeneste detaljer"
               >
-                <XMarkIcon className="w-5 h-5" />
+                <Icon name="close" className="w-5 h-5" />
               </button>
             </div>
             
@@ -95,14 +125,14 @@ export default function ServiceCard({
             <div className="flex-1 p-6 pt-4 space-y-4 overflow-y-auto">
               {longDescription && (
                 <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
-                  <h4 className="mb-2 text-sm font-semibold tracking-wide uppercase text-accent">Beskrivelse</h4>
+                  <h4 className="mb-2 text-sm font-semibold tracking-wide uppercase text-accent">{t.description}</h4>
                   <p className="text-sm leading-relaxed text-text">{longDescription}</p>
                 </div>
               )}
               
               {features && features.length > 0 && (
                 <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
-                  <h4 className="mb-3 text-sm font-semibold tracking-wide uppercase text-accent">Oversikt</h4>
+                  <h4 className="mb-3 text-sm font-semibold tracking-wide uppercase text-accent">{t.overview}</h4>
                   <ul className="space-y-2">
                     {features.map((feature, index) => (
                       <li key={index} className="flex items-start text-sm text-text">
@@ -114,6 +144,43 @@ export default function ServiceCard({
                 </div>
               )}
             </div>
+            
+            {/* Booking Buttons */}
+            {(bookingLink || bookingLinks || showContactButton) && (
+              <div className="p-6 pt-4 mt-auto">
+                {bookingLinks && bookingLinks.length > 0 ? (
+                  <div className="space-y-2">
+                    {bookingLinks.map((booking, index) => (
+                      <a
+                        key={index}
+                        href={booking.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full px-3 py-2 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
+                      >
+                        {booking.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : bookingLink ? (
+                         <a
+                           href={bookingLink}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="block w-full px-3 py-2 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md whitespace-nowrap min-w-[200px]"
+                         >
+                           {t.bookButton}
+                         </a>
+                ) : showContactButton ? (
+                  <a
+                    href="/contact"
+                    className="block w-full px-3 py-2 text-sm font-medium text-center text-white transition-all duration-200 rounded-md bg-red-500 hover:bg-red-600 hover:shadow-md whitespace-nowrap min-w-[120px]"
+                  >
+                    {t.contactButton}
+                  </a>
+                ) : null}
+              </div>
+            )}
           </div>
         </div>
       </div>

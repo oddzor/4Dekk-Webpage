@@ -10,6 +10,8 @@ const nextConfig = {
       },
     ],
     formats: ['image/webp'],
+    // Add cache busting for development
+    minimumCacheTTL: 0,
   },
   // Disable experimental features that might cause issues on Windows
   experimental: {

@@ -41,7 +41,7 @@ A modern, responsive website for 4Dekk Auto Repair built with Next.js, TypeScrip
 │   ├── Footer.tsx         # Site footer
 │   ├── HeroSection.tsx    # Hero section
 │   ├── ServicesSection.tsx # Services showcase
-│   ├── TestimonialSection.tsx # Customer testimonials
+│   ├── GoogleReviews.tsx     # Google reviews carousel
 │   ├── AboutSection.tsx   # About section
 │   ├── ContactSection.tsx # Contact section
 │   ├── ServiceCard.tsx    # Service card component

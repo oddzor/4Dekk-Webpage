@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import TestimonialCard from './TestimonialCard'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface GoogleReview {
   name: string
@@ -26,12 +27,36 @@ interface GoogleReviewsResponse {
 }
 
 export default function GoogleReviewsSection() {
+  const { language } = useLanguage()
   const [reviews, setReviews] = useState<GoogleReview[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [overallRating, setOverallRating] = useState(0)
   const [totalRatings, setTotalRatings] = useState(0)
+  
+  const content = {
+    no: {
+      title: "Hva Våre Kunder Sier",
+      description: "Her er hva våre fornøyde kunder har å si om våre tjenester.",
+      loading: "Laster Google anmeldelser...",
+      error: "Kunne ikke laste Google anmeldelser. Vennligst prøv igjen senere.",
+      noReviews: "Ingen Google anmeldelser funnet for øyeblikket.",
+      basedOn: "Basert på {totalRatings} anmeldelser på Google",
+      reviewTitle: "Google Anmeldelse - {time}"
+    },
+    en: {
+      title: "What Our Customers Say",
+      description: "Here's what our satisfied customers have to say about our services.",
+      loading: "Loading Google reviews...",
+      error: "Could not load Google reviews. Please try again later.",
+      noReviews: "No Google reviews found at the moment.",
+      basedOn: "Based on {totalRatings} reviews on Google",
+      reviewTitle: "Google Review - {time}"
+    }
+  }
+  
+  const t = content[language]
 
   const placeId = 'ChIJ1fptqozARkYRRLwkYKop0Eg'
 
@@ -119,10 +144,10 @@ export default function GoogleReviewsSection() {
         <div className="container-custom">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
-              Hva Våre Kunder Sier
+              {t.title}
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-200">
-              Laster Google anmeldelser...
+              {t.loading}
             </p>
           </div>
         </div>
@@ -136,10 +161,10 @@ export default function GoogleReviewsSection() {
         <div className="container-custom">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
-              Hva Våre Kunder Sier
+              {t.title}
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-200">
-              Kunne ikke laste Google anmeldelser. Vennligst prøv igjen senere.
+              {t.error}
             </p>
             <p className="mt-4 text-sm text-gray-300">
               Feil: {error}
@@ -156,10 +181,10 @@ export default function GoogleReviewsSection() {
         <div className="container-custom">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
-              Hva Våre Kunder Sier
+              {t.title}
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-gray-200">
-              Ingen Google anmeldelser funnet for øyeblikket.
+              {t.noReviews}
             </p>
           </div>
         </div>
@@ -175,21 +200,21 @@ export default function GoogleReviewsSection() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
-            Hva Våre Kunder Sier
+            {t.title}
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-gray-200">
-            Ikke bare ta vårt ord for det. Her er hva våre fornøyde kunder har å si om våre tjenester.
+           {t.description}
           </p>
           
           {/* Overall Rating Display */}
           {overallRating > 0 && (
-            <div className="mt-6 p-4 bg-white/10 rounded-lg inline-block">
-              <div className="flex items-center justify-center space-x-2 mb-2">
+            <div className="inline-block p-4 mt-6 rounded-lg bg-white/10">
+              <div className="flex items-center justify-center mb-2 space-x-2">
                 {renderStars(overallRating)}
                 <span className="text-2xl font-bold text-accent">{overallRating.toFixed(1)}</span>
               </div>
               <p className="text-sm text-gray-200">
-                Basert på {totalRatings} anmeldelser på Google
+                {t.basedOn.replace('{totalRatings}', totalRatings.toString())}
               </p>
             </div>
           )}
@@ -204,7 +229,7 @@ export default function GoogleReviewsSection() {
                 quote={currentReview.text.text}
                 name={currentReview.authorAttribution.displayName}
                 rating={currentReview.rating}
-                title={`Google Anmeldelse - ${currentReview.relativePublishTimeDescription}`}
+                title={t.reviewTitle.replace('{time}', currentReview.relativePublishTimeDescription)}
               />
             </div>
 
@@ -237,7 +262,7 @@ export default function GoogleReviewsSection() {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                      className={`w-4 h-4 rounded-full transition-colors duration-200 ${
                         index === currentIndex ? 'bg-accent' : 'bg-white/30'
                       }`}
                       aria-label={`Gå til anmeldelse ${index + 1}`}
@@ -252,10 +277,10 @@ export default function GoogleReviewsSection() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <p className="mb-6 text-lg text-gray-200">
-            Bli med våre fornøyde kunder og opplev 4Dekk-forskjellen.
+            Bli en av våre fornøyde kunder.
           </p>
-          <a href="/booking" className="btn-accent">
-            Bestill Din Service I Dag
+          <a href="/booking" className="btn-accent whitespace-nowrap min-w-[180px]">
+            Bestill Din Time I Dag
           </a>
         </div>
       </div>

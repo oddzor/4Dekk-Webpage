@@ -1,0 +1,75 @@
+[
+  {
+    "service": "EU Inspection",
+    "price": "1150,-",
+    "icon": "check",
+    "description": "Complete EU inspection with approximately 150 control points, direct connection with the Norwegian Public Roads Administration"
+  },
+  {
+    "service": "Re-inspection",
+    "price": "400,-",
+    "icon": "check",
+    "description": "Re-inspection of repairs made in connection with a failed EU Inspection"
+  },
+  {
+    "service": "4-Wheel Alignment",
+    "price": "1875,-",
+    "icon": "check",
+    "description": "Control and adjustment of wheel alignment angle on your car"
+  },
+  {
+    "service": "Workshop Rate",
+    "price": "1400,- per hour",
+    "icon": "clock",
+    "description": "Our competitive hourly rate for workshop work and repairs"
+  },
+  {
+    "service": "Car Diagnostics",
+    "price": "From 700,-",
+    "icon": "wrench",
+    "description": "Advanced diagnostics and inspection for identifying car problems"
+  },
+  {
+    "service": "Tire Balancing",
+    "price": "500,-",
+    "icon": "tire",
+    "description": "Digital tire balancing with high accuracy"
+  },
+
+  {
+    "service": "Tire Fitting",
+    "price": "1500,-",
+    "icon": "tire",
+    "description": "Fitting of new tires with balancing and tire change."
+  },
+  {
+    "service": "Tire Change",
+    "price": "500,-",
+    "icon": "tire",
+    "description": "Seasonal change or general tire change"
+  },
+      {
+      "service": "Tire Plugging (External)",
+      "price": "300,-",
+      "icon": "tire",
+      "description": "Temporary repair of punctures from outside, not a permanent repair but often a reasonable alternative for well-used tires"
+    },
+    {
+      "service": "Tire Plugging (Internal)",
+      "price": "600,-",
+      "icon": "tire",
+      "description": "Professional repair of punctures from inside, approved as a permanent repair, but will vary with tire wear"
+    },
+    {
+      "service": "Tire Fitting (DekkOnline, Dekk365 etc)",
+      "price": "1800,-",
+      "icon": "tire",
+      "description": "Fitting of tires delivered to us through external suppliers, includes full mounting and balancing"
+    },
+    {
+      "service": "Tire Hotel",
+      "price": "400,-",
+      "icon": "hotel",
+      "description": "Total price per season 1100,- (incl tire change and tire wash), (SUV 1150,-, Motorhome <3.5T 1200,-)"
+    }
+  ]

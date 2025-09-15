@@ -1,7 +1,8 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
-import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from '@heroicons/react/24/outline'
+import Icon from './Icon'
 import businessData from '../data/business.json'
 
 export default function ContactSection() {
@@ -22,7 +23,7 @@ export default function ContactSection() {
             <div className="mb-8 space-y-6">
               <div className="flex items-start">
                 <div className="mt-1 mr-4 text-accent">
-                  <MapPinIcon className="w-6 h-6" />
+                  <Icon name="map" className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold font-headings text-headings">Adresse</h3>
@@ -35,7 +36,7 @@ export default function ContactSection() {
 
               <div className="flex items-start">
                 <div className="mt-1 mr-4 text-accent">
-                  <PhoneIcon className="w-6 h-6" />
+                  <Icon name="phone" className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold font-headings text-headings">Telefon</h3>
@@ -47,7 +48,7 @@ export default function ContactSection() {
 
               <div className="flex items-start">
                 <div className="mt-1 mr-4 text-accent">
-                  <EnvelopeIcon className="w-6 h-6" />
+                  <Icon name="email" className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold font-headings text-headings">E-post</h3>
@@ -59,7 +60,7 @@ export default function ContactSection() {
 
               <div className="flex items-start">
                 <div className="mt-1 mr-4 text-accent">
-                  <ClockIcon className="w-6 h-6" />
+                  <Icon name="clock" className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold font-headings text-headings">Åpningstider</h3>
@@ -78,10 +79,10 @@ export default function ContactSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/contact" className="btn-primary">
+              <Link href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
                 Kontakt Oss
               </Link>
-              <Link href="/booking" className="btn-secondary">
+              <Link href="/booking" className="btn-accent whitespace-nowrap min-w-[200px]">
                 Bestill Time
               </Link>
             </div>
@@ -101,22 +102,6 @@ export default function ContactSection() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="4Dekk Larvik Plassering"
-                  onError={(e) => {
-                    // Fallback if map fails to load
-                    const target = e.target as HTMLIFrameElement
-                    target.style.display = 'none'
-                    target.parentElement!.innerHTML = `
-                      <div class="flex items-center justify-center h-full bg-gray-800 text-gray-400">
-                        <div class="text-center">
-                          <svg class="w-16 h-16 mx-auto mb-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m-6 3l6-3"></path>
-                          </svg>
-                          <div class="text-lg">Kart Laster...</div>
-                          <div class="text-sm mt-2">${businessData.address.street}, ${businessData.address.postalCode} ${businessData.address.city}</div>
-                        </div>
-                      </div>
-                    `
-                  }}
                 />
               </div>
             </div>

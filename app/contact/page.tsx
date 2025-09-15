@@ -1,269 +1,183 @@
-import type { Metadata } from 'next'
-import { PhoneIcon, MapPinIcon, TruckIcon, BoltIcon, TagIcon, ClipboardDocumentIcon } from '@heroicons/react/24/outline'
-import businessData from '../../data/business.json'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Kontakt Oss - 4Dekk Larvik',
-  description: 'Ta kontakt med 4Dekk Larvik. Kontakt oss for spørsmål, tilbud eller for å bestille din neste service.',
-  keywords: 'kontakt 4Dekk, bilreparasjon kontakt, service tilbud, timebestilling, kundeservice',
-}
-
-const contactMethods = [
-  {
-    title: "Generelle Henvendelser",
-    description: "Spørsmål om våre tjenester, prising eller generell informasjon",
-    email: "4dekk4@gmail.com",
-    icon: "📧",
-    color: "bg-gradient-to-r from-blue-600 to-blue-700"
-  },
-  {
-    title: "Service Timer",
-    description: "Bestill reparasjoner, vedlikehold eller diagnostiske tjenester",
-    email: "4dekk4@gmail.com",
-    icon: "🔧",
-    color: "bg-gradient-to-r from-green-600 to-green-700"
-  },
-  {
-    title: "Akutte Reparasjoner",
-    description: "Haste reparasjoner, veihjelp eller akutte situasjoner",
-    email: "4dekk4@gmail.com",
-    icon: "🚨",
-    color: "bg-gradient-to-r from-red-600 to-red-700"
-  },
-  {
-    title: "Deler & Utstyr",
-    description: "Dekksalg, delesøk eller utstyrsspørsmål",
-    email: "4dekk4@gmail.com",
-    icon: "🛞",
-    color: "bg-gradient-to-r from-purple-600 to-purple-700"
-  },
-  {
-    title: "Kommersielle Flåtetjenester",
-    description: "Flåtevedlikehold, kommersielle kontoer eller forretningspartnerskap",
-    email: "4dekk4@gmail.com",
-    icon: "🚛",
-    color: "bg-gradient-to-r from-orange-600 to-orange-700"
-  },
-  {
-    title: "Kundestøtte",
-    description: "Klager, tilbakemeldinger eller kundeservice problemer",
-    email: "4dekk4@gmail.com",
-    icon: "💬",
-    color: "bg-gradient-to-r from-teal-600 to-teal-700"
-  }
-]
+import React from 'react'
+import Icon from '../../components/Icon'
+import { getBusinessData } from '../../utils/dataLoader'
+import { useLanguage } from '../../contexts/LanguageContext'
+import ContactForm from '../../components/ContactForm'
+import DynamicMetadata from '../../components/DynamicMetadata'
 
 export default function ContactPage() {
+  const { language } = useLanguage()
+  const businessData = getBusinessData(language)
+  
+  const content = {
+    no: {
+      title: "Kontakt Oss",
+      description: "Ta kontakt med oss for spørsmål, tilbud eller for å bestille din neste service.",
+      contactFormTitle: "Kontakt Oss",
+      contactFormDescription: "Fyll ut skjemaet nedenfor og vi kommer tilbake til deg så raskt som mulig.",
+      emailNote: "Merk at eposten ikke bemannes utenfor åpningstider.",
+      contactInfoTitle: "Kontaktinformasjon",
+      contactInfoDescription: "Du kan også kontakte oss direkte via telefon eller besøke vårt verksted.",
+      phone: "Telefon",
+      email: "E-post",
+      address: "Adresse",
+      hours: "Åpningstider",
+      monday: "Mandag",
+      tuesday: "Tirsdag",
+      wednesday: "Onsdag",
+      thursday: "Torsdag",
+      friday: "Fredag",
+      saturday: "Lørdag",
+      sunday: "Søndag",
+      mapTitle: "4Dekk Larvik Plassering",
+      ctaTitle: "Klar til å Komme I Gang?",
+      ctaDescription: "Ikke vent til det er for sent. Kontakt oss eller bestill din neste vedlikehold, reparasjon eller dekkservice idag.",
+      bookButton: "Bestill Time"
+    },
+    en: {
+      title: "Contact Us",
+      description: "Contact us for questions, quotes or to book your next service.",
+      contactFormTitle: "Contact Us",
+      contactFormDescription: "Fill out the form below and we'll get back to you as soon as possible.",
+      emailNote: "Note that email is not monitored outside opening hours.",
+      contactInfoTitle: "Contact Information",
+      contactInfoDescription: "You can also contact us directly by phone or visit our workshop.",
+      phone: "Phone",
+      email: "Email",
+      address: "Address",
+      hours: "Opening Hours",
+      monday: "Monday",
+      tuesday: "Tuesday",
+      wednesday: "Wednesday",
+      thursday: "Thursday",
+      friday: "Friday",
+      saturday: "Saturday",
+      sunday: "Sunday",
+      mapTitle: "4Dekk Larvik Location",
+      ctaTitle: "Ready to Get Started?",
+      ctaDescription: "Don't wait until it's too late. Contact us or book your next maintenance, repair or tire service today.",
+      bookButton: "Book Appointment"
+    }
+  }
+  
+  const t = content[language]
   return (
     <div>
+      <DynamicMetadata page="contact" />
       {/* Hero Section */}
       <section className="py-20 text-white bg-gradient-dark">
         <div className="text-center container-custom">
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl font-headings">
-            Kontakt Oss
+            {t.title}
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-gray-200">
-            Ta kontakt med oss for spørsmål, tilbud eller for å bestille din neste service.
+            {t.description}
           </p>
         </div>
       </section>
 
-      {/* Contact Methods Grid */}
-      <section className="section-dark section-padding">
-        <div className="container-custom">
-          <div className="mb-16 text-center">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
-              Hvordan Kan Vi Hjelpe Deg?
-            </h2>
-            <p className="max-w-3xl mx-auto text-lg text-text">
-              Velg den passende kontaktmetoden basert på dine behov. Vi har dedikerte e-postadresser 
-              for ulike typer henvendelser for å sikre at du får det raskeste svaret.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {contactMethods.map((method, index) => (
-              <div key={index} className="p-6 transition-all duration-300 card-dark hover:border-glow">
-                                  <div className={`${method.color} w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto`}>
-                    {method.icon === '📧' && (
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    )}
-                    {method.icon === '🔧' && (
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    )}
-                    {method.icon === '🚨' && (
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                      </svg>
-                    )}
-                    {method.icon === '🛞' && (
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    )}
-                    {method.icon === '🚛' && (
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    )}
-                    {method.icon === '💬' && (
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    )}
-                  </div>
-                <h3 className="mb-3 text-xl font-semibold text-center font-headings text-headings">
-                  {method.title}
-                </h3>
-                <p className="mb-4 text-center text-text">
-                  {method.description}
-                </p>
-                <div className="text-center">
-                  <a 
-                    href={`mailto:${method.email}`}
-                    className="font-semibold transition-colors duration-200 text-accent hover:text-accent-dark"
-                  >
-                    {method.email}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Phone & Address Section */}
-      <section className="section-light section-padding">
+      {/* Contact Form & Info Section */}
+      <section className="section-padding section-light">
         <div className="container-custom">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            {/* Phone Contact */}
-            <div className="p-8 card-dark">
-              <h2 className="mb-6 text-3xl font-bold font-headings text-headings">
-                Ring Oss Direkte
+            {/* Contact Form */}
+            <div>
+              <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
+                {t.contactFormTitle}
               </h2>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className="mr-4 text-accent">
-                    <PhoneIcon className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">Hovedkontor</h3>
-                    <a href={`tel:${businessData.contact.phone}`} className="text-xl font-semibold text-accent hover:text-accent-dark">
-                      {businessData.contact.phone}
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="mr-4 text-accent">
-                    <PhoneIcon className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">Telefon</h3>
-                    <a href={`tel:${businessData.contact.phone}`} className="text-xl font-semibold text-accent hover:text-accent-dark">
-                      {businessData.contact.phone}
-                    </a>
-                  </div>
-                </div>
-                <div className="pt-4 border-t border-gray-600">
-                  <h3 className="mb-2 font-semibold font-headings text-headings">Åpningstider</h3>
-                  <div className="space-y-1 text-text">
-                    <div>Mandag: {businessData.hours.monday}</div>
-                    <div>Tirsdag: {businessData.hours.tuesday}</div>
-                    <div>Onsdag: {businessData.hours.wednesday}</div>
-                    <div>Torsdag: {businessData.hours.thursday}</div>
-                    <div>Fredag: {businessData.hours.friday}</div>
-                    <div>Lørdag: {businessData.hours.saturday}</div>
-                    <div>Søndag: {businessData.hours.sunday}</div>
-                  </div>
-                </div>
-              </div>
+              <p className="mb-8 text-lg text-text">
+                {t.contactFormDescription}  
+                <p className="text-accent">{t.emailNote}</p>
+              </p>  
+              <ContactForm />
             </div>
 
-            {/* Address & Location */}
-            <div className="p-8 card-dark">
-              <h2 className="mb-6 text-3xl font-bold font-headings text-headings">
-                Besøk Vårt Verksted
+            {/* Contact Information */}
+            <div>
+              <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
+                {t.contactInfoTitle}
               </h2>
+              <p className="mb-8 text-lg text-text">
+                {t.contactInfoDescription}
+              </p>
+
+              {/* Contact Details */}
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="mt-1 mr-4 text-accent">
-                    <MapPinIcon className="w-8 h-8" />
+                    <Icon name="phone" className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-2 font-semibold font-headings text-headings">Adresse</h3>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.phone}</h3>
+                    <a href={`tel:${businessData.contact.phone}`} className="transition-colors duration-200 text-accent hover:text-accent-dark">
+                      {businessData.contact.phone}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="mt-1 mr-4 text-accent">
+                    <Icon name="email" className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.email}</h3>
+                    <a href={`mailto:${businessData.contact.email}`} className="transition-colors duration-200 text-accent hover:text-accent-dark">
+                      {businessData.contact.email}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="mt-1 mr-4 text-accent">
+                    <Icon name="map" className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.address}</h3>
                     <p className="text-text">
                       {businessData.address.street}<br />
                       {businessData.address.postalCode} {businessData.address.city}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="mt-1 mr-4 text-accent">
-                    <TruckIcon className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="mb-2 font-semibold font-headings text-headings">Parkering</h3>
-                    <p className="text-text">
-                      Gratis parkering tilgjengelig på stedet med enkel tilgang fra hovedveier.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="mt-1 mr-4 text-accent">
-                    <TruckIcon className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <h3 className="mb-2 font-semibold font-headings text-headings">Kollektivtransport</h3>
-                    <p className="text-text">
-                      Praktisk tilgang via buss og tog ruter.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Response Time Section */}
-      <section className="section-dark section-padding">
-        <div className="text-center container-custom">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
-            Hva Du Kan Forvente
-          </h2>
-          <div className="grid max-w-4xl grid-cols-1 gap-8 mx-auto md:grid-cols-3">
-            <div className="p-6 card-dark">
-              <div className="mb-4 text-accent">
-                <BoltIcon className="w-12 h-12 mx-auto" />
+                <div className="flex items-start">
+                  <div className="mt-1 mr-4 text-accent">
+                    <Icon name="clock" className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.hours}</h3>
+                    <div className="space-y-1 text-text">
+                      <div>{t.monday}: {businessData.hours.monday}</div>
+                      <div>{t.tuesday}: {businessData.hours.tuesday}</div>
+                      <div>{t.wednesday}: {businessData.hours.wednesday}</div>
+                      <div>{t.thursday}: {businessData.hours.thursday}</div>
+                      <div>{t.friday}: {businessData.hours.friday}</div>
+                      <div>{t.saturday}: {businessData.hours.saturday}</div>
+                      <div>{t.sunday}: {businessData.hours.sunday}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="mb-3 text-xl font-semibold font-headings text-headings">Raskt Svar</h3>
-              <p className="text-text">
-                Vi svarer vanligvis på e-post innen 2-4 timer i åpningstiden.
-              </p>
-            </div>
-            <div className="p-6 card-dark">
-              <div className="mb-4 text-accent">
-                <TagIcon className="w-12 h-12 mx-auto" />
+
+              {/* Map */}
+              <div className="mt-8">
+                <div className="overflow-hidden card-dark">
+                  <div className="h-[500px] lg:h-[600px] relative">
+                    <iframe
+                      src={businessData.location.googleMapsEmbedUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={t.mapTitle}
+                    />
+                  </div>
+                </div>
               </div>
-              <h3 className="mb-3 text-xl font-semibold font-headings text-headings">Spesialisert Støtte</h3>
-              <p className="text-text">
-                Hver e-postadresse overvåkes av eksperter innen det spesifikke serviceområdet.
-              </p>
-            </div>
-            <div className="p-6 card-dark">
-              <div className="mb-4 text-accent">
-                <ClipboardDocumentIcon className="w-12 h-12 mx-auto" />
-              </div>
-              <h3 className="mb-3 text-xl font-semibold font-headings text-headings">Detaljert Informasjon</h3>
-              <p className="text-text">
-                Inkluder kjøretøyets detaljer og servicebehov for raskere, mer nøyaktige svar.
-              </p>
             </div>
           </div>
         </div>
@@ -273,21 +187,18 @@ export default function ContactPage() {
       <section className="text-white section-padding bg-gradient-dark">
         <div className="text-center container-custom">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings">
-            Klar til å Komme I Gang?
+            {t.ctaTitle}
           </h2>
           <p className="max-w-2xl mx-auto mb-8 text-xl text-gray-200">
-            Ikke vent til det er for sent. Kontakt oss i dag for å bestille din neste vedlikehold eller reparasjonsservice.
+            {t.ctaDescription}
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <a href="/booking" className="btn-accent">
-              Bestill Time
-            </a>
-            <a href={`tel:${businessData.contact.phone}`} className="btn-secondary">
-              Ring Nå
+              {t.bookButton}
             </a>
           </div>
         </div>
       </section>
     </div>
   )
-} 
+}

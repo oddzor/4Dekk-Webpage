@@ -1,9 +1,47 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function AboutSection() {
+  const { language } = useLanguage()
+  
+  const content = {
+    no: {
+      title: "Om 4Dekk AS",
+      description1: "I 10 år har 4Dekk AS vært det pålitelige valget for bil og dekk-service i Larvik. Det startet som en dekk og felg bedrift, men har nå vokst til et godkjent bilverksted med godkjenning fra Statens Vegvesen.",
+      description2: "I dag har vi to bukker for verkstedet, èn for dekkservice og kan tilby alt fra EU kontroll, full service, bremseservice, girkasseservice, diagnostikk og masse annet.",
+      experience: "10+ Års Erfaring",
+      certified: "Godkjent Verksted",
+      modern: "Moderne Utstyr",
+      service: "Utmerket Service",
+      learnMore: "Les Mer Om Oss",
+      contactUs: "Kontakt Oss",
+      feature1: "Erfarne Teknikere",
+      feature2: "Kvalitetsgaranti",
+      feature3: "Konkurransedyktige Priser",
+      feature4: "Rask Service"
+    },
+    en: {
+      title: "About 4Dekk AS",
+      description1: "For 10 years, 4Dekk AS has been the reliable choice for car and tire service in Larvik. It started as a tire and rim business, but has now grown into an approved car workshop with approval from the Norwegian Public Roads Administration.",
+      description2: "Today we have two lifts for the workshop, one for tire service and can offer everything from EU inspection, full service, brake service, transmission service, diagnostics and much more.",
+      experience: "10+ Years Experience",
+      certified: "Certified Workshop",
+      modern: "Modern Equipment",
+      service: "Excellent Service",
+      learnMore: "Learn More About Us",
+      contactUs: "Contact Us",
+      feature1: "Experienced Technicians",
+      feature2: "Quality Guarantee",
+      feature3: "Competitive Prices",
+      feature4: "Fast Service"
+    }
+  }
+  
+  const t = content[language]
   return (
     <section className="section-padding section-light">
       <div className="container-custom">
@@ -11,45 +49,44 @@ export default function AboutSection() {
           {/* Content */}
           <div>
             <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
-              Om 4Dekk AS
+              {t.title}
             </h2>
             <p className="mb-6 text-lg leading-relaxed text-text">
-              I 10 år har 4Dekk AS vært det pålitelige valget for bil og dekk-service i Larvik. 
-              Det startet som en dekk og felg bedrift, men har nå vokst til et godkjent bilverksted med godkjenning fra Statens Vegvesen.
+              {t.description1}
             </p>
             <p className="mb-8 text-lg leading-relaxed text-text">
-              I dag har vi to bukker for verkstedet, èn for dekkservice og kan tilby alt fra EU kontroll, full service, bremseservice, girkasseservice, diagnostikk og masse annet.
+              {t.description2}
             </p>
             
             {/* Key Features */}
             <div className="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Erfarne Teknikere</span>
+                <span className="text-text">{t.feature1}</span>
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Kvalitetsgaranti</span>
+                <span className="text-text">{t.feature2}</span>
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Konkurransedyktige Priser</span>
+                <span className="text-text">{t.feature3}</span>
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
-                <span className="text-text">Rask Service</span>
+                <span className="text-text">{t.feature4}</span>
               </div>
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/about" className="btn-primary">
-                Lær Mer
-              </Link>
-              <Link href="/contact" className="btn-secondary">
-                Kontakt Oss
-              </Link>
-            </div>
+                   <div className="flex flex-col gap-4 sm:flex-row">
+                     <Link href="/about" className="btn-primary whitespace-nowrap min-w-[180px]">
+                       {t.learnMore}
+                     </Link>
+                     <Link href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
+                       {t.contactUs}
+                     </Link>
+                   </div>
           </div>
 
           {/* Image */}

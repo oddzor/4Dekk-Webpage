@@ -1,22 +1,40 @@
-import { CheckCircleIcon, CogIcon, WrenchScrewdriverIcon, BuildingOfficeIcon, ClockIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
-import pricingItems from '@/data/pricing.json'
+'use client'
+
+import React from 'react'
+import Icon from './Icon'
+import { getPricingData } from '@/utils/dataLoader'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function PricingSection() {
-  const getIcon = (iconType: string) => {
-    switch (iconType) {
-      case 'check':
-        return <CheckCircleIcon className="w-6 h-6" />
-      case 'tire':
-        return <CogIcon className="w-6 h-6" />
-      case 'hotel':
-        return <BuildingOfficeIcon className="w-6 h-6" />
-      case 'clock':
-        return <ClockIcon className="w-6 h-6" />
-      case 'wrench':
-        return <WrenchScrewdriverIcon className="w-6 h-6" />
-      default:
-        return <CurrencyDollarIcon className="w-6 h-6" />
+  const { language } = useLanguage()
+  const pricingItems = getPricingData(language)
+  
+  const content = {
+    no: {
+      title: "Våre Priser",
+      description: "Transparente og konkurransedyktige priser for alle våre tjenester. Alle priser er inkludert mva og materialer.",
+      importantInfo: "Viktig Informasjon",
+      info1: "Dersom du ikke finner det du leter etter, kontakt oss gjerne for et uforpliktende pristilbud",
+      info2: "Deler til service som bremsedeler, filtere o.l. må ofte bestilles i forveien grunnet begrenset delelager",
+      unsureText: "Usikker på hvilken tjeneste du trenger? Kontakt oss for en gratis konsultasjon.",
+      bookButton: "Bestill Time",
+      contactButton: "Kontakt Oss"
+    },
+    en: {
+      title: "Our Prices",
+      description: "Transparent and competitive prices for all our services. All prices include VAT and materials.",
+      importantInfo: "Important Information",
+      info1: "If you don't find what you're looking for, please contact us for a non-binding price quote",
+      info2: "Service parts such as brake parts, filters etc. often need to be ordered in advance due to limited parts inventory",
+      unsureText: "Unsure which service you need? Contact us for a free consultation.",
+      bookButton: "Book Appointment",
+      contactButton: "Contact Us"
     }
+  }
+  
+  const t = content[language]
+  const getIcon = (iconType: string) => {
+    return <Icon name={iconType} className="w-6 h-6" />
   }
 
   return (
@@ -25,11 +43,10 @@ export default function PricingSection() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
-            Våre Priser
+            {t.title}
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-text">
-            Transparente og konkurransedyktige priser for alle våre tjenester. 
-            Alle priser er inkludert mva og materialer.
+            {t.description}
           </p>
         </div>
 
@@ -63,27 +80,27 @@ export default function PricingSection() {
         <div className="mt-12 text-center">
           <div className="max-w-2xl p-6 mx-auto card-dark">
             <h3 className="mb-4 text-xl font-semibold font-headings text-accent">
-              Viktig Informasjon
+              {t.importantInfo}
             </h3>
             <div className="space-y-2 text-sm text-text">
-              <p>• Dersom du ikke finner det du leter etter, kontakt oss gjerne for et uforpliktende pristilbud</p>
-              <p>• Siden delelageret vårt er ganske begrenset, må ofte deler bestilles i forveien for din time</p>
+              <p>• {t.info1}</p>
+              <p>• {t.info2}</p>
             </div>
           </div>
         </div>
         {/* CTA */}
         <div className="mt-12 text-center">
           <p className="mb-6 text-lg text-text">
-            Usikker på hvilken tjeneste du trenger? Kontakt oss for en gratis konsultasjon.
+            {t.unsureText}
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/booking" className="btn-primary">
-              Bestill Time
-            </a>
-            <a href="/contact" className="btn-secondary">
-              Kontakt Oss
-            </a>
-          </div>
+                 <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                   <a href="/booking" className="btn-accent whitespace-nowrap min-w-[200px]">
+                     {t.bookButton}
+                   </a>
+                   <a href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
+                     {t.contactButton}
+                   </a>
+                 </div>
         </div>
       </div>
     </section>

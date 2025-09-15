@@ -2,7 +2,7 @@
   {
     "id": "eu-control",
     "title": "EU Kontroll",
-    "description": "Pålagt sikkerhetskontroll av kjøretøy, direkte koblet til Statens Vegvesen.",
+    "description": "Lovpålagt sikkerhetskontroll av kjøretøy.",
     "longDescription": "EU-kontroll sjekker bilens trafikksikkerhet og miljøpåvirkning gjennom ca. 150 kontrollpunkter",
     "icon": "check",
     "image": "/images/eucontrol.webp",
@@ -20,14 +20,14 @@
   {
     "id": "after-control",
     "title": "Etterkontroll",
-    "description": "Kontroll etter reparasjoner fra ikke-godkjent EU Kontroll.",
-    "longDescription": "Etterkontroll utføres når reparasjoner er gjort etter ikke-bestått EU kontroll.",
+    "description": "Dersom du har gjort reparasjoner i forbindelse med en ikke-godkjent EU Kontroll",
+    "longDescription": "Vi går over bilen for å se at feilene som ble avdekket på EU kontrollen er utbedret.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
     "features": [
       "Etterkontroll",
       "Reparasjonsverifikasjon",
-      "Dokumentasjon"
+      "Godkjenning"
     ],
     "pricing": "400,-",
     "pricingDescription": "Etterkontroll reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
@@ -42,7 +42,7 @@
     "features": [
       "Hjuljustering",
       "Kamber kontroll",
-      "Toe justering",
+      "Spissing",
       "Caster kontroll"
     ],
     "pricing": "1875,-",
@@ -50,19 +50,18 @@
   },
   {
     "id": "workshop-hourly",
-    "title": "Bilreparasjoner og Service",
-    "description": "Konkurransedyktig timepris for verkstedarbeid og reparasjoner.",
-    "longDescription": "Transparente priser og fakturering kun for faktisk arbeidstid.",
-    "icon": "clock",
-    "image": "/images/timeprisverksted.webp",
+    "title": "Oljeskift",
+    "description": "Bytte av olje og oljefilter, valgfritt luftfilterbytte.",
+    "longDescription": "Regelmessig oljeskift er avgjørende for motorens levetid og ytelse. Vi bruker kvalitetsoljer og filtere for optimal beskyttelse.",
+    "icon": "wrench",
+    "image": "/images/oil-change.webp",
     "features": [
-      "Diagnostikk",
-      "Reparasjoner",
-      "Vedlikehold",
-      "med mer..."
+      "Oljeskift med kvalitetsolje",
+      "Oljefilterbytte",
+      "Valgfritt luftfilterbytte"
     ],
-    "pricing": "1400,-",
-    "pricingDescription": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
+    "pricing": "Fra 1500,-",
+    "pricingDescription": "Oljeskift inkludert olje og filter, pris avhenger av biltype og oljetype"
   },
   {
     "id": "diagnostics",
@@ -72,89 +71,92 @@
     "icon": "wrench",
     "image": "/images/engine-diagnostics.webp",
     "features": [
-      "Feilkode lesing",
-      "Systemytelse testing",
-      "Motor analyse",
-      "Testkjøring",
-      "Manuell diagnose"
+      "Lesing av feilkoder",
+      "Test av bilsystemer og ytelse",
+      "Teknisk inspeksjon",
+      "Nøye feilsøking"
     ],
     "pricing": "Fra 750 kr for diagnostisk service"
   },
   {
-    "id": "tire-balancing",
-    "title": "Balansering av dekk",
-    "description": "Digital balansering av dekk med høy nøyaktighet.",
-    "longDescription": "Digitalt utstyr for å gi deg nøyaktig dekkbalansering.",
-    "icon": "tire",
-    "image": "/images/balansering.webp",
-    "features": [
-      "Digital måling",
-      "Nøyaktig justering",
-      "Kan hjelpe med vibrasjoner og levetiden av dekkene dine"
-    ],
-    "pricing": "500,-",
-    "pricingDescription": "Komplett rebalansering av dekk, her brukes digital maskin for å sikre balansering innenfor 5 gram"
-  },
-  {
     "id": "tires",
     "title": "Dekkservice",
-    "description": "Komplett dekkservice - salg, montering, balansering og reparasjoner.",
-    "longDescription": "Gode priser på dekk og tjenester, store leverandører med mange ulike dekkprodusenter og dimensjoner som kan skaffes på kort varsel.",
+    "description": "Komplett dekkservice - montering, balansering, omlegging og reparasjoner.",
+    "longDescription": "Gode priser på dekk og tjenester, store leverandører med mange ulike dekkprodusenter og dimensjoner som kan skaffes på kort varsel. Vi tilbyr også balansering med digitalt utstyr for nøyaktig justering og omlegging av dekk på felgene dine.",
     "icon": "tire",
     "image": "/images/tire-service.webp",
     "features": [
       "Dekksalg",
       "Omlegging og balansering",
+      "Digital balansering innenfor 5 gram",
       "Reparasjoner",
-      "Kjøpshjelp"
+      "Kjøpshjelp",
+      "Kontroll av lufttrykk"
     ],
-    "pricing": "Fra 250 kr for rotasjon, 150 kr for montering per dekk"
-  },
-  {
-    "id": "tire-mounting-car",
-    "title": "Omlegging av dekk",
-    "description": "Omlegging av nye dekk som monteres tilbake på bilen.",
-    "longDescription": "Profesjonell omlegging og montering av dine nye dekk.",
-    "icon": "tire",
-    "image": "/images/omlegging.webp",
-    "features": [
-      "Dekkomlegging",
-      "Montering",
-      "Kvalitetskontroll"
-    ],
-    "pricing": "1500,-",
-    "pricingDescription": "Dersom du har nye dekk du ønsker å få lagt om, som deretter monteres tilbake på bilen"
+    "pricing": "Fra 250 kr for rotasjon, 150 kr for montering per dekk, 500 kr for balansering"
   },
   {
     "id": "hjulskift",
     "title": "Hjulskift",
     "description": "Hjulskift mellom sommer- og vinterdekk.",
-    "longDescription": "Rask hjulskift med montering, balansering og kontroll.",
+    "longDescription": "Rask hjulskift med hydraulisk løftebukk",
     "icon": "tire",
     "image": "/images/hjulskift.webp",
     "features": [
-      "Hjulskift",
-      "Balansering",
-      "Dekktrykk kontroll"
+      "Raskt",
+      "Inspeksjon av dekk",
+      "Kontroll av lufttrykk hvis ønskelig"
     ],
     "pricing": "500,-",
-    "pricingDescription": "Komplett hjulskift inkludert montering av sommer- og vinterdekk"
+    "pricingDescription": "Komplett hjulskift av sommer- og vinterdekk"
   },
-
   {
     "id": "tire-hotel",
     "title": "Dekkhotell",
     "description": "Sikker lagring av sommer- og vinterdekk.",
-    "longDescription": "Praktisk lagring med vask og omlegging av dekk når du trenger det.",
+    "longDescription": "Praktisk lagring med vask og skifte av hjul når du trenger det.",
     "icon": "hotel",
     "image": "/images/dekkhotell.webp",
     "features": [
-      "Sikker lagring",
-      "Dekkvask",
-      "Kontroll av dekkslitasje",
-      "Hjulskift"
+        "Sikker lagring",
+        "Dekkvask",
+        "Kontroll av dekkslitasje",
+        "Hjulskift"
       ],
     "pricing": "400,-",
     "pricingDescription": "Enkel og trygg lagring av dekkene dine når du bytter over for sesongen"
+  },
+  {
+    "id": "bilreparasjoner",
+    "title": "Reparasjoner av Bil",
+    "description": "Vedlikehold og reparasjoner med svært konkurransedyktig timepris.",
+    "longDescription": "Transparente priser og bred erfaring med ulike biltyper og produsenter. Vi kan håndtere alt fra små reparasjoner til større vedlikeholdsarbeid.",
+    "icon": "wrench",
+    "image": "/images/brake-repair.webp",
+    "features": [
+      "Diagnostikk",
+      "Reparasjoner",
+      "Vedlikehold",
+      "Ta kontakt for nærmere informasjon"
+    ],
+    "pricing": "1400,-",
+    "pricingDescription": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
+  },
+  {
+    "id": "generell-service",
+    "title": "Generell Service",
+    "description": "Komplett service og vedlikehold av bilen din.",
+    "longDescription": "Regelmessig service er avgjørende for bilens ytelse og levetid. Vi tilbyr omfattende servicepakker tilpasset din biltype og kjøremønster.",
+    "icon": "wrench",
+    "image": "/images/timeprisverksted.webp",
+    "features": [
+      "Komplett servicepakke",
+      "Kontroll av alle væsker",
+      "Filterbytte",
+      "Inspeksjon av bremser og hjuloppheng",
+      "Ta kontakt for skreddersydd tilbud"
+    ],
+    "pricing": "Fra 2500,-",
+    "pricingDescription": "Pris avhenger av biltype og servicepakke"
   }
 ] 

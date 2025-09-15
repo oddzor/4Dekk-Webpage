@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Image from 'next/image'
 
 interface TestimonialCardProps {
@@ -33,7 +34,7 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
 
       {/* Quote */}
       <blockquote className="mb-6 text-lg italic text-text">
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </blockquote>
 
       {/* Author */}

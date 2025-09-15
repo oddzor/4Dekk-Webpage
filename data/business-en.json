@@ -1,0 +1,38 @@
+{
+  "name": "4Dekk Larvik",
+  "address": {
+    "street": "Haakon VII's vei 9",
+    "city": "Larvik",
+    "postalCode": "3269",
+    "country": "Norway"
+  },
+  "contact": {
+    "phone": "93 99 55 55",
+    "email": "4dekk4@gmail.com",
+    "website": "https://4dekk.no"
+  },
+  "hours": {
+    "monday": "8:00 - 16:00",
+    "tuesday": "8:00 - 16:00",
+    "wednesday": "8:00 - 16:00",
+    "thursday": "8:00 - 16:00",
+    "friday": "8:00 - 16:00",
+    "saturday": "Closed",
+    "sunday": "Closed"
+  },
+  "location": {
+    "latitude": 59.0533,
+    "longitude": 10.0297,
+    "googleMapsUrl": "https://www.google.com/maps/place/4Dekk+Larvik/@59.0533,10.0297,17z",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4102.078030415878!2d10.0426241!3d59.06480259999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4646c08caa6dfad5%3A0x48d029aa6024bc44!2s4dekk%20AS!5e0!3m2!1sen!2sno!4v1756979259507!5m2!1sen!2sno&t=k&v=2"
+  },
+  "services": [
+    "Tire Service",
+    "Car Repair",
+    "Oil Change",
+    "Brake Repair",
+    "Engine Diagnostics",
+    "Inspection"
+  ],
+  "description": "4Dekk AS in Larvik offers professional car and tire service in Larvik. With over 10 years of experience and certified technicians, you can expect quality work at competitive prices."
+}
