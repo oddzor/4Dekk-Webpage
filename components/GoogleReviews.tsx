@@ -34,7 +34,7 @@ export default function GoogleReviewsSection() {
   const [error, setError] = useState<string | null>(null)
   const [overallRating, setOverallRating] = useState(0)
   const [totalRatings, setTotalRatings] = useState(0)
-  
+
   const content = {
     no: {
       title: "Hva Våre Kunder Sier",
@@ -90,7 +90,6 @@ export default function GoogleReviewsSection() {
     fetchReviews()
   }, [placeId])
 
-  // Auto-advance reviews
   useEffect(() => {
     if (reviews.length > 0) {
       const timer = setInterval(() => {
@@ -197,7 +196,6 @@ export default function GoogleReviewsSection() {
   return (
     <section className="text-white section-padding bg-primary">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
             {t.title}
@@ -206,7 +204,6 @@ export default function GoogleReviewsSection() {
            {t.description}
           </p>
           
-          {/* Overall Rating Display */}
           {overallRating > 0 && (
             <div className="inline-block p-4 mt-6 rounded-lg bg-white/10">
               <div className="flex items-center justify-center mb-2 space-x-2">
@@ -220,10 +217,8 @@ export default function GoogleReviewsSection() {
           )}
         </div>
 
-        {/* Reviews Carousel */}
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Testimonial */}
             <div className="text-center">
               <TestimonialCard
                 quote={currentReview.text.text}
@@ -233,7 +228,6 @@ export default function GoogleReviewsSection() {
               />
             </div>
 
-            {/* Navigation Arrows */}
             {reviews.length > 1 && (
               <>
                 <button
@@ -256,7 +250,6 @@ export default function GoogleReviewsSection() {
                   </svg>
                 </button>
 
-                {/* Dots Indicator */}
                 <div className="flex justify-center mt-8 space-x-2">
                   {reviews.map((_, index) => (
                     <button
@@ -274,7 +267,6 @@ export default function GoogleReviewsSection() {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="mt-16 text-center">
           <p className="mb-6 text-lg text-gray-200">
             Bli en av våre fornøyde kunder.

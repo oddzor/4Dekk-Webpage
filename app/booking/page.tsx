@@ -1,13 +1,12 @@
 'use client'
 
-import React from 'react'
 import Icon from '../../components/Icon'
 import { useLanguage } from '../../contexts/LanguageContext'
 import DynamicMetadata from '../../components/DynamicMetadata'
 
 export default function BookingPage() {
   const { language } = useLanguage()
-  
+
   const content = {
     no: {
       title: "Bestill en Time",
@@ -19,15 +18,15 @@ export default function BookingPage() {
       diagnostics: "Diagnose av Bilproblemer",
       diagnosticsDesc: "Avansert diagnostikk for identifisering av bilproblemer",
       oilChange: "Oljeskift",
-      oilChangeDesc: "Oljeskift og generell service av bilen din",
+      oilChangeDesc: "Oljeskift med valgfritt bytte av luftfilter",
       tireChangeHotel: "Hjulskift (Dekkhotell)",
       tireChangeHotelDesc: "Hjulskift med lagring av dekk i vårt dekkhotell",
       tireChangeOwn: "Hjulskift (Egne Dekk)",
       tireChangeOwnDesc: "Hjulskift med dine egne dekk som du tar med",
       tireMounting: "Omlegging av Dekk (Nettbestilling)",
       tireMountingDesc: "Omlegging av dekk som du har bestilt på nett",
-      afterControl: "Etterkontroll",
-      afterControlDesc: "Etterkontroll etter reparasjoner og service",
+      afterControl: "EU-Etterkontroll",
+      afterControlDesc: "Etterkontroll av reparasjoner og service ifbm ikke-godkjent EU Kontroll",
       wheelAlignment: "4Hjulskontroll",
       wheelAlignmentDesc: "Kontroll og justering av hjulgeometri",
       bookTime: "Bestill time →",
@@ -46,15 +45,15 @@ export default function BookingPage() {
       diagnostics: "Car Diagnostics",
       diagnosticsDesc: "Advanced diagnostics for identifying car problems",
       oilChange: "Oil Change",
-      oilChangeDesc: "Oil change and general car service",
+      oilChangeDesc: "Oil change and optional air filter change",
       tireChangeHotel: "Tire Change (Tire Hotel)",
       tireChangeHotelDesc: "Tire change with tire storage in our tire hotel",
       tireChangeOwn: "Tire Change (Own Tires)",
       tireChangeOwnDesc: "Tire change with your own tires that you bring",
       tireMounting: "Tire Mounting (Online Order)",
       tireMountingDesc: "Tire mounting for tires you ordered online",
-      afterControl: "After Control",
-      afterControlDesc: "After control after repairs and service",
+      afterControl: "EU Reinspection",
+      afterControlDesc: "Reinspection after repairs and service related to non-approved EU inspection",
       wheelAlignment: "Wheel Alignment",
       wheelAlignmentDesc: "Control and adjustment of wheel geometry",
       bookTime: "Book appointment →",
@@ -73,7 +72,6 @@ export default function BookingPage() {
   return (
     <div>
       <DynamicMetadata page="booking" />
-      {/* Hero Section */}
       <section className="py-20 text-white bg-gradient-dark">
         <div className="text-center container-custom">
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl font-headings">
@@ -85,7 +83,6 @@ export default function BookingPage() {
         </div>
       </section>
 
-      {/* Service Types Section */}
       <section className="section-light section-padding">
         <div className="container-custom">
           <div className="mb-12 text-center">
@@ -98,7 +95,6 @@ export default function BookingPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {/* Row 1: EU Kontroll - Diagnose - Generell Service */}
             <a 
               href="https://calendly.com/4dekk-service2/eu-kontroll" 
               target="_blank" 
@@ -174,7 +170,6 @@ export default function BookingPage() {
               </div>
             </a>
             
-            {/* Row 2: Hjulskift (Dekkhotell) - Hjulskift (Egne) - Omlegging */}
             <a 
               href="https://calendly.com/4dekk/dekkskift-dekkhotell" 
               target="_blank" 
@@ -196,7 +191,7 @@ export default function BookingPage() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="font-semibold text-accent">{t.bookTime}</div>
-                <div className="text-sm font-semibold text-accent">500,- til 600,-</div>
+                <div className="text-sm font-semibold text-accent">{language === 'no' ? '500,- til 600,-' : '500,- to 600,-'}</div>
               </div>
             </a>
             
@@ -221,7 +216,7 @@ export default function BookingPage() {
               </p>
               <div className="flex items-center justify-between">
                 <div className="font-semibold text-accent">{t.bookTime}</div>
-                <div className="text-sm font-semibold text-accent">500,- til 600,-</div>
+                <div className="text-sm font-semibold text-accent">{language === 'no' ? '500,- til 600,-' : '500,- to 600,-'}</div>
               </div>
             </a>
             
@@ -250,7 +245,6 @@ export default function BookingPage() {
               </div>
             </a>
             
-            {/* Row 3: Etterkontroll - 4Hjulskontroll */}
             <a 
               href="https://calendly.com/4dekk-service2/etterkontroll" 
               target="_blank" 
@@ -304,7 +298,6 @@ export default function BookingPage() {
         </div>
       </section>
 
-      {/* Help Section */}
       <section className="section-light section-padding">
         <div className="text-center container-custom">
           <div className="max-w-2xl mx-auto">

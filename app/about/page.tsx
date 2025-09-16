@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Image from 'next/image'
 import Icon from '../../components/Icon'
 import { useLanguage } from '../../contexts/LanguageContext'
@@ -8,7 +7,7 @@ import DynamicMetadata from '../../components/DynamicMetadata'
 
 export default function AboutPage() {
   const { language } = useLanguage()
-  
+
   const teamMembers = {
     no: [
       {
@@ -120,7 +119,6 @@ export default function AboutPage() {
   return (
     <div>
       <DynamicMetadata page="about" />
-      {/* Hero Section */}
       <section className="py-20 text-white bg-gradient-dark">
         <div className="text-center container-custom">
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl font-headings">
@@ -129,11 +127,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="section-light section-padding">
         <div className="container-custom">
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-            {/* Content */}
             <div>
               <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
                 {t.aboutTitle}
@@ -145,7 +141,6 @@ export default function AboutPage() {
                 {t.aboutDescription2}
               </p>
               
-              {/* Key Features */}
               <div className="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
                 <div className="flex items-center">
                   <div className="mr-3 text-2xl text-accent">✅</div>
@@ -166,7 +161,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Image */}
             <div className="relative">
               <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl card-dark">
                 <Image
@@ -177,7 +171,6 @@ export default function AboutPage() {
                 />
               </div>
               
-              {/* Experience Badge */}
               <div className="absolute px-6 py-4 rounded-lg shadow-lg -bottom-6 -left-6 bg-accent text-gray-darker">
                 <div className="text-2xl font-bold font-headings">10</div>
                 <div className="text-sm">Års Erfaring</div>
@@ -187,7 +180,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="section-dark section-padding">
         <div className="container-custom">
           <div className="mb-16 text-center">
@@ -228,7 +220,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
       <section className="section-light section-padding">
         <div className="container-custom">
           <div className="mb-16 text-center">
@@ -244,9 +235,23 @@ export default function AboutPage() {
             {currentTeamMembers.map((member, index) => (
               <div key={index} className="p-6 text-center card-dark">
                 <div className="relative w-48 h-48 mx-auto mb-6 overflow-hidden rounded-full bg-gray-dark">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    <Icon name="users" className="w-16 h-16" />
-                  </div>
+                  <Image
+                    src={member.photo}
+                    alt={`${member.name} - ${member.position}`}
+                    fill
+                    className="object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.style.display = 'none'
+                      target.parentElement!.innerHTML = `
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400">
+                          <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                          </svg>
+                        </div>
+                      `
+                    }}
+                  />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold font-headings text-headings">
                   {member.name}
@@ -263,7 +268,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="text-white section-padding bg-gradient-dark">
         <div className="text-center container-custom">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings">

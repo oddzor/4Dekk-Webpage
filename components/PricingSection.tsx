@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import { useState } from 'react'
 import Icon from './Icon'
 import { getPricingData } from '@/utils/dataLoader'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -8,7 +8,20 @@ import { useLanguage } from '@/contexts/LanguageContext'
 export default function PricingSection() {
   const { language } = useLanguage()
   const pricingItems = getPricingData(language)
-  
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set())
+
+  const toggleExpanded = (index: number) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
+      return newSet
+    })
+  }
+
   const content = {
     no: {
       title: "Våre Priser",
@@ -40,7 +53,6 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="section-padding section-light">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
             {t.title}
@@ -50,33 +62,79 @@ export default function PricingSection() {
           </p>
         </div>
 
-        {/* Pricing Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {pricingItems.map((item, index) => (
-            <div key={index} className="p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center">
-                  <div className="mr-3 text-accent">
-                    {getIcon(item.icon)}
+          {pricingItems.map((item, index) => {
+            const isExpanded = expandedItems.has(index)
+            
+            return (
+              <div key={index} className="overflow-hidden transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg">
+                {/* Mobile: Collapsible header */}
+                <div className="md:hidden">
+                  <button
+                    onClick={() => toggleExpanded(index)}
+                    className="w-full p-4 text-left transition-all duration-200 hover:bg-gray-dark/50"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <div className="mr-3 text-accent">
+                          {getIcon(item.icon)}
+                        </div>
+                        <h3 className="text-lg font-semibold font-headings text-headings">
+                          {item.service}
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="text-lg font-bold text-accent">
+                          {item.price}
+                        </div>
+                        <Icon 
+                          name="chevron" 
+                          className={`w-5 h-5 text-text transition-transform duration-200 ${
+                            isExpanded ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </div>
+                    </div>
+                  </button>
+                  
+                  {/* Collapsible content */}
+                  <div className={`transition-all duration-300 overflow-hidden ${
+                    isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="px-4 pb-4">
+                      <p className="text-sm text-text">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold font-headings text-headings">
-                    {item.service}
-                  </h3>
                 </div>
-                <div className="text-right">
-                  <div className="text-xl font-bold text-accent">
-                    {item.price}
+
+                {/* Desktop: Full card */}
+                <div className="hidden p-6 md:block">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center">
+                      <div className="mr-3 text-accent">
+                        {getIcon(item.icon)}
+                      </div>
+                      <h3 className="text-lg font-semibold font-headings text-headings">
+                        {item.service}
+                      </h3>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xl font-bold text-accent">
+                        {item.price}
+                      </div>
+                    </div>
                   </div>
+                  <p className="text-sm text-text">
+                    {item.description}
+                  </p>
                 </div>
               </div>
-              <p className="text-sm text-text">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
-        {/* Additional Info */}
         <div className="mt-12 text-center">
           <div className="max-w-2xl p-6 mx-auto card-dark">
             <h3 className="mb-4 text-xl font-semibold font-headings text-accent">
@@ -88,7 +146,6 @@ export default function PricingSection() {
             </div>
           </div>
         </div>
-        {/* CTA */}
         <div className="mt-12 text-center">
           <p className="mb-6 text-lg text-text">
             {t.unsureText}

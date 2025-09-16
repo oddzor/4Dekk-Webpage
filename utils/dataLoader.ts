@@ -19,7 +19,6 @@ export function getPricingData(language: Language = 'no') {
   return language === 'en' ? pricingEnData : pricingData
 }
 
-// Helper function to get all data for a specific language
 export function getAllData(language: Language = 'no') {
   return {
     business: getBusinessData(language),

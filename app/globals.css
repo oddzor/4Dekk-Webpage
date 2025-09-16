@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom 3D Flip Classes */
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -19,7 +18,6 @@
   transform: rotateY(180deg);
 }
 
-/* Line clamp utility */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -55,19 +53,19 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:bg-primary-light text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
+    @apply px-6 py-3 font-medium text-white transition-colors duration-200 rounded-lg bg-primary hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
   }
   
   .btn-secondary {
-    @apply bg-secondary hover:bg-secondary-light text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
+    @apply px-6 py-3 font-medium text-white transition-colors duration-200 rounded-lg bg-secondary hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
   }
   
   .btn-accent {
-    @apply bg-accent hover:bg-accent-dark text-gray-darker font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
+    @apply px-6 py-3 font-medium transition-colors duration-200 rounded-lg bg-accent hover:bg-accent-dark text-gray-darker focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
   }
   
   .section-padding {
@@ -75,7 +73,7 @@
   }
 
   .card-dark {
-    @apply bg-gray-dark border border-gray-600 rounded-lg shadow-lg;
+    @apply border border-gray-600 rounded-lg shadow-lg bg-gray-dark;
   }
 
   .section-dark {

@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Link from 'next/link'
 import { getBusinessData } from '@/utils/dataLoader'
 import { useLanguage } from '@/contexts/LanguageContext'
@@ -56,7 +55,6 @@ export default function Footer() {
     <footer className="text-white bg-gray-darker">
       <div className="py-12 container-custom">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <p className="max-w-md mb-4 text-gray-300">
               {businessData.description}
@@ -68,7 +66,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="mb-4 text-lg font-semibold font-headings text-headings">{t.quickLinks}</h3>
             <ul className="space-y-2">
@@ -85,7 +82,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Media */}
           <div>
             <h3 className="mb-4 text-lg font-semibold font-headings text-headings">{t.followUs}</h3>
             <div className="flex space-x-4">
@@ -112,7 +108,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-8 mt-8 text-sm text-center text-gray-400 border-t border-gray-600">
           <p>
             © {new Date().getFullYear()} {businessData.name}. {t.copyright} <a href="http://www.grimholt.me" target="_blank" rel="noopener noreferrer"><strong>grimholt.me</strong></a> {t.websiteServices}.

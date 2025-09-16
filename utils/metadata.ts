@@ -3,7 +3,7 @@ type Language = 'no' | 'en'
 export function getMetadata(language: Language = 'no', path: string = '/') {
   const baseUrl = 'https://4dekk.no'
   const currentUrl = `${baseUrl}${path}${language === 'en' ? '?lang=en' : ''}`
-  
+
   const metadata = {
     no: {
       title: '4Dekk Larvik - Bilverksted og Dekkservice',
@@ -26,15 +26,15 @@ export function getMetadata(language: Language = 'no', path: string = '/') {
       alternateNo: `${baseUrl}${path}`
     }
   }
-  
+
   return metadata[language]
 }
 
-type Page = 'home' | 'about' | 'contact' | 'booking'
+type Page = 'home' | 'about' | 'contact' | 'booking' | 'blog'
 
 export function generatePageMetadata(language: Language, page: Page = 'home') {
   const baseMetadata = getMetadata(language, `/${page}`)
-  
+
   const pageSpecific: Record<Language, Record<Page, { title: string; description: string }>> = {
     no: {
       home: {
@@ -52,6 +52,10 @@ export function generatePageMetadata(language: Language, page: Page = 'home') {
       booking: {
         title: 'Bestill Time - 4Dekk Larvik',
         description: 'Bestill time for bilverksted eller dekkservice hos 4Dekk Larvik. Enkel online booking.'
+      },
+      blog: {
+        title: 'Blogg - 4Dekk Larvik',
+        description: 'Tips om vedlikehold, reparasjoner og generell, nyttig kjøretøykunnskap fra 4Dekk Larvik.'
       }
     },
     en: {
@@ -70,12 +74,16 @@ export function generatePageMetadata(language: Language, page: Page = 'home') {
       booking: {
         title: 'Book Appointment - 4Dekk Larvik',
         description: 'Book an appointment for car workshop or tire service at 4Dekk Larvik. Easy online booking.'
+      },
+      blog: {
+        title: 'Blog - 4Dekk Larvik',
+        description: 'Tips about maintenance, repairs and general, useful vehicle knowledge from 4Dekk Larvik.'
       }
     }
   }
-  
+
   const pageData = pageSpecific[language][page] || pageSpecific[language].home
-  
+
   return {
     ...baseMetadata,
     title: pageData.title,

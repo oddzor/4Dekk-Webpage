@@ -4,8 +4,10 @@ import { useEffect } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { generatePageMetadata } from '@/utils/metadata'
 
+type Page = 'home' | 'about' | 'contact' | 'booking' | 'blog'
+
 interface DynamicMetadataProps {
-  page?: string
+  page?: Page
 }
 
 export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps) {
@@ -14,10 +16,7 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
   useEffect(() => {
     const metadata = generatePageMetadata(language, page)
     
-    // Update document title
     document.title = metadata.title
-    
-    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', metadata.description)
@@ -27,8 +26,6 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
       meta.content = metadata.description
       document.head.appendChild(meta)
     }
-    
-    // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', metadata.keywords)
@@ -38,8 +35,6 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
       meta.content = metadata.keywords
       document.head.appendChild(meta)
     }
-    
-    // Update Open Graph title
     const ogTitle = document.querySelector('meta[property="og:title"]')
     if (ogTitle) {
       ogTitle.setAttribute('content', metadata.ogTitle)
@@ -49,8 +44,6 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
       meta.content = metadata.ogTitle
       document.head.appendChild(meta)
     }
-    
-    // Update Open Graph description
     const ogDescription = document.querySelector('meta[property="og:description"]')
     if (ogDescription) {
       ogDescription.setAttribute('content', metadata.ogDescription)
@@ -60,8 +53,6 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
       meta.content = metadata.ogDescription
       document.head.appendChild(meta)
     }
-    
-    // Update canonical URL
     const canonical = document.querySelector('link[rel="canonical"]')
     if (canonical) {
       canonical.setAttribute('href', metadata.canonical)
@@ -71,8 +62,6 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
       link.href = metadata.canonical
       document.head.appendChild(link)
     }
-    
-    // Update alternate language links
     const alternateEn = document.querySelector('link[rel="alternate"][hreflang="en"]')
     if (alternateEn) {
       alternateEn.setAttribute('href', metadata.alternateEn)
@@ -94,11 +83,9 @@ export default function DynamicMetadata({ page = 'home' }: DynamicMetadataProps)
       link.href = metadata.alternateNo
       document.head.appendChild(link)
     }
-    
-    // Update html lang attribute
     document.documentElement.lang = language
     
   }, [language, page])
 
-  return null // This component doesn't render anything
+  return null
 }

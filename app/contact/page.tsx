@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Icon from '../../components/Icon'
 import { getBusinessData } from '../../utils/dataLoader'
 import { useLanguage } from '../../contexts/LanguageContext'
@@ -10,7 +9,7 @@ import DynamicMetadata from '../../components/DynamicMetadata'
 export default function ContactPage() {
   const { language } = useLanguage()
   const businessData = getBusinessData(language)
-  
+
   const content = {
     no: {
       title: "Kontakt Oss",
@@ -66,7 +65,6 @@ export default function ContactPage() {
   return (
     <div>
       <DynamicMetadata page="contact" />
-      {/* Hero Section */}
       <section className="py-20 text-white bg-gradient-dark">
         <div className="text-center container-custom">
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl font-headings">
@@ -78,23 +76,20 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form & Info Section */}
       <section className="section-padding section-light">
         <div className="container-custom">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-            {/* Contact Form */}
             <div>
               <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
                 {t.contactFormTitle}
               </h2>
-              <p className="mb-8 text-lg text-text">
+              <div className="mb-8 text-lg text-text">
                 {t.contactFormDescription}  
                 <p className="text-accent">{t.emailNote}</p>
-              </p>  
+              </div>  
               <ContactForm />
             </div>
 
-            {/* Contact Information */}
             <div>
               <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings text-headings">
                 {t.contactInfoTitle}
@@ -103,7 +98,6 @@ export default function ContactPage() {
                 {t.contactInfoDescription}
               </p>
 
-              {/* Contact Details */}
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="mt-1 mr-4 text-accent">
@@ -161,7 +155,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map */}
               <div className="mt-8">
                 <div className="overflow-hidden card-dark">
                   <div className="h-[500px] lg:h-[600px] relative">
@@ -183,7 +176,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="text-white section-padding bg-gradient-dark">
         <div className="text-center container-custom">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-headings">

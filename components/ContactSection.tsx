@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Link from 'next/link'
 import Icon from './Icon'
 import businessData from '../data/business.json'
@@ -10,7 +9,6 @@ export default function ContactSection() {
     <section className="section-padding section-light">
       <div className="container-custom">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Contact Information */}
           <div>
             <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
               Ta Kontakt
@@ -19,7 +17,6 @@ export default function ContactSection() {
               Klar til å bestille din neste service? Kontakt oss i dag  eller bestill time på nettet.
             </p>
 
-            {/* Contact Details */}
             <div className="mb-8 space-y-6">
               <div className="flex items-start">
                 <div className="mt-1 mr-4 text-accent">
@@ -77,7 +74,6 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
                 Kontakt Oss
@@ -88,11 +84,9 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Map */}
           <div className="relative">
             <div className="overflow-hidden card-dark">
               <div className="h-96 lg:h-[500px] relative">
-                {/* Google Maps Embed */}
                 <iframe
                   src={businessData.location.googleMapsEmbedUrl}
                   width="100%"

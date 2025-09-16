@@ -21,7 +21,6 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Use Places API (New) endpoint
     const response = await fetch(
       `https://places.googleapis.com/v1/places/${placeId}?fields=reviews,rating,userRatingCount&key=${apiKey}`,
       {
@@ -39,12 +38,10 @@ export async function GET(request: NextRequest) {
 
     const data = await response.json()
 
-    // Places API (New) has different response structure
     const reviews = data.reviews || []
     const rating = data.rating || 0
     const totalRatings = data.userRatingCount || 0
 
-    // Sort reviews by publication date (newest first)
     const sortedReviews = reviews.sort((a: any, b: any) => {
       const dateA = new Date(a.publishTime || a.time || 0)
       const dateB = new Date(b.publishTime || b.time || 0)

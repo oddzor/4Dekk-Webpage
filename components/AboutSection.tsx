@@ -1,13 +1,12 @@
 'use client'
 
-import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function AboutSection() {
   const { language } = useLanguage()
-  
+
   const content = {
     no: {
       title: "Om 4Dekk AS",
@@ -46,7 +45,6 @@ export default function AboutSection() {
     <section className="section-padding section-light">
       <div className="container-custom">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Content */}
           <div>
             <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
               {t.title}
@@ -58,7 +56,6 @@ export default function AboutSection() {
               {t.description2}
             </p>
             
-            {/* Key Features */}
             <div className="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
@@ -78,7 +75,6 @@ export default function AboutSection() {
               </div>
             </div>
             
-            {/* CTA Buttons */}
                    <div className="flex flex-col gap-4 sm:flex-row">
                      <Link href="/about" className="btn-primary whitespace-nowrap min-w-[180px]">
                        {t.learnMore}
@@ -89,7 +85,6 @@ export default function AboutSection() {
                    </div>
           </div>
 
-          {/* Image */}
           <div className="relative">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl card-dark">
               <Image
@@ -98,7 +93,6 @@ export default function AboutSection() {
                 fill
                 className="object-cover"
                 onError={(e) => {
-                  // Fallback to a placeholder if image fails to load
                   const target = e.target as HTMLImageElement
                   target.style.display = 'none'
                   target.parentElement!.style.backgroundColor = '#1a1a1a'
@@ -116,7 +110,6 @@ export default function AboutSection() {
               />
             </div>
             
-            {/* Experience Badge */}
             <div className="absolute px-6 py-4 rounded-lg shadow-lg -bottom-6 -left-6 bg-accent text-gray-darker">
               <div className="text-2xl font-bold font-headings">10</div>
               <div className="text-sm">Års Erfaring</div>

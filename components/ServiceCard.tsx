@@ -1,33 +1,28 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Image from 'next/image';
-import Icon from './Icon';
+import Image from 'next/image'
+import Icon from './Icon'
 
 interface ServiceCardProps {
-  id: string;
-  title: string;
-  description: string;
-  pricing: string;
-  image: string;
-  href?: string;
-  longDescription?: string;
-  features?: string[];
-  isExpanded: boolean;
-  onExpand: (cardId: string) => void;
-  bookingLink?: string;
-  bookingLinks?: { label: string; url: string }[];
-  showContactButton?: boolean;
-  language?: 'no' | 'en';
+  id: string
+  title: string
+  description: string
+  image: string
+  longDescription?: string
+  features?: string[]
+  isExpanded: boolean
+  onExpand: (cardId: string) => void
+  bookingLink?: string
+  bookingLinks?: { label: string; url: string }[]
+  showContactButton?: boolean
+  language?: 'no' | 'en'
 }
 
 export default function ServiceCard({
   id,
   title,
   description,
-  // pricing, // Unused for now
   image,
-  // href, // Unused for now
   longDescription,
   features,
   isExpanded,
@@ -37,7 +32,6 @@ export default function ServiceCard({
   showContactButton,
   language = 'no'
 }: ServiceCardProps) {
-  
   const content = {
     no: {
       readMore: "Les Mer",
@@ -62,16 +56,13 @@ export default function ServiceCard({
 
   return (
     <div className="relative w-full h-96 perspective-1000">
-      {/* Card Container with 3D Flip */}
       <div 
         className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
           isExpanded ? 'rotate-y-180' : ''
         }`}
       >
-        {/* Front of Card (Image View) */}
         <div className="absolute inset-0 w-full h-full backface-hidden">
           <div className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out card-dark hover:shadow-xl border-glow">
-            {/* Image */}
             <div className="relative w-full overflow-hidden h-52 bg-gray-dark">
               <Image
                 src={image}
@@ -83,15 +74,11 @@ export default function ServiceCard({
               />
             </div>
             
-            {/* Content */}
             <div className="flex flex-col flex-grow min-h-0 p-6">
-              {/* Title */}
               <h3 className="mb-3 text-xl font-semibold font-headings text-headings line-clamp-2">{title}</h3>
               
-              {/* Description */}
               <p className="flex-grow mb-4 text-sm leading-relaxed text-text line-clamp-3">{description}</p>
               
-              {/* Button */}
               <div className="pt-2 mt-auto">
                 <button
                   onClick={handleToggle}
@@ -106,10 +93,8 @@ export default function ServiceCard({
           </div>
         </div>
 
-        {/* Back of Card (Text View) */}
         <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
           <div className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out card-dark hover:shadow-xl border-glow">
-            {/* Header with accent border */}
             <div className="flex items-center justify-between p-6 pb-4 border-b border-accent/20">
               <h3 className="text-xl font-semibold font-headings text-headings">{title}</h3>
               <button
@@ -121,7 +106,6 @@ export default function ServiceCard({
               </button>
             </div>
             
-            {/* Scrollable Content */}
             <div className="flex-1 p-6 pt-4 space-y-4 overflow-y-auto">
               {longDescription && (
                 <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
@@ -145,7 +129,6 @@ export default function ServiceCard({
               )}
             </div>
             
-            {/* Booking Buttons */}
             {(bookingLink || bookingLinks || showContactButton) && (
               <div className="p-6 pt-4 mt-auto">
                 {bookingLinks && bookingLinks.length > 0 ? (

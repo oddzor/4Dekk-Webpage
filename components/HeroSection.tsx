@@ -1,13 +1,12 @@
 'use client'
 
-import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HeroSection() {
   const { language } = useLanguage()
-  
+
   const content = {
     no: {
       title: "Bilverksted og Dekkservice",
@@ -32,7 +31,6 @@ export default function HeroSection() {
   const t = content[language]
   return (
     <section className="relative flex items-start justify-center h-screen pt-20 overflow-hidden md:pt-16 bg-gradient-dark">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 z-10 bg-black/70" />
         <Image
@@ -43,7 +41,6 @@ export default function HeroSection() {
           priority
           quality={90}
           onError={(e) => {
-            // Fallback to a solid color if image fails to load
             const target = e.target as HTMLImageElement
             target.style.display = 'none'
             target.parentElement!.style.backgroundColor = '#1a1a2e'
@@ -51,9 +48,7 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Content */}
       <div className="relative z-20 px-4 mt-4 text-center text-white md:mt-8">
-        {/* Logo */}
         <div className="flex justify-center mb-6 md:mb-8">
           <div className="relative w-80 h-32 md:w-[28rem] md:h-48 lg:w-[32rem] lg:h-56">
             <Image
@@ -79,7 +74,6 @@ export default function HeroSection() {
           {t.description}
         </p>
         
-        {/* CTA Buttons */}
                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                  <Link href="/booking" className="px-8 py-4 text-lg text-center btn-accent border-glow whitespace-nowrap min-w-[240px]">
                    {t.cta1}
@@ -89,7 +83,6 @@ export default function HeroSection() {
                  </a>
                </div>
 
-        {/* Trust Indicators */}
         <div className="grid max-w-4xl grid-cols-1 gap-6 mx-auto mt-12 md:gap-8 md:mt-16 md:grid-cols-3">
           <div className="p-4 text-center md:p-6 card-dark">
             <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">10+</div>

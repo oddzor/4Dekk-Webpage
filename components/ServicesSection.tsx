@@ -1,23 +1,20 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
+import { useState } from 'react'
 import ServiceCard from './ServiceCard'
 import { getServicesData } from '@/utils/dataLoader'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
-// Mapping of services to their booking links
 const bookingLinks: { [key: string]: string } = {
   'eu-control': 'https://calendly.com/4dekk-service2/eu-kontroll',
-  'after-control': 'https://calendly.com/4dekk-service2/etterkontroll', // Etterkontroll
-  'wheel-alignment': 'https://calendly.com/4dekk-service2/4hjulskontroll', // 4Hjulskontroll
+  'after-control': 'https://calendly.com/4dekk-service2/etterkontroll',
+  'wheel-alignment': 'https://calendly.com/4dekk-service2/4hjulskontroll',
   'diagnostics': 'https://calendly.com/4dekk-as/diagnose-av-bilproblemer',
-  'workshop-hourly': 'https://calendly.com/d/cw8m-3w4-8yy/oljeskift', // Oljeskift
+  'workshop-hourly': 'https://calendly.com/d/cw8m-3w4-8yy/oljeskift',
   'tire-mounting-car': 'https://calendly.com/4dekk/omlegging-av-dekk'
-  // Removed 'tire-hotel' to remove button from Dekkhotell
 }
 
-// Mapping of services to multiple booking links
 const multipleBookingLinks: { [key: string]: { [key: string]: { label: string; url: string }[] } } = {
   'hjulskift': {
     no: [
@@ -31,7 +28,6 @@ const multipleBookingLinks: { [key: string]: { [key: string]: { label: string; u
   }
 }
 
-// Mapping of services that should show "Kontakt oss" buttons
 const contactServices: { [key: string]: boolean } = {
   'bilreparasjoner': true,
   'generell-service': true
@@ -68,21 +64,16 @@ export default function ServicesSection() {
   const { language } = useLanguage()
   const services = getServicesData(language)
   
-  // Global state for which card is currently expanded
   const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
 
-  // Function to handle card expansion
   const handleCardExpand = (cardId: string) => {
     if (expandedCardId === cardId) {
-      // If clicking the same card, close it
       setExpandedCardId(null);
     } else {
-      // If clicking a different card, close the previous one and open the new one
       setExpandedCardId(cardId);
     }
   };
 
-  // Content translations
   const content = {
     no: {
       title: "Våre Tjenester",
@@ -110,14 +101,12 @@ export default function ServicesSection() {
   
   const t = content[language]
 
-  // Filter out services that are already in featuredServices to avoid duplicates
   const featuredServiceIds = featuredServices.map(service => service.serviceId)
   const remainingServices = services.filter(service => !featuredServiceIds.includes(service.id))
 
   return (
     <section id="services" className="section-padding section-dark">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
             {t.title}
@@ -127,14 +116,12 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Featured Services Grid */}
         <div className="mb-16">
           <h3 className="mb-8 text-2xl font-bold text-center font-headings text-headings">
             {t.featuredTitle}
           </h3>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {featuredServices.map((service, index) => {
-              // Find the corresponding service data from services.json
               const serviceData = services.find(s => s.id === service.serviceId)
               
               if (!serviceData) {
@@ -148,11 +135,9 @@ export default function ServicesSection() {
                   id={serviceData.id}
                   title={serviceData.title}
                   description={serviceData.description}
-                  pricing={serviceData.pricing}
                   longDescription={serviceData.longDescription}
                   features={serviceData.features}
                   image={service.image}
-                  href={`#${serviceData.id}`}
                   isExpanded={expandedCardId === serviceData.id}
                   onExpand={handleCardExpand}
                   bookingLink={bookingLinks[serviceData.id]}
@@ -165,7 +150,6 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* All Services Grid */}
         <div className="mb-16">
           <h3 className="mb-8 text-2xl font-bold text-center font-headings text-headings">
             {t.allServicesTitle}
@@ -177,11 +161,9 @@ export default function ServicesSection() {
                 id={service.id}
                 title={service.title}
                 description={service.description}
-                pricing={service.pricing}
                 longDescription={service.longDescription}
                 features={service.features}
                 image={service.image}
-                href={`#${service.id}`}
                 isExpanded={expandedCardId === service.id}
                 onExpand={handleCardExpand}
                 bookingLink={bookingLinks[service.id]}
@@ -193,7 +175,6 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* CTA Section */}
         <div className="text-center">
           <p className="mb-6 text-lg text-text">
             {t.notFoundText}

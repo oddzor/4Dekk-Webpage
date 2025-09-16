@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroSection from '@/components/HeroSection'
 import ServicesSection from '@/components/ServicesSection'
 import PricingSection from '@/components/PricingSection'
@@ -17,4 +16,4 @@ export default function Home() {
       <FloatingPriceButton />
     </div>
   )
-} 
+}

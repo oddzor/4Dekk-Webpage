@@ -10,15 +10,11 @@ const nextConfig = {
       },
     ],
     formats: ['image/webp'],
-    // Add cache busting for development
     minimumCacheTTL: 0,
   },
-  // Disable experimental features that might cause issues on Windows
   experimental: {
-    // Disable some features that might cause file system issues
     optimizePackageImports: [],
   },
-  // Reduce file watching to prevent permission issues
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
       config.watchOptions = {

@@ -17,7 +17,7 @@ interface FormData {
 export default function ContactForm() {
   const { language } = useLanguage()
   const businessData = getBusinessData(language)
-  
+
   const emailSubjects = {
     no: [
       { value: 'booking', label: 'Forespørsel om reparasjon eller service på bil' },
@@ -84,7 +84,6 @@ export default function ContactForm() {
     formState: { errors }
   } = useForm<FormData>()
 
-  // EmailJS configuration
   const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID'
   const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
   const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
@@ -94,11 +93,8 @@ export default function ContactForm() {
     setSubmitStatus('idle')
     
     try {
-      // Get the selected subject label
       const selectedSubject = currentEmailSubjects.find(subject => subject.value === data.subject)
       const subjectLine = selectedSubject ? selectedSubject.label : t.generalSubject
-      
-      // Prepare template parameters for EmailJS
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
@@ -110,10 +106,7 @@ export default function ContactForm() {
         reply_to: data.email
       }
       
-      // Dynamically import EmailJS to reduce initial bundle size
       const emailjs = (await import('@emailjs/browser')).default
-      
-      // Send email using EmailJS
       const result = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -138,7 +131,6 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      {/* Registration Number Field */}
       <div>
         <label htmlFor="regnumber" className="block mb-2 text-sm font-medium text-headings">
           {t.regNumber} *
@@ -157,7 +149,6 @@ export default function ContactForm() {
         )}
       </div>
 
-      {/* Subject Field */}
       <div>
         <label htmlFor="subject" className="block mb-2 text-sm font-medium text-headings">
           {t.subject} *
@@ -195,7 +186,6 @@ export default function ContactForm() {
         )}
       </div>
 
-      {/* Name Field */}
       <div>
         <label htmlFor="name" className="block mb-2 text-sm font-medium text-headings">
           {t.name} *
@@ -214,7 +204,6 @@ export default function ContactForm() {
         )}
       </div>
 
-      {/* Email Field */}
       <div>
         <label htmlFor="email" className="block mb-2 text-sm font-medium text-headings">
           {t.email} *
@@ -239,7 +228,6 @@ export default function ContactForm() {
         )}
       </div>
 
-      {/* Phone Field */}
       <div>
         <label htmlFor="phone" className="block mb-2 text-sm font-medium text-headings">
           {t.phone}
@@ -253,7 +241,6 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Message Field */}
       <div>
         <label htmlFor="message" className="block mb-2 text-sm font-medium text-headings">
           {t.message} *
@@ -272,7 +259,6 @@ export default function ContactForm() {
         )}
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
@@ -281,7 +267,6 @@ export default function ContactForm() {
         {isSubmitting ? t.sending : t.sendButton}
       </button>
 
-      {/* Status Messages */}
       {submitStatus === 'success' && (
         <div className="p-6 border border-green-500 rounded-lg bg-green-900/20 card-dark">
           <div className="flex items-start">
@@ -328,7 +313,6 @@ export default function ContactForm() {
         </div>
       )}
 
-      {/* Contact Information */}
       <div className="p-6 rounded-lg card-dark">
         <h3 className="mb-4 text-lg font-semibold text-headings">
           {t.preferDirectContact}
@@ -368,7 +352,6 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Privacy Notice */}
       <div className="p-4 border border-gray-600 rounded-lg bg-gray-800/50">
         <p className="text-sm text-gray-300">
           <strong className="text-gray-200">{t.privacy}</strong> {t.privacyText}

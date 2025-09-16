@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import Image from 'next/image'
 
 interface TestimonialCardProps {
@@ -14,7 +13,6 @@ interface TestimonialCardProps {
 export default function TestimonialCard({ quote, name, photo, rating, title }: TestimonialCardProps) {
   return (
     <div className="p-6 card-dark md:p-8">
-      {/* Rating */}
       {rating && (
         <div className="flex mb-4">
           {[...Array(5)].map((_, i) => (
@@ -32,12 +30,10 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
         </div>
       )}
 
-      {/* Quote */}
       <blockquote className="mb-6 text-lg italic text-text">
         &ldquo;{quote}&rdquo;
       </blockquote>
 
-      {/* Author */}
       <div className="flex items-center">
         {photo && (
           <div className="relative w-12 h-12 mr-4 overflow-hidden rounded-full">
@@ -47,7 +43,6 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
               fill
               className="object-cover"
               onError={(e) => {
-                // Fallback to initials if photo fails to load
                 const target = e.target as HTMLImageElement
                 target.style.display = 'none'
               }}
