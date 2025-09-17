@@ -1,0 +1,25 @@
+name: Monthly Review Refresh
+
+on:
+  schedule:
+    # Runs on the 1st day of every month at 2 AM UTC
+    - cron: '0 2 1 * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  refresh-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh Reviews Cache
+        run: |
+          curl -X GET "${{ secrets.SITE_URL }}/api/cron/refresh-reviews?secret=${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --fail \
+            --silent \
+            --show-error
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+
+      - name: Log Success
+        run: echo "✅ Reviews refreshed successfully on $(date)"

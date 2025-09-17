@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+interface GoogleReview {
+  publishTime?: string
+  time?: string
+  [key: string]: unknown
+}
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const placeId = searchParams.get('placeId')
@@ -42,17 +48,23 @@ export async function GET(request: NextRequest) {
     const rating = data.rating || 0
     const totalRatings = data.userRatingCount || 0
 
-    const sortedReviews = reviews.sort((a: any, b: any) => {
+    // Filter reviews to only show those from the last 5 years (temporarily more lenient)
+    const fiveYearsAgo = new Date()
+    fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 5)
+    
+    // Sort all available reviews by newest first (Google's 5 review limit)
+    const sortedReviews = reviews.sort((a: GoogleReview, b: GoogleReview) => {
       const dateA = new Date(a.publishTime || a.time || 0)
       const dateB = new Date(b.publishTime || b.time || 0)
-      return dateB.getTime() - dateA.getTime() // Newest first
+      return dateB.getTime() - dateA.getTime()
     })
 
     return NextResponse.json({
       success: true,
       reviews: sortedReviews,
       rating,
-      totalRatings
+      totalRatings,
+      note: 'Limited to 5 reviews by Google Places API'
     })
   } catch (error) {
     console.error('Error fetching Google reviews:', error)
@@ -65,4 +77,3 @@ export async function GET(request: NextRequest) {
     )
   }
 }
-

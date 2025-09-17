@@ -66,7 +66,6 @@ export default function Header() {
 
   return (
     <>
-      {/* Glassmorphism Header with Active Page Detection */}
       <header className="sticky top-0 z-[50] bg-gray-darker/80 backdrop-blur-md border-b border-accent/20">
         <nav className="flex items-center justify-between py-4 container-custom">
           <div className="flex">
@@ -113,7 +112,7 @@ export default function Header() {
 
                  <div className="hidden lg:flex lg:items-center lg:gap-4">
                    <LanguageToggle />
-                   <Link href="/booking" className="btn-accent whitespace-nowrap min-w-[200px] text-center shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all duration-300">
+                   <Link href="/booking" className="btn-accent whitespace-nowrap min-w-[200px] text-center transition-all duration-300">
                      {t.bookButton}
                    </Link>
                  </div>
@@ -175,7 +174,7 @@ export default function Header() {
                   <div className="flex justify-center">
                     <Link
                       href="/booking"
-                      className="btn-accent whitespace-nowrap min-w-[200px] text-center shadow-lg shadow-accent/25"
+                      className="btn-accent whitespace-nowrap min-w-[200px] text-center"
                       onClick={closeMobileMenu}
                     >
                       {t.bookButton}

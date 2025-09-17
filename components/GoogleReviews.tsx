@@ -24,6 +24,8 @@ interface GoogleReviewsResponse {
   reviews: GoogleReview[]
   rating: number
   totalRatings: number
+  cached?: boolean
+  lastUpdated?: string
 }
 
 export default function GoogleReviewsSection() {
@@ -58,13 +60,11 @@ export default function GoogleReviewsSection() {
   
   const t = content[language]
 
-  const placeId = 'ChIJ1fptqozARkYRRLwkYKop0Eg'
-
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         setLoading(true)
-        const response = await fetch(`/api/reviews?placeId=${placeId}`)
+        const response = await fetch(`/api/reviews-cached`)
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
@@ -76,6 +76,7 @@ export default function GoogleReviewsSection() {
           setReviews(data.reviews)
           setOverallRating(data.rating)
           setTotalRatings(data.totalRatings)
+          console.log(`Loaded ${data.reviews.length} reviews (cached: ${data.cached})`)
         } else {
           throw new Error('Failed to fetch reviews')
         }
@@ -88,7 +89,7 @@ export default function GoogleReviewsSection() {
     }
 
     fetchReviews()
-  }, [placeId])
+  }, [])
 
   useEffect(() => {
     if (reviews.length > 0) {
@@ -166,7 +167,7 @@ export default function GoogleReviewsSection() {
               {t.error}
             </p>
             <p className="mt-4 text-sm text-gray-300">
-              Feil: {error}
+              {language === 'no' ? 'Feil:' : 'Error:'} {error}
             </p>
           </div>
         </div>
@@ -233,7 +234,7 @@ export default function GoogleReviewsSection() {
                 <button
                   onClick={goToPrevious}
                   className="absolute left-0 p-2 transition-colors duration-200 transform -translate-x-12 -translate-y-1/2 rounded-full top-1/2 bg-white/10 hover:bg-white/20"
-                  aria-label="Forrige anmeldelse"
+                  aria-label={language === 'no' ? 'Forrige anmeldelse' : 'Previous review'}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -243,7 +244,7 @@ export default function GoogleReviewsSection() {
                 <button
                   onClick={goToNext}
                   className="absolute right-0 p-2 transition-colors duration-200 transform translate-x-12 -translate-y-1/2 rounded-full top-1/2 bg-white/20"
-                  aria-label="Neste anmeldelse"
+                  aria-label={language === 'no' ? 'Neste anmeldelse' : 'Next review'}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -258,7 +259,7 @@ export default function GoogleReviewsSection() {
                       className={`w-4 h-4 rounded-full transition-colors duration-200 ${
                         index === currentIndex ? 'bg-accent' : 'bg-white/30'
                       }`}
-                      aria-label={`Gå til anmeldelse ${index + 1}`}
+                      aria-label={language === 'no' ? `Gå til anmeldelse ${index + 1}` : `Go to review ${index + 1}`}
                     />
                   ))}
                 </div>
@@ -269,10 +270,10 @@ export default function GoogleReviewsSection() {
 
         <div className="mt-16 text-center">
           <p className="mb-6 text-lg text-gray-200">
-            Bli en av våre fornøyde kunder.
+            {language === 'no' ? 'Bli en av våre fornøyde kunder.' : 'Become one of our satisfied customers.'}
           </p>
           <a href="/booking" className="btn-accent whitespace-nowrap min-w-[180px]">
-            Bestill Din Time I Dag
+            {language === 'no' ? 'Bestill Din Time I Dag' : 'Book Your Appointment Today'}
           </a>
         </div>
       </div>

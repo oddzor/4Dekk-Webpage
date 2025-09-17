@@ -1,8 +1,4 @@
 {
   "/page": "app/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/booking/page": "app/booking/page.js",
-  "/api/reviews/route": "app/api/reviews/route.js",
-  "/about/page": "app/about/page.js"
+  "/api/test-outscraper/route": "app/api/test-outscraper/route.js"
 }

@@ -62,7 +62,19 @@ export default function ServiceCard({
         }`}
       >
         <div className="absolute inset-0 w-full h-full backface-hidden">
-          <div className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out card-dark hover:shadow-xl border-glow">
+f          <div 
+            className="flex flex-col h-full overflow-hidden cursor-pointer card-dark border-glow hover:border-glow-strong"
+            onClick={handleToggle}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleToggle();
+              }
+            }}
+            aria-label={`${t.readMore} ${title}`}
+          >
             <div className="relative w-full overflow-hidden h-52 bg-gray-dark">
               <Image
                 src={image}
@@ -80,27 +92,23 @@ export default function ServiceCard({
               <p className="flex-grow mb-4 text-sm leading-relaxed text-text line-clamp-3">{description}</p>
               
               <div className="pt-2 mt-auto">
-                <button
-                  onClick={handleToggle}
-                  className="inline-flex items-center font-medium transition-colors duration-200 text-accent hover:text-accent-dark"
-                  aria-label={`Les mer om ${title}`}
-                >
-                  Les Mer
+                <div className="inline-flex items-center font-medium transition-colors duration-200 text-accent">
+                  {t.readMore}
                   <Icon name="chevron" className="w-4 h-4 ml-2" />
-                </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
-          <div className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out card-dark hover:shadow-xl border-glow">
+          <div className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out card-dark border-glow">
             <div className="flex items-center justify-between p-6 pb-4 border-b border-accent/20">
               <h3 className="text-xl font-semibold font-headings text-headings">{title}</h3>
               <button
                 onClick={handleToggle}
                 className="inline-flex items-center justify-center w-8 h-8 transition-all duration-200 rounded-full bg-accent/10 hover:bg-accent/20 text-accent hover:text-accent-dark hover:scale-105"
-                aria-label="Lukk tjeneste detaljer"
+                aria-label={language === 'no' ? 'Lukk tjeneste detaljer' : 'Close service details'}
               >
                 <Icon name="close" className="w-5 h-5" />
               </button>
