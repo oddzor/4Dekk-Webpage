@@ -168,6 +168,7 @@ export default function AboutPage() {
                   alt="4Dekk Auto Repair verksted interiør"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               
@@ -240,6 +241,7 @@ export default function AboutPage() {
                     alt={`${member.name} - ${member.position}`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement
                       target.style.display = 'none'

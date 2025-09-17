@@ -45,7 +45,8 @@ export default function GoogleReviewsSection() {
       error: "Kunne ikke laste Google anmeldelser. Vennligst prøv igjen senere.",
       noReviews: "Ingen Google anmeldelser funnet for øyeblikket.",
       basedOn: "Basert på {totalRatings} anmeldelser på Google",
-      reviewTitle: "Google Anmeldelse - {time}"
+      reviewTitle: "Google Anmeldelse - {time}",
+      noComment: "La ikke igjen en kommentar"
     },
     en: {
       title: "What Our Customers Say",
@@ -54,13 +55,16 @@ export default function GoogleReviewsSection() {
       error: "Could not load Google reviews. Please try again later.",
       noReviews: "No Google reviews found at the moment.",
       basedOn: "Based on {totalRatings} reviews on Google",
-      reviewTitle: "Google Review - {time}"
+      reviewTitle: "Google Review - {time}",
+      noComment: "Did not leave a comment"
     }
   }
   
   const t = content[language]
 
   useEffect(() => {
+    let isMounted = true
+    
     const fetchReviews = async () => {
       try {
         setLoading(true)
@@ -72,23 +76,29 @@ export default function GoogleReviewsSection() {
 
         const data: GoogleReviewsResponse = await response.json()
         
-        if (data.success && data.reviews) {
+        if (isMounted && data.success && data.reviews) {
           setReviews(data.reviews)
           setOverallRating(data.rating)
           setTotalRatings(data.totalRatings)
-          console.log(`Loaded ${data.reviews.length} reviews (cached: ${data.cached})`)
-        } else {
+        } else if (isMounted) {
           throw new Error('Failed to fetch reviews')
         }
       } catch (err) {
-        console.error('Error fetching reviews:', err)
-        setError(err instanceof Error ? err.message : 'Failed to fetch reviews')
+        if (isMounted) {
+          setError(err instanceof Error ? err.message : 'Failed to fetch reviews')
+        }
       } finally {
-        setLoading(false)
+        if (isMounted) {
+          setLoading(false)
+        }
       }
     }
 
     fetchReviews()
+    
+    return () => {
+      isMounted = false
+    }
   }, [])
 
   useEffect(() => {
@@ -119,6 +129,42 @@ export default function GoogleReviewsSection() {
     )
   }
 
+  const getReviewAge = (publishTime: string) => {
+    try {
+      let reviewDate: Date
+      
+      if (publishTime.includes('/')) {
+        reviewDate = new Date(publishTime)
+      } else if (publishTime.includes('T')) {
+        reviewDate = new Date(publishTime)
+      } else {
+        reviewDate = new Date(publishTime)
+      }
+      
+      const now = new Date()
+      const diffInMs = now.getTime() - reviewDate.getTime()
+      const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24))
+      
+      if (diffInDays === 0) {
+        return language === 'no' ? 'I dag' : 'Today'
+      } else if (diffInDays === 1) {
+        return language === 'no' ? '1 dag siden' : '1 day ago'
+      } else if (diffInDays < 7) {
+        return language === 'no' ? `${diffInDays} dager siden` : `${diffInDays} days ago`
+      } else if (diffInDays < 30) {
+        const weeks = Math.floor(diffInDays / 7)
+        return language === 'no' ? `${weeks} uke${weeks > 1 ? 'r' : ''} siden` : `${weeks} week${weeks > 1 ? 's' : ''} ago`
+      } else if (diffInDays < 365) {
+        const months = Math.floor(diffInDays / 30)
+        return language === 'no' ? `${months} måned${months > 1 ? 'er' : ''} siden` : `${months} month${months > 1 ? 's' : ''} ago`
+      } else {
+        const years = Math.floor(diffInDays / 365)
+        return language === 'no' ? `${years} år siden` : `${years} year${years > 1 ? 's' : ''} ago`
+      }
+    } catch (error) {
+      return language === 'no' ? 'Nylig' : 'Recently'
+    }
+  }
   const renderStars = (rating: number) => {
     return (
       <div className="flex justify-center mb-4">
@@ -193,6 +239,14 @@ export default function GoogleReviewsSection() {
   }
 
   const currentReview = reviews[currentIndex]
+  
+  const getReviewText = (review: GoogleReview) => {
+    const text = review.text?.text?.trim()
+    if (!text || text === '') {
+      return t.noComment
+    }
+    return text
+  }
 
   return (
     <section className="text-white section-padding bg-primary">
@@ -222,10 +276,10 @@ export default function GoogleReviewsSection() {
           <div className="relative">
             <div className="text-center">
               <TestimonialCard
-                quote={currentReview.text.text}
+                quote={getReviewText(currentReview)}
                 name={currentReview.authorAttribution.displayName}
                 rating={currentReview.rating}
-                title={t.reviewTitle.replace('{time}', currentReview.relativePublishTimeDescription)}
+                title={t.reviewTitle.replace('{time}', getReviewAge(currentReview.publishTime))}
               />
             </div>
 

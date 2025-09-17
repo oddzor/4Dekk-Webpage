@@ -19,12 +19,9 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    console.log('🔍 Searching for business with query:', query)
 
-    // Test the provided query
     const url = `https://api.outscraper.com/maps/reviews-v3?query=${encodeURIComponent(query)}&reviewsLimit=10&async=false&language=en`
     
-    console.log('📡 Request URL:', url)
 
     const response = await fetch(url, {
       headers: {
@@ -33,11 +30,9 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    console.log('📊 Response status:', response.status)
 
     if (!response.ok) {
       const errorText = await response.text()
-      console.log('❌ Error response:', errorText)
       
       return NextResponse.json({
         success: false,
@@ -48,7 +43,6 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await response.json()
-    console.log('📋 Response data:', JSON.stringify(data, null, 2))
 
     if (!data || data.length === 0) {
       return NextResponse.json({
@@ -59,7 +53,6 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Return all found businesses with their details
     const businesses = data.map((business: any) => ({
       name: business.name,
       address: business.address,
@@ -87,7 +80,6 @@ export async function POST(request: NextRequest) {
     })
 
   } catch (error) {
-    console.error('Business search failed:', error)
     return NextResponse.json({
       success: false,
       error: 'Search failed',

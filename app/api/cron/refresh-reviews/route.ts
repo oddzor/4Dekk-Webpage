@@ -20,7 +20,6 @@ const CACHE_FILE = path.join(process.cwd(), 'data', 'cached-reviews.json')
 
 export async function GET(request: NextRequest) {
   try {
-    // Verify this is a legitimate Vercel cron request
     const authHeader = request.headers.get('authorization')
     const cronSecret = process.env.CRON_SECRET
     
@@ -31,14 +30,11 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    console.log('🔄 Automated monthly refresh triggered')
 
-    // Force refresh by fetching new data
     const placeId = process.env['4DEKK_PLACES_ID'] || 'ChIJ1fptqozARkYRRLwkYKop0Eg'
     const apiKey = process.env.OUTSCRAPER_API_KEY
 
     if (!apiKey) {
-      console.log('⚠️ No Outscraper API key, falling back to Google Places API')
       const freshData = await fetchFromGooglePlaces(placeId)
       await saveToCache(freshData)
       
@@ -50,11 +46,9 @@ export async function GET(request: NextRequest) {
       })
     }
 
-    // Fetch fresh data from Outscraper
     const freshData = await fetchFromOutscraper(placeId, apiKey)
     await saveToCache(freshData)
 
-    console.log(`✅ Successfully refreshed ${freshData.reviews.length} reviews`)
 
     return NextResponse.json({
       success: true,
@@ -65,7 +59,6 @@ export async function GET(request: NextRequest) {
     })
 
   } catch (error) {
-    console.error('❌ Cron refresh failed:', error)
     
     return NextResponse.json({
       success: false,
@@ -83,16 +76,14 @@ async function saveToCache(data: { reviews: any[], rating: number, totalRatings:
     rating: data.rating,
     totalRatings: data.totalRatings,
     lastUpdated: now.toISOString(),
-    expiresAt: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString() // 30 days
+    expiresAt: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString()
   }
 
-  // Ensure data directory exists
   await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true })
   await fs.writeFile(CACHE_FILE, JSON.stringify(cacheData, null, 2))
 }
 
 async function fetchFromOutscraper(placeId: string, apiKey: string) {
-  console.log('🔍 Fetching reviews from Outscraper for automated refresh')
   
   const url = `https://api.outscraper.com/maps/reviews-v3?query=${placeId}&reviewsLimit=250&async=false&language=en`
   
@@ -108,7 +99,9 @@ async function fetchFromOutscraper(placeId: string, apiKey: string) {
     throw new Error(`Outscraper API error: ${response.status} - ${errorText}`)
   }
   
-  const data = await response.json()
+  const responseData = await response.json()
+  
+  const data = responseData.data || []
   
   if (!data || data.length === 0) {
     throw new Error('No data received from Outscraper')
@@ -117,7 +110,6 @@ async function fetchFromOutscraper(placeId: string, apiKey: string) {
   const businessData = data[0]
   const reviews = businessData.reviews_data || []
   
-  // Transform to match your existing format
   const transformedReviews = reviews.map((review: any) => ({
     authorAttribution: {
       displayName: review.author_title || 'Anonymous',
@@ -132,10 +124,16 @@ async function fetchFromOutscraper(placeId: string, apiKey: string) {
     relativePublishTimeDescription: review.review_timestamp || 'Recently'
   }))
   
+  transformedReviews.sort((a: any, b: any) => {
+    const dateA = new Date(a.publishTime)
+    const dateB = new Date(b.publishTime)
+    return dateB.getTime() - dateA.getTime()
+  })
+  
   return {
     reviews: transformedReviews,
     rating: businessData.rating || 0,
-    totalRatings: businessData.reviews_count || 0
+    totalRatings: businessData.reviews_count || transformedReviews.length
   }
 }
 
@@ -153,7 +151,6 @@ async function fetchFromGooglePlaces(placeId: string) {
   
   const data = await response.json()
   
-  // Sort by newest first
   const sortedReviews = (data.reviews || []).sort((a: GoogleReview, b: GoogleReview) => {
     const dateA = new Date(a.publishTime || a.time || 0)
     const dateB = new Date(b.publishTime || b.time || 0)

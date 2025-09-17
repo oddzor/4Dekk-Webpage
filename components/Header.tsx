@@ -56,12 +56,17 @@ export default function Header() {
     setMobileMenuOpen(false)
   }, [])
 
-  // Helper function to check if a link is active
   const isActiveLink = (href: string) => {
     if (href === '/') {
       return pathname === '/'
     }
     return pathname.startsWith(href)
+  }
+
+  const handleBlogClick = () => {
+    if (pathname === '/blog') {
+      window.dispatchEvent(new CustomEvent('closeBlogArticle'))
+    }
   }
 
   return (
@@ -100,6 +105,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   className="relative text-sm font-medium transition-all duration-200 text-text hover:text-accent group"
+                  onClick={item.href === '/blog' ? handleBlogClick : undefined}
                 >
                   {item.name}
                   <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
@@ -163,7 +169,12 @@ export default function Header() {
                             ? 'text-accent bg-accent/10 border-l-4 border-accent' 
                             : 'text-text hover:bg-gray-dark/50 hover:text-accent'
                         }`}
-                        onClick={closeMobileMenu}
+                        onClick={() => {
+                          closeMobileMenu()
+                          if (item.href === '/blog') {
+                            handleBlogClick()
+                          }
+                        }}
                       >
                         {item.name}
                       </Link>

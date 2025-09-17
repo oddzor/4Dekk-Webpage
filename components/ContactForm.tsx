@@ -119,11 +119,9 @@ export default function ContactForm() {
         reset()
       } else {
         setSubmitStatus('error')
-        console.error('EmailJS error:', result)
       }
     } catch (error) {
       setSubmitStatus('error')
-      console.error('EmailJS error:', error)
     }
     
     setIsSubmitting(false)

@@ -4,6 +4,8 @@ import servicesData from '@/data/services.json'
 import servicesEnData from '@/data/services-en.json'
 import pricingData from '@/data/pricing.json'
 import pricingEnData from '@/data/pricing-en.json'
+import blogData from '@/data/blog.json'
+import blogEnData from '@/data/blog-en.json'
 
 type Language = 'no' | 'en'
 
@@ -19,10 +21,15 @@ export function getPricingData(language: Language = 'no') {
   return language === 'en' ? pricingEnData : pricingData
 }
 
+export function getBlogData(language: Language = 'no') {
+  return language === 'en' ? blogEnData : blogData
+}
+
 export function getAllData(language: Language = 'no') {
   return {
     business: getBusinessData(language),
     services: getServicesData(language),
-    pricing: getPricingData(language)
+    pricing: getPricingData(language),
+    blog: getBlogData(language)
   }
 }

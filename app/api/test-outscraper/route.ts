@@ -5,9 +5,6 @@ export async function GET() {
     const apiKey = process.env.OUTSCRAPER_API_KEY
     const placeId = process.env['4DEKK_PLACES_ID'] || 'ChIJ1fptqozARkYRRLwkYKop0Eg'
 
-    console.log('🧪 Testing Outscraper API...')
-    console.log('API Key available:', !!apiKey)
-    console.log('Place ID:', placeId)
 
     if (!apiKey) {
       return NextResponse.json({
@@ -17,51 +14,55 @@ export async function GET() {
       })
     }
 
-    // Test Outscraper API call
-    const url = `https://api.outscraper.com/maps/reviews-v3?query=${placeId}&reviewsLimit=5&async=false&language=en`
+    const queries = [
+      placeId,
+      '4Dekk Larvik',
+      '4Dekk Haakon VII\'s vei 9 Larvik',
+      'ChIJ1fptqozARkYRRLwkYKop0Eg'
+    ]
     
-    console.log('Making request to:', url)
-
-    const response = await fetch(url, {
-      headers: {
-        'X-API-KEY': apiKey,
-        'Content-Type': 'application/json'
-      }
-    })
-
-    console.log('Response status:', response.status)
-    console.log('Response headers:', Object.fromEntries(response.headers.entries()))
-
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.log('Error response:', errorText)
-      
-      return NextResponse.json({
-        success: false,
-        error: `Outscraper API error: ${response.status}`,
-        details: errorText,
-        apiKeyLength: apiKey.length,
-        suggestion: response.status === 401 ? 'Check if your API key is correct' : 'Check Outscraper service status'
-      })
-    }
-
-    const data = await response.json()
-    console.log('🔍 Raw Outscraper response:', JSON.stringify(data, null, 2))
-    console.log('📊 Response type:', typeof data)
-    console.log('📏 Response length:', Array.isArray(data) ? data.length : 'Not an array')
-
-    if (!data || (Array.isArray(data) && data.length === 0)) {
-      return NextResponse.json({
-        success: false,
-        error: 'No data received from Outscraper',
-        rawResponse: data,
-        debug: {
-          responseType: typeof data,
-          isArray: Array.isArray(data),
-          responseKeys: typeof data === 'object' ? Object.keys(data) : 'N/A'
+    let lastError = null
+    let successfulData = null
+    
+    for (const query of queries) {
+      try {
+        const url = `https://api.outscraper.com/maps/reviews-v3?query=${encodeURIComponent(query)}&reviewsLimit=5&async=false&language=en`
+        
+        const response = await fetch(url, {
+          headers: {
+            'X-API-KEY': apiKey,
+            'Content-Type': 'application/json'
+          }
+        })
+        
+        
+        if (response.ok) {
+          const responseData = await response.json()
+          const data = responseData.data || []
+          if (data && data.length > 0) {
+            successfulData = { query, data }
+            break
+          }
+        } else {
+          const errorText = await response.text()
+          lastError = { query, status: response.status, error: errorText }
         }
+      } catch (err) {
+        lastError = { query, error: err instanceof Error ? err.message : 'Unknown error' }
+      }
+    }
+    
+    if (!successfulData) {
+      return NextResponse.json({
+        success: false,
+        error: 'All query attempts failed',
+        attempts: queries.map(q => ({ query: q, error: lastError?.query === q ? lastError : 'No error recorded' })),
+        lastError
       })
     }
+    
+    const { query: successfulQuery, data } = successfulData
+    
 
     const businessData = data[0]
     const reviews = businessData?.reviews_data || []
@@ -69,12 +70,13 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       message: '✅ Outscraper API is working!',
+      successfulQuery,
       stats: {
         businessName: businessData?.name || 'Unknown',
         totalReviews: businessData?.reviews_count || 0,
         rating: businessData?.rating || 0,
         reviewsSample: reviews.length,
-        apiCallsRemaining: response.headers.get('x-credits-remaining') || 'Unknown'
+        address: businessData?.full_address || 'Unknown'
       },
       sampleReview: reviews[0] ? {
         author: reviews[0].author_title,
@@ -85,7 +87,6 @@ export async function GET() {
     })
 
   } catch (error) {
-    console.error('Test failed:', error)
     return NextResponse.json({
       success: false,
       error: 'Network or parsing error',

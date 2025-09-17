@@ -12,7 +12,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, name, photo, rating, title }: TestimonialCardProps) {
   return (
-    <div className="p-6 card-dark md:p-8">
+    <div className="flex flex-col p-6 card-dark md:p-8 h-80">
       {rating && (
         <div className="flex mb-4">
           {[...Array(5)].map((_, i) => (
@@ -30,11 +30,11 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
         </div>
       )}
 
-      <blockquote className="mb-6 text-lg italic text-text">
-        &ldquo;{quote}&rdquo;
+      <blockquote className="flex items-center justify-center flex-1 mb-6 text-lg italic text-text">
+        <span>&ldquo;{quote}&rdquo;</span>
       </blockquote>
 
-      <div className="flex items-center">
+      <div className="flex items-center mt-auto">
         {photo && (
           <div className="relative w-12 h-12 mr-4 overflow-hidden rounded-full">
             <Image

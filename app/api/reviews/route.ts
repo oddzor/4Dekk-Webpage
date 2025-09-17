@@ -48,11 +48,9 @@ export async function GET(request: NextRequest) {
     const rating = data.rating || 0
     const totalRatings = data.userRatingCount || 0
 
-    // Filter reviews to only show those from the last 5 years (temporarily more lenient)
     const fiveYearsAgo = new Date()
     fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 5)
     
-    // Sort all available reviews by newest first (Google's 5 review limit)
     const sortedReviews = reviews.sort((a: GoogleReview, b: GoogleReview) => {
       const dateA = new Date(a.publishTime || a.time || 0)
       const dateB = new Date(b.publishTime || b.time || 0)
@@ -67,7 +65,6 @@ export async function GET(request: NextRequest) {
       note: 'Limited to 5 reviews by Google Places API'
     })
   } catch (error) {
-    console.error('Error fetching Google reviews:', error)
     return NextResponse.json(
       { 
         error: 'Failed to fetch reviews',

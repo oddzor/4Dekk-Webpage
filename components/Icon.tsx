@@ -12,7 +12,10 @@ import {
   EnvelopeIcon,
   ChevronDownIcon,
   UserGroupIcon,
-  HeartIcon
+  HeartIcon,
+  CalendarIcon,
+  ArrowRightIcon,
+  ArrowLeftIcon
 } from '@heroicons/react/24/outline'
 
 interface IconProps {
@@ -35,7 +38,10 @@ export default function Icon({ name, className = "w-6 h-6" }: IconProps) {
     email: EnvelopeIcon,
     chevron: ChevronDownIcon,
     users: UserGroupIcon,
-    heart: HeartIcon
+    heart: HeartIcon,
+    calendar: CalendarIcon,
+    'arrow-right': ArrowRightIcon,
+    'arrow-left': ArrowLeftIcon
   }
 
   const IconComponent = icons[name]

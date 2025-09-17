@@ -13,7 +13,6 @@ export async function GET(_request: NextRequest) {
 
     const placeId = process.env['4DEKK_PLACES_ID'] || 'ChIJ1fptqozARkYRRLwkYKop0Eg'
 
-    // Test different search methods for your business
     const searchMethods = [
       {
         name: 'Place ID Search',
@@ -32,8 +31,6 @@ export async function GET(_request: NextRequest) {
     const results = []
 
     for (const method of searchMethods) {
-      console.log(`🔍 Testing: ${method.name}`)
-      console.log(`📡 URL: ${method.url}`)
 
       try {
         const response = await fetch(method.url, {
@@ -43,11 +40,9 @@ export async function GET(_request: NextRequest) {
           }
         })
 
-        console.log(`📊 ${method.name} - Status:`, response.status)
 
         if (response.ok) {
           const data = await response.json()
-          console.log(`📋 ${method.name} - Data:`, JSON.stringify(data, null, 2))
           
           results.push({
             method: method.name,
@@ -60,7 +55,6 @@ export async function GET(_request: NextRequest) {
           })
         } else {
           const errorText = await response.text()
-          console.log(`❌ ${method.name} - Error:`, errorText)
           
           results.push({
             method: method.name,
@@ -69,7 +63,6 @@ export async function GET(_request: NextRequest) {
           })
         }
       } catch (error) {
-        console.log(`💥 ${method.name} - Exception:`, error)
         results.push({
           method: method.name,
           success: false,
@@ -77,11 +70,9 @@ export async function GET(_request: NextRequest) {
         })
       }
 
-      // Small delay between requests
       await new Promise(resolve => setTimeout(resolve, 500))
     }
 
-    // Find the best result
     const successfulResults = results.filter(r => r.success && r.businessFound)
     const bestResult = successfulResults.find(r => r.reviewCount > 0) || successfulResults[0]
 
@@ -98,7 +89,6 @@ export async function GET(_request: NextRequest) {
     })
 
   } catch (error) {
-    console.error('Search test failed:', error)
     return NextResponse.json({
       success: false,
       error: 'Test failed',

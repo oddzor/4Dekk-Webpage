@@ -1,0 +1,2634 @@
+{
+  "reviews": [
+    {
+      "authorAttribution": {
+        "displayName": "Anders Nevland",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVhaEq-JCx0b5aznk0hJg8Dt3NcfqpTE4mTkSi-mZHNavSoyjsN=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Skaffet dekkene innen 24 timer og hadde tid til a legge om samme dag. Perfekt service i en stressa hverdag.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/17/2025 17:11:29",
+      "relativePublishTimeDescription": 1755450689
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Carl Petter Auby",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXNsi11beSWOC_-YvZDEXmqq85FzQ0ggMwiVNFNeFKIR6X2JiGV=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Serviceinnstilt og flott gjeng!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/01/2025 04:52:57",
+      "relativePublishTimeDescription": 1746075177
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Camilla Olesdatter Aske",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXGAqqmXZbRoiCtlLotSJrO3WkMsqJjnF6Tyz9IgYEVf2WujLj0Dg=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Det er rett og slett ingen andre enn reiser til!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/29/2025 18:48:59",
+      "relativePublishTimeDescription": 1745952539
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Daiga Baltre",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocK_3PxTKQ8BBE3yYItnltsNlS2k0a57ovKdO3KlmdTfJBnUpQ=s120-c-rp-mo-ba5-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/29/2025 12:05:37",
+      "relativePublishTimeDescription": 1745928337
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kęstutis Pučinskas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXWh_qo6SKQI44xZtYcGcoddfGIveYIZ8LMPYLSjxUfA2RJsvMK=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/25/2024 13:28:55",
+      "relativePublishTimeDescription": 1732541335
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Sebastian Slusarek",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLgrl9HPfd35wdd7eRZvr8wPCvcrKkvM0-MefPxcmESjQtghQ=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "11/17/2024 16:11:50",
+      "relativePublishTimeDescription": 1731859910
+    },
+    {
+      "authorAttribution": {
+        "displayName": "André Vorland Jensen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJIywe2qokOJJTA_qgkHYcSNsURvA0Tz7UEfOYo_lHq_wX-dw=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/12/2024 16:06:54",
+      "relativePublishTimeDescription": 1731427614
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Torbjørn Bergane",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKtVh_pAisZfX8QDf7WbF3wAvoP1tuRwphxhPZi2_AWX3OOtw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/01/2024 10:01:03",
+      "relativePublishTimeDescription": 1727776863
+    },
+    {
+      "authorAttribution": {
+        "displayName": "UAB \"FORMICA LT\" FORMICA LT",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJkhkCKJjNIX2HRnz_MAqZvGh2jN9nSNJIuCS3YIZLzGN4srQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Takk for et bra service på bilen. Hyggelig personale, anbefales!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/25/2024 18:32:03",
+      "relativePublishTimeDescription": 1724610723
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Svein Monrad Hov",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocINvSnmiXTIDGa3Vl5jhSrA7_Vy6jH3XvpmXes9rqBXI9anvw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/20/2024 05:55:47",
+      "relativePublishTimeDescription": 1721454947
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tor Helgeland",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLqHtX7MuC8wKs7Jw_YL39DlnQyZOhuBwSlA641LlA-0PRhQg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Veldig fornøyd.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/31/2024 14:20:24",
+      "relativePublishTimeDescription": 1717165224
+    },
+    {
+      "authorAttribution": {
+        "displayName": "John Magnar Ørnes",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVuV2V7hJweAzcgbNsMhPiQgwWEjf3UDqTF7C3TvVCylUsEPSONlg=s120-c-rp-mo-ba6-br100"
+      },
+      "text": {
+        "text": "Veldig bra service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/23/2024 08:34:15",
+      "relativePublishTimeDescription": 1713861255
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Paulius aba",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLSo1PtKQ7vnSXxrTIihPS2fBIoz2-vDO5rSvS2N4PWr2Y46g=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 2,
+      "publishTime": "11/30/2023 12:42:38",
+      "relativePublishTimeDescription": 1701348158
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Justyna Gredys",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUPxqhGFvxUYFjT-f8N2PpdqsvqxECVtSTuvWNQpTV5owSrqZ3W=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/08/2023 10:14:29",
+      "relativePublishTimeDescription": 1699438469
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Andrius Andrius",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW9xd87iCqoUsYwNgqORPpm3xmpdvRuaZ424KmsHYCk6fqskjGT9w=s120-c-rp-mo-ba6-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/19/2023 12:34:52",
+      "relativePublishTimeDescription": 1695126892
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Vismante Sinkeviciute",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX8-bATg4zVdH4Aidr_RHsIyti--1-rxaflKqbtTmaosuXNKVqwFg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/29/2023 18:24:22",
+      "relativePublishTimeDescription": 1693333462
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Håvard Rykkelid",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWVFP4T2sl-UwCYdMOROBx86iw7EMY5-7vWcnSwhDJ53DB46GGLFw=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Bra pris og flinke folk",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/16/2023 07:40:04",
+      "relativePublishTimeDescription": 1692171604
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kistian Sydnes",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLSWqhnJy0euF0bK0ShjdOjbSycrwBcqbRrnssg_W54sxYKWg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/27/2023 09:28:35",
+      "relativePublishTimeDescription": 1685179715
+    },
+    {
+      "authorAttribution": {
+        "displayName": "David Lysnes",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUs0_v5DPzH6bF8CI2T9VG5aJo4MnZBgacUF27zIpMeXBMAaJey8g=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Eksemplarisk som alltid 😎",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/26/2023 13:58:04",
+      "relativePublishTimeDescription": 1685109484
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Irmantas Palsys",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIZz7rMTW0QaCWZwUHcUyqHOku2VF42hC-HexqRI-BWaPdYIQ=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/23/2023 13:48:29",
+      "relativePublishTimeDescription": 1684849709
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Irene Konradsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUkseA9_5ZjrYDtP1IRvQDnYra8Ul-o0Vxzx4pfYYHe86-SvEcifA=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Veldig innstilte på og ha fornøyde kunder og ihvertfall er vi det. Skiftet dekk i løpet av noen minutter og tar vare på dekkene til høsten kommer. Kan anbefales 😊",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/24/2023 13:24:35",
+      "relativePublishTimeDescription": 1682342675
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Djordje Drazic",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXisO6kMB4tPKaJ4LLMuUTVz7gO99TxL6Ge8eKLJwSpypRlxqYq6g=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/13/2023 10:18:14",
+      "relativePublishTimeDescription": 1681381094
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Pål Terje Støtvig",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV96jdZNMTTNjTKJnDzROGIjdP29ZFE-LpGk4VHnjTeK8Ilyq13=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Super service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/01/2023 16:55:20",
+      "relativePublishTimeDescription": 1680368120
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Igor Brjanov",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI2xlS6M18vGwH0M1pn_Yw5YoMRMDXLUGhAK77f_Pi8OhqOiQ=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/31/2023 06:28:51",
+      "relativePublishTimeDescription": 1680244131
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Paulius Kolpakovas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjURJyztBJY9I96IuyfxlcsOZXT_6Fus8lbIQjkUof30J9FFyU_v=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/09/2023 09:06:51",
+      "relativePublishTimeDescription": 1678352811
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Martin",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJoowJaMAA0F6N5GneL4f2fIxauH1iwwGn8Qqrijj3DKxPn2Q=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Løsningsorienterte, kjappe og til en god pris!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/14/2022 19:11:09",
+      "relativePublishTimeDescription": 1671045069
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Gaute Kjeldsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVDZCefCRS0S3LFxg37pGwLv71XMyiPKWnRBtF-uQzmzafAQBnS=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/15/2022 12:52:36",
+      "relativePublishTimeDescription": 1668516756
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Rina Stanevičienė",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUgyoVaGT3cRMfNO6LXKja4zbnmTLO4wPz-Bay9owCYqkPu0Ylb=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/07/2022 08:50:11",
+      "relativePublishTimeDescription": 1662540611
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Rolandas S.",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXQzEloxmNnwy5UnVloMgCs0bSSD9BMPHBX2UGdzDQeKkyKCnLF=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Cheep",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/22/2022 19:33:49",
+      "relativePublishTimeDescription": 1661196829
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Juozas Klimavičius",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUHx8ZkTUeHiDkgaqec_RjYXhGno05kgQiwDIaT4jk8ZeeY_lA=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Veldig bra service, og beste pris 👌",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/29/2022 15:32:16",
+      "relativePublishTimeDescription": 1659108736
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ole-Christian Vagle",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW0xRtC2fYKp2dIDtho-dltC0gP9iQJ-n0a7nIWvq0I9nw30OE=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "God service og flinke folk",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/27/2022 21:46:20",
+      "relativePublishTimeDescription": 1658958380
+    },
+    {
+      "authorAttribution": {
+        "displayName": "anne gro lekven",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLdaRygCJD9ucnLTT0r7vmUUlQql573e1Sr6yi2XWxSjUNq3A=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Kjappe og hyggelige!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/06/2022 07:16:59",
+      "relativePublishTimeDescription": 1657091819
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ken Arild Carlsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV70f9UhT2J2N_eJg6nKxfrq5_5twg77XIl8ESCq92UhygKxBOI7Q=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "God service!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/29/2022 08:04:23",
+      "relativePublishTimeDescription": 1656489863
+    },
+    {
+      "authorAttribution": {
+        "displayName": "aleksandras panumariovas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVnIbXvnNZo1Es-u5gyJkjb5tKHW7wqHXcOqA69q7Br6rXYuJ5vsg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/27/2022 09:18:39",
+      "relativePublishTimeDescription": 1653643119
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kestutis Jurevicius",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKjQ0iOYb5bdDs5LI5jUFuXecIBaIm998mjFdiScEkqikR4hw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/18/2022 16:53:58",
+      "relativePublishTimeDescription": 1652892838
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Christian Løkka Karlsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXzTKX7-tXaEJGHejlIpWqLBCkdl8fGqSKFBIwlDRBoFqjsmrUy=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Her kan du komme om du skal gjøre alt som har noe med dekk å gjøre, har brukt dem før å vil fortsette med det!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/17/2022 18:11:17",
+      "relativePublishTimeDescription": 1652811077
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Rolf Asgeir Botnen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI1b7GDA642obqjKe1EgncegzsEh2tC8dt5SxsHqOGSNtDtzg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "God og rask service med hyggelige ansatte!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/06/2022 09:33:27",
+      "relativePublishTimeDescription": 1651829607
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Magne Stovern",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWKN24CyGVgT_ePc8_mR6t1wCnyli05cqpatNz_w0lV7TWl4LFe=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Rask betjening, gode råd og bra service. Anbefales 🌟🌟🌟🌟🌟",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/18/2022 21:06:33",
+      "relativePublishTimeDescription": 1650315993
+    },
+    {
+      "authorAttribution": {
+        "displayName": "mantas andriuskevicius",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUxyEub1CVGNZiHCSqL_ao2mQHXwfU7pgElaY90edNmzbCrxNo=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "02/19/2022 18:53:36",
+      "relativePublishTimeDescription": 1645296816
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ginny karlson",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKOBSGe0R72hCJZuuSMWPHu3aRYyScryT7vUlNLydtfiyot=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "01/25/2022 20:48:55",
+      "relativePublishTimeDescription": 1643143735
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Camilla Johnson",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocK9MkOQPTAEXg1oJzaQUDWka63FXF2Ew9Hatxc1Yi2Iai21hw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Rask service og grei pris.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "01/22/2022 14:33:26",
+      "relativePublishTimeDescription": 1642862006
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bjørn Oscar Wirum",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVHSq_g5Fmmg3U9By3JFDDwUhLzq6UMdpgcx9rgxqpj3EJkXH_P=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/01/2021 15:42:02",
+      "relativePublishTimeDescription": 1635781322
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Stan Williams",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocK2HW3EORnULGLN9soba7kYQnLO9OQ1cBhUNSLs_rc6d3SZ=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Fantastic service,kan anbefales",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/25/2021 04:48:29",
+      "relativePublishTimeDescription": 1635137309
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tine Johnsen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJahXfW-zpM_iNwfv0OytYa4gdhM7EtbDBGzlfzsAByKa5tQg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 1,
+      "publishTime": "10/20/2021 11:33:13",
+      "relativePublishTimeDescription": 1634729593
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Lars Petter Nesse",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX5zSaiuYFpWIIrbdaifTtqz97t2BX5bmONNI2Cj7rsATKowus=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Kjapp og billig",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/24/2021 18:57:28",
+      "relativePublishTimeDescription": 1632509848
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ania Kelar",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXSKguZubt9H-0J6pOAIxo55piMjcx3DYnkulUTPJCCkYCiSzWOMA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/16/2021 15:22:19",
+      "relativePublishTimeDescription": 1629127339
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Arild Stensrud",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKXYcDSEDlGjM3gEm9CMTfTnr_2L3PBBhIvgYSwnOvu05sENA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/28/2021 17:35:09",
+      "relativePublishTimeDescription": 1627493709
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Rune Ihlen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUMEM6Z6xvNf5iHw14MMngG0jM2eDR17VqeNl8-f4yoDF5DukHA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "🇧🇻😁 veldig bra service.  Og bra. Priser😁😁",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/13/2021 10:49:14",
+      "relativePublishTimeDescription": 1626173354
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ole Magnus Brastein",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ1DqyHuhFrQubJXBRQLTpVPRZCRjhvjHknsSKqCHWjaonMDQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/05/2021 16:57:38",
+      "relativePublishTimeDescription": 1625504258
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Arild Rove",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI3s6P83Tycn1YMUFCKNDaEskSucaY4EH0QTSs4OHK0KgiZCg=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/22/2021 18:31:58",
+      "relativePublishTimeDescription": 1624386718
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Erik Dji",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXcAQwPn0x7Y-se0S74kBCbHYQu6lAA34cTD0cd7kZd1L4u6B0=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Veldig rask og god service! + for fine priser",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/19/2021 17:13:07",
+      "relativePublishTimeDescription": 1621444387
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Gudie Engilbertsson",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWCjm7Vqwe-vCYezwi9o0LoK06PXsUkHHmixLPrreNAM7DdESI=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Really good service.\nDecent prices.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/19/2021 13:42:38",
+      "relativePublishTimeDescription": 1621431758
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bjørn Johansen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJMURHD3ITgzYZfQ3ucEOSuJ_XLrm9n_GqmCfRuVyACRwDT_g=s120-c-rp-mo-ba5-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "05/06/2021 19:46:48",
+      "relativePublishTimeDescription": 1620330408
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Mantas Vasiliauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjViWT_nTSIxJFPwfiEoh3MBGLT8vhOmPtGh5b29r061-y7-OUYNPw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/29/2021 17:56:47",
+      "relativePublishTimeDescription": 1619719007
+    },
+    {
+      "authorAttribution": {
+        "displayName": "jørn larsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVQtWsTEeOVxpw1QC3S3oTA2UkDEbvNLNnj2JHMPaiCl4RaCfxl=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Kan anbefales, veldig fornøyd med dekker og jobb.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/27/2021 19:12:37",
+      "relativePublishTimeDescription": 1619550757
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ramunas Siniakas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKLs6RGIJtOBkZa2Z2C-vKtvyL5mhPk-rgItXESyXYSSU7fyw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Flinke gutter!!!🙂👍👍👍👍👍",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/13/2021 05:55:47",
+      "relativePublishTimeDescription": 1618293347
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ståle Andersen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIcafxdfxiqjEQETFT5sexlkfO3PvX3UX7chrHkEAuoS11N5g=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "God service og gode råd 👍",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/23/2021 13:27:38",
+      "relativePublishTimeDescription": 1616506058
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Edgaras Andriusis",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUDEGBPr2-8ob2RiWpBOKnYB47jFHi3-PJqxBnUpGW3UonB9yu0=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/12/2021 17:00:18",
+      "relativePublishTimeDescription": 1615568418
+    },
+    {
+      "authorAttribution": {
+        "displayName": "morten j.",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVhssOupsUblE4CYFrbFHx52qALXu645bRYkhIcJsNqjdU0SrPI=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "02/02/2021 19:09:18",
+      "relativePublishTimeDescription": 1612292958
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kristoffer KONRADSEN",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocL0aT5kzLg_GC6_gIe4BYHo2kqwoDzYSGfYAT1ngSG05H77xag=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Dyktige å serviceminded betjening !\nFortsett sånn !",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "01/21/2021 15:27:53",
+      "relativePublishTimeDescription": 1611242873
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Arnas Audickas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW35H9EJ3P6_enYmJVgvPiuK4zL-C6D_ep8gx4pQH456jBCDMBE=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "01/18/2021 17:03:34",
+      "relativePublishTimeDescription": 1610989414
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Helen G",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWMhjWU-04mQbqVM8FkzQT7xoNSBoCk1OVzEzfj0APnIvLoJQem=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Glimrende service - veldig gode priser; veldig hyggelig folk --!!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/04/2020 22:49:13",
+      "relativePublishTimeDescription": 1607122153
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Thomas Ornell",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW_Ve_f-X7cbfLu2w5xR5hOpC7W7nMEm2maayRHpTS01QVupM4ipQ=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "11/23/2020 11:42:59",
+      "relativePublishTimeDescription": 1606131779
+    },
+    {
+      "authorAttribution": {
+        "displayName": "reda",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKtNMD3IJq3h81--teawJIchRE8ScRtyDnJsTgv_4pWN21jtg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/19/2020 09:56:42",
+      "relativePublishTimeDescription": 1605779802
+    },
+    {
+      "authorAttribution": {
+        "displayName": "w1nd1ss_LTU",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVlQMWPcejjE97GAEQPHfOJ6BjCwUaUuWq48KUGMxxBRN9NdU6q=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/14/2020 10:27:50",
+      "relativePublishTimeDescription": 1605349670
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Saulius Kacanauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIZV_tbnLN0uesZ1ZEJMN6fgZgNVGrai_NzWHKbRyoyeLYn9A=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/12/2020 11:17:30",
+      "relativePublishTimeDescription": 1605179850
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Vaidas Levanauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWWymTb3QpkZhyn9Dm7iFN9njTF3-VCheh7_OfXCccGsRRZvr-Z=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/07/2020 11:16:10",
+      "relativePublishTimeDescription": 1604747770
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Thore Holtan",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXEhR5Ooquobqy8HEP66R84xkwj7K-jP_jTlhe4bThq5eR4oz8=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Grei pris, rask levering.",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "11/07/2020 07:17:20",
+      "relativePublishTimeDescription": 1604733440
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Lars Petter Eskelund",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjViY6wXKFgosvRm64NpvUtA58x4sqBAglXYE_qdp3zMZ0uH7Hgw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Skifter dekk der hvert år, raske, rimlige og hyggelige gutter. Anbefales!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/04/2020 14:55:33",
+      "relativePublishTimeDescription": 1604501733
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Asta Klerauskaite",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWpkxnK1ju2FwiHvPLS0HcmeRTrYYL4VNsNNAjqQ40jTnOU_01N=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/28/2020 14:46:44",
+      "relativePublishTimeDescription": 1603896404
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bjørn Thomas Konradsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWvz4nV5lmagWTtndz87nDbpLPXSNbnFV1DTK7cC4zqs0xwVghA=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Super service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/19/2020 10:46:00",
+      "relativePublishTimeDescription": 1603104360
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ernesta Krecikaite",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWAxnruvwN2idEaV3m-XDoKTdhpCXpXO7nV_VmZC3ca2WANpw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/14/2020 15:16:48",
+      "relativePublishTimeDescription": 1597418208
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Carl On Duty",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUzhgMdTTrhsRn223ehdCRGxM-tzmLHDM7ICegiAXEAdWaLM521=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Rask service, gode priser",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/04/2020 13:19:45",
+      "relativePublishTimeDescription": 1596547185
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Espen Brun Kittelsen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJIWEACTy4xPqG0kMtwEx7peZOgH_Ou_cALBNqw2Mg66Z7psA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Hyggelige, raske/effektive og god pris! Tommel opp!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/30/2020 08:22:03",
+      "relativePublishTimeDescription": 1596097323
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Svein Roger Fandal",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIobsZDgqnkAE0J3_B_TuP6UI2TES3PiafFKNiEfxfT5rtzDl0=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Super og effektiv service. Gutta skulle avbalansert 4 dekk. Fikk beskjed om å utbedre en feil på 2 av dekkene, dette fikset de på strak arm.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/15/2020 11:48:29",
+      "relativePublishTimeDescription": 1594813709
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Finn Magne Triger",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUonk67GZ-cPJ09GBt7gVfQCUx3JRVnWaRWyZ2lxu8tBb2iZGqXLQ=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Kjapp og bra service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/15/2020 08:38:02",
+      "relativePublishTimeDescription": 1594802282
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jonas Stanevicius",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVSTqFO0-6hmR732-ZUariFNpLbxkkwxW6LFFC8dTLOm7rT8lCb=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Hyggelig betjening ikke noe ventetid. Veldig bra jobba!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/09/2020 10:57:57",
+      "relativePublishTimeDescription": 1591700277
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Игорь Брянов",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIvwvg-F4c24MM-qyD-xBMURl4gNe42soynAo8Olh2zOEKa9w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Flinke gutter, veldig fornøyd.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/19/2020 16:58:39",
+      "relativePublishTimeDescription": 1589907519
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Magnar Høie",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXXO-Jz6HJVJ9IBLCvC7w_bYfKIKSJXPoFGqhZHW2KdQDbuCBoA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Rettet 21\" felger til Tesla, ble 100% bra  raskt levert og dermed miljø og penger spart, kontra det å kjøpe en ny :)",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/28/2020 06:55:25",
+      "relativePublishTimeDescription": 1588056925
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Thomas Straumstein",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUSoWnvxRaNp1BPLUKDy8HGgbg3zNQYK0hTW6FiivdTm9vSF-pL=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Kjøpte brukt hjulpakke fra verkstedet (gjennom Finn.no) og 2 mnd etter kjøp, da jeg satte på dekkene oppdaget jeg en feil.\n\nTok kontakt og fikk time allerede dagen etterpå.  Super service! Rask, pålitelige og seriøse. Anbefales!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/18/2020 07:27:42",
+      "relativePublishTimeDescription": 1584516462
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Sergei Sergo",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWfQcRJPYkr4PM7DAhWnoyA_R9D8YTT8es-HNr2VNdxqLNj80xu=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Bra",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "02/20/2020 15:08:26",
+      "relativePublishTimeDescription": 1582211306
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Leif Erik Thorsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU1s2lxSMAl-_Buy8xymPPY8DxsRmPl2Ox59KRT7zBHk4TAO-tx=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Veldig kjapp, bra service og hyggelige priser. De har også gode vinterdekk til en fin pris.\nEdit 2020, de er fortsatt best på nevnte, men vil legge også til felger her.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "01/14/2020 15:56:06",
+      "relativePublishTimeDescription": 1579017366
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Lars Petter Eskelund",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWywQZjDUHMgjThBJwS3IjKCTr02hr1XVpHwYC3-yZ_j1tvqB58ZA=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Kjempe god service, samt at de er raske.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "01/04/2020 18:58:22",
+      "relativePublishTimeDescription": 1578164302
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Joakim Gusland",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV4kuVpWw-w04lBPejQp9bvzjvp0654xRSFGA9KJRMyaVIFk0C5=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "01/02/2020 05:52:07",
+      "relativePublishTimeDescription": 1577944327
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Fascini Mallo",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKpUohDestz5Ge3oi3f4-vgvR-ePmkiSrwQxCb9b7tosoQ_uQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/16/2019 16:01:48",
+      "relativePublishTimeDescription": 1576512108
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Odin Jonassen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUURfwnMiRVZmw_m7GHMkbG7y1Hd5egwTX7uKsduIREOyfwb8pm=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/15/2019 13:04:40",
+      "relativePublishTimeDescription": 1576415080
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jan Arvid Førland",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ5DRdqriP3mmTT89ZHxbBx3m9G7Uf-O7hxvqAIO5q_8rMcLw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "11/06/2019 11:27:10",
+      "relativePublishTimeDescription": 1573039630
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Anders Haugene",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocK0Cw5RqbSycvn8aI0k_4_Sx11vuwOCCUGOV7xYSOhWh7cjcQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Har benyttet meg av bedriften siden oppstart og har bare gode erfaringer. Anbefales på det sterkeste enten man skal ha dekk til veteran eller nyere bil.\nVar innom å prøvde forskjellige størrelser på vinterdekkene til Country Golfen før jeg bestemte meg. Det som gjorde mest inntrykk var måten en eldre dame ble forstått, behandlet og kjørt hjem av en ansatt mens det kokte i hallen. Super service.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/31/2019 21:28:01",
+      "relativePublishTimeDescription": 1572557281
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Saulius Naujikas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW1LBm5oKI9X5DpSFjYkVIfnEYJHhTiLlY2987v18UnEhulL6Q=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "💯 👌 Perfect job",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/31/2019 20:00:22",
+      "relativePublishTimeDescription": 1572552022
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jahn Ove Jahnsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWMXLGL4eqViZnsE92pd5lQS2EHbjMJGMCy2Sa3VxzdtWGNqo0y=s120-c-rp-mo-ba5-br100"
+      },
+      "text": {
+        "text": "Veldig imøtekommende og hyggelige. God service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/31/2019 10:24:52",
+      "relativePublishTimeDescription": 1572517492
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Terje Ravik Jaerson",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWYjxs089i05if8BNwmR_ICIsyyGYzYU5JybinY7on-VBlDTm7_=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Bra service.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/30/2019 15:25:05",
+      "relativePublishTimeDescription": 1572449105
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Frode Berg",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLlJYmPbx5djk9tXvRBJoYrAqFUbriLYIBariibOZ9x_GdmJA=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "10/26/2019 14:09:48",
+      "relativePublishTimeDescription": 1572098988
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tomas Vidžiūnas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWhEMuBdXWWOnuKL4hheloFBQx6PK7lxw6xCukP3zhv7udutuZh=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Kjempe flinke og hyggelig folk der. Rimelig pris, topp kvalitet. Trenger du råd, vil kjøpe dekk, felg, dekkhotell osv. anbefaler å besøke 4dekk.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/25/2019 09:56:36",
+      "relativePublishTimeDescription": 1571997396
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Gediminas Trukleckas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJe4nUOBIbrzY7LZpPbWR9PBwMvv5mU0p1bMUWMRgQKClPYKA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/19/2019 13:09:21",
+      "relativePublishTimeDescription": 1571490561
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tadas Jankauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLN93fNHq8gNm85IW_6QaVD6aS_7lP2e1j5PfeSUUzzPFmg1Q=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/19/2019 13:08:43",
+      "relativePublishTimeDescription": 1571490523
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Egil Hallberg",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWngFhSgvIlvY51zSYErXDh1hU_rcNeta4HOJSiR-hi4x7p0KRB=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/18/2019 13:58:24",
+      "relativePublishTimeDescription": 1571407104
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Liv Nordman",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJtrdKMUYiu5k7etb-bga-cGnj17QruDNdenzNJCeAVGbbGPg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Veldig god service. Raskt utført arbeid",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/10/2019 10:22:29",
+      "relativePublishTimeDescription": 1570702949
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Svein Olberg",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWXCRI7cihRFN2IHEj0OSyi38ZLT-RYi2ztxF-NS6mvfXz93Zx_=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 3,
+      "publishTime": "10/04/2019 07:49:56",
+      "relativePublishTimeDescription": 1570175396
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Michelle Tornholm",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJmNiYjWpBU6P3-tkrRn7TE6wrAXwq5K3OCEB11pkqC-gld_w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/19/2019 07:57:38",
+      "relativePublishTimeDescription": 1568879858
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Svein Johansen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocL15wHKmDQTTEtKbt2xuS2VZ64KBx10TviA8RV0X9LnK6lXHw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "09/18/2019 11:36:32",
+      "relativePublishTimeDescription": 1568806592
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Syrristen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW_Zg5b1hW9UQH8ZyQMUcM1t1_Qf_PLoTBXLs7xXQZ423pETM1g=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Veldig god service, veldig informative og hjelpsomme :) Jobber raskt, effektivt og får jobben gjort ordentlig.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/05/2019 10:07:42",
+      "relativePublishTimeDescription": 1567678062
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bergur ingi",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJdqmkk5KnSclZ67ZLfYub2svJfINhPMsXYWUpaFltOzCvPrw=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Bra service og billig",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/15/2019 12:26:07",
+      "relativePublishTimeDescription": 1565871967
+    },
+    {
+      "authorAttribution": {
+        "displayName": "David Breivik",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKNTEWaH0PdT7yJ6nXYlZAMyt9KT-gMKGSpBB7OW0VrgGAqyw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "God og rask service. Rettet felger kjapt og enkelt. Raskt leveranse. Fikk igjen på samme dag. 😊",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/07/2019 12:03:21",
+      "relativePublishTimeDescription": 1565179401
+    },
+    {
+      "authorAttribution": {
+        "displayName": "T B",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI1o5obXQyLZs8iW4pGTz6MjIXNXD0NJUeOk0Nc5zxKfwLz8ExX=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/01/2019 18:45:17",
+      "relativePublishTimeDescription": 1564685117
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Arvydas Pilnikovas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW2ZTMLqBIW7i3FDcqForB6PSKYz0NDM0u5JqJ5nb35wq0Z0dIt=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/16/2019 17:50:53",
+      "relativePublishTimeDescription": 1563299453
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Haakon Solbakken",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJHEunDpLpH-i3hZ-Fu58KalPRyI2r0SkIIZlQgva8U0CpruA=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Meget god service. Ringte og sa at vi kom med danskebåten med et reservedekk på bilen, og ikke var fremme før de stengte. Det var ikke noe problem, og de holdt åpent ekstra for å bytte dekk for oss en fredagskveld. Hyggelig og flink var han også.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/05/2019 15:57:10",
+      "relativePublishTimeDescription": 1562342230
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Alexander Eriksen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ7DNjK8-beRMLmmbWM7MKq7p8TZwkVCFwlJTln2HOD94eY8w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Bra service og rask levering dekk og felg 😎",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/21/2019 15:36:40",
+      "relativePublishTimeDescription": 1561131400
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Morten Wahlstrøm",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJpvuU5-KhF4Mek6hz1kPBVcUDMQ50mvmT305NOVQDhBsr1LA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "God service og hyggelige ansatte. Extra pluss for rimelige priser.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/20/2019 17:21:10",
+      "relativePublishTimeDescription": 1561051270
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kim Andre Hylland",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWbDlSjJX7ZbksRQDeK5z5THEfMH74OP_uc-fVAZcK1mPw0Q6w9kQ=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/18/2019 16:59:05",
+      "relativePublishTimeDescription": 1560877145
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Krzysztof Jaworski",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUERA4_nOCgyJXCVQ9qC_N4U_vQPft7d2qqMHvj7Mg0xJNGZ9w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/18/2019 16:22:45",
+      "relativePublishTimeDescription": 1560874965
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Sigmund Lekven",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIbz3A9zXDbSs7mXQ9elTJIpPzSWvMqeDEC_FauwbN9Xg5YUw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "06/14/2019 11:46:11",
+      "relativePublishTimeDescription": 1560512771
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Runar Hansen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLIWKqoO3FWbgtDegOE4zMdIAvz6j4tAo9OMcKQTEZBPXTy2Q=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Veldig bra. Har brukt de i mange år.\nAlltid fornøyd.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/09/2019 22:46:13",
+      "relativePublishTimeDescription": 1560120373
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Dovi Blobstein",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXid-DVZZaRSugAkZZbSGOBpA2LR1fca4CE5zUnZRvKQ1HEVlmn=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Bra service, rask og effektiv",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "05/30/2019 09:35:41",
+      "relativePublishTimeDescription": 1559208941
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Leif Gramford",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUreWgBDh3pnqWfgPmIj3roUvAYE1VdfNM-r43H7KH_Qa2fNMFx=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Knall service og priser.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/21/2019 11:17:22",
+      "relativePublishTimeDescription": 1558437442
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Patrick S",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIm-PbSbEcyHG4IaALi8S0H4hijRryzuPAAn-RgzjCQitq0jKs=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Ikke noe tull, ordentlig og god pris.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/07/2019 13:21:20",
+      "relativePublishTimeDescription": 1557235280
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Thomas Nissen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjX5a-7GRBMW68UmxWKq-kznqqC4wAv-EZ10agZkh7FBqHbrlePh=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/04/2019 10:26:28",
+      "relativePublishTimeDescription": 1556965588
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Knut Zakariassen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVy0Mga1CFcWPwYn9zZabc8DaY0jcYOJGbt8GGmXEhioQULVBM=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Rask og god service, hyggelige folk.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/30/2019 09:49:53",
+      "relativePublishTimeDescription": 1556617793
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Mariann Grorud",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJV7Up8NqwGgMszxjbzILqldIU6LljsGMDvPnGcEyQspZAmEg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Topp service 👍😊",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/29/2019 18:41:21",
+      "relativePublishTimeDescription": 1556563281
+    },
+    {
+      "authorAttribution": {
+        "displayName": "marita jensen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocL4RN4QwzkeBpOC0mnl3fQdL3ayaMGE_bT__4hL6NMgWdl2gA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/26/2019 12:02:03",
+      "relativePublishTimeDescription": 1556280123
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tron Skjellerud",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW3NK4lVVErMUgJnawX3yYOLj3KNkqOJPvVmz8kgseKdSWwvdVa_w=s120-c-rp-mo-ba5-br100"
+      },
+      "text": {
+        "text": "Bra dekkverksted med dekkhotell, hyggelig folk, kan anbefales",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "04/23/2019 13:54:31",
+      "relativePublishTimeDescription": 1556027671
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Dainius Simonaitis",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUCJ25M_3G0uuNh71EIGmC3jhoPVEQMCthrGUZHH-y-dMbr_kw=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/22/2019 08:13:52",
+      "relativePublishTimeDescription": 1555920832
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Eric Andre Løvmo",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIG2Wa5BNNsPlNzZbKoXXaoa8mXgl_jirdlurYLhe4GPRayRg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Rask og god service 👍",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/15/2019 16:12:42",
+      "relativePublishTimeDescription": 1555344762
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Troy Kristiansen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLf6EC-ivRTPto8bgrDU5lJv4kCF4nH4AuignQN_N948lJR=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/13/2019 14:10:14",
+      "relativePublishTimeDescription": 1555164614
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Deividas Jucaitis (David)",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXzY7h3LUjJwF1czNQLavUjEGCfqSU6gtqyVOydHu45qCNZEEEk=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/06/2019 12:30:03",
+      "relativePublishTimeDescription": 1554553803
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Binh Nguyen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJ93G_Kxf-25jPMBoS5zWD978y5aJ9XUyYBnbU1Su7tFTKPqQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "God service, veldig fornøyd.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/25/2019 15:10:47",
+      "relativePublishTimeDescription": 1553526647
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Leif",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVGcdJ0aQ_iJU6PypYnioWQp4IrtELhbhpm-3ZMSanCxuulWOPr=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Veldig flinke og raske 🙂",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/22/2019 12:48:05",
+      "relativePublishTimeDescription": 1553258885
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Civicshelf",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI_kSUT2SaA6uhTOUAJ7pgkSDZv-e2bMzz1W1-EcvJqG3xO=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/21/2019 14:48:49",
+      "relativePublishTimeDescription": 1553179729
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Marius Bjerke",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXFopxWKz5xQTisZUwqn9v8RhO_gdKDthK0ra7OlCFgZs3NPzcZ=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/18/2019 09:04:33",
+      "relativePublishTimeDescription": 1552899873
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Anders Hem",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIOQSaw_cUv-i39vGsD2QMDhUhbGocch7osWD_HsK3DR-4ytg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Best pris, best service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/11/2019 07:24:32",
+      "relativePublishTimeDescription": 1552289072
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bjørn Øivind Rognstad",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXzTIZ3ZlZ5cRPuYmcmJbUlVcXZGYNlZnEkvwQZ_r4mkvNPHdh6=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/09/2019 01:23:54",
+      "relativePublishTimeDescription": 1552094634
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kristoffer Persson",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLCGnZnsNPeMGUrOO8yPIug2231c0XnV8cMMpCHT7Uqo_6Fbg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Kjempe bra service!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/04/2019 16:51:18",
+      "relativePublishTimeDescription": 1551718278
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Pål Sørensen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLl2WIyJfNszHTaDLxMW071Ic-sM9_1DQTs2qBkRNvGWqSP7g=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/29/2018 16:01:35",
+      "relativePublishTimeDescription": 1543507295
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Morten Trondsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUKTrVH4-_DrWTzzU78DXMvdPaRjimea6pqhEq-4gzAMQ_tmTs5=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/16/2018 12:00:01",
+      "relativePublishTimeDescription": 1542369601
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bjarte Gjertsen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKgWlIjU9O8HwLadXO3BEd5W9HmXPCOXtBF92W3v_N8faA-pw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/15/2018 12:51:38",
+      "relativePublishTimeDescription": 1542286298
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Petter Løvland",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUo_6gHM4lv1twSSCzNSif1QqWQEClUyKws5JoOaYja1_A7W3owzQ=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 3,
+      "publishTime": "11/05/2018 11:31:36",
+      "relativePublishTimeDescription": 1541417496
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Sergio Silveira",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXh2EdzWSSTBqibxC2KwCihDMypzHG3YACHbPfmxbv7Vd2SwXFc-A=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Great service and great prices.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/05/2018 10:15:12",
+      "relativePublishTimeDescription": 1541412912
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Sindre Carlsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVLA-LivST2wqlq25UnrpLJcLyMAyTdXleMBaVpdHaL9lMLI-E=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "God service. Fornøyd!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/02/2018 17:24:52",
+      "relativePublishTimeDescription": 1541179492
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Edvard Jensen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLzUcYQKQHV-l8ZlTOj-TmSC84TXPFjif0wpZaiRUqlwLD0TQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/02/2018 13:16:50",
+      "relativePublishTimeDescription": 1541164610
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Oddbjørn Hellem",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKccuLZuPCC095HE3B6v9umQfZa1e6DcaO0HnMpQ87rIqxJrw=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "God service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/31/2018 16:26:40",
+      "relativePublishTimeDescription": 1541003200
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Karsten Bjerkeli",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLl1lYtPCCyeeOqyOal8MzKDlG-0GMJR95y1q3Cc2z3kkG_pg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Kjempegod service, veldig raske 👍 Har full forståelse for at det er hektisk i disse tider når alle vil legge om til vinterdekk nesten samtidig, så litt ventetid må vi regne med 👍😊De som klager her har nok store problemer !!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/27/2018 14:49:50",
+      "relativePublishTimeDescription": 1540651790
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Håkon 4818",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI3CM163MuMAAtN3CIqXjaRY1AVffZwpnu7OjNUo1GCUTa5Zg=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "Pluss for at det er billig. Ellers var det en usympatisk og lite kundevennlig innstilling.",
+        "languageCode": "en"
+      },
+      "rating": 2,
+      "publishTime": "10/26/2018 13:01:44",
+      "relativePublishTimeDescription": 1540558904
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Frode B Hansson",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXl1klQb-IM3i3kn9bsl5fvJJuZvCylcM16BAITIPU96MOkRTEQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Meget bra service,raske folk",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/26/2018 10:43:52",
+      "relativePublishTimeDescription": 1540550632
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Nils Petter Vaskinn",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocL3Ty7LP9SVRmSnWutzu7d0v-b8pkeqLcswubzADv53edxdVQ=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/24/2018 18:13:32",
+      "relativePublishTimeDescription": 1540404812
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Glenn Ihlström",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIoAF2zcsHnexfSvaiynLG9Xhg0bTKJvcPfbw0XsJaXacIErw=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/17/2018 10:12:55",
+      "relativePublishTimeDescription": 1539771175
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kristoffer Gulbrandsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWSJoY6WJ2R9husIWn9ft35kL10_9kj5fUTD7AxXU1y5wxiRys=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Fantastisk service og utrolig flinke folk.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/16/2018 08:32:21",
+      "relativePublishTimeDescription": 1539678741
+    },
+    {
+      "authorAttribution": {
+        "displayName": "kristian thomas larsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWkLMwMXG5zyA_Z8Lcpm5pC6RaxY-0mDzgOa9zDsd6_HSuPXVVU=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Jobb raskt utført og hyggelig betjening",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "10/08/2018 19:03:27",
+      "relativePublishTimeDescription": 1539025407
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ida Vår Kierulf Meyer",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVymlUd6X5rVAJmnIIdY8O24fRDrIYlLto--IroNZOQn0cgQ9rG=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2018 14:56:04",
+      "relativePublishTimeDescription": 1538578564
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Denis Budanov",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKLKAeQ_XVVK1T8_SSNqr68CZah88L5Ad_Wpiemwz8mXUz6fQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/01/2018 20:01:50",
+      "relativePublishTimeDescription": 1538424110
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Pekka Stenhagen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKJEaPDQPZuXrV4CdeUJ0Z6_T8ifVjmpPBZltZ4NJ8GTqF8kw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Rekommenderes varmt. Rask og veldig god service. Mye kunnskap om sitt fagområde!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/28/2018 11:25:10",
+      "relativePublishTimeDescription": 1538133910
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Terje Almar Gogstad",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU9ZroNbjR1GnHz4Hpg1siKF_AaSBvJuzlTp7BNEWZu40yW-W4T=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Veldig hjelpsomme og med gode priser.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/27/2018 10:19:04",
+      "relativePublishTimeDescription": 1538043544
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tautvydas Maslauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVuWLNiWknBlyHB5CZMB68WDIcGQty9hlV0QQht3lo8ZaIWvyFi=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "09/10/2018 16:21:32",
+      "relativePublishTimeDescription": 1536596492
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Eivind Furustad",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLmh6uneghQLTtngHx0Ye8tGzewhGZO9P2c4zU4FARD205L=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Selger kvalitet til lav pris\nJobber raskt  😄",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/04/2018 11:24:36",
+      "relativePublishTimeDescription": 1536060276
+    },
+    {
+      "authorAttribution": {
+        "displayName": "vytautas kutka",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJl6vHrRANKWI0cgB2pglF0_oySMsdCThyVoosaN__Lu9JFNA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/27/2018 18:16:04",
+      "relativePublishTimeDescription": 1535393764
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Danpeter Støtvig Haugstad",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJTEsQrGmQNOxhHKDzmDH7iwbTU2gYlJExjAyCl4w6iwgzuow=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 3,
+      "publishTime": "08/23/2018 14:51:32",
+      "relativePublishTimeDescription": 1535035892
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jonathan Langved",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJvkXySXbpC2teZC7BbvLP_auXsjYX3AWWIXatBcrlkOprZYg=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/13/2018 19:44:13",
+      "relativePublishTimeDescription": 1534189453
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tautvydas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIK4Nd3Ue2Q63uowoWhxvo2TeE-DbMJPWOakuVcvsv3A2kSMA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "08/09/2018 13:49:38",
+      "relativePublishTimeDescription": 1533822578
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Hasse Siem",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI5IrehPs_DSRG4rsvFvyVtYrVb-FyEZMjHpNTctiyqLJkO-w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Bra. God service og hyggelige priser. Anbefales",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "07/20/2018 18:13:04",
+      "relativePublishTimeDescription": 1532110384
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Egidijus vejelis",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWQLdPn77zfwyTw6yxeCWHWmPe1oP5wRvCZonVJK0z6IpDe-I4=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/13/2018 13:43:55",
+      "relativePublishTimeDescription": 1531489435
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Andreas Ramstad",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVZnyHqIonvMu0zK8zXkMq9T-85r8j5nbqrKPtRkv4sugfHeVcK=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "07/06/2018 06:43:42",
+      "relativePublishTimeDescription": 1530859422
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Bjørn Terje Løwer",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXBXLqmtD2-M5K6ahJkreabWPNvn8x3KVzMLFDZhhFfwsBsapZP=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "På en skala fra 1 til 10: 12",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "06/06/2018 16:51:51",
+      "relativePublishTimeDescription": 1528303911
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Vygantas Demendziunas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJNghC0DBQ9L70ugptafp9JjDeT0g-vIqhhaU4YoQkpgdHScA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/21/2018 20:33:39",
+      "relativePublishTimeDescription": 1526934819
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Evaldas Vasiliauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIOigpoX66SDyFokNrYuhrfISATTwRXByXBu3CT8dJyp5mh0Q=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "04/29/2018 09:51:01",
+      "relativePublishTimeDescription": 1524995461
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Gregory Kaleta",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIuSJGlwdSMhtnb7F5MHRcq_viToPoW4CQENU1pSEi64bPfzA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 1,
+      "publishTime": "04/16/2018 14:44:18",
+      "relativePublishTimeDescription": 1523889858
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Emil Andreas Skevik",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIorgFqURqAEceUxtjbZrYCwXCxLB-qHTEpnkEhyifHZ72PUQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Veldig bra service. Byttet 4 stk dekk for meg på sekundet. Kan anbefales!!!!! Takk for god service.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/22/2018 11:10:49",
+      "relativePublishTimeDescription": 1521717049
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Elidijus AŠ",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLMOd6vJD-6hTyuJtf9t1_hX-69wcd3MWt21DMeNC5hO5RHlA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/14/2018 16:55:20",
+      "relativePublishTimeDescription": 1521046520
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kjetil Aakvik Gogstad",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV7NnXHpKzHKcDV9sNzc0TsqV75ppXbYhovqVFYDRPS1Qdz2d_hOg=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "Kjapp og god service. Billig også.",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "03/07/2018 16:59:42",
+      "relativePublishTimeDescription": 1520441982
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Paulius Balciauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJmSmKStr5xQpQ7ZSoDzf7qCU0k8H4ap3ef_C3uXc9Ia3-wLQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "02/01/2018 13:37:29",
+      "relativePublishTimeDescription": 1517492249
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Odd Ivar",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIhQVPMrktsWkWfnWt6bE68lt2T4Os_99D_ZAuebDLMYCKk=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Topp service. Greie priser. Fleksible. Alltid hyggelige.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "01/18/2018 16:30:16",
+      "relativePublishTimeDescription": 1516293016
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kenneth Strand",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJIXi26230Lgu5_qlUwE_d7BFV2rRGjCgG3_V25ghj13RPm9A=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "01/09/2018 10:00:38",
+      "relativePublishTimeDescription": 1515492038
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Henning Rollefsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU9m62c3Nqe7uOV9gcnKbgoEqolx4ebcMG6jcLUSbb3b4vgjii3=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/29/2017 10:32:31",
+      "relativePublishTimeDescription": 1514543551
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jarle Kristiansen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKdisseUZHXnPLJbP-SVvdkupPzcybyzO-5CSgNn1RUJtA-Gw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Kjapp å veldig grei service",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/07/2017 17:26:38",
+      "relativePublishTimeDescription": 1512667598
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Hanne Røsjordet",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJrcj_pncxxTfMKj19XuXmmsM7kZirIT_yP88dCfu6EuREvvA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Veldig bra service og hyggelige folk",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "12/05/2017 12:51:08",
+      "relativePublishTimeDescription": 1512478268
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tone Haakonsen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLbRuvmH4SxKy9u_42UcD3bn7CT6a6zs4wLN4Rv-9azp_OEfw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 3,
+      "publishTime": "12/04/2017 19:08:19",
+      "relativePublishTimeDescription": 1512414499
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Carl Fredrik Hansen",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIZiNZ1Je8KzGcc7bgIDDRjteU0PzahD2Pl7XQuXoJt5LCNMQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Bra priser. Fantastisk service!!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/24/2017 12:23:13",
+      "relativePublishTimeDescription": 1511526193
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jahn Larsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVBSC7HqsHXoNphzardFjjthPqbokHZWhPcnQLehf_xRcO3VZQ=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Beste service og pris på felger og dekk.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/18/2017 13:51:45",
+      "relativePublishTimeDescription": 1511013105
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tine Marina Berglund Nalum",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIQYCTSKrdxva_qkuZBSIHXNIiSJFn9X2GXylsFw3TRxcoGJg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Topp service,dekkskifte gjøres kjapt og det er billig😊😊 Anbefales😊😊",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "11/13/2017 13:26:36",
+      "relativePublishTimeDescription": 1510579596
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ruben Lar Sen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXRFNLIpm-dmYqUFj7eSopfLgsul3sLSz3lGtt_vV9itkR4A7ql2Q=s120-c-rp-mo-ba5-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "11/06/2017 07:12:33",
+      "relativePublishTimeDescription": 1509952353
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Geir Einar Larsen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVlcv9_xp4ShqtPN6S0dpjgJ2i3rBDwPM7pZ0QpJikwwF91HLNJ=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Utrolige gode tilbud på dekk og veldig god service.",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/20/2017 19:46:22",
+      "relativePublishTimeDescription": 1508528782
+    },
+    {
+      "authorAttribution": {
+        "displayName": "egis burokas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUDPI8SWNmsEthGq4vKql2LL-pYJ2XQtWRtx64JOT556JbSToD8=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/16/2017 13:43:45",
+      "relativePublishTimeDescription": 1508161425
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Rytis Zakarauskas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKenOeJUMBuZqbqusc8JKcwf8R0lgXFxYRc_aFrIY9rQcTY7A=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Utrolig bra service ! Ambefales",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/15/2017 17:39:22",
+      "relativePublishTimeDescription": 1508089162
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Nils Magnus Garn",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLfLr5RZWnza1fIfvBuHk_KKrui1y2F7HOa6LR-mqnSOAx-OQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Super sørvis raske folk fantastisk på pris på dekk 👍👍👍👍er å anbefale",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/14/2017 12:06:51",
+      "relativePublishTimeDescription": 1507982811
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Vytautas Biliunas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUHZsaUkUKO9LWi8Ns4GSshAiy0lOnyfdsqPgCbx4Zij7sBbzAC=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/25/2017 08:47:10",
+      "relativePublishTimeDescription": 1500972430
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Jarle Hansen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXodtYnYFBzNNTPeOqq86GHTDgQMkmgkgA5ts23ctcyXqel3WQ=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "God service. Bra dekkpriser og prakket ikke på deg noe du ikke trenger. Langt under pris på sammenlignbare produkter",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/09/2017 20:51:09",
+      "relativePublishTimeDescription": 1499633469
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Elius",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI11lM2Se4eEdDErDDXLI9wynX5nkOUNgnwiQQ6KVpuNvEk6w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "07/03/2017 19:11:48",
+      "relativePublishTimeDescription": 1499109108
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Tom Roger Pettersen",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWJFFJ_Iv2EWuYvw9P5JHQkWNzYymcBhfWhQWODM0EncL8aCUHYNw=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Fantastisk service til hyggelige priser. Anbefales.......",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "05/30/2017 07:44:09",
+      "relativePublishTimeDescription": 1496130249
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Dalius G",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLl4eP2Tyk_yKmSomp1B38HY8dFU16aNk8PMSbd1MQRRQAs7w=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Beste pris og kvalitet 👍🏻👍🏻👍🏻",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "03/31/2017 13:41:28",
+      "relativePublishTimeDescription": 1490967688
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Geir Olav Bye",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVZPZpS6gaGOMeyhFO_hKaNaUPJGi9Kszv6PA06jPmRm_B8KiQO=s120-c-rp-mo-ba4-br100"
+      },
+      "text": {
+        "text": "Rask og god service!",
+        "languageCode": "en"
+      },
+      "rating": 4,
+      "publishTime": "11/15/2016 17:02:49",
+      "relativePublishTimeDescription": 1479229369
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Sarunas Karazija",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLvRThiGXM-HcPoFPWObdF1sZzee4LPW6fg_UotMFAsCaPWbw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2016 11:45:40",
+      "relativePublishTimeDescription": 1475495140
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Eitvydas Vanagas",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocIE6-IHliavT_SSXI-0Dy-xlQGxWe7577ts446UkYHUtzE8Sg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2016 11:43:32",
+      "relativePublishTimeDescription": 1475495012
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Eitvydas Vanagas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWGnUi5A0_Hx59CjTAWEqF2UKNX_Z9SbWzIQe5PmZyE8Wb3GRTBew=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2016 11:28:59",
+      "relativePublishTimeDescription": 1475494139
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Simona Deinytė",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWa1pCoPQAC4zkE-mzzelv2_yN6MQT8FnDK3QKnQ7iL8TuQITGj=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2016 11:15:55",
+      "relativePublishTimeDescription": 1475493355
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Joachim Jansson",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU5KS_2ioXLmQJnPxnsiE5OX5B522zGMpAUNinPqmIU9xL_gdQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2016 11:11:56",
+      "relativePublishTimeDescription": 1475493116
+    },
+    {
+      "authorAttribution": {
+        "displayName": "ASU AGRONOMIJA",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU0GrHVuEVkRUfHGPIe_6l5DZpCQNudEJ9slJX5dYI-iX13eq0A=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "10/03/2016 11:10:22",
+      "relativePublishTimeDescription": 1475493022
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Deimante K",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWkFHpTRx6Pm5uRPtZMIV737cmT25OvTdahgvV_QK1gQy7CaJTk=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/27/2016 15:11:47",
+      "relativePublishTimeDescription": 1474989107
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Karolis Diniskinas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXDadi8CD5KT0oCJm326j8kURUcWfVJrPsMeIfszvbXkx8vM72o=s120-c-rp-mo-ba3-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 21:09:59",
+      "relativePublishTimeDescription": 1474924199
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Kjell Erik Stensland",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLkQ0VagAdDpv06Ydbm14JPHUYFIpXFhFgTP67hcyr0cszumA=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "Best service og best på pris på dekk og felgpakker 👏👏👏",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 21:02:47",
+      "relativePublishTimeDescription": 1474923767
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Aidas Butkus",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKfAon6zdnZNFtlJE5HPClyJ3gkWNMiWjvbDpUvobPVzp9yRQ=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "God service!!! Best pris!!!",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 20:33:03",
+      "relativePublishTimeDescription": 1474921983
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Normantas Liubinas",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjW9qNKhMDLaziQ9LVEp92-bapMuSrwfUHA8EeQBE6KfZIgQY2Wt=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 20:21:56",
+      "relativePublishTimeDescription": 1474921316
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Simas Ku",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKY9gZp60O4Fae-9iFXMsRHqJD7r8A1q9mmze6e4DFXQq9oBw=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 20:17:30",
+      "relativePublishTimeDescription": 1474921050
+    },
+    {
+      "authorAttribution": {
+        "displayName": "vytenis gircys",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocI0bApkesnqRpffPSP6YkeuYCv0JAC_zfjvqOgEVqXVdFbwhg=s120-c-rp-mo-ba2-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 20:12:11",
+      "relativePublishTimeDescription": 1474920731
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Ieva Kaselytė",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocK3BlLg_qsMVIzUEkw7HHLwZSBGI38hTj_6Mi7jR_TzaXrweeI=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 19:55:00",
+      "relativePublishTimeDescription": 1474919700
+    },
+    {
+      "authorAttribution": {
+        "displayName": "Goda Amirjan",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVuICMNxejeIAVPnO0IPiufLdec3RfbMmPu56EvCaXZaJDSDFBCAg=s120-c-rp-mo-br100"
+      },
+      "text": {
+        "text": "",
+        "languageCode": "en"
+      },
+      "rating": 5,
+      "publishTime": "09/26/2016 19:16:55",
+      "relativePublishTimeDescription": 1474917415
+    }
+  ],
+  "rating": 4.8,
+  "totalRatings": 202,
+  "lastUpdated": "2025-09-17T06:03:39.612Z",
+  "expiresAt": "2025-10-17T06:03:39.612Z"
+}

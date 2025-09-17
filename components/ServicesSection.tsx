@@ -6,14 +6,14 @@ import { getServicesData } from '@/utils/dataLoader'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
-const bookingLinks: { [key: string]: string } = {
-  'eu-control': 'https://calendly.com/4dekk-service2/eu-kontroll',
-  'after-control': 'https://calendly.com/4dekk-service2/etterkontroll',
-  'wheel-alignment': 'https://calendly.com/4dekk-service2/4hjulskontroll',
-  'diagnostics': 'https://calendly.com/4dekk-as/diagnose-av-bilproblemer',
-  'workshop-hourly': 'https://calendly.com/d/cw8m-3w4-8yy/oljeskift',
-  'tire-mounting-car': 'https://calendly.com/4dekk/omlegging-av-dekk'
-}
+const getBookingLinks = (language: 'no' | 'en'): { [key: string]: string } => ({
+  'eu-control': language === 'no' ? 'https://calendly.com/4dekk-service2/eu-kontroll' : 'https://calendly.com/4dekk-service2/eu-kontroll-clone',
+  'after-control': language === 'no' ? 'https://calendly.com/4dekk-service2/etterkontroll' : 'https://calendly.com/4dekk-service2/etterkontroll-clone',
+  'wheel-alignment': language === 'no' ? 'https://calendly.com/4dekk-service2/4hjulskontroll' : 'https://calendly.com/4dekk-service2/4hjulskontroll-clone',
+  'diagnostics': language === 'no' ? 'https://calendly.com/d/cr7j-wcf-8qy/diagnose-av-bilproblemer' : 'https://calendly.com/d/cwby-hk5-8d4/car-issue-diagnostics',
+  'workshop-hourly': language === 'no' ? 'https://calendly.com/d/cw8m-3w4-8yy/oljeskift' : 'https://calendly.com/d/csmh-bdz-qwd/oil-change',
+  'tire-mounting-car': language === 'no' ? 'https://calendly.com/4dekk/omlegging-av-dekk' : 'https://calendly.com/4dekk/omlegging-av-dekk-selvbestilling-via-internet-clone'
+})
 
 const multipleBookingLinks: { [key: string]: { [key: string]: { label: string; url: string }[] } } = {
   'hjulskift': {
@@ -22,8 +22,8 @@ const multipleBookingLinks: { [key: string]: { [key: string]: { label: string; u
       { label: 'Hjulskift (Egne Dekk)', url: 'https://calendly.com/4dekk/hjulskift-egne-dekk' }
     ],
     en: [
-      { label: 'Tire Change (Tire Hotel)', url: 'https://calendly.com/4dekk/dekkskift-dekkhotell' },
-      { label: 'Tire Change (Own Tires)', url: 'https://calendly.com/4dekk/hjulskift-egne-dekk' }
+      { label: 'Tire Change (Tire Hotel)', url: 'https://calendly.com/4dekk/hjulskift-dekkhotell-clone' },
+      { label: 'Tire Change (Own Tires)', url: 'https://calendly.com/4dekk/hjulskift-egne-dekk-clone' }
     ]
   }
 }
@@ -63,6 +63,7 @@ const featuredServices = [
 export default function ServicesSection() {
   const { language } = useLanguage()
   const services = getServicesData(language)
+  const bookingLinks = getBookingLinks(language)
   
   const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
 
@@ -125,7 +126,6 @@ export default function ServicesSection() {
               const serviceData = services.find(s => s.id === service.serviceId)
               
               if (!serviceData) {
-                console.warn(`Service data not found for: ${service.serviceId}`)
                 return null
               }
               

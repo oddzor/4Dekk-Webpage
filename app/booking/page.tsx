@@ -50,8 +50,8 @@ export default function BookingPage() {
       tireChangeHotelDesc: "Tire change with tire storage in our tire hotel",
       tireChangeOwn: "Tire Change (Own Tires)",
       tireChangeOwnDesc: "Tire change with your own tires that you bring",
-      tireMounting: "Tire Mounting (Online Order)",
-      tireMountingDesc: "Tire mounting for tires you ordered online",
+      tireMounting: "Tire Fitting (Online Order)",
+      tireMountingDesc: "Tire fitting for tires you ordered online",
       afterControl: "EU Reinspection",
       afterControlDesc: "Reinspection after repairs and service related to non-approved EU inspection",
       wheelAlignment: "Wheel Alignment",
@@ -96,7 +96,7 @@ export default function BookingPage() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <a 
-              href="https://calendly.com/4dekk-service2/eu-kontroll" 
+              href={language === 'no' ? "https://calendly.com/4dekk-service2/eu-kontroll" : "https://calendly.com/4dekk-service2/eu-kontroll-clone"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -121,7 +121,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/4dekk-as/diagnose-av-bilproblemer" 
+              href={language === 'no' ? "https://calendly.com/d/cr7j-wcf-8qy/diagnose-av-bilproblemer" : "https://calendly.com/d/cwby-hk5-8d4/car-issue-diagnostics"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -146,7 +146,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/d/cw8m-3w4-8yy/oljeskift" 
+              href={language === 'no' ? "https://calendly.com/d/cw8m-3w4-8yy/oljeskift" : "https://calendly.com/d/csmh-bdz-qwd/oil-change"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -171,7 +171,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/4dekk/dekkskift-dekkhotell" 
+              href={language === 'no' ? "https://calendly.com/4dekk/dekkskift-dekkhotell" : "https://calendly.com/4dekk/hjulskift-dekkhotell-clone"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -196,7 +196,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/4dekk/hjulskift-egne-dekk" 
+              href={language === 'no' ? "https://calendly.com/4dekk/hjulskift-egne-dekk" : "https://calendly.com/4dekk/hjulskift-egne-dekk-clone"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -221,7 +221,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/4dekk/omlegging-av-dekk" 
+              href={language === 'no' ? "https://calendly.com/4dekk/omlegging-av-dekk" : "https://calendly.com/4dekk/omlegging-av-dekk-selvbestilling-via-internet-clone"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -246,7 +246,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/4dekk-service2/etterkontroll" 
+              href={language === 'no' ? "https://calendly.com/4dekk-service2/etterkontroll" : "https://calendly.com/4dekk-service2/etterkontroll-clone"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -271,7 +271,7 @@ export default function BookingPage() {
             </a>
             
             <a 
-              href="https://calendly.com/4dekk-service2/4hjulskontroll" 
+              href={language === 'no' ? "https://calendly.com/4dekk-service2/4hjulskontroll" : "https://calendly.com/4dekk-service2/4hjulskontroll-clone"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
