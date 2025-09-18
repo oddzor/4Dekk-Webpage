@@ -1,0 +1,411 @@
+{
+  "id": "eu-control",
+  "slug": "eu-kontroll-guide-frist-sjekkliste-tips",
+  "category": "inspection",
+  "publishDate": "2024-03-05",
+  "lastUpdated": "2024-03-05",
+  "featured": true,
+  "readTime": 7,
+  "no": {
+    "title": "EU-kontroll Guide: Frister, Sjekkliste og Tips for Godkjent Kontroll",
+    "metaDescription": "Komplett guide til EU-kontroll - lær om frister, forberedelse, kostnader og hva som skjer hvis bilen ikke blir godkjent. Ekspertråd fra 4Dekk Larvik.",
+    "excerpt": "Alt du trenger å vite om EU-kontroll: frister, forberedelse og tips for å unngå kostbare underkjennelser. Få din bil godkjent første gang.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "EU-kontroll er obligatorisk for alle biler i Norge, og som bileier har du ansvaret for å få kjøretøyet kontrollert innenfor fristen. Mange opplever stress rundt EU-kontrollen, men med riktig forberedelse kan du øke sjansene betydelig for å få bilen godkjent første gang."
+      },
+      {
+        "type": "image",
+        "alt": "Bil som går gjennom EU-kontroll på autorisert kontrollstasjon",
+        "caption": "EU-kontroll sikrer at alle biler på norske veier oppfyller sikkerhets- og miljøkrav"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "EU-kontroll Frister og Regler"
+      },
+      {
+        "type": "paragraph",
+        "text": "Som bileier har du det fulle ansvaret for å få kjøretøyet EU-kontrollert innenfor lovpålagte frister. Det er opp til deg når du gjennomfører kontrollen, så lenge bilen er godkjent innen fristen. Hvis ikke, kan den bli avskiltet av myndighetene, og du risikerer både bot og problemer med forsikringen."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Frister for Forskjellige Kjøretøy"
+      },
+      {
+        "type": "paragraph",
+        "text": "**Kjøretøy under 7500 kg (de fleste personbiler og varebiler):**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Første EU-kontroll: Innen fire år etter førstegangsregistrering",
+          "Påfølgende kontroller: Senest hvert annet år",
+          "Veteranbiler 30-49 år: Hvert femte år (hvis kontrollert etter fylte 30 år)",
+          "Veteranbiler 50+ år: Fritatt for EU-kontroll (hvis kontrollert etter fylte 50 år)"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "**Kjøretøy over 7500 kg:**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Første EU-kontroll: Innen to år etter første registrering",
+          "Påfølgende kontroller: Årlig"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Sjekk din EU-kontroll Frist"
+      },
+      {
+        "type": "paragraph",
+        "text": "Husker du ikke når bilen din sist var inne til kontroll? Dette er heldigvis enkelt å sjekke. På Statens vegvesen sine nettsider kan du skrive inn registreringsnummeret og få komplett informasjon om kjøretøyet, inkludert neste frist for EU-kontroll."
+      },
+      {
+        "type": "paragraph",
+        "text": "Det anbefales å sjekke fristen i god tid før den utløper, slik at du kan planlegge kontrollen og eventuelt få utbedret feil før fristen går ut."
+      },
+      {
+        "type": "image",
+        "alt": "Mekaniker som inspiserer bilens understell under EU-kontroll",
+        "caption": "EU-kontrollen omfatter cirka 150 kontrollpunkter for sikkerhet og miljø"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Kostnader for EU-kontroll"
+      },
+      {
+        "type": "paragraph",
+        "text": "Verkstedene og kontrollstasjonene setter selv prisen for EU-kontroll, og det kan være betydelige forskjeller. Prisene varierer typisk fra 900 til 1200 kroner, men husk at kvaliteten på arbeidet som blir gjort er like viktig som prisen."
+      },
+      {
+        "type": "paragraph",
+        "text": "Det lønner seg å sammenligne priser, men velg alltid en autorisert kontrollstasjon med god rykte. En grundig kontroll kan faktisk spare deg penger ved å oppdage problemer tidlig."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Forbered Bilen for EU-kontroll"
+      },
+      {
+        "type": "paragraph",
+        "text": "God forberedelse kan spare deg for både tid og penger. Det finnes flere ting du enkelt kan sjekke selv før du leverer bilen til kontroll."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Innvendig Sjekkliste"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Rydd bilen og sørg for at vognkort, refleksvest og varseltrekant er godt synlig",
+          "Kontroller at alle speil og vinduer er rene og uten skader i synsfeltet",
+          "Test at vindusviskere og spylevæskemekanismen fungerer",
+          "Sjekk at alle lys fungerer: billys, blinklys, ryggelys, bremselys og skiltlys",
+          "Test rattet for klakkelyder og dødgang",
+          "Kontroller at låser, tyverisikring, speedometer og varsellamper fungerer",
+          "Sjekk at seter, dører og bagasjerom åpnes og lukkes korrekt"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Utvendig Sjekkliste"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Inspiser bremseskivene for ujevn slitasje og store rustskader",
+          "Kontroller at det er tilstrekkelig bremsebelegg på bremseklossene",
+          "Undersøk hjulsystemet: støtdempere, fjærer, dekk og felger",
+          "Se etter synlige skader på eksosanlegg, drivstofftank og rør",
+          "Sjekk at alle hjulbolter sitter godt fast",
+          "Kontroller dekkenes mønsterdybde og jevnhet i slitasjen"
+        ]
+      },
+      {
+        "type": "image",
+        "alt": "EU-kontroll godkjent sertifikat og kontrollseddel",
+        "caption": "Godkjent EU-kontroll gir deg lovlig kjøring i to år fremover"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Etter EU-kontrollen"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Hvis Bilen Blir Godkjent"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gratulerer! Når kjøretøyet ditt har fått godkjent EU-kontroll, er bilen klarert for kjøring på norske og europeiske veier de neste to årene. Du har bidratt til å sikre en tryggere og mer miljøvennlig bilpark."
+      },
+      {
+        "type": "paragraph",
+        "text": "Sjekk likevel kontrollseddelen nøye:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "At riktig kilometerstand er registrert",
+          "Eventuelle mangler med feilkode 1 (må rettes, men krever ikke etterkontroll)",
+          "Din neste frist for EU-kontroll"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Hvis Bilen Ikke Blir Godkjent"
+      },
+      {
+        "type": "paragraph",
+        "text": "Hvis bilen din fikk merknader og ikke ble EU-godkjent, må manglene utbedres hos et verksted. Deretter må kjøretøyet inn til etterkontroll."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Mangelkoder og deres betydning:**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Kode 1: Mangler som må rettes, men krever ikke etterkontroll",
+          "Kode 2: Mangler som må rettes og krever etterkontroll. Vurder om bilen er forsvarlig å kjøre",
+          "Kode 3: Kjøreforbud! Bilen kan ikke brukes før manglene er rettet og godkjent"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Etterkontrollen kan tas hvor som helst og kontrollerer kun at feil og mangler er utbedret. Den går normalt relativt raskt og koster mindre enn en full EU-kontroll."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Ekspertråd for Vellykket EU-kontroll"
+      },
+      {
+        "type": "paragraph",
+        "text": "På EU-kontrollen blir rundt 150 punkter gjennomgått, så det er umulig å gardere seg helt. Likevel kan god forberedelse og regelmessig vedlikehold øke sjansene betydelig for godkjennelse første gang."
+      },
+      {
+        "type": "paragraph",
+        "text": "Hos 4Dekk Larvik kan vi hjelpe deg med pre-kontroll for å identifisere potensielle problemer før EU-kontrollen. Vi utfører også all nødvendig reparasjon og vedlikehold for å få bilen din gjennom kontrollen."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kontakt oss for en gjennomgang av bilen din før EU-kontroll, så øker du sjansene for godkjennelse første gang og unngår stress og ekstra kostnader."
+      }
+    ]
+  },
+  "en": {
+    "title": "EU Control Guide: Deadlines, Checklist and Tips for Approved Inspection",
+    "metaDescription": "Complete guide to EU control - learn about deadlines, preparation, costs and what happens if your car fails inspection. Expert advice from 4Dekk Larvik.",
+    "excerpt": "Everything you need to know about EU control: deadlines, preparation and tips to avoid costly rejections. Get your car approved the first time.",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "EU control is mandatory for all cars in Norway, and as a car owner, you have the responsibility to have your vehicle inspected within the deadline. Many experience stress around EU control, but with proper preparation, you can significantly increase the chances of getting your car approved the first time."
+      },
+      {
+        "type": "image",
+        "alt": "Car going through EU control at authorized inspection station",
+        "caption": "EU control ensures that all cars on Norwegian roads meet safety and environmental requirements"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "EU Control Deadlines and Rules"
+      },
+      {
+        "type": "paragraph",
+        "text": "As a car owner, you have full responsibility for getting your vehicle EU-controlled within legal deadlines. It's up to you when you conduct the inspection, as long as the car is approved within the deadline. Otherwise, it can be deregistered by authorities, and you risk both fines and insurance problems."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Deadlines for Different Vehicles"
+      },
+      {
+        "type": "paragraph",
+        "text": "**Vehicles under 7500 kg (most passenger cars and vans):**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "First EU control: Within four years after first registration",
+          "Subsequent controls: At least every other year",
+          "Veteran cars 30-49 years: Every fifth year (if controlled after turning 30)",
+          "Veteran cars 50+ years: Exempt from EU control (if controlled after turning 50)"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "**Vehicles over 7500 kg:**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "First EU control: Within two years after first registration",
+          "Subsequent controls: Annually"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Check Your EU Control Deadline"
+      },
+      {
+        "type": "paragraph",
+        "text": "Don't remember when your car was last inspected? This is fortunately easy to check. On the Norwegian Public Roads Administration website, you can enter your registration number and get complete vehicle information, including the next EU control deadline."
+      },
+      {
+        "type": "paragraph",
+        "text": "It's recommended to check the deadline well before it expires, so you can plan the inspection and potentially fix any issues before the deadline passes."
+      },
+      {
+        "type": "image",
+        "alt": "Mechanic inspecting car's undercarriage during EU control",
+        "caption": "EU control covers approximately 150 checkpoints for safety and environment"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "EU Control Costs"
+      },
+      {
+        "type": "paragraph",
+        "text": "Workshops and inspection stations set their own prices for EU control, and there can be significant differences. Prices typically vary from 900 to 1200 kroner, but remember that the quality of work performed is as important as the price."
+      },
+      {
+        "type": "paragraph",
+        "text": "It pays to compare prices, but always choose an authorized inspection station with a good reputation. A thorough inspection can actually save you money by discovering problems early."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Prepare Your Car for EU Control"
+      },
+      {
+        "type": "paragraph",
+        "text": "Good preparation can save you both time and money. There are several things you can easily check yourself before delivering the car for inspection."
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Interior Checklist"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Clean the car and ensure vehicle registration, reflective vest and warning triangle are clearly visible",
+          "Check that all mirrors and windows are clean and without damage in the field of vision",
+          "Test that windshield wipers and washer fluid system work",
+          "Check that all lights work: headlights, turn signals, reverse lights, brake lights and license plate lights",
+          "Test the steering wheel for clicking sounds and play",
+          "Check that locks, anti-theft system, speedometer and warning lights work",
+          "Verify that seats, doors and trunk open and close correctly"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "Exterior Checklist"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Inspect brake discs for uneven wear and major rust damage",
+          "Check that there's sufficient brake pad material on brake pads",
+          "Examine wheel system: shock absorbers, springs, tires and rims",
+          "Look for visible damage to exhaust system, fuel tank and pipes",
+          "Check that all wheel bolts are properly tightened",
+          "Verify tire tread depth and evenness of wear"
+        ]
+      },
+      {
+        "type": "image",
+        "alt": "EU control approved certificate and inspection slip",
+        "caption": "Approved EU control gives you legal driving for the next two years"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "After EU Control"
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "If Your Car is Approved"
+      },
+      {
+        "type": "paragraph",
+        "text": "Congratulations! When your vehicle has passed EU control, the car is cleared for driving on Norwegian and European roads for the next two years. You've contributed to ensuring a safer and more environmentally friendly vehicle fleet."
+      },
+      {
+        "type": "paragraph",
+        "text": "Still, check the inspection slip carefully:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "That correct mileage is registered",
+          "Any defects with error code 1 (must be fixed but doesn't require re-inspection)",
+          "Your next EU control deadline"
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "text": "If Your Car is Not Approved"
+      },
+      {
+        "type": "paragraph",
+        "text": "If your car received remarks and was not EU-approved, the defects must be fixed at a workshop. Then the vehicle must undergo re-inspection."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Defect codes and their meaning:**"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Code 1: Defects that must be fixed but don't require re-inspection",
+          "Code 2: Defects that must be fixed and require re-inspection. Assess if the car is safe to drive",
+          "Code 3: Driving ban! The car cannot be used until defects are fixed and approved"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Re-inspection can be done anywhere and only checks that errors and defects have been corrected. It normally goes relatively quickly and costs less than a full EU control."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Expert Tips for Successful EU Control"
+      },
+      {
+        "type": "paragraph",
+        "text": "About 150 points are reviewed during EU control, so it's impossible to guard against everything. However, good preparation and regular maintenance can significantly increase the chances of first-time approval."
+      },
+      {
+        "type": "paragraph",
+        "text": "At 4Dekk Larvik, we can help you with pre-inspection to identify potential problems before EU control. We also perform all necessary repairs and maintenance to get your car through inspection."
+      },
+      {
+        "type": "paragraph",
+        "text": "Contact us for a review of your car before EU control, and you'll increase the chances of first-time approval while avoiding stress and extra costs."
+      }
+    ]
+  }
+}
+
+

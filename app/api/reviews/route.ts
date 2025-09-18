@@ -64,11 +64,11 @@ export async function GET(request: NextRequest) {
       totalRatings,
       note: 'Limited to 5 reviews by Google Places API'
     })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { 
         error: 'Failed to fetch reviews',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        details: 'Unknown error'
       },
       { status: 500 }
     )

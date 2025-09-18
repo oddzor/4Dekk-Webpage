@@ -86,11 +86,11 @@ export async function GET() {
       } : null
     })
 
-  } catch (error) {
+  } catch {
     return NextResponse.json({
       success: false,
       error: 'Network or parsing error',
-      details: error instanceof Error ? error.message : 'Unknown error'
+      details: 'Unknown error'
     }, { status: 500 })
   }
 }

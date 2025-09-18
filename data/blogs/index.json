@@ -1,0 +1,65 @@
+{
+  "blogs": [
+    {
+      "id": "wheel-alignment",
+      "file": "wheel-alignment.json",
+      "featured": true,
+      "category": "maintenance"
+    },
+    {
+      "id": "seasonal-tires", 
+      "file": "seasonal-tires.json",
+      "featured": true,
+      "category": "tires"
+    },
+    {
+      "id": "car-maintenance",
+      "file": "car-maintenance.json",
+      "featured": false,
+      "category": "maintenance"
+    },
+    {
+      "id": "oil-change",
+      "file": "oil-change.json", 
+      "featured": false,
+      "category": "maintenance"
+    },
+    {
+      "id": "eu-control",
+      "file": "eu-control.json",
+      "featured": true,
+      "category": "inspection"
+    },
+    {
+      "id": "tire-wear",
+      "file": "tire-wear.json",
+      "featured": false,
+      "category": "tires"
+    }
+  ],
+  "categories": [
+    {
+      "id": "maintenance",
+      "name": {
+        "no": "Vedlikehold",
+        "en": "Maintenance"
+      }
+    },
+    {
+      "id": "tires", 
+      "name": {
+        "no": "Dekk",
+        "en": "Tires"
+      }
+    },
+    {
+      "id": "inspection",
+      "name": {
+        "no": "Kontroll",
+        "en": "Inspection"
+      }
+    }
+  ]
+}
+
+

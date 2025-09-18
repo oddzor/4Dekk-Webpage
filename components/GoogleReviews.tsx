@@ -161,7 +161,7 @@ export default function GoogleReviewsSection() {
         const years = Math.floor(diffInDays / 365)
         return language === 'no' ? `${years} år siden` : `${years} year${years > 1 ? 's' : ''} ago`
       }
-    } catch (error) {
+    } catch {
       return language === 'no' ? 'Nylig' : 'Recently'
     }
   }

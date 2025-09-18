@@ -8,8 +8,31 @@ interface GoogleReview {
   [key: string]: unknown
 }
 
+interface OutscraperReview {
+  author_title?: string
+  author_image?: string
+  review_text?: string
+  review_rating?: number
+  review_datetime_utc?: string
+  review_timestamp?: string
+}
+
+interface TransformedReview {
+  authorAttribution: {
+    displayName: string
+    photoUri?: string
+  }
+  text: {
+    text: string
+    languageCode: string
+  }
+  rating: number
+  publishTime: string
+  relativePublishTimeDescription: string
+}
+
 interface CachedReviews {
-  reviews: any[]
+  reviews: TransformedReview[]
   rating: number
   totalRatings: number
   lastUpdated: string
@@ -58,18 +81,18 @@ export async function GET(request: NextRequest) {
       timestamp: new Date().toISOString()
     })
 
-  } catch (error) {
+  } catch {
     
     return NextResponse.json({
       success: false,
       error: 'Refresh failed',
-      details: error instanceof Error ? error.message : 'Unknown error',
+      details: 'Unknown error',
       timestamp: new Date().toISOString()
     }, { status: 500 })
   }
 }
 
-async function saveToCache(data: { reviews: any[], rating: number, totalRatings: number }) {
+async function saveToCache(data: { reviews: TransformedReview[], rating: number, totalRatings: number }) {
   const now = new Date()
   const cacheData: CachedReviews = {
     reviews: data.reviews,
@@ -110,7 +133,7 @@ async function fetchFromOutscraper(placeId: string, apiKey: string) {
   const businessData = data[0]
   const reviews = businessData.reviews_data || []
   
-  const transformedReviews = reviews.map((review: any) => ({
+  const transformedReviews = reviews.map((review: OutscraperReview) => ({
     authorAttribution: {
       displayName: review.author_title || 'Anonymous',
       photoUri: review.author_image || undefined
@@ -124,7 +147,7 @@ async function fetchFromOutscraper(placeId: string, apiKey: string) {
     relativePublishTimeDescription: review.review_timestamp || 'Recently'
   }))
   
-  transformedReviews.sort((a: any, b: any) => {
+  transformedReviews.sort((a: TransformedReview, b: TransformedReview) => {
     const dateA = new Date(a.publishTime)
     const dateB = new Date(b.publishTime)
     return dateB.getTime() - dateA.getTime()

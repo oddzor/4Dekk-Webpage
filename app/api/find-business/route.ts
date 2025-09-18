@@ -79,11 +79,11 @@ export async function POST(request: NextRequest) {
         'Try a different search term'
     })
 
-  } catch (error) {
+  } catch {
     return NextResponse.json({
       success: false,
       error: 'Search failed',
-      details: error instanceof Error ? error.message : 'Unknown error'
+      details: 'Unknown error'
     }, { status: 500 })
   }
 }

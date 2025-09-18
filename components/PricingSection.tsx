@@ -29,7 +29,6 @@ export default function PricingSection() {
       importantInfo: "Viktig Informasjon",
       info1: "Dersom du ikke finner det du leter etter, kontakt oss gjerne for et uforpliktende pristilbud",
       info2: "Deler til service som bremsedeler, filtere o.l. må ofte bestilles i forveien grunnet begrenset delelager",
-      unsureText: "Usikker på hvilken tjeneste du trenger? Kontakt oss for en gratis konsultasjon.",
       bookButton: "Bestill Time",
       contactButton: "Kontakt Oss"
     },
@@ -39,7 +38,6 @@ export default function PricingSection() {
       importantInfo: "Important Information",
       info1: "If you don't find what you're looking for, please contact us for a non-binding price quote",
       info2: "Service parts such as brake parts, filters etc. often need to be ordered in advance due to limited parts inventory",
-      unsureText: "Unsure which service you need? Contact us for a free consultation.",
       bookButton: "Book Appointment",
       contactButton: "Contact Us"
     }
@@ -147,9 +145,6 @@ export default function PricingSection() {
           </div>
         </div>
         <div className="mt-12 text-center">
-          <p className="mb-6 text-lg text-text">
-            {t.unsureText}
-          </p>
                  <div className="flex flex-col justify-center gap-4 sm:flex-row">
                    <a href="/booking" className="btn-accent whitespace-nowrap min-w-[200px]">
                      {t.bookButton}

@@ -62,11 +62,11 @@ export async function GET(_request: NextRequest) {
             error: `HTTP ${response.status}: ${errorText}`
           })
         }
-      } catch (error) {
+      } catch {
         results.push({
           method: method.name,
           success: false,
-          error: error instanceof Error ? error.message : 'Unknown error'
+          error: 'Unknown error'
         })
       }
 
@@ -88,11 +88,11 @@ export async function GET(_request: NextRequest) {
       ]
     })
 
-  } catch (error) {
+  } catch {
     return NextResponse.json({
       success: false,
       error: 'Test failed',
-      details: error instanceof Error ? error.message : 'Unknown error'
+      details: 'Unknown error'
     }, { status: 500 })
   }
 }

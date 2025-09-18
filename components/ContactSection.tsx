@@ -61,15 +61,36 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="mb-1 font-semibold font-headings text-headings">Åpningstider</h3>
-                  <p className="text-text">
-                    Mandag: {businessData.hours.monday}<br />
-                    Tirsdag: {businessData.hours.tuesday}<br />
-                    Onsdag: {businessData.hours.wednesday}<br />
-                    Torsdag: {businessData.hours.thursday}<br />
-                    Fredag: {businessData.hours.friday}<br />
-                    Lørdag: {businessData.hours.saturday}<br />
-                    Søndag: {businessData.hours.sunday}
-                  </p>
+                  <div className="space-y-1 text-text">
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Mandag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.monday}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Tirsdag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.tuesday}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Onsdag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.wednesday}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Torsdag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.thursday}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Fredag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.friday}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Lørdag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.saturday}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="min-w-[80px]">Søndag:</span>
+                      <span className="font-medium text-accent">{businessData.hours.sunday}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

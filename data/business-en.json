@@ -12,11 +12,11 @@
     "website": "https://4dekk.no"
   },
   "hours": {
-    "monday": "8:00 - 16:00",
-    "tuesday": "8:00 - 16:00",
-    "wednesday": "8:00 - 16:00",
-    "thursday": "8:00 - 16:00",
-    "friday": "8:00 - 16:00",
+    "monday": "08:00 - 16:00",
+    "tuesday": "08:00 - 16:00",
+    "wednesday": "08:00 - 16:00",
+    "thursday": "08:00 - 16:00",
+    "friday": "08:00 - 16:00",
     "saturday": "Closed",
     "sunday": "Closed"
   },

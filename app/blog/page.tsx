@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import Icon from '../../components/Icon'
 import { useLanguage } from '../../contexts/LanguageContext'
 import DynamicMetadata from '../../components/DynamicMetadata'
@@ -23,7 +22,7 @@ interface BlogArticle {
 export default function BlogPage() {
   const { language } = useLanguage()
   const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null)
-  const blogArticles = getBlogData(language)
+  const blogArticles = getBlogData()
 
   const content = {
     no: {
@@ -52,12 +51,6 @@ export default function BlogPage() {
   
   const t = content[language]
   
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    return language === 'no' 
-      ? date.toLocaleDateString('nb-NO', { year: 'numeric', month: 'long', day: 'numeric' })
-      : date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
-  }
 
   const handleArticleClick = (article: BlogArticle) => {
     setSelectedArticle(article)
@@ -85,8 +78,24 @@ export default function BlogPage() {
           </h2>
         )
       }
+      if (line.startsWith('### ')) {
+        return (
+          <h3 key={index} className="mt-6 mb-3 text-xl font-semibold font-headings text-headings">
+            {line.replace('### ', '')}
+          </h3>
+        )
+      }
       if (line.trim() === '') {
         return <br key={index} />
+      }
+      // Handle bold text (introduction paragraphs)
+      if (line.startsWith('**') && line.endsWith('**')) {
+        const boldText = line.slice(2, -2)
+        return (
+          <p key={index} className="mb-4 leading-relaxed text-text font-semibold text-lg">
+            {boldText}
+          </p>
+        )
       }
       return (
         <p key={index} className="mb-4 leading-relaxed text-text">
@@ -116,21 +125,7 @@ export default function BlogPage() {
         <section className="section-light section-padding">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
-              <div className="relative h-64 mb-8 overflow-hidden rounded-lg md:h-96">
-                <Image
-                  src={selectedArticle.image}
-                  alt={selectedArticle.title[language]}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw"
-                />
-              </div>
-              
               <article className="prose prose-lg max-w-none">
-                <div className="mb-8 text-lg font-medium text-gray-300">
-                  {selectedArticle.excerpt[language]}
-                </div>
-                
                 <div className="text-text">
                   {formatContent(selectedArticle.content[language])}
                 </div>
@@ -195,7 +190,7 @@ export default function BlogPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
-            {blogArticles.map((article, index) => (
+            {blogArticles.map((article) => (
               <article 
                 key={article.id} 
                 className={`group overflow-hidden transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg hover:shadow-accent/10 cursor-pointer ${
@@ -203,16 +198,6 @@ export default function BlogPage() {
                 }`}
                 onClick={() => handleArticleClick(article)}
               >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.title[language]}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-
                 <div className="p-6">
                   <h3 className="mb-3 text-xl font-bold transition-colors duration-200 font-headings text-headings group-hover:text-accent">
                     {article.title[language]}
