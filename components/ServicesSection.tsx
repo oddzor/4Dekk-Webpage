@@ -106,7 +106,7 @@ export default function ServicesSection() {
   const remainingServices = services.filter(service => !featuredServiceIds.includes(service.id))
 
   return (
-    <section id="services" className="section-padding section-dark">
+    <section id="services" className="section-padding section-dark mt-4 md:mt-0">
       <div className="container-custom">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">

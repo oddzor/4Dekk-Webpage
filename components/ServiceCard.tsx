@@ -62,7 +62,7 @@ export default function ServiceCard({
         }`}
       >
         <div className="absolute inset-0 w-full h-full backface-hidden">
-f          <div 
+      <div 
             className="flex flex-col h-full overflow-hidden cursor-pointer card-dark border-glow hover:border-glow-strong"
             onClick={handleToggle}
             role="button"

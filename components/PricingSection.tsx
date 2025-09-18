@@ -66,7 +66,6 @@ export default function PricingSection() {
             
             return (
               <div key={index} className="overflow-hidden transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg">
-                {/* Mobile: Collapsible header */}
                 <div className="md:hidden">
                   <button
                     onClick={() => toggleExpanded(index)}
@@ -95,7 +94,6 @@ export default function PricingSection() {
                     </div>
                   </button>
                   
-                  {/* Collapsible content */}
                   <div className={`transition-all duration-300 overflow-hidden ${
                     isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}>
@@ -107,7 +105,6 @@ export default function PricingSection() {
                   </div>
                 </div>
 
-                {/* Desktop: Full card */}
                 <div className="hidden p-6 md:block">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center">

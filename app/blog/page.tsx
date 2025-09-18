@@ -179,10 +179,10 @@ export default function BlogPage() {
                   }
                 </p>
                 <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                  <a href="/contact" className="btn-secondary">
+                  <a href="/contact" className="btn-secondary text-center">
                     {language === 'no' ? 'Kontakt Oss' : 'Contact Us'}
                   </a>
-                  <a href="/booking" className="btn-accent">
+                  <a href="/booking" className="btn-accent text-center">
                     {language === 'no' ? 'Bestill Time' : 'Book Appointment'}
                   </a>
                 </div>
@@ -193,11 +193,11 @@ export default function BlogPage() {
         
         <button
           onClick={handleBackToBlog}
-          className="fixed z-50 flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-all duration-300 ease-in-out transform border rounded-lg shadow-lg opacity-90 top-6 right-6 bg-gray-800/80 hover:bg-gray-700/80 hover:shadow-xl hover:scale-105 backdrop-blur-sm border-gray-600/50 hover:opacity-100"
+          className="fixed z-50 flex items-center gap-2 px-3 py-2 text-sm font-medium text-white transition-all duration-300 ease-in-out transform border rounded-lg shadow-lg opacity-90 top-6 right-16 bg-gray-800/80 hover:bg-gray-700/80 hover:shadow-xl hover:scale-105 backdrop-blur-sm border-gray-600/50 hover:opacity-100 sm:px-4 sm:right-6"
           aria-label={t.backToBlog}
         >
           <Icon name="arrow-left" className="w-4 h-4" />
-          {t.backToBlog}
+          <span className="hidden sm:inline">{t.backToBlog}</span>
         </button>
       </div>
     )
@@ -265,10 +265,10 @@ export default function BlogPage() {
                 }
               </p>
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <a href="/contact" className="btn-secondary">
+                <a href="/contact" className="btn-secondary text-center">
                   {language === 'no' ? 'Kontakt Oss' : 'Contact Us'}
                 </a>
-                <a href="/booking" className="btn-accent">
+                <a href="/booking" className="btn-accent text-center">
                   {language === 'no' ? 'Bestill Time' : 'Book Appointment'}
                 </a>
               </div>

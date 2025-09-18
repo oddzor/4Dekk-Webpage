@@ -30,16 +30,18 @@ export default function HeroSection() {
   
   const t = content[language]
   return (
-    <section className="relative flex items-start justify-center h-screen pt-20 overflow-hidden md:pt-16 bg-gradient-dark">
+    <section className="relative flex items-start justify-center min-h-screen pt-20 pb-8 overflow-hidden md:pt-16 md:pb-12 bg-gradient-dark">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 z-10 bg-black/70" />
         <Image
-          src="/images/hero-bg.webp"
+          src="/images/hero-image-1.webp"
           alt="Bilverksted med teknikere som arbeider"
           fill
           className="object-cover"
           priority
-          quality={90}
+          quality={80}
+          sizes="100vw"
+          fetchPriority="high"
           onError={(e) => {
             const target = e.target as HTMLImageElement
             target.style.display = 'none'
@@ -57,12 +59,12 @@ export default function HeroSection() {
               fill
               className="object-contain"
               priority
-              quality={100}
-              sizes="(max-width: 768px) 384px, (max-width: 1024px) 448px, 512px"
+              quality={95}
+              sizes="(max-width: 768px) 320px, (max-width: 1024px) 448px, 512px"
+              fetchPriority="high"
               style={{
                 imageRendering: 'auto'
               }}
-              unoptimized={false}
             />
           </div>
         </div>
@@ -83,7 +85,7 @@ export default function HeroSection() {
                  </a>
                </div>
 
-        <div className="grid max-w-4xl grid-cols-1 gap-6 mx-auto mt-12 md:gap-8 md:mt-16 md:grid-cols-3">
+        <div className="grid max-w-4xl grid-cols-1 gap-4 mx-auto mt-8 md:gap-8 md:mt-16 md:grid-cols-3">
           <div className="p-4 text-center md:p-6 card-dark">
             <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">10+</div>
             <div className="text-sm text-gray-300 md:text-base">{t.trust1}</div>

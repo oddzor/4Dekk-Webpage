@@ -66,7 +66,13 @@ export async function GET() {
     const apiKey = process.env.OUTSCRAPER_API_KEY
     
     if (!apiKey) {
-      return await fetchFromGooglePlaces(placeId)
+      const googleData = await fetchFromGooglePlaces(placeId)
+      return NextResponse.json({
+        success: true,
+        ...googleData,
+        cached: false,
+        lastUpdated: now.toISOString()
+      })
     }
 
     const freshReviews = await fetchFromOutscraper(placeId, apiKey)
@@ -78,11 +84,9 @@ export async function GET() {
       lastUpdated: now.toISOString(),
       expiresAt: new Date(now.getTime() + CACHE_DURATION_DAYS * 24 * 60 * 60 * 1000).toISOString()
     }
-
-
+    
     await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true })
     await fs.writeFile(CACHE_FILE, JSON.stringify(cacheData, null, 2))
-    
 
     return NextResponse.json({
       success: true,

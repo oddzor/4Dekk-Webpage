@@ -7,7 +7,7 @@
   "featured": true,
   "readTime": 7,
   "no": {
-    "title": "EU-kontroll Guide: Frister, Sjekkliste og Tips for Godkjent Kontroll",
+    "title": "EU Kontroll: Hva innebærer det?",
     "metaDescription": "Komplett guide til EU-kontroll - lær om frister, forberedelse, kostnader og hva som skjer hvis bilen ikke blir godkjent. Ekspertråd fra 4Dekk Larvik.",
     "excerpt": "Alt du trenger å vite om EU-kontroll: frister, forberedelse og tips for å unngå kostbare underkjennelser. Få din bil godkjent første gang.",
     "content": [
@@ -17,6 +17,7 @@
       },
       {
         "type": "image",
+        "src": "/images/eu-control-1.webp",
         "alt": "Bil som går gjennom EU-kontroll på autorisert kontrollstasjon",
         "caption": "EU-kontroll sikrer at alle biler på norske veier oppfyller sikkerhets- og miljøkrav"
       },
@@ -62,6 +63,7 @@
       },
       {
         "type": "image",
+        "src": "/images/eu-control-2.webp",
         "alt": "Mekaniker som inspiserer bilens understell under EU-kontroll",
         "caption": "EU-kontrollen omfatter cirka 150 kontrollpunkter for sikkerhet og miljø"
       },
@@ -122,6 +124,7 @@
       },
       {
         "type": "image",
+        "src": "/images/eu-control-3.webp",
         "alt": "EU-kontroll godkjent sertifikat og kontrollseddel",
         "caption": "Godkjent EU-kontroll gir deg lovlig kjøring i to år fremover"
       },
@@ -166,7 +169,7 @@
     ]
   },
   "en": {
-    "title": "EU Control Guide: Deadlines, Checklist and Tips for Approved Inspection",
+    "title": "EU Inspection: What Does It Involve?",
     "metaDescription": "Complete guide to EU control - learn about deadlines, preparation, costs and what happens if your car fails inspection. Expert advice from 4Dekk Larvik.",
     "excerpt": "Everything you need to know about EU control: deadlines, preparation and tips to avoid costly rejections. Get your car approved the first time.",
     "content": [
@@ -176,6 +179,7 @@
       },
       {
         "type": "image",
+        "src": "/images/eu-control-1.webp",
         "alt": "Car going through EU control at authorized inspection station",
         "caption": "EU control ensures that all cars on Norwegian roads meet safety and environmental requirements"
       },
@@ -221,6 +225,7 @@
       },
       {
         "type": "image",
+        "src": "/images/eu-control-2.webp",
         "alt": "Mechanic inspecting car's undercarriage during EU control",
         "caption": "EU control covers approximately 150 checkpoints for safety and environment"
       },
@@ -281,6 +286,7 @@
       },
       {
         "type": "image",
+        "src": "/images/eu-control-3.webp",
         "alt": "EU control approved certificate and inspection slip",
         "caption": "Approved EU control gives you legal driving for the next two years"
       },

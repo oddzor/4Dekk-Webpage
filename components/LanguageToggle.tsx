@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import ReactCountryFlag from 'react-country-flag'
 
 export default function LanguageToggle() {
   const { language, toggleLanguage } = useLanguage()
@@ -12,9 +13,15 @@ export default function LanguageToggle() {
       aria-label={`Switch to ${language === 'no' ? 'English' : 'Norwegian'}`}
     >
       <div className="flex items-center gap-1">
-        <span className="text-lg">
-          {language === 'no' ? '🇬🇧' : '🇳🇴'}
-        </span>
+        <ReactCountryFlag
+          countryCode={language === 'no' ? 'GB' : 'NO'}
+          svg
+          style={{
+            width: '20px',
+            height: '15px',
+          }}
+          title={language === 'no' ? 'English' : 'Norwegian'}
+        />
         <span className="text-xs font-semibold">
           {language === 'no' ? 'EN' : 'NO'}
         </span>

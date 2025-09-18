@@ -68,27 +68,42 @@ export default function GoogleReviewsSection() {
     const fetchReviews = async () => {
       try {
         setLoading(true)
-        const response = await fetch(`/api/reviews-cached`)
         
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-
-        const data: GoogleReviewsResponse = await response.json()
-        
-        if (isMounted && data.success && data.reviews) {
-          setReviews(data.reviews)
-          setOverallRating(data.rating)
-          setTotalRatings(data.totalRatings)
-        } else if (isMounted) {
-          throw new Error('Failed to fetch reviews')
+        // CRITICAL: Defer API call to not block main thread
+        if (window.requestIdleCallback) {
+          window.requestIdleCallback(async () => {
+            if (!isMounted) return
+            
+            const response = await fetch(`/api/reviews-cached`)
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
+            const data: GoogleReviewsResponse = await response.json()
+            
+            if (isMounted && data.success && data.reviews) {
+              setReviews(data.reviews)
+              setOverallRating(data.rating)
+              setTotalRatings(data.totalRatings)
+            }
+            if (isMounted) setLoading(false)
+          })
+        } else {
+          // Fallback with timeout to break up main thread
+          setTimeout(async () => {
+            if (!isMounted) return
+            const response = await fetch(`/api/reviews-cached`)
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
+            const data: GoogleReviewsResponse = await response.json()
+            
+            if (isMounted && data.success && data.reviews) {
+              setReviews(data.reviews)
+              setOverallRating(data.rating)
+              setTotalRatings(data.totalRatings)
+            }
+            if (isMounted) setLoading(false)
+          }, 500) // Delay to let main thread breathe
         }
       } catch (err) {
         if (isMounted) {
           setError(err instanceof Error ? err.message : 'Failed to fetch reviews')
-        }
-      } finally {
-        if (isMounted) {
           setLoading(false)
         }
       }

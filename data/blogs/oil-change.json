@@ -7,7 +7,7 @@
   "featured": false,
   "readTime": 4,
   "no": {
-    "title": "Oljeskift Guide: Hvor Ofte og Hvorfor",
+    "title": "Olje: Hvorfor bytter man olje regelmessig?",
     "metaDescription": "Komplett guide til oljeskift - lær hvor ofte du bør skifte olje og hvorfor det er viktig. Ekspertråd fra 4Dekk Larvik.",
     "excerpt": "Regelmessig oljeskift er det viktigste vedlikeholdet for bilens motor. Lær alt du trenger å vite om oljeskift og hvorfor det er så viktig.",
     "content": [
@@ -17,7 +17,8 @@
       },
       {
         "type": "image",
-        "alt": "Fersk motorolje som helles i bilmotor",
+        "src": "/images/motor-oil-change-guide-4dekk.webp",
+        "alt": "Fersk motorolje som helles i bilmotor - 4Dekk Larvik oljeskift service",
         "caption": "Fersk, ren motorolje er livsnerven til enhver bilmotor"
       },
       {
@@ -48,6 +49,7 @@
       },
       {
         "type": "image",
+        "src": "/images/engineoil-2.webp",
         "alt": "Mekaniker som kontrollerer oljenivå med målestokk",
         "caption": "Regelmessig kontroll av oljenivå er viktig mellom serviceintervallene"
       },
@@ -89,6 +91,7 @@
       },
       {
         "type": "image",
+        "src": "/images/engineoil-3.webp",
         "alt": "Forskjellige typer motorolje på verkstedhylle",
         "caption": "Riktig oljetype er avgjørende for motorens ytelse og levetid"
       },
@@ -108,7 +111,7 @@
     ]
   },
   "en": {
-    "title": "Oil Change Guide: How Often and Why",
+    "title": "Engine Oil: Why Change It Regularly?",
     "metaDescription": "Complete guide to oil changes - learn how often you should change oil and why it's important. Expert advice from 4Dekk Larvik.",
     "excerpt": "Regular oil changes are the most important maintenance for your car's engine. Learn everything you need to know about oil changes and why they're so important.",
     "content": [
@@ -118,7 +121,8 @@
       },
       {
         "type": "image",
-        "alt": "Fresh motor oil being poured into car engine",
+        "src": "/images/motor-oil-change-guide-4dekk.webp",
+        "alt": "Fresh motor oil being poured into car engine - 4Dekk Larvik oil change service",
         "caption": "Fresh, clean motor oil is the lifeblood of any car engine"
       },
       {
@@ -149,6 +153,7 @@
       },
       {
         "type": "image",
+        "src": "/images/engineoil-2.webp",
         "alt": "Mechanic checking oil level with dipstick",
         "caption": "Regular oil level checks are important between service intervals"
       },
@@ -190,6 +195,7 @@
       },
       {
         "type": "image",
+        "src": "/images/engineoil-3.webp",
         "alt": "Different types of motor oil on workshop shelf",
         "caption": "The right oil type is crucial for engine performance and longevity"
       },

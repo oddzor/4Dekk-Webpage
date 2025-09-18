@@ -93,7 +93,7 @@ export function getBlogData() {
       },
       image: `/images/${blogData.category === 'maintenance' ? 'oil-change.webp' : 
                blogData.category === 'tires' ? 'tire-service.webp' : 
-               'eucontrol.webp'}`, // Placeholder images
+               'eucontrol.webp'}`,
       category: categoryName,
       readTime: `${blogData.readTime}`,
       publishDate: blogData.publishDate,

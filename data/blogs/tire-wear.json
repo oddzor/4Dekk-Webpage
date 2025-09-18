@@ -7,7 +7,7 @@
   "featured": false,
   "readTime": 6,
   "no": {
-    "title": "Dekkslitasje: Årsaker, Forebygging og Når du Må Handle",
+    "title": "Dekkslitasje: Hva kan det indikere?",
     "metaDescription": "Lær om ulike typer dekkslitasje, hva som forårsaker dem og hvordan du kan forlenge dekkenes levetid. Ekspertråd for optimal dekkvedlikehold fra 4Dekk Larvik.",
     "excerpt": "Skjeve eller ujevne dekk? Lær å gjenkjenne tegn på problematisk dekkslitasje og hva du kan gjøre for å forlenge dekkenes levetid betydelig.",
     "content": [
@@ -17,7 +17,8 @@
       },
       {
         "type": "image",
-        "alt": "Sammenligning av normalt slitt dekk og dekk med ujevn slitasje",
+        "src": "/images/tire-wear-comparison-4dekk.webp",
+        "alt": "Sammenligning av normalt slitt dekk og dekk med ujevn slitasje - 4Dekk Larvik dekkservice",
         "caption": "Normal vs ujevn dekkslitasje - forskjellen kan spare deg for mye penger"
       },
       {
@@ -62,8 +63,9 @@
       },
       {
         "type": "image",
+        "src": "/images/tire-wear-pressure.webp",
         "alt": "Dekktrykkmåler som viser korrekt lufttrykk",
-        "caption": "Riktig dekktrykk er enkelt å kontrollere og kan spare deg for mye penger"
+        "caption": "Fra venstre: riktig, for lavt og for høyt dekktrykk"
       },
       {
         "type": "heading",
@@ -112,7 +114,8 @@
       },
       {
         "type": "image",
-        "alt": "Mekaniker som kontrollerer hjulstilling på moderne utstyr",
+        "src": "/images/wheel-alignment-inspection-4dekk.webp",
+        "alt": "Mekaniker som kontrollerer hjulstilling på moderne utstyr - 4Dekk Larvik verksted",
         "caption": "Feil hjulstilling er en vanlig årsak til skjev dekkslitasje"
       },
       {
@@ -160,6 +163,7 @@
       },
       {
         "type": "image",
+        "src": "/images/tire-change.webp",
         "alt": "Fire dekk som roteres for jevnere slitasje",
         "caption": "Regelmessig dekkrotasjon gir jevnere slitasje og lengre levetid"
       },
@@ -199,7 +203,7 @@
     ]
   },
   "en": {
-    "title": "Tire Wear: Causes, Prevention and When You Must Act",
+    "title": "Tire Wear: What Could It Indicate?",
     "metaDescription": "Learn about different types of tire wear, what causes them and how you can extend tire life. Expert advice for optimal tire maintenance from 4Dekk Larvik.",
     "excerpt": "Uneven or skewed tires? Learn to recognize signs of problematic tire wear and what you can do to significantly extend tire life.",
     "content": [
@@ -209,7 +213,8 @@
       },
       {
         "type": "image",
-        "alt": "Comparison of normally worn tire and tire with uneven wear",
+        "src": "/images/tire-wear-comparison-4dekk.webp",
+        "alt": "Comparison of normally worn tire and tire with uneven wear - 4Dekk Larvik tire service",
         "caption": "Normal vs uneven tire wear - the difference can save you a lot of money"
       },
       {
@@ -254,8 +259,9 @@
       },
       {
         "type": "image",
+        "src": "/images/tire-wear-pressure.webp",
         "alt": "Tire pressure gauge showing correct air pressure",
-        "caption": "Proper tire pressure is easy to check and can save you a lot of money"
+        "caption": "From left: correct, too low and too high tire pressure"
       },
       {
         "type": "heading",
@@ -304,7 +310,8 @@
       },
       {
         "type": "image",
-        "alt": "Mechanic checking wheel alignment on modern equipment",
+        "src": "/images/wheel-alignment-inspection-4dekk.webp",
+        "alt": "Mechanic checking wheel alignment on modern equipment - 4Dekk Larvik workshop",
         "caption": "Incorrect wheel alignment is a common cause of uneven tire wear"
       },
       {
@@ -352,6 +359,7 @@
       },
       {
         "type": "image",
+        "src": "/images/tire-change.webp",
         "alt": "Four tires being rotated for more even wear",
         "caption": "Regular tire rotation provides more even wear and longer life"
       },

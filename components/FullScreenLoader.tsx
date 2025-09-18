@@ -11,52 +11,44 @@ export default function FullScreenLoader({ onComplete }: FullScreenLoaderProps) 
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    let loadedImages = 0
-    let totalImages = 0
-    let loadedMaps = 0
-    let totalMaps = 0
+    if (window.innerWidth < 768) {
+      setIsVisible(false)
+      onComplete?.()
+      return
+    }
 
-    const checkResources = () => {
-      const images = document.querySelectorAll('img')
-      const maps = document.querySelectorAll('iframe[src*="google.com/maps"]')
-      
-      totalImages = images.length
-      totalMaps = maps.length
-      
-      images.forEach((img) => {
-        if (img.complete && img.naturalHeight !== 0) {
-          loadedImages++
-        }
-      })
-      
-      loadedMaps = totalMaps
-      
-      const totalResources = totalImages + totalMaps
-      const loadedResources = loadedImages + loadedMaps
-      
-      if (totalResources > 0) {
-        const progress = (loadedResources / totalResources) * 100
-        
-        if (progress >= 100) {
-          setTimeout(() => {
+    const checkCriticalResources = () => {
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => {
+          const heroImages = document.querySelectorAll('img[src*="hero-image-1"], img[src*="4dekk-logo"]')
+          let criticalLoaded = 0
+          
+          heroImages.forEach((img) => {
+            const imageElement = img as HTMLImageElement
+            if (imageElement.complete && imageElement.naturalHeight !== 0) {
+              criticalLoaded++
+            }
+          })
+          
+          if (criticalLoaded >= 1 || heroImages.length === 0) {
             setIsVisible(false)
             onComplete?.()
-          }, 500)
-        }
+          }
+        })
       } else {
         setTimeout(() => {
           setIsVisible(false)
           onComplete?.()
-        }, 1000)
+        }, 100)
       }
     }
 
-    const checkInterval = setInterval(checkResources, 200)
-    
+    checkCriticalResources()
+    const checkInterval = setInterval(checkCriticalResources, 200)
     const fallbackTimeout = setTimeout(() => {
       setIsVisible(false)
       onComplete?.()
-    }, 5000)
+    }, 1000)
 
     return () => {
       clearInterval(checkInterval)
