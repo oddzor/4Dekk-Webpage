@@ -1,16 +1,27 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Icon from '../../components/Icon'
 import { useLanguage } from '../../contexts/LanguageContext'
 import DynamicMetadata from '../../components/DynamicMetadata'
 import { getBlogData } from '../../utils/dataLoader'
 
+interface BlogContent {
+  type: string
+  text?: string
+  level?: number
+  items?: string[]
+  alt?: string
+  caption?: string
+  src?: string
+}
+
 interface BlogArticle {
   id: string
   title: { no: string; en: string }
   excerpt: { no: string; en: string }
-  content: { no: string; en: string }
+  content: { no: BlogContent[]; en: BlogContent[] }
   image: string
   category: { no: string; en: string }
   readTime: string
@@ -69,39 +80,65 @@ export default function BlogPage() {
     return () => window.removeEventListener('closeBlogArticle', handleCloseBlogArticle)
   }, [])
 
-  const formatContent = (content: string) => {
-    return content.split('\n').map((line, index) => {
-      if (line.startsWith('## ')) {
-        return (
-          <h2 key={index} className="mt-8 mb-4 text-2xl font-bold font-headings text-headings">
-            {line.replace('## ', '')}
-          </h2>
-        )
+  const formatContent = (content: BlogContent[]) => {
+    return content.map((item, index) => {
+      switch (item.type) {
+        case 'paragraph':
+          return (
+            <p key={index} className="mb-4 leading-relaxed text-text">
+              {item.text}
+            </p>
+          )
+        case 'heading':
+          const level = item.level || 2
+          if (level === 2) {
+            return (
+              <h2 key={index} className="mt-8 mb-4 text-2xl font-bold font-headings text-headings">
+                {item.text}
+              </h2>
+            )
+          } else if (level === 3) {
+            return (
+              <h3 key={index} className="mt-6 mb-3 text-xl font-semibold font-headings text-headings">
+                {item.text}
+              </h3>
+            )
+          }
+          return (
+            <h2 key={index} className="mt-8 mb-4 text-2xl font-bold font-headings text-headings">
+              {item.text}
+            </h2>
+          )
+        case 'list':
+          return (
+            <ul key={index} className="mb-4 ml-6 list-disc text-text">
+              {item.items?.map((listItem, listIndex) => (
+                <li key={listIndex} className="mb-2 leading-relaxed">
+                  {listItem}
+                </li>
+              ))}
+            </ul>
+          )
+        case 'image':
+          return (
+            <div key={index} className="my-6">
+              <Image
+                src={item.src || ''}
+                alt={item.alt || ''}
+                width={600}
+                height={300}
+                className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+              />
+              {item.caption && (
+                <p className="mt-2 text-sm text-center text-gray-600 italic">
+                  {item.caption}
+                </p>
+              )}
+            </div>
+          )
+        default:
+          return null
       }
-      if (line.startsWith('### ')) {
-        return (
-          <h3 key={index} className="mt-6 mb-3 text-xl font-semibold font-headings text-headings">
-            {line.replace('### ', '')}
-          </h3>
-        )
-      }
-      if (line.trim() === '') {
-        return <br key={index} />
-      }
-      // Handle bold text (introduction paragraphs)
-      if (line.startsWith('**') && line.endsWith('**')) {
-        const boldText = line.slice(2, -2)
-        return (
-          <p key={index} className="mb-4 leading-relaxed text-text font-semibold text-lg">
-            {boldText}
-          </p>
-        )
-      }
-      return (
-        <p key={index} className="mb-4 leading-relaxed text-text">
-          {line}
-        </p>
-      )
     })
   }
 

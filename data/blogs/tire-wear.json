@@ -18,7 +18,7 @@
       {
         "type": "image",
         "alt": "Sammenligning av normalt slitt dekk og dekk med ujevn slitasje",
-        "caption": "Normal vs ujevn dekkslitasje - forskjellen kan spare deg tusenvis av kroner"
+        "caption": "Normal vs ujevn dekkslitasje - forskjellen kan spare deg for mye penger"
       },
       {
         "type": "heading",
@@ -31,7 +31,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Ujevn eller skjev slitasje derimot er noe du definitivt bør passe deg for, da det indikerer problemer som må løses for å unngå farlige situasjoner og unødvendige kostnader."
+        "text": "Ujevn eller skjev slitasje derimot er noe du definitivt bør passe deg for, da det indikerer problemer som må løses for å unngå farlige situasjoner og unødvendige reparasjoner."
       },
       {
         "type": "heading",
@@ -149,13 +149,13 @@
       {
         "type": "list",
         "items": [
-          "**Kontroller dekktrykket månedlig** - Sjekk alltid trykket når dekkene er kalde, og følg produsentens anbefalinger",
-          "**Inspiser mønsterdybden regelmessig** - Spesielt når du skifter mellom sommer- og vinterdekk",
-          "**Praktiser rolig kjørestil** - Unngå brå akselerasjon og bremsing som øker slitasjen dramatisk",
-          "**Roter dekkene jevnlig** - Dette sikrer jevnere slitasje på alle fire dekk",
-          "**Bruk riktige dekk til riktig sesong** - Vinterdekk slites raskt på varme veier over 7°C",
-          "**Unngå overlasting** - Hold deg innenfor bilens maksimale lastekapasitet",
-          "**Få kontrollert hjulstillingen årlig** - Spesielt etter hard påkjenning som hull eller kantstein"
+          "Kontroller dekktrykket månedlig - Sjekk alltid trykket når dekkene er kalde, og følg produsentens anbefalinger",
+          "Inspiser mønsterdybden regelmessig - Spesielt når du skifter mellom sommer- og vinterdekk",
+          "Praktiser rolig kjørestil - Unngå brå akselerasjon og bremsing som øker slitasjen dramatisk",
+          "Roter dekkene jevnlig - Dette sikrer jevnere slitasje på alle fire dekk",
+          "Bruk riktige dekk til riktig sesong - Vinterdekk slites raskt på varme veier over 7°C",
+          "Unngå overlasting - Hold deg innenfor bilens maksimale lastekapasitet",
+          "Få kontrollert hjulstillingen årlig - Spesielt etter hard påkjenning som hull eller kantstein"
         ]
       },
       {
@@ -175,7 +175,8 @@
       {
         "type": "list",
         "items": [
-          "Mønsterdybde under 1,6 mm (lovpålagt minimum)",
+          "Mønsterdybde under 1,6 mm for sommerdekk (lovpålagt minimum)",
+          "Mønsterdybde under 3,0 mm for vinterdekk (anbefalt for sikkerhet)",
           "Synlige sprekker eller kutt i dekket",
           "Bulker eller deformasjoner i dekksideveggen",
           "Ujevn slitasje som ikke kan korrigeres",
@@ -209,7 +210,7 @@
       {
         "type": "image",
         "alt": "Comparison of normally worn tire and tire with uneven wear",
-        "caption": "Normal vs uneven tire wear - the difference can save you thousands of kroner"
+        "caption": "Normal vs uneven tire wear - the difference can save you a lot of money"
       },
       {
         "type": "heading",
@@ -222,7 +223,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Uneven or skewed wear, however, is something you should definitely watch out for, as it indicates problems that must be solved to avoid dangerous situations and unnecessary costs."
+        "text": "Uneven or skewed wear, however, is something you should definitely watch out for, as it indicates problems that must be solved to avoid dangerous situations and unnecessary repairs."
       },
       {
         "type": "heading",
@@ -340,13 +341,13 @@
       {
         "type": "list",
         "items": [
-          "**Check tire pressure monthly** - Always check pressure when tires are cold, and follow manufacturer recommendations",
-          "**Inspect tread depth regularly** - Especially when switching between summer and winter tires",
-          "**Practice calm driving style** - Avoid sudden acceleration and braking that dramatically increases wear",
-          "**Rotate tires regularly** - This ensures more even wear on all four tires",
-          "**Use right tires for right season** - Winter tires wear quickly on hot roads above 7°C",
-          "**Avoid overloading** - Stay within your car's maximum load capacity",
-          "**Have wheel alignment checked annually** - Especially after hard impacts like potholes or curbs"
+          "Check tire pressure monthly - Always check pressure when tires are cold, and follow manufacturer recommendations",
+          "Inspect tread depth regularly - Especially when switching between summer and winter tires",
+          "Practice calm driving style - Avoid sudden acceleration and braking that dramatically increases wear",
+          "Rotate tires regularly - This ensures more even wear on all four tires",
+          "Use right tires for right season - Winter tires wear quickly on hot roads above 7°C",
+          "Avoid overloading - Stay within your car's maximum load capacity",
+          "Have wheel alignment checked annually - Especially after hard impacts like potholes or curbs"
         ]
       },
       {
@@ -366,7 +367,8 @@
       {
         "type": "list",
         "items": [
-          "Tread depth below 1.6 mm (legal minimum)",
+          "Tread depth below 1.6 mm for summer tires (legal minimum)",
+          "Tread depth below 3.0 mm for winter tires (recommended for safety)",
           "Visible cracks or cuts in the tire",
           "Bulges or deformations in the tire sidewall",
           "Uneven wear that cannot be corrected",

@@ -36,7 +36,7 @@
       },
       {
         "type": "paragraph",
-        "text": "**Kjøretøy under 7500 kg (de fleste personbiler og varebiler):**"
+        "text": "Kjøretøy under 7500 kg (de fleste personbiler og varebiler):"
       },
       {
         "type": "list",
@@ -45,17 +45,6 @@
           "Påfølgende kontroller: Senest hvert annet år",
           "Veteranbiler 30-49 år: Hvert femte år (hvis kontrollert etter fylte 30 år)",
           "Veteranbiler 50+ år: Fritatt for EU-kontroll (hvis kontrollert etter fylte 50 år)"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "**Kjøretøy over 7500 kg:**"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Første EU-kontroll: Innen to år etter første registrering",
-          "Påfølgende kontroller: Årlig"
         ]
       },
       {
@@ -83,11 +72,11 @@
       },
       {
         "type": "paragraph",
-        "text": "Verkstedene og kontrollstasjonene setter selv prisen for EU-kontroll, og det kan være betydelige forskjeller. Prisene varierer typisk fra 900 til 1200 kroner, men husk at kvaliteten på arbeidet som blir gjort er like viktig som prisen."
+        "text": "Verkstedene og kontrollstasjonene setter selv prisen for EU-kontroll, og det kan være betydelige forskjeller. Prisene i Norge kan være høye - sjekk lokale priser før du bestiller. Mange steder tar betydelig mer enn forventet."
       },
       {
         "type": "paragraph",
-        "text": "Det lønner seg å sammenligne priser, men velg alltid en autorisert kontrollstasjon med god rykte. En grundig kontroll kan faktisk spare deg penger ved å oppdage problemer tidlig."
+        "text": "Hos 4Dekk Larvik tilbyr vi EU-kontroll for kun 1150,- kroner. Vi kombinerer konkurransedyktige priser med høy kvalitet og grundig service. En grundig kontroll kan faktisk spare deg penger ved å oppdage problemer tidlig."
       },
       {
         "type": "heading",
@@ -139,41 +128,15 @@
       {
         "type": "heading",
         "level": 2,
-        "text": "Etter EU-kontrollen"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Hvis Bilen Blir Godkjent"
+        "text": "Etter EU-kontrollen - Mangelkoder og Feil"
       },
       {
         "type": "paragraph",
-        "text": "Gratulerer! Når kjøretøyet ditt har fått godkjent EU-kontroll, er bilen klarert for kjøring på norske og europeiske veier de neste to årene. Du har bidratt til å sikre en tryggere og mer miljøvennlig bilpark."
+        "text": "Etter EU-kontrollen får du en kontrollseddel som viser resultatet. Hvis bilen blir godkjent, er den klarert for kjøring i to år. Hvis det er mangler, må disse utbedres før bilen kan brukes."
       },
       {
         "type": "paragraph",
-        "text": "Sjekk likevel kontrollseddelen nøye:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "At riktig kilometerstand er registrert",
-          "Eventuelle mangler med feilkode 1 (må rettes, men krever ikke etterkontroll)",
-          "Din neste frist for EU-kontroll"
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "Hvis Bilen Ikke Blir Godkjent"
-      },
-      {
-        "type": "paragraph",
-        "text": "Hvis bilen din fikk merknader og ikke ble EU-godkjent, må manglene utbedres hos et verksted. Deretter må kjøretøyet inn til etterkontroll."
-      },
-      {
-        "type": "paragraph",
-        "text": "**Mangelkoder og deres betydning:**"
+        "text": "Mangelkoder og deres betydning:"
       },
       {
         "type": "list",
@@ -198,11 +161,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Hos 4Dekk Larvik kan vi hjelpe deg med pre-kontroll for å identifisere potensielle problemer før EU-kontrollen. Vi utfører også all nødvendig reparasjon og vedlikehold for å få bilen din gjennom kontrollen."
-      },
-      {
-        "type": "paragraph",
-        "text": "Kontakt oss for en gjennomgang av bilen din før EU-kontroll, så øker du sjansene for godkjennelse første gang og unngår stress og ekstra kostnader."
+        "text": "Hos 4Dekk Larvik utfører vi all nødvendig reparasjon og vedlikehold for å få bilen din gjennom kontrollen. Kontakt oss for hjelp med å forberede bilen din til EU-kontroll."
       }
     ]
   },
@@ -236,7 +195,7 @@
       },
       {
         "type": "paragraph",
-        "text": "**Vehicles under 7500 kg (most passenger cars and vans):**"
+        "text": "Vehicles under 7500 kg (most passenger cars and vans):"
       },
       {
         "type": "list",
@@ -245,17 +204,6 @@
           "Subsequent controls: At least every other year",
           "Veteran cars 30-49 years: Every fifth year (if controlled after turning 30)",
           "Veteran cars 50+ years: Exempt from EU control (if controlled after turning 50)"
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "**Vehicles over 7500 kg:**"
-      },
-      {
-        "type": "list",
-        "items": [
-          "First EU control: Within two years after first registration",
-          "Subsequent controls: Annually"
         ]
       },
       {
@@ -283,11 +231,11 @@
       },
       {
         "type": "paragraph",
-        "text": "Workshops and inspection stations set their own prices for EU control, and there can be significant differences. Prices typically vary from 900 to 1200 kroner, but remember that the quality of work performed is as important as the price."
+        "text": "Workshops and inspection stations set their own prices for EU control, and there can be significant differences. Prices in Norway can be high - check local prices before booking. Many places charge significantly more than expected."
       },
       {
         "type": "paragraph",
-        "text": "It pays to compare prices, but always choose an authorized inspection station with a good reputation. A thorough inspection can actually save you money by discovering problems early."
+        "text": "At 4Dekk Larvik, we offer EU control for just 1150,- kroner. We combine competitive prices with high quality and thorough service. A thorough inspection can actually save you money by discovering problems early."
       },
       {
         "type": "heading",
@@ -339,41 +287,15 @@
       {
         "type": "heading",
         "level": 2,
-        "text": "After EU Control"
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "If Your Car is Approved"
+        "text": "After EU Control - Defect Codes and Errors"
       },
       {
         "type": "paragraph",
-        "text": "Congratulations! When your vehicle has passed EU control, the car is cleared for driving on Norwegian and European roads for the next two years. You've contributed to ensuring a safer and more environmentally friendly vehicle fleet."
+        "text": "After EU control, you receive an inspection slip showing the result. If the car is approved, it's cleared for driving for two years. If there are defects, these must be fixed before the car can be used."
       },
       {
         "type": "paragraph",
-        "text": "Still, check the inspection slip carefully:"
-      },
-      {
-        "type": "list",
-        "items": [
-          "That correct mileage is registered",
-          "Any defects with error code 1 (must be fixed but doesn't require re-inspection)",
-          "Your next EU control deadline"
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 3,
-        "text": "If Your Car is Not Approved"
-      },
-      {
-        "type": "paragraph",
-        "text": "If your car received remarks and was not EU-approved, the defects must be fixed at a workshop. Then the vehicle must undergo re-inspection."
-      },
-      {
-        "type": "paragraph",
-        "text": "**Defect codes and their meaning:**"
+        "text": "Defect codes and their meaning:"
       },
       {
         "type": "list",
@@ -398,11 +320,7 @@
       },
       {
         "type": "paragraph",
-        "text": "At 4Dekk Larvik, we can help you with pre-inspection to identify potential problems before EU control. We also perform all necessary repairs and maintenance to get your car through inspection."
-      },
-      {
-        "type": "paragraph",
-        "text": "Contact us for a review of your car before EU control, and you'll increase the chances of first-time approval while avoiding stress and extra costs."
+        "text": "At 4Dekk Larvik, we perform all necessary repairs and maintenance to get your car through inspection. Contact us for help preparing your car for EU control."
       }
     ]
   }

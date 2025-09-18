@@ -17,6 +17,7 @@
       },
       {
         "type": "image",
+        "src": "/images/wheel-misalignment.webp",
         "alt": "Bil med feil hjulstilling på vei",
         "caption": "Feil hjulstilling kan føre til farlige situasjoner og økt slitasje"
       },
@@ -49,6 +50,7 @@
       },
       {
         "type": "image",
+        "src": "/images/alignment-wear.webp",
         "alt": "Ujevn dekkslitasje forårsaket av feil hjulstilling",
         "caption": "Ujevn dekkslitasje er et tydelig tegn på feil hjulstilling"
       },
@@ -81,6 +83,7 @@
       },
       {
         "type": "image",
+        "src": "/images/wheel_alignment.webp",
         "alt": "Professionell hjulstillingsmaskin i bruk på verksted",
         "caption": "Moderne hjulstillingsutstyr sikrer presise målinger og justeringer"
       },
@@ -110,6 +113,7 @@
       },
       {
         "type": "image",
+        "src": "/images/wheel-misalignment.webp",
         "alt": "Car with misaligned wheels on road",
         "caption": "Improper wheel alignment can lead to dangerous situations and increased wear"
       },
@@ -142,6 +146,7 @@
       },
       {
         "type": "image",
+        "src": "/images/alignment-wear.webp",
         "alt": "Uneven tire wear caused by misalignment",
         "caption": "Uneven tire wear is a clear sign of wheel misalignment"
       },
@@ -174,6 +179,7 @@
       },
       {
         "type": "image",
+        "src": "/images/wheel_alignment.webp",
         "alt": "Professional wheel alignment machine in use at workshop",
         "caption": "Modern wheel alignment equipment ensures precise measurements and adjustments"
       },

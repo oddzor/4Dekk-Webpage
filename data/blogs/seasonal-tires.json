@@ -1,15 +1,15 @@
 {
   "id": "seasonal-tires",
-  "slug": "valg-av-dekk-sommer-vinter-helars",
+  "slug": "valg-av-dekk-sommer-vinter",
   "category": "tires",
   "publishDate": "2024-03-10",
   "lastUpdated": "2024-03-10",
   "featured": true,
   "readTime": 6,
   "no": {
-    "title": "Sommerdekk vs Vinterdekk vs Helårsdekk: Den Komplette Guiden",
-    "metaDescription": "Lær forskjellen mellom sommerdekk, vinterdekk og helårsdekk. Få ekspertråd om når du skal skifte dekk og hvilke dekk som passer best for dine kjørebehov.",
-    "excerpt": "Usikker på hvilke dekk du skal velge? Denne guiden forklarer forskjellene mellom sommerdekk, vinterdekk og helårsdekk, og når du bør skifte mellom dem.",
+    "title": "Sommerdekk vs Vinterdekk: Den Komplette Guiden",
+    "metaDescription": "Lær forskjellen mellom sommerdekk og vinterdekk. Få ekspertråd om når du skal skifte dekk og hvilke dekk som passer best for dine kjørebehov.",
+    "excerpt": "Usikker på hvilke dekk du skal velge? Denne guiden forklarer forskjellene mellom sommerdekk og vinterdekk, og når du bør skifte mellom dem.",
     "content": [
       {
         "type": "paragraph",
@@ -17,6 +17,7 @@
       },
       {
         "type": "image",
+        "src": "/images/summer-vs-winter.webp",
         "alt": "Sammenligning av sommerdekk og vinterdekk side ved side",
         "caption": "Forskjellen mellom sommerdekk og vinterdekk er tydelig når du ser på dekkmønsteret"
       },
@@ -48,21 +49,9 @@
       },
       {
         "type": "image",
+        "src": "/images/snowy-winter-tire.webp",
         "alt": "Nærbilde av vinterdekk i snø som viser lameller og dekkmønster",
         "caption": "Vinterdekks spesielle lameller og dekkmønster gir overlegen ytelse på snø og is"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Hva er Helårsdekk?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Helårsdekk, eller all-season dekk, kombinerer teknologier fra både sommer- og vinterdekk og kan brukes hele året. De har flere lameller i dekkmønsteret enn sommerdekk, noe som gir bedre grep på snø, samtidig som de tilpasser seg høyere temperaturer."
-      },
-      {
-        "type": "paragraph",
-        "text": "Helårsdekk er det beste valget hvis du bor et sted med milde vintre og somre, og hvor det sjelden er ekstreme værforhold. Når de er merket med 3PMSF-symbolet (Three Peak Mountain Snow Flake), garanterer de mobilitet og sikkerhet ved temperaturer fra -10°C til 30°C."
       },
       {
         "type": "heading",
@@ -79,6 +68,7 @@
       },
       {
         "type": "image",
+        "src": "/images/tire-change.webp",
         "alt": "Bil som skifter dekk på verksted",
         "caption": "Profesjonelt dekkskifte sikrer riktig montering og balansering"
       },
@@ -97,7 +87,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Med helårsdekk merket 3PMSF trenger du ikke bekymre deg for dekkskifte - de gir trygghet og lovlig kjøring hele året."
+        "text": "For optimal sikkerhet og ytelse anbefaler vi å bruke dedikerte sommer- og vinterdekk som skiftes i henhold til sesongen."
       },
       {
         "type": "heading",
@@ -115,9 +105,9 @@
     ]
   },
   "en": {
-    "title": "Summer vs Winter vs All-Season Tires: The Complete Guide",
-    "metaDescription": "Learn the differences between summer, winter, and all-season tires. Get expert advice on when to change tires and which tires suit your driving needs best.",
-    "excerpt": "Unsure about which tires to choose? This guide explains the differences between summer, winter, and all-season tires, and when you should switch between them.",
+    "title": "Summer vs Winter Tires: The Complete Guide",
+    "metaDescription": "Learn the differences between summer and winter tires. Get expert advice on when to change tires and which tires suit your driving needs best.",
+    "excerpt": "Unsure about which tires to choose? This guide explains the differences between summer and winter tires, and when you should switch between them.",
     "content": [
       {
         "type": "paragraph",
@@ -125,6 +115,7 @@
       },
       {
         "type": "image",
+        "src": "/images/summer-vs-winter.webp",
         "alt": "Comparison of summer and winter tires side by side",
         "caption": "The difference between summer and winter tires is clear when you look at the tread pattern"
       },
@@ -156,21 +147,9 @@
       },
       {
         "type": "image",
+        "src": "/images/snowy-winter-tire.webp",
         "alt": "Close-up of winter tire in snow showing sipes and tread pattern",
         "caption": "Winter tire's special sipes and tread pattern provide superior performance on snow and ice"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "What are All-Season Tires?"
-      },
-      {
-        "type": "paragraph",
-        "text": "All-season tires combine technologies from both summer and winter tires and can be used year-round. They have more sipes in the tread pattern than summer tires, providing better grip on snow while adapting to higher temperatures."
-      },
-      {
-        "type": "paragraph",
-        "text": "All-season tires are the best choice if you live somewhere with mild winters and summers, where extreme weather conditions are rare. When marked with the 3PMSF symbol (Three Peak Mountain Snow Flake), they guarantee mobility and safety at temperatures ranging from -10°C to 30°C."
       },
       {
         "type": "heading",
@@ -187,6 +166,7 @@
       },
       {
         "type": "image",
+        "src": "/images/tire-change.webp",
         "alt": "Car getting tire change at workshop",
         "caption": "Professional tire mounting ensures proper installation and balancing"
       },
@@ -205,7 +185,7 @@
       },
       {
         "type": "paragraph",
-        "text": "With all-season tires marked 3PMSF, you don't need to worry about tire changes - they provide safety and legal driving year-round."
+        "text": "For optimal safety and performance, we recommend using dedicated summer and winter tires that are changed according to the season."
       },
       {
         "type": "heading",

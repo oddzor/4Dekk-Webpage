@@ -7,13 +7,13 @@
   "featured": false,
   "readTime": 4,
   "no": {
-    "title": "Oljeskift Guide: Hvor Ofte, Hvorfor og Hvilken Olje du Trenger",
-    "metaDescription": "Komplett guide til oljeskift - lær hvor ofte du bør skifte olje, hvorfor det er viktig, og hvilken olje som passer din bil. Ekspertråd fra 4Dekk Larvik.",
-    "excerpt": "Regelmessig oljeskift er det viktigste vedlikeholdet for bilens motor. Lær alt du trenger å vite om oljeskift, fra hyppighet til riktig oljetype.",
+    "title": "Oljeskift Guide: Hvor Ofte og Hvorfor",
+    "metaDescription": "Komplett guide til oljeskift - lær hvor ofte du bør skifte olje og hvorfor det er viktig. Ekspertråd fra 4Dekk Larvik.",
+    "excerpt": "Regelmessig oljeskift er det viktigste vedlikeholdet for bilens motor. Lær alt du trenger å vite om oljeskift og hvorfor det er så viktig.",
     "content": [
       {
         "type": "paragraph",
-        "text": "Oljeskift er kanskje det aller viktigste vedlikeholdet du kan gjøre for bilens motor. Likevel er det mange bileiere som er usikre på hvor ofte de bør skifte olje, hvilken type olje de skal bruke, og hvorfor det egentlig er så viktig. La oss ta en grundig gjennomgang av alt du trenger å vite om oljeskift."
+        "text": "Oljeskift er kanskje det aller viktigste vedlikeholdet du kan gjøre for bilens motor. Likevel er det mange bileiere som er usikre på hvor ofte de bør skifte olje og hvorfor det egentlig er så viktig. La oss ta en grundig gjennomgang av alt du trenger å vite om oljeskift."
       },
       {
         "type": "image",
@@ -95,41 +95,6 @@
       {
         "type": "heading",
         "level": 2,
-        "text": "Velg Riktig Olje ved Oljeskift"
-      },
-      {
-        "type": "paragraph",
-        "text": "Det finnes mange forskjellige motoroljer på markedet, og dessverre inkluderer dette også oljer av dårlig kvalitet og oljer som ikke passer din spesifikke bil. Feil olje kan i verste fall skade motoren din permanent."
-      },
-      {
-        "type": "paragraph",
-        "text": "Hos et merkeverksted eller profesjonelt bilverksted får du ekspertråd om hvilken olje som passer best til din bil. Seriøse verksteder bruker alltid den oljen bilprodusenten anbefaler, noe som sikrer at du unngår unødvendig slitasje på motoren."
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Forstå Oljeviskositet - Slik Merkes Oljen"
-      },
-      {
-        "type": "paragraph",
-        "text": "Oljens konsistens og flytevne avhenger sterkt av temperaturen. Den blir tykkere når det er kaldt og tynnere når det er varmt. For at oljen skal kunne fungere optimalt i vårt varierende klima, har det blitt utviklet såkalte multigrade motoroljer."
-      },
-      {
-        "type": "paragraph",
-        "text": "En motoroljes viskositet merkes med to tall og en bokstav, for eksempel 0W-30 eller 5W-40. Oljer som er tilpasset lavere temperaturer merkes med W (winter), og de fleste oljer som brukes i Norge er merket med W."
-      },
-      {
-        "type": "list",
-        "items": [
-          "Det første tallet (før W) angir hvor tynn oljens konsistens er når den er kald",
-          "Det andre tallet angir hvor tykk oljen blir når temperaturen stiger",
-          "Lavere tall betyr tynnere olje som flyter lettere i kulde",
-          "Høyere tall betyr at oljen holder tykkelsen bedre ved høye temperaturer"
-        ]
-      },
-      {
-        "type": "heading",
-        "level": 2,
         "text": "Profesjonelt Oljeskift hos 4Dekk Larvik"
       },
       {
@@ -143,13 +108,13 @@
     ]
   },
   "en": {
-    "title": "Oil Change Guide: How Often, Why, and What Oil You Need",
-    "metaDescription": "Complete guide to oil changes - learn how often you should change oil, why it's important, and which oil suits your car. Expert advice from 4Dekk Larvik.",
-    "excerpt": "Regular oil changes are the most important maintenance for your car's engine. Learn everything you need to know about oil changes, from frequency to the right oil type.",
+    "title": "Oil Change Guide: How Often and Why",
+    "metaDescription": "Complete guide to oil changes - learn how often you should change oil and why it's important. Expert advice from 4Dekk Larvik.",
+    "excerpt": "Regular oil changes are the most important maintenance for your car's engine. Learn everything you need to know about oil changes and why they're so important.",
     "content": [
       {
         "type": "paragraph",
-        "text": "Oil changes are perhaps the most important maintenance you can do for your car's engine. Yet many car owners are unsure about how often they should change oil, what type of oil to use, and why it's actually so important. Let's take a thorough look at everything you need to know about oil changes."
+        "text": "Oil changes are perhaps the most important maintenance you can do for your car's engine. Yet many car owners are unsure about how often they should change oil and why it's actually so important. Let's take a thorough look at everything you need to know about oil changes."
       },
       {
         "type": "image",
@@ -227,41 +192,6 @@
         "type": "image",
         "alt": "Different types of motor oil on workshop shelf",
         "caption": "The right oil type is crucial for engine performance and longevity"
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Choose the Right Oil for Oil Changes"
-      },
-      {
-        "type": "paragraph",
-        "text": "There are many different motor oils on the market, and unfortunately this includes oils of poor quality and oils that don't suit your specific car. Wrong oil can, in worst cases, permanently damage your engine."
-      },
-      {
-        "type": "paragraph",
-        "text": "At a brand workshop or professional car service, you get expert advice on which oil best suits your car. Serious workshops always use the oil the car manufacturer recommends, ensuring you avoid unnecessary engine wear."
-      },
-      {
-        "type": "heading",
-        "level": 2,
-        "text": "Understanding Oil Viscosity - How Oil is Marked"
-      },
-      {
-        "type": "paragraph",
-        "text": "Oil's consistency and flow properties depend heavily on temperature. It becomes thicker when cold and thinner when warm. For oil to function optimally in our varying climate, so-called multigrade motor oils have been developed."
-      },
-      {
-        "type": "paragraph",
-        "text": "A motor oil's viscosity is marked with two numbers and a letter, for example 0W-30 or 5W-40. Oils adapted for lower temperatures are marked with W (winter), and most oils used in Norway are marked with W."
-      },
-      {
-        "type": "list",
-        "items": [
-          "The first number (before W) indicates how thin the oil's consistency is when cold",
-          "The second number indicates how thick the oil becomes when temperature rises",
-          "Lower numbers mean thinner oil that flows easier in cold",
-          "Higher numbers mean the oil maintains thickness better at high temperatures"
-        ]
       },
       {
         "type": "heading",

@@ -21,6 +21,7 @@ interface BlogContent {
   items?: string[]
   alt?: string
   caption?: string
+  src?: string
 }
 
 interface BlogData {
@@ -69,33 +70,6 @@ export function getBlogData() {
     return category ? category.name : { no: categoryId, en: categoryId }
   }
 
-  const formatContent = (content: BlogContent[]) => {
-    let isFirstParagraph = true
-    
-    return content.map(item => {
-      switch (item.type) {
-        case 'paragraph':
-          const text = item.text || ''
-          if (isFirstParagraph) {
-            isFirstParagraph = false
-            return `**${text}**` // Make first paragraph bold
-          }
-          return text
-        case 'heading':
-          const level = item.level || 2
-          if (level === 3) {
-            return `### ${item.text || ''}` // Keep ### for level 3 headings
-          }
-          return `${'#'.repeat(level)} ${item.text || ''}`
-        case 'list':
-          return item.items ? item.items.map(listItem => `• ${listItem}`).join('\n') : ''
-        case 'image':
-          return `[Image: ${item.alt || 'Blog image'}]`
-        default:
-          return ''
-      }
-    }).join('\n\n')
-  }
 
   return blogIndex.blogs.map(blogMeta => {
     const blogData = blogFiles[blogMeta.id]
@@ -114,8 +88,8 @@ export function getBlogData() {
         en: blogData.en.excerpt
       },
       content: {
-        no: formatContent(blogData.no.content),
-        en: formatContent(blogData.en.content)
+        no: blogData.no.content,
+        en: blogData.en.content
       },
       image: `/images/${blogData.category === 'maintenance' ? 'oil-change.webp' : 
                blogData.category === 'tires' ? 'tire-service.webp' : 
