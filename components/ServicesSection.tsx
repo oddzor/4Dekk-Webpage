@@ -1,70 +1,104 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import ServiceCard from './ServiceCard'
-import { getServicesData } from '@/utils/dataLoader'
-import { useLanguage } from '@/contexts/LanguageContext'
-import Link from 'next/link'
+import { useState } from "react";
+import ServiceCard from "./ServiceCard";
+import { getServicesData } from "@/utils/dataLoader";
+import { useLanguage } from "@/contexts/LanguageContext";
+import Link from "next/link";
 
-const getBookingLinks = (language: 'no' | 'en'): { [key: string]: string } => ({
-  'eu-control': language === 'no' ? 'https://calendly.com/4dekk-service2/eu-kontroll' : 'https://calendly.com/4dekk-service2/eu-kontroll-clone',
-  'after-control': language === 'no' ? 'https://calendly.com/4dekk-service2/etterkontroll' : 'https://calendly.com/4dekk-service2/etterkontroll-clone',
-  'wheel-alignment': language === 'no' ? 'https://calendly.com/4dekk-service2/4hjulskontroll' : 'https://calendly.com/4dekk-service2/4hjulskontroll-clone',
-  'diagnostics': language === 'no' ? 'https://calendly.com/d/cr7j-wcf-8qy/diagnose-av-bilproblemer' : 'https://calendly.com/d/cwby-hk5-8d4/car-issue-diagnostics',
-  'workshop-hourly': language === 'no' ? 'https://calendly.com/d/cw8m-3w4-8yy/oljeskift' : 'https://calendly.com/d/csmh-bdz-qwd/oil-change',
-  'tire-mounting-car': language === 'no' ? 'https://calendly.com/4dekk/omlegging-av-dekk' : 'https://calendly.com/4dekk/omlegging-av-dekk-selvbestilling-via-internet-clone'
-})
+const getBookingLinks = (language: "no" | "en"): { [key: string]: string } => ({
+  "eu-control":
+    language === "no"
+      ? "https://calendly.com/4dekk-service2/eu-kontroll"
+      : "https://calendly.com/4dekk-service2/eu-kontroll-clone",
+  "after-control":
+    language === "no"
+      ? "https://calendly.com/4dekk-service2/etterkontroll"
+      : "https://calendly.com/4dekk-service2/etterkontroll-clone",
+  "wheel-alignment":
+    language === "no"
+      ? "https://calendly.com/4dekk-service2/4hjulskontroll"
+      : "https://calendly.com/4dekk-service2/4hjulskontroll-clone",
+  diagnostics:
+    language === "no"
+      ? "https://calendly.com/d/cr7j-wcf-8qy/diagnose-av-bilproblemer"
+      : "https://calendly.com/d/cwby-hk5-8d4/car-issue-diagnostics",
+  "workshop-hourly":
+    language === "no"
+      ? "https://calendly.com/d/cw8m-3w4-8yy/oljeskift"
+      : "https://calendly.com/d/csmh-bdz-qwd/oil-change",
+  "tire-mounting-car":
+    language === "no"
+      ? "https://calendly.com/4dekk/omlegging-av-dekk"
+      : "https://calendly.com/4dekk/omlegging-av-dekk-selvbestilling-via-internet-clone",
+});
 
-const multipleBookingLinks: { [key: string]: { [key: string]: { label: string; url: string }[] } } = {
-  'hjulskift': {
+const multipleBookingLinks: {
+  [key: string]: { [key: string]: { label: string; url: string }[] };
+} = {
+  hjulskift: {
     no: [
-      { label: 'Hjulskift (Dekkhotell)', url: 'https://calendly.com/4dekk/dekkskift-dekkhotell' },
-      { label: 'Hjulskift (Egne Dekk)', url: 'https://calendly.com/4dekk/hjulskift-egne-dekk' }
+      {
+        label: "Hjulskift (Dekkhotell)",
+        url: "https://calendly.com/4dekk/dekkskift-dekkhotell",
+      },
+      {
+        label: "Hjulskift (Egne Dekk)",
+        url: "https://calendly.com/4dekk/hjulskift-egne-dekk",
+      },
     ],
     en: [
-      { label: 'Tire Change (Tire Hotel)', url: 'https://calendly.com/4dekk/hjulskift-dekkhotell-clone' },
-      { label: 'Tire Change (Own Tires)', url: 'https://calendly.com/4dekk/hjulskift-egne-dekk-clone' }
-    ]
-  }
-}
+      {
+        label: "Tire Change (Tire Hotel)",
+        url: "https://calendly.com/4dekk/hjulskift-dekkhotell-clone",
+      },
+      {
+        label: "Tire Change (Own Tires)",
+        url: "https://calendly.com/4dekk/hjulskift-egne-dekk-clone",
+      },
+    ],
+  },
+};
 
 const contactServices: { [key: string]: boolean } = {
-  'bilreparasjoner': true,
-  'generell-service': true
-}
+  bilreparasjoner: true,
+  "generell-service": true,
+};
 
 const featuredServices = [
   {
-    title: 'EU Kontroll',
-    description: 'Årlig sikkerhetskontroll av kjøretøy, direkte koblet til Statens Vegvesen.',
-    image: '/images/eucontrol.webp',
-    serviceId: 'eu-control'
+    title: "EU Kontroll",
+    description:
+      "Årlig sikkerhetskontroll av kjøretøy, direkte koblet til Statens Vegvesen.",
+    image: "/images/eucontrol.webp",
+    serviceId: "eu-control",
   },
   {
-    title: 'Diagnose av Bilproblemer',
-    description: 'Avansert diagnostisktjeneste for å identifisere og løse motorproblemer raskt og nøyaktig.',
-    image: '/images/engine-diagnostics.webp',
-    serviceId: 'diagnostics'
+    title: "Diagnose av Bilproblemer",
+    description:
+      "Avansert diagnostisktjeneste for å identifisere og løse motorproblemer raskt og nøyaktig.",
+    image: "/images/engine-diagnostics.webp",
+    serviceId: "diagnostics",
   },
   {
-    title: 'Hjulskift',
-    description: 'Hjulskift mellom sommer- og vinterdekk med rask service.',
-    image: '/images/hjulskift.webp',
-    serviceId: 'hjulskift'
+    title: "Hjulskift",
+    description: "Hjulskift mellom sommer- og vinterdekk med rask service.",
+    image: "/images/hjulskift.webp",
+    serviceId: "hjulskift",
   },
   {
-    title: 'Oljeskift',
-    description: 'Bytte av olje og oljefilter, valgfritt luftfilterbytte.',
-    image: '/images/oil-change.webp',
-    serviceId: 'workshop-hourly'
-  }
-]
+    title: "Oljeskift",
+    description: "Bytte av olje og oljefilter, valgfritt luftfilterbytte.",
+    image: "/images/oil-change.webp",
+    serviceId: "workshop-hourly",
+  },
+];
 
 export default function ServicesSection() {
-  const { language } = useLanguage()
-  const services = getServicesData(language)
-  const bookingLinks = getBookingLinks(language)
-  
+  const { language } = useLanguage();
+  const services = getServicesData(language);
+  const bookingLinks = getBookingLinks(language);
+
   const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
 
   const handleCardExpand = (cardId: string) => {
@@ -78,43 +112,52 @@ export default function ServicesSection() {
   const content = {
     no: {
       title: "Våre Tjenester",
-      description: "Vi tilbyr omfattende bilreparasjon, vedlikehold og dekkservice for å holde kjøretøyet ditt i god og sikker stand.",
+      description:
+        "Vi tilbyr omfattende bilreparasjon, vedlikehold og dekkservice for å holde kjøretøyet ditt i god og sikker stand.",
       featuredTitle: "Populære Tjenester",
       allServicesTitle: "Alle Våre Tjenester",
       bookButton: "Bestill Time",
       contactButton: "Kontakt Oss",
-      notFoundText: "Ser du ikke tjenesten du trenger? Kontakt oss for et tilpasset tilbud.",
+      notFoundText:
+        "Ser du ikke tjenesten du trenger? Kontakt oss for et tilpasset tilbud.",
       bookTimeButton: "Bestill Time",
-      contactUsButton: "Kontakt Oss"
+      contactUsButton: "Kontakt Oss",
     },
     en: {
       title: "Our Services",
-      description: "We offer comprehensive car repair, maintenance and tire service to keep your vehicle in good and safe condition.",
+      description:
+        "We offer comprehensive car repair, maintenance and tire service to keep your vehicle in good and safe condition.",
       featuredTitle: "Popular Services",
       allServicesTitle: "All Our Services",
       bookButton: "Book Appointment",
       contactButton: "Contact Us",
-      notFoundText: "Don't see the service you need? Contact us for a customized offer.",
+      notFoundText:
+        "Don't see the service you need? Contact us for a customized offer.",
       bookTimeButton: "Book Appointment",
-      contactUsButton: "Contact Us"
-    }
-  }
-  
-  const t = content[language]
+      contactUsButton: "Contact Us",
+    },
+  };
 
-  const featuredServiceIds = featuredServices.map(service => service.serviceId)
-  const remainingServices = services.filter(service => !featuredServiceIds.includes(service.id))
+  const t = content[language];
+
+  const featuredServiceIds = featuredServices.map(
+    (service) => service.serviceId,
+  );
+  const remainingServices = services.filter(
+    (service) => !featuredServiceIds.includes(service.id),
+  );
 
   return (
-    <section id="services" className="section-padding section-dark mt-4 md:mt-0">
+    <section
+      id="services"
+      className="section-padding section-dark mt-4 md:mt-0"
+    >
       <div className="container-custom">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
             {t.title}
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-text">
-            {t.description}
-          </p>
+          <p className="max-w-3xl mx-auto text-lg text-text">{t.description}</p>
         </div>
 
         <div className="mb-16">
@@ -123,12 +166,14 @@ export default function ServicesSection() {
           </h3>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {featuredServices.map((service, index) => {
-              const serviceData = services.find(s => s.id === service.serviceId)
-              
+              const serviceData = services.find(
+                (s) => s.id === service.serviceId,
+              );
+
               if (!serviceData) {
-                return null
+                return null;
               }
-              
+
               return (
                 <ServiceCard
                   key={index}
@@ -141,11 +186,13 @@ export default function ServicesSection() {
                   isExpanded={expandedCardId === serviceData.id}
                   onExpand={handleCardExpand}
                   bookingLink={bookingLinks[serviceData.id]}
-                  bookingLinks={multipleBookingLinks[serviceData.id]?.[language]}
+                  bookingLinks={
+                    multipleBookingLinks[serviceData.id]?.[language]
+                  }
                   showContactButton={contactServices[serviceData.id]}
                   language={language}
                 />
-              )
+              );
             })}
           </div>
         </div>
@@ -176,19 +223,23 @@ export default function ServicesSection() {
         </div>
 
         <div className="text-center">
-          <p className="mb-6 text-lg text-text">
-            {t.notFoundText}
-          </p>
-                 <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                   <Link href="/booking" className="btn-accent whitespace-nowrap min-w-[200px]">
-                     {t.bookTimeButton}
-                   </Link>
-                   <Link href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
-                     {t.contactUsButton}
-                   </Link>
-                 </div>
+          <p className="mb-6 text-lg text-text">{t.notFoundText}</p>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href="/booking"
+              className="btn-accent whitespace-nowrap min-w-[200px]"
+            >
+              {t.bookTimeButton}
+            </Link>
+            <Link
+              href="/contact"
+              className="btn-secondary whitespace-nowrap min-w-[120px]"
+            >
+              {t.contactUsButton}
+            </Link>
+          </div>
         </div>
       </div>
     </section>
-  )
-} 
+  );
+}

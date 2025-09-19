@@ -1,52 +1,78 @@
-'use client'
+"use client";
 
-import dynamic from 'next/dynamic'
-import { Suspense, useDeferredValue, useState, useEffect } from 'react'
-import HeroSection from '@/components/HeroSection'
-import DynamicMetadata from '@/components/DynamicMetadata'
+import dynamic from "next/dynamic";
+import { Suspense, useDeferredValue, useState, useEffect } from "react";
+import HeroSection from "@/components/HeroSection";
+import DynamicMetadata from "@/components/DynamicMetadata";
 
-const ServicesSection = dynamic(() => import('@/components/ServicesSection'), {
-  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />
-})
-const PricingSection = dynamic(() => import('@/components/PricingSection'), {
-  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />
-})
-const GoogleReviewsSection = dynamic(() => import('@/components/GoogleReviews'), {
-  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />
-})
-const FloatingPriceButton = dynamic(() => import('@/components/FloatingPriceButton'), {
-  ssr: false
-})
+const ServicesSection = dynamic(() => import("@/components/ServicesSection"), {
+  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />,
+});
+const PricingSection = dynamic(() => import("@/components/PricingSection"), {
+  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />,
+});
+const GoogleReviewsSection = dynamic(
+  () => import("@/components/GoogleReviews"),
+  {
+    loading: () => <div className="bg-gray-800 h-96 animate-pulse" />,
+  },
+);
+const FloatingPriceButton = dynamic(
+  () => import("@/components/FloatingPriceButton"),
+  {
+    ssr: false,
+  },
+);
 
 export default function Home() {
-  const [showContent, setShowContent] = useState(false)
-  const deferredShowContent = useDeferredValue(showContent)
+  const [showContent, setShowContent] = useState(false);
+  const deferredShowContent = useDeferredValue(showContent);
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
       interface SchedulerPostTaskOptions {
-        priority?: 'user-blocking' | 'user-visible' | 'background';
+        priority?: "user-blocking" | "user-visible" | "background";
       }
-      
       interface Scheduler {
-        postTask(callback: () => void, options?: SchedulerPostTaskOptions): void;
+        postTask(
+          callback: () => void,
+          options?: SchedulerPostTaskOptions,
+        ): void;
       }
-      
       interface WindowWithScheduler extends Window {
         scheduler?: Scheduler;
       }
-      
       const windowWithScheduler = window as WindowWithScheduler;
-      
-      if ('scheduler' in window && windowWithScheduler.scheduler?.postTask) {
-        windowWithScheduler.scheduler.postTask(() => setShowContent(true), { priority: 'background' });
+      if ("scheduler" in window && windowWithScheduler.scheduler?.postTask) {
+        windowWithScheduler.scheduler.postTask(() => setShowContent(true), {
+          priority: "background",
+        });
       } else {
         setShowContent(true);
       }
     }, 200);
-    
     return () => clearTimeout(timer1);
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      if (window.location.hash === "#pricing") {
+        setTimeout(() => {
+          const pricingSection = document.getElementById("pricing");
+          if (pricingSection) {
+            pricingSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 1000);
+      }
+    };
+
+    handleHashScroll();
+    window.addEventListener("hashchange", handleHashScroll);
+    return () => window.removeEventListener("hashchange", handleHashScroll);
+  }, []);
 
   return (
     <div>
@@ -69,5 +95,5 @@ export default function Home() {
       )}
       <FloatingPriceButton />
     </div>
-  )
+  );
 }

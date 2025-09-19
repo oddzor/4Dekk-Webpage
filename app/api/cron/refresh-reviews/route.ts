@@ -1,188 +1,192 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { promises as fs } from 'fs'
-import path from 'path'
+import { NextRequest, NextResponse } from "next/server";
+import { promises as fs } from "fs";
+import path from "path";
 
 interface GoogleReview {
-  publishTime?: string
-  time?: string
-  [key: string]: unknown
+  publishTime?: string;
+  time?: string;
+  [key: string]: unknown;
 }
 
 interface OutscraperReview {
-  author_title?: string
-  author_image?: string
-  review_text?: string
-  review_rating?: number
-  review_datetime_utc?: string
-  review_timestamp?: string
+  author_title?: string;
+  author_image?: string;
+  review_text?: string;
+  review_rating?: number;
+  review_datetime_utc?: string;
+  review_timestamp?: string;
 }
 
 interface TransformedReview {
   authorAttribution: {
-    displayName: string
-    photoUri?: string
-  }
+    displayName: string;
+    photoUri?: string;
+  };
   text: {
-    text: string
-    languageCode: string
-  }
-  rating: number
-  publishTime: string
-  relativePublishTimeDescription: string
+    text: string;
+    languageCode: string;
+  };
+  rating: number;
+  publishTime: string;
+  relativePublishTimeDescription: string;
 }
 
 interface CachedReviews {
-  reviews: TransformedReview[]
-  rating: number
-  totalRatings: number
-  lastUpdated: string
-  expiresAt: string
+  reviews: TransformedReview[];
+  rating: number;
+  totalRatings: number;
+  lastUpdated: string;
+  expiresAt: string;
 }
 
-const CACHE_FILE = path.join(process.cwd(), 'data', 'cached-reviews.json')
+const CACHE_FILE = path.join(process.cwd(), "data", "cached-reviews.json");
 
 export async function GET(request: NextRequest) {
   try {
-    const authHeader = request.headers.get('authorization')
-    const cronSecret = process.env.CRON_SECRET
-    
+    const authHeader = request.headers.get("authorization");
+    const cronSecret = process.env.CRON_SECRET;
+
     if (authHeader !== `Bearer ${cronSecret}`) {
       return NextResponse.json(
-        { error: 'Unauthorized - Invalid cron secret' },
-        { status: 401 }
-      )
+        { error: "Unauthorized - Invalid cron secret" },
+        { status: 401 },
+      );
     }
 
-
-    const placeId = process.env.DEKK_PLACES_ID || 'ChIJ1fptqozARkYRRLwkYKop0Eg'
-    const apiKey = process.env.OUTSCRAPER_API_KEY
+    const placeId = process.env.DEKK_PLACES_ID || "ChIJ1fptqozARkYRRLwkYKop0Eg";
+    const apiKey = process.env.OUTSCRAPER_API_KEY;
 
     if (!apiKey) {
-      const freshData = await fetchFromGooglePlaces(placeId)
-      await saveToCache(freshData)
-      
+      const freshData = await fetchFromGooglePlaces(placeId);
+      await saveToCache(freshData);
+
       return NextResponse.json({
         success: true,
-        message: 'Reviews refreshed via Google Places API (backup)',
+        message: "Reviews refreshed via Google Places API (backup)",
         reviewCount: freshData.reviews.length,
-        timestamp: new Date().toISOString()
-      })
+        timestamp: new Date().toISOString(),
+      });
     }
 
-    const freshData = await fetchFromOutscraper(placeId, apiKey)
-    await saveToCache(freshData)
-
+    const freshData = await fetchFromOutscraper(placeId, apiKey);
+    await saveToCache(freshData);
 
     return NextResponse.json({
       success: true,
-      message: 'Reviews refreshed successfully',
+      message: "Reviews refreshed successfully",
       reviewCount: freshData.reviews.length,
-      source: 'Outscraper',
-      timestamp: new Date().toISOString()
-    })
-
+      source: "Outscraper",
+      timestamp: new Date().toISOString(),
+    });
   } catch {
-    
-    return NextResponse.json({
-      success: false,
-      error: 'Refresh failed',
-      details: 'Unknown error',
-      timestamp: new Date().toISOString()
-    }, { status: 500 })
+    return NextResponse.json(
+      {
+        success: false,
+        error: "Refresh failed",
+        details: "Unknown error",
+        timestamp: new Date().toISOString(),
+      },
+      { status: 500 },
+    );
   }
 }
 
-async function saveToCache(data: { reviews: TransformedReview[], rating: number, totalRatings: number }) {
-  const now = new Date()
+async function saveToCache(data: {
+  reviews: TransformedReview[];
+  rating: number;
+  totalRatings: number;
+}) {
+  const now = new Date();
   const cacheData: CachedReviews = {
     reviews: data.reviews,
     rating: data.rating,
     totalRatings: data.totalRatings,
     lastUpdated: now.toISOString(),
-    expiresAt: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString()
-  }
+    expiresAt: new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+  };
 
-  await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true })
-  await fs.writeFile(CACHE_FILE, JSON.stringify(cacheData, null, 2))
+  await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true });
+  await fs.writeFile(CACHE_FILE, JSON.stringify(cacheData, null, 2));
 }
 
 async function fetchFromOutscraper(placeId: string, apiKey: string) {
-  
-  const url = `https://api.outscraper.com/maps/reviews-v3?query=${placeId}&reviewsLimit=250&async=false&language=en`
-  
+  const url = `https://api.outscraper.com/maps/reviews-v3?query=${placeId}&reviewsLimit=250&async=false&language=en`;
+
   const response = await fetch(url, {
     headers: {
-      'X-API-KEY': apiKey,
-      'Content-Type': 'application/json'
-    }
-  })
-  
+      "X-API-KEY": apiKey,
+      "Content-Type": "application/json",
+    },
+  });
+
   if (!response.ok) {
-    const errorText = await response.text()
-    throw new Error(`Outscraper API error: ${response.status} - ${errorText}`)
+    const errorText = await response.text();
+    throw new Error(`Outscraper API error: ${response.status} - ${errorText}`);
   }
-  
-  const responseData = await response.json()
-  
-  const data = responseData.data || []
-  
+
+  const responseData = await response.json();
+
+  const data = responseData.data || [];
+
   if (!data || data.length === 0) {
-    throw new Error('No data received from Outscraper')
+    throw new Error("No data received from Outscraper");
   }
-  
-  const businessData = data[0]
-  const reviews = businessData.reviews_data || []
-  
+
+  const businessData = data[0];
+  const reviews = businessData.reviews_data || [];
+
   const transformedReviews = reviews.map((review: OutscraperReview) => ({
     authorAttribution: {
-      displayName: review.author_title || 'Anonymous',
-      photoUri: review.author_image || undefined
+      displayName: review.author_title || "Anonymous",
+      photoUri: review.author_image || undefined,
     },
     text: {
-      text: review.review_text || '',
-      languageCode: 'en'
+      text: review.review_text || "",
+      languageCode: "en",
     },
     rating: review.review_rating || 5,
     publishTime: review.review_datetime_utc || new Date().toISOString(),
-    relativePublishTimeDescription: review.review_timestamp || 'Recently'
-  }))
-  
+    relativePublishTimeDescription: review.review_timestamp || "Recently",
+  }));
+
   transformedReviews.sort((a: TransformedReview, b: TransformedReview) => {
-    const dateA = new Date(a.publishTime)
-    const dateB = new Date(b.publishTime)
-    return dateB.getTime() - dateA.getTime()
-  })
-  
+    const dateA = new Date(a.publishTime);
+    const dateB = new Date(b.publishTime);
+    return dateB.getTime() - dateA.getTime();
+  });
+
   return {
     reviews: transformedReviews,
     rating: businessData.rating || 0,
-    totalRatings: businessData.reviews_count || transformedReviews.length
-  }
+    totalRatings: businessData.reviews_count || transformedReviews.length,
+  };
 }
 
 async function fetchFromGooglePlaces(placeId: string) {
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   const response = await fetch(
     `https://places.googleapis.com/v1/places/${placeId}?fields=reviews,rating,userRatingCount&key=${apiKey}`,
     {
       headers: {
-        'X-Goog-Api-Key': apiKey!,
-        'X-Goog-FieldMask': 'reviews,rating,userRatingCount'
-      }
-    }
-  )
-  
-  const data = await response.json()
-  
-  const sortedReviews = (data.reviews || []).sort((a: GoogleReview, b: GoogleReview) => {
-    const dateA = new Date(a.publishTime || a.time || 0)
-    const dateB = new Date(b.publishTime || b.time || 0)
-    return dateB.getTime() - dateA.getTime()
-  })
-  
+        "X-Goog-Api-Key": apiKey!,
+        "X-Goog-FieldMask": "reviews,rating,userRatingCount",
+      },
+    },
+  );
+
+  const data = await response.json();
+
+  const sortedReviews = (data.reviews || []).sort(
+    (a: GoogleReview, b: GoogleReview) => {
+      const dateA = new Date(a.publishTime || a.time || 0);
+      const dateB = new Date(b.publishTime || b.time || 0);
+      return dateB.getTime() - dateA.getTime();
+    },
+  );
+
   return {
     reviews: sortedReviews,
     rating: data.rating || 0,
-    totalRatings: data.userRatingCount || 0
-  }
+    totalRatings: data.userRatingCount || 0,
+  };
 }

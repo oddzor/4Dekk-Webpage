@@ -1,16 +1,22 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 
 interface TestimonialCardProps {
-  quote: string
-  name: string
-  photo?: string
-  rating?: number
-  title?: string
+  quote: string;
+  name: string;
+  photo?: string;
+  rating?: number;
+  title?: string;
 }
 
-export default function TestimonialCard({ quote, name, photo, rating, title }: TestimonialCardProps) {
+export default function TestimonialCard({
+  quote,
+  name,
+  photo,
+  rating,
+  title,
+}: TestimonialCardProps) {
   return (
     <div className="flex flex-col p-6 card-dark md:p-8 h-80">
       {rating && (
@@ -19,7 +25,7 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
             <svg
               key={i}
               className={`w-5 h-5 ${
-                i < rating ? 'text-accent' : 'text-gray-600'
+                i < rating ? "text-accent" : "text-gray-600"
               }`}
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -43,8 +49,8 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
               fill
               className="object-cover"
               onError={(e) => {
-                const target = e.target as HTMLImageElement
-                target.style.display = 'none'
+                const target = e.target as HTMLImageElement;
+                target.style.display = "none";
               }}
             />
           </div>
@@ -55,5 +61,5 @@ export default function TestimonialCard({ quote, name, photo, rating, title }: T
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}

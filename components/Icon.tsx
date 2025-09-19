@@ -1,54 +1,55 @@
-import { 
-  CheckCircleIcon, 
-  CircleStackIcon, 
-  WrenchScrewdriverIcon, 
-  BuildingOfficeIcon, 
-  ClockIcon, 
+import {
+  CheckCircleIcon,
+  CircleStackIcon,
+  WrenchScrewdriverIcon,
+  BuildingOfficeIcon,
+  ClockIcon,
   CurrencyDollarIcon,
   Bars3Icon,
   XMarkIcon,
   PhoneIcon,
-  MapPinIcon,   
+  MapPinIcon,
   EnvelopeIcon,
   ChevronDownIcon,
   UserGroupIcon,
   HeartIcon,
   CalendarIcon,
   ArrowRightIcon,
-  ArrowLeftIcon
-} from '@heroicons/react/24/outline'
+  ArrowLeftIcon,
+} from "@heroicons/react/24/outline";
 
 interface IconProps {
-  name: string
-  className?: string
+  name: string;
+  className?: string;
 }
 
 export default function Icon({ name, className = "w-6 h-6" }: IconProps) {
-  const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-    check: CheckCircleIcon,
-    tire: CircleStackIcon,
-    wrench: WrenchScrewdriverIcon,
-    hotel: BuildingOfficeIcon,
-    clock: ClockIcon,
-    currency: CurrencyDollarIcon,
-    menu: Bars3Icon,
-    close: XMarkIcon,
-    phone: PhoneIcon,
-    map: MapPinIcon,
-    email: EnvelopeIcon,
-    chevron: ChevronDownIcon,
-    users: UserGroupIcon,
-    heart: HeartIcon,
-    calendar: CalendarIcon,
-    'arrow-right': ArrowRightIcon,
-    'arrow-left': ArrowLeftIcon
-  }
+  const icons: { [key: string]: React.ComponentType<{ className?: string }> } =
+    {
+      check: CheckCircleIcon,
+      tire: CircleStackIcon,
+      wrench: WrenchScrewdriverIcon,
+      hotel: BuildingOfficeIcon,
+      clock: ClockIcon,
+      currency: CurrencyDollarIcon,
+      menu: Bars3Icon,
+      close: XMarkIcon,
+      phone: PhoneIcon,
+      map: MapPinIcon,
+      email: EnvelopeIcon,
+      chevron: ChevronDownIcon,
+      users: UserGroupIcon,
+      heart: HeartIcon,
+      calendar: CalendarIcon,
+      "arrow-right": ArrowRightIcon,
+      "arrow-left": ArrowLeftIcon,
+    };
 
-  const IconComponent = icons[name]
-  
+  const IconComponent = icons[name];
+
   if (!IconComponent) {
-    return <CurrencyDollarIcon className={className} />
+    return <CurrencyDollarIcon className={className} />;
   }
 
-  return <IconComponent className={className} />
+  return <IconComponent className={className} />;
 }

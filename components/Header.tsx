@@ -1,73 +1,84 @@
-'use client'
+"use client";
 
-import { useState, useCallback } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { usePathname } from 'next/navigation'
-import Icon from './Icon'
-import LanguageToggle from './LanguageToggle'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { useState, useCallback } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import Icon from "./Icon";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Header() {
-  const { language } = useLanguage()
-  const pathname = usePathname()
+  const { language } = useLanguage();
+  const pathname = usePathname();
 
   const navigation = {
     no: [
-      { name: 'Hjem', href: '/' },
-      { name: 'Om Oss', href: '/about' },
-      { name: 'Timebestilling', href: '/booking' },
-      { name: 'Priser', href: '/#pricing' },
-      { name: 'Kontakt', href: '/contact' },
-      { name: 'Blogg', href: '/blog' },
+      { name: "Hjem", href: "/" },
+      { name: "Om Oss", href: "/about" },
+      { name: "Timebestilling", href: "/booking" },
+      { name: "Priser", href: "/#pricing" },
+      { name: "Kontakt", href: "/contact" },
+      { name: "Blogg", href: "/blog" },
     ],
     en: [
-      { name: 'Home', href: '/' },
-      { name: 'About Us', href: '/about' },
-      { name: 'Book Appointment', href: '/booking' },
-      { name: 'Prices', href: '/#pricing' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Blog', href: '/blog' },
-    ]
-  }
-  
+      { name: "Home", href: "/" },
+      { name: "About Us", href: "/about" },
+      { name: "Book Appointment", href: "/booking" },
+      { name: "Prices", href: "/#pricing" },
+      { name: "Contact", href: "/contact" },
+      { name: "Blog", href: "/blog" },
+    ],
+  };
+
   const content = {
     no: {
-      openMenu: 'Åpne hovedmeny',
-      closeMenu: 'Lukk meny',
-      bookButton: 'Bestill Time'
+      openMenu: "Åpne hovedmeny",
+      closeMenu: "Lukk meny",
+      bookButton: "Bestill Time",
     },
     en: {
-      openMenu: 'Open main menu',
-      closeMenu: 'Close menu',
-      bookButton: 'Book Appointment'
-    }
-  }
-  
-  const t = content[language]
-  const navItems = navigation[language]
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+      openMenu: "Open main menu",
+      closeMenu: "Close menu",
+      bookButton: "Book Appointment",
+    },
+  };
+  const t = content[language];
+  const navItems = navigation[language];
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const openMobileMenu = useCallback(() => {
-    setMobileMenuOpen(true)
-  }, [])
+    setMobileMenuOpen(true);
+  }, []);
 
   const closeMobileMenu = useCallback(() => {
-    setMobileMenuOpen(false)
-  }, [])
+    setMobileMenuOpen(false);
+  }, []);
 
   const isActiveLink = (href: string) => {
-    if (href === '/') {
-      return pathname === '/'
+    if (href === "/") {
+      return pathname === "/";
     }
-    return pathname.startsWith(href)
-  }
+    return pathname.startsWith(href);
+  };
 
   const handleBlogClick = () => {
-    if (pathname === '/blog') {
-      window.dispatchEvent(new CustomEvent('closeBlogArticle'))
+    if (pathname === "/blog") {
+      window.dispatchEvent(new CustomEvent("closeBlogArticle"));
     }
-  }
+  };
+
+  const handlePricingClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (href === "/#pricing") {
+      if (pathname !== "/") {
+        e.preventDefault();
+        window.location.href = "/#pricing";
+      }
+    }
+  };
 
   return (
     <>
@@ -86,48 +97,62 @@ export default function Header() {
             </Link>
           </div>
 
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-text hover:text-accent transition-colors duration-200"
-            onClick={openMobileMenu}
-          >
-            <span className="sr-only">{t.openMenu}</span>
-            <Icon name="menu" className={`h-6 w-6 transition-all duration-200 ${mobileMenuOpen ? 'opacity-0 rotate-90' : 'opacity-100 rotate-0'}`} />
-          </button>
-        </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-text hover:text-accent transition-colors duration-200"
+              onClick={openMobileMenu}
+            >
+              <span className="sr-only">{t.openMenu}</span>
+              <Icon
+                name="menu"
+                className={`h-6 w-6 transition-all duration-200 ${mobileMenuOpen ? "opacity-0 rotate-90" : "opacity-100 rotate-0"}`}
+              />
+            </button>
+          </div>
 
           <div className="hidden lg:flex lg:gap-x-8">
             {navItems.map((item) => {
-              const isActive = isActiveLink(item.href)
+              const isActive = isActiveLink(item.href);
               return (
                 <Link
                   key={item.name}
                   href={item.href}
                   className="relative text-sm font-medium transition-all duration-200 text-text hover:text-accent group"
-                  onClick={item.href === '/blog' ? handleBlogClick : undefined}
+                  onClick={
+                    item.href === "/blog"
+                      ? handleBlogClick
+                      : item.href === "/#pricing"
+                        ? (e) => handlePricingClick(e, item.href)
+                        : undefined
+                  }
                 >
                   {item.name}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
-                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
                 </Link>
-              )
+              );
             })}
           </div>
 
-                 <div className="hidden lg:flex lg:items-center lg:gap-4">
-                   <LanguageToggle />
-                   <Link href="/booking" className="btn-accent whitespace-nowrap min-w-[200px] text-center transition-all duration-300">
-                     {t.bookButton}
-                   </Link>
-                 </div>
+          <div className="hidden lg:flex lg:items-center lg:gap-4">
+            <LanguageToggle />
+            <Link
+              href="/booking"
+              className="btn-accent whitespace-nowrap min-w-[200px] text-center transition-all duration-300"
+            >
+              {t.bookButton}
+            </Link>
+          </div>
         </nav>
       </header>
 
       {mobileMenuOpen && (
         <div className="lg:hidden">
-          <div 
+          <div
             className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm"
             onClick={closeMobileMenu}
           />
@@ -159,26 +184,28 @@ export default function Header() {
               <div className="-my-6 divide-y divide-gray-600/50">
                 <div className="py-6 space-y-2">
                   {navItems.map((item) => {
-                    const isActive = isActiveLink(item.href)
+                    const isActive = isActiveLink(item.href);
                     return (
                       <Link
                         key={item.name}
                         href={item.href}
                         className={`block px-3 py-2 -mx-3 text-base font-medium rounded-lg transition-all duration-200 ${
-                          isActive 
-                            ? 'text-accent bg-accent/10 border-l-4 border-accent' 
-                            : 'text-text hover:bg-gray-dark/50 hover:text-accent'
+                          isActive
+                            ? "text-accent bg-accent/10 border-l-4 border-accent"
+                            : "text-text hover:bg-gray-dark/50 hover:text-accent"
                         }`}
-                        onClick={() => {
-                          closeMobileMenu()
-                          if (item.href === '/blog') {
-                            handleBlogClick()
+                        onClick={(e) => {
+                          closeMobileMenu();
+                          if (item.href === "/blog") {
+                            handleBlogClick();
+                          } else if (item.href === "/#pricing") {
+                            handlePricingClick(e, item.href);
                           }
                         }}
                       >
                         {item.name}
                       </Link>
-                    )
+                    );
                   })}
                 </div>
                 <div className="py-6 space-y-4">
@@ -198,5 +225,5 @@ export default function Header() {
         </div>
       )}
     </>
-  )
-} 
+  );
+}

@@ -38,9 +38,9 @@
 
   {
     "service": "Tire Fitting",
-    "price": "1500,-",
+    "price": "1000,-",
     "icon": "tire",
-    "description": "Fitting of new tires with balancing and tire change."
+    "description": "Fitting of new tires with balancing. If tire change needed, total: 1500,-"
   },
   {
     "service": "Tire Change",
@@ -48,28 +48,28 @@
     "icon": "tire",
     "description": "Seasonal change or general tire change"
   },
-      {
-      "service": "Tire Plugging (External)",
-      "price": "300,-",
-      "icon": "tire",
-      "description": "Temporary repair of punctures from outside, not a permanent repair but often a reasonable alternative for well-used tires"
-    },
-    {
-      "service": "Tire Plugging (Internal)",
-      "price": "600,-",
-      "icon": "tire",
-      "description": "Professional repair of punctures from inside, approved as a permanent repair, but will vary with tire wear"
-    },
-    {
-      "service": "Tire Fitting (DekkOnline, Dekk365 etc)",
-      "price": "1800,-",
-      "icon": "tire",
-      "description": "Fitting of tires delivered to us through external suppliers, includes full mounting and balancing"
-    },
-    {
-      "service": "Tire Hotel",
-      "price": "400,-",
-      "icon": "hotel",
-      "description": "Total price per season 1100,- (incl tire change and tire wash), (SUV 1150,-, Motorhome <3.5T 1200,-)"
-    }
-  ]
+  {
+    "service": "Tire Plugging (External)",
+    "price": "300,-",
+    "icon": "tire",
+    "description": "Temporary repair of punctures from outside, not a permanent repair but often a reasonable alternative for well-used tires"
+  },
+  {
+    "service": "Tire Plugging (Internal)",
+    "price": "600,-",
+    "icon": "tire",
+    "description": "Professional repair of punctures from inside, approved as a permanent repair, but will vary with tire wear"
+  },
+  {
+    "service": "Tire Fitting (DekkOnline, Dekk365 etc)",
+    "price": "1800,-",
+    "icon": "tire",
+    "description": "Fitting of tires delivered to us through external suppliers, includes full mounting and balancing. Without tire change: 1500,-"
+  },
+  {
+    "service": "Tire Hotel w/ Tire Wash",
+    "price": "600,-",
+    "icon": "hotel",
+    "description": "Total price per season incl tire change: 1100,- (SUV 1150,-, Motorhome <3.5T 1200,-)"
+  }
+]

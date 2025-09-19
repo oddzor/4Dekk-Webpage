@@ -1,34 +1,36 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useLanguage } from '@/contexts/LanguageContext'
+import Link from "next/link";
+import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HeroSection() {
-  const { language } = useLanguage()
+  const { language } = useLanguage();
 
   const content = {
     no: {
       title: "Bilverksted og Dekkservice",
-      description: "Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice. Din samarbeidspartner for bil-og-dekkservice i Larvik.",
+      description:
+        "Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice. Din samarbeidspartner for bil-og-dekkservice i Larvik.",
       cta1: "Bestill Time Nå",
       cta2: "Se Våre Tjenester",
       trust1: "Års Erfaring",
       trust2: "Fornøyde Kunder",
-      trust3: "Mandag-Fredag"
+      trust3: "Mandag-Fredag",
     },
     en: {
       title: "Automotive Repair & Tire Service",
-      description: "Quality work, competitive pricing and excellent customer service. Your partner for car and tire service in Larvik.",
+      description:
+        "Quality work, competitive pricing and excellent customer service. Your partner for car and tire service in Larvik.",
       cta1: "Book Appointment Now",
       cta2: "See Our Services",
       trust1: "Years Experience",
       trust2: "Satisfied Customers",
-      trust3: "Monday-Friday"
-    }
-  }
-  
-  const t = content[language]
+      trust3: "Monday-Friday",
+    },
+  };
+
+  const t = content[language];
   return (
     <section className="relative flex items-start justify-center min-h-screen pt-20 pb-8 overflow-hidden md:pt-16 md:pb-12 bg-gradient-dark">
       <div className="absolute inset-0 z-0">
@@ -43,9 +45,9 @@ export default function HeroSection() {
           sizes="100vw"
           fetchPriority="high"
           onError={(e) => {
-            const target = e.target as HTMLImageElement
-            target.style.display = 'none'
-            target.parentElement!.style.backgroundColor = '#1a1a2e'
+            const target = e.target as HTMLImageElement;
+            target.style.display = "none";
+            target.parentElement!.style.backgroundColor = "#1a1a2e";
           }}
         />
       </div>
@@ -63,7 +65,7 @@ export default function HeroSection() {
               sizes="(max-width: 768px) 320px, (max-width: 1024px) 448px, 512px"
               fetchPriority="high"
               style={{
-                imageRendering: 'auto'
+                imageRendering: "auto",
               }}
             />
           </div>
@@ -75,33 +77,43 @@ export default function HeroSection() {
         <p className="max-w-2xl mx-auto mb-8 text-base text-gray-200 md:mb-12 md:text-xl text-shadow">
           {t.description}
         </p>
-        
-               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                 <Link href="/booking" className="px-8 py-4 text-lg text-center btn-accent border-glow whitespace-nowrap min-w-[240px]">
-                   {t.cta1}
-                 </Link>
-                 <a href="#services" className="px-8 py-4 text-lg text-center btn-secondary whitespace-nowrap min-w-[200px]">
-                   {t.cta2}
-                 </a>
-               </div>
+
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            href="/booking"
+            className="px-8 py-4 text-lg text-center btn-accent border-glow whitespace-nowrap min-w-[240px]"
+          >
+            {t.cta1}
+          </Link>
+          <a
+            href="#services"
+            className="px-8 py-4 text-lg text-center btn-secondary whitespace-nowrap min-w-[200px]"
+          >
+            {t.cta2}
+          </a>
+        </div>
 
         <div className="grid max-w-4xl grid-cols-1 gap-4 mx-auto mt-8 md:gap-8 md:mt-16 md:grid-cols-3">
           <div className="p-4 text-center md:p-6 card-dark">
-            <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">10+</div>
+            <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">
+              10+
+            </div>
             <div className="text-sm text-gray-300 md:text-base">{t.trust1}</div>
           </div>
           <div className="p-4 text-center md:p-6 card-dark">
-            <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">1000+</div>
+            <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">
+              1000+
+            </div>
             <div className="text-sm text-gray-300 md:text-base">{t.trust2}</div>
           </div>
           <div className="p-4 text-center md:p-6 card-dark">
-            <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">08-16</div>
+            <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">
+              08-16
+            </div>
             <div className="text-sm text-gray-300 md:text-base">{t.trust3}</div>
           </div>
         </div>
       </div>
-
-
     </section>
-  )
-} 
+  );
+}

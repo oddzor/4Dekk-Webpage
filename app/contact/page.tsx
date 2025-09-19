@@ -1,24 +1,27 @@
-'use client'
+"use client";
 
-import Icon from '../../components/Icon'
-import { getBusinessData } from '../../utils/dataLoader'
-import { useLanguage } from '../../contexts/LanguageContext'
-import ContactForm from '../../components/ContactForm'
-import DynamicMetadata from '../../components/DynamicMetadata'
+import Icon from "../../components/Icon";
+import { getBusinessData } from "../../utils/dataLoader";
+import { useLanguage } from "../../contexts/LanguageContext";
+import ContactForm from "../../components/ContactForm";
+import DynamicMetadata from "../../components/DynamicMetadata";
 
 export default function ContactPage() {
-  const { language } = useLanguage()
-  const businessData = getBusinessData(language)
+  const { language } = useLanguage();
+  const businessData = getBusinessData(language);
 
   const content = {
     no: {
       title: "Kontakt Oss",
-      description: "Ta kontakt med oss for spørsmål, tilbud eller for å bestille din neste service.",
+      description:
+        "Ta kontakt med oss for spørsmål, tilbud eller for å bestille din neste service.",
       contactFormTitle: "Kontakt Oss",
-      contactFormDescription: "Fyll ut skjemaet nedenfor og vi kommer tilbake til deg så raskt som mulig.",
+      contactFormDescription:
+        "Fyll ut skjemaet nedenfor og vi kommer tilbake til deg så raskt som mulig.",
       emailNote: "Merk at eposten ikke bemannes utenfor åpningstider.",
       contactInfoTitle: "Kontaktinformasjon",
-      contactInfoDescription: "Du kan også kontakte oss direkte via telefon eller besøke vårt verksted.",
+      contactInfoDescription:
+        "Du kan også kontakte oss direkte via telefon eller besøke vårt verksted.",
       phone: "Telefon",
       email: "E-post",
       address: "Adresse",
@@ -32,17 +35,21 @@ export default function ContactPage() {
       sunday: "Søndag",
       mapTitle: "4Dekk Larvik Plassering",
       ctaTitle: "Klar til å Komme I Gang?",
-      ctaDescription: "Ikke vent til det er for sent. Kontakt oss eller bestill din neste vedlikehold, reparasjon eller dekkservice idag.",
-      bookButton: "Bestill Time"
+      ctaDescription:
+        "Ikke vent til det er for sent. Kontakt oss eller bestill din neste vedlikehold, reparasjon eller dekkservice idag.",
+      bookButton: "Bestill Time",
     },
     en: {
       title: "Contact Us",
-      description: "Contact us for questions, quotes or to book your next service.",
+      description:
+        "Contact us for questions, quotes or to book your next service.",
       contactFormTitle: "Contact Us",
-      contactFormDescription: "Fill out the form below and we'll get back to you as soon as possible.",
+      contactFormDescription:
+        "Fill out the form below and we'll get back to you as soon as possible.",
       emailNote: "Note that email is not monitored outside opening hours.",
       contactInfoTitle: "Contact Information",
-      contactInfoDescription: "You can also contact us directly by phone or visit our workshop.",
+      contactInfoDescription:
+        "You can also contact us directly by phone or visit our workshop.",
       phone: "Phone",
       email: "Email",
       address: "Address",
@@ -56,12 +63,13 @@ export default function ContactPage() {
       sunday: "Sunday",
       mapTitle: "4Dekk Larvik Location",
       ctaTitle: "Ready to Get Started?",
-      ctaDescription: "Don't wait until it's too late. Contact us or book your next maintenance, repair or tire service today.",
-      bookButton: "Book Appointment"
-    }
-  }
-  
-  const t = content[language]
+      ctaDescription:
+        "Don't wait until it's too late. Contact us or book your next maintenance, repair or tire service today.",
+      bookButton: "Book Appointment",
+    },
+  };
+
+  const t = content[language];
   return (
     <div>
       <DynamicMetadata page="contact" />
@@ -84,9 +92,9 @@ export default function ContactPage() {
                 {t.contactFormTitle}
               </h2>
               <div className="mb-8 text-lg text-text">
-                {t.contactFormDescription}  
+                {t.contactFormDescription}
                 <p className="text-accent">{t.emailNote}</p>
-              </div>  
+              </div>
               <ContactForm />
             </div>
 
@@ -104,8 +112,13 @@ export default function ContactPage() {
                     <Icon name="phone" className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.phone}</h3>
-                    <a href={`tel:${businessData.contact.phone}`} className="transition-colors duration-200 text-accent hover:text-accent-dark">
+                    <h3 className="mb-1 font-semibold font-headings text-headings">
+                      {t.phone}
+                    </h3>
+                    <a
+                      href={`tel:${businessData.contact.phone}`}
+                      className="transition-colors duration-200 text-accent hover:text-accent-dark"
+                    >
                       {businessData.contact.phone}
                     </a>
                   </div>
@@ -116,8 +129,13 @@ export default function ContactPage() {
                     <Icon name="email" className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.email}</h3>
-                    <a href={`mailto:${businessData.contact.email}`} className="transition-colors duration-200 text-accent hover:text-accent-dark">
+                    <h3 className="mb-1 font-semibold font-headings text-headings">
+                      {t.email}
+                    </h3>
+                    <a
+                      href={`mailto:${businessData.contact.email}`}
+                      className="transition-colors duration-200 text-accent hover:text-accent-dark"
+                    >
                       {businessData.contact.email}
                     </a>
                   </div>
@@ -128,10 +146,14 @@ export default function ContactPage() {
                     <Icon name="map" className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.address}</h3>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">
+                      {t.address}
+                    </h3>
                     <p className="text-text">
-                      {businessData.address.street}<br />
-                      {businessData.address.postalCode} {businessData.address.city}
+                      {businessData.address.street}
+                      <br />
+                      {businessData.address.postalCode}{" "}
+                      {businessData.address.city}
                     </p>
                   </div>
                 </div>
@@ -141,35 +163,51 @@ export default function ContactPage() {
                     <Icon name="clock" className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold font-headings text-headings">{t.hours}</h3>
+                    <h3 className="mb-1 font-semibold font-headings text-headings">
+                      {t.hours}
+                    </h3>
                     <div className="space-y-1 text-text">
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.monday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.monday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.monday}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.tuesday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.tuesday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.tuesday}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.wednesday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.wednesday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.wednesday}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.thursday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.thursday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.thursday}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.friday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.friday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.friday}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.saturday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.saturday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.saturday}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="min-w-[100px]">{t.sunday}:</span>
-                        <span className="text-accent font-medium">{businessData.hours.sunday}</span>
+                        <span className="text-accent font-medium">
+                          {businessData.hours.sunday}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -213,5 +251,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

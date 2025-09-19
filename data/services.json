@@ -24,11 +24,7 @@
     "longDescription": "Vi går over bilen for å se at feilene som ble avdekket på EU kontrollen er utbedret.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
-    "features": [
-      "Etterkontroll",
-      "Reparasjonsverifikasjon",
-      "Godkjenning"
-    ],
+    "features": ["Etterkontroll", "Reparasjonsverifikasjon", "Godkjenning"],
     "pricing": "400,-",
     "pricingDescription": "Etterkontroll av reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
   },
@@ -118,11 +114,11 @@
     "icon": "hotel",
     "image": "/images/dekkhotell.webp",
     "features": [
-        "Sikker lagring",
-        "Dekkvask",
-        "Kontroll av dekkslitasje",
-        "Hjulskift"
-      ],
+      "Sikker lagring",
+      "Dekkvask",
+      "Kontroll av dekkslitasje",
+      "Hjulskift"
+    ],
     "pricing": "400,-",
     "pricingDescription": "Enkel og trygg lagring av dekkene dine når du bytter over for sesongen"
   },
@@ -159,4 +155,4 @@
     "pricing": "Fra 2500,-",
     "pricingDescription": "Pris avhenger av biltype og servicepakke"
   }
-] 
+]

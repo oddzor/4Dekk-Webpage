@@ -1,54 +1,73 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
 export default function FloatingPriceButton() {
-  const [isVisible, setIsVisible] = useState(true)
-  const [isAbovePricing, setIsAbovePricing] = useState(true)
+  const [isVisible, setIsVisible] = useState(false);
+  const [isAbovePricing, setIsAbovePricing] = useState(true);
 
   const scrollToPricing = () => {
-    const pricingSection = document.getElementById('pricing')
+    const pricingSection = document.getElementById("pricing");
     if (pricingSection) {
-      pricingSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
+      pricingSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
-  }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const pricingSection = document.getElementById('pricing')
-      if (pricingSection) {
-        const rect = pricingSection.getBoundingClientRect()
-        const isVisible = rect.top > window.innerHeight || rect.bottom < 0
-        const isAbove = rect.top > window.innerHeight / 2
-        
-        setIsVisible(isVisible)
-        setIsAbovePricing(isAbove)
+      const servicesSection = document.getElementById("services");
+      const pricingSection = document.getElementById("pricing");
+      if (servicesSection && pricingSection) {
+        const servicesRect = servicesSection.getBoundingClientRect();
+        const pricingRect = pricingSection.getBoundingClientRect();
+        const hasScrolledIntoServices =
+          servicesRect.top < window.innerHeight && servicesRect.bottom > 0;
+        const isPricingVisible =
+          pricingRect.top > window.innerHeight || pricingRect.bottom < 0;
+        const isAbove = pricingRect.top > window.innerHeight / 2;
+        setIsVisible(hasScrolledIntoServices && isPricingVisible);
+        setIsAbovePricing(isAbove);
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  if (!isVisible) return null
+  if (!isVisible) return null;
 
   return (
     <button
       onClick={scrollToPricing}
-      className="fixed z-50 px-3 py-2 text-xs font-medium text-black transition-all duration-300 ease-in-out transform border rounded-md shadow-lg opacity-75 bottom-6 right-6 bg-accent/80 hover:bg-accent hover:shadow-xl hover:scale-105 backdrop-blur-sm border-accent/20 hover:opacity-100 flex items-center gap-1"
+      className="fixed z-50 flex items-center gap-1 px-3 py-2 text-xs font-medium text-black transition-all duration-300 ease-in-out transform border rounded-md shadow-lg opacity-75 bottom-6 right-4 sm:right-6 bg-accent/80 hover:bg-accent hover:shadow-xl hover:scale-105 backdrop-blur-sm border-accent/20 hover:opacity-100"
       aria-label="Se våre priser"
     >
       Priser
-      <svg className="w-3 h-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg
+        className="w-3 h-3 transition-transform duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
         {isAbovePricing ? (
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
         ) : (
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
         )}
       </svg>
     </button>
-  )
+  );
 }

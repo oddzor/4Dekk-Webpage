@@ -24,11 +24,7 @@
     "longDescription": "We go through the car to see that the faults discovered during the EU inspection have been repaired.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
-    "features": [
-      "Re-inspection",
-      "Repair verification",
-      "Approval"
-    ],
+    "features": ["Re-inspection", "Repair verification", "Approval"],
     "pricing": "400,-",
     "pricingDescription": "Re-inspection of repairs made in connection with a failed EU Inspection"
   },
@@ -102,11 +98,7 @@
     "longDescription": "Quick tire change with hydraulic jack",
     "icon": "tire",
     "image": "/images/hjulskift.webp",
-    "features": [
-      "Fast",
-      "Tire inspection",
-      "Air pressure check if desired"
-    ],
+    "features": ["Fast", "Tire inspection", "Air pressure check if desired"],
     "pricing": "500,-",
     "pricingDescription": "Complete tire change of summer and winter tires"
   },
@@ -118,11 +110,11 @@
     "icon": "hotel",
     "image": "/images/dekkhotell.webp",
     "features": [
-        "Safe storage",
-        "Tire washing",
-        "Tire wear check",
-        "Tire change"
-      ],
+      "Safe storage",
+      "Tire washing",
+      "Tire wear check",
+      "Tire change"
+    ],
     "pricing": "400,-",
     "pricingDescription": "Simple and safe storage of your tires when you switch over for the season"
   },

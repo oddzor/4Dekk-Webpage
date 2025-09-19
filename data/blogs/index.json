@@ -7,7 +7,7 @@
       "category": "maintenance"
     },
     {
-      "id": "seasonal-tires", 
+      "id": "seasonal-tires",
       "file": "seasonal-tires.json",
       "featured": true,
       "category": "tires"
@@ -20,7 +20,7 @@
     },
     {
       "id": "oil-change",
-      "file": "oil-change.json", 
+      "file": "oil-change.json",
       "featured": false,
       "category": "maintenance"
     },
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "tires", 
+      "id": "tires",
       "name": {
         "no": "Dekk",
         "en": "Tires"
@@ -61,5 +61,3 @@
     }
   ]
 }
-
-

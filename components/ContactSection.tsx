@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Icon from './Icon'
-import businessData from '../data/business.json'
+import Link from "next/link";
+import Icon from "./Icon";
+import businessData from "../data/business.json";
 
 export default function ContactSection() {
   return (
@@ -14,7 +14,8 @@ export default function ContactSection() {
               Ta Kontakt
             </h2>
             <p className="mb-8 text-lg text-text">
-              Klar til å bestille din neste service? Kontakt oss i dag  eller bestill time på nettet.
+              Klar til å bestille din neste service? Kontakt oss i dag eller
+              bestill time på nettet.
             </p>
 
             <div className="mb-8 space-y-6">
@@ -23,10 +24,14 @@ export default function ContactSection() {
                   <Icon name="map" className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold font-headings text-headings">Adresse</h3>
+                  <h3 className="mb-1 font-semibold font-headings text-headings">
+                    Adresse
+                  </h3>
                   <p className="text-text">
-                    {businessData.address.street}<br />
-                    {businessData.address.postalCode} {businessData.address.city}
+                    {businessData.address.street}
+                    <br />
+                    {businessData.address.postalCode}{" "}
+                    {businessData.address.city}
                   </p>
                 </div>
               </div>
@@ -36,8 +41,13 @@ export default function ContactSection() {
                   <Icon name="phone" className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold font-headings text-headings">Telefon</h3>
-                  <a href={`tel:${businessData.contact.phone}`} className="transition-colors duration-200 text-accent hover:text-accent-dark">
+                  <h3 className="mb-1 font-semibold font-headings text-headings">
+                    Telefon
+                  </h3>
+                  <a
+                    href={`tel:${businessData.contact.phone}`}
+                    className="transition-colors duration-200 text-accent hover:text-accent-dark"
+                  >
                     {businessData.contact.phone}
                   </a>
                 </div>
@@ -48,8 +58,13 @@ export default function ContactSection() {
                   <Icon name="email" className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold font-headings text-headings">E-post</h3>
-                  <a href={`mailto:${businessData.contact.email}`} className="transition-colors duration-200 text-accent hover:text-accent-dark">
+                  <h3 className="mb-1 font-semibold font-headings text-headings">
+                    E-post
+                  </h3>
+                  <a
+                    href={`mailto:${businessData.contact.email}`}
+                    className="transition-colors duration-200 text-accent hover:text-accent-dark"
+                  >
                     {businessData.contact.email}
                   </a>
                 </div>
@@ -60,35 +75,51 @@ export default function ContactSection() {
                   <Icon name="clock" className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="mb-1 font-semibold font-headings text-headings">Åpningstider</h3>
+                  <h3 className="mb-1 font-semibold font-headings text-headings">
+                    Åpningstider
+                  </h3>
                   <div className="space-y-1 text-text">
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Mandag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.monday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.monday}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Tirsdag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.tuesday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.tuesday}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Onsdag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.wednesday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.wednesday}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Torsdag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.thursday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.thursday}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Fredag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.friday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.friday}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Lørdag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.saturday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.saturday}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="min-w-[80px]">Søndag:</span>
-                      <span className="font-medium text-accent">{businessData.hours.sunday}</span>
+                      <span className="font-medium text-accent">
+                        {businessData.hours.sunday}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -96,10 +127,16 @@ export default function ContactSection() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
+              <Link
+                href="/contact"
+                className="btn-secondary whitespace-nowrap min-w-[120px]"
+              >
                 Kontakt Oss
               </Link>
-              <Link href="/booking" className="btn-accent whitespace-nowrap min-w-[200px]">
+              <Link
+                href="/booking"
+                className="btn-accent whitespace-nowrap min-w-[200px]"
+              >
                 Bestill Time
               </Link>
             </div>
@@ -120,11 +157,9 @@ export default function ContactSection() {
                 />
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
     </section>
-  )
-} 
+  );
+}

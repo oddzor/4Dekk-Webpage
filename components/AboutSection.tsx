@@ -1,17 +1,19 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { useLanguage } from '@/contexts/LanguageContext'
+import Link from "next/link";
+import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutSection() {
-  const { language } = useLanguage()
+  const { language } = useLanguage();
 
   const content = {
     no: {
       title: "Om 4Dekk AS",
-      description1: "I 10 år har 4Dekk AS vært det pålitelige valget for bil og dekk-service i Larvik. Det startet som en dekk og felg bedrift, men har nå vokst til et godkjent bilverksted med godkjenning fra Statens Vegvesen.",
-      description2: "I dag har vi to bukker for verkstedet, èn for dekkservice og kan tilby alt fra EU kontroll, full service, bremseservice, girkasseservice, diagnostikk og masse annet.",
+      description1:
+        "I 10 år har 4Dekk AS vært det pålitelige valget for bil og dekk-service i Larvik. Det startet som en dekk og felg bedrift, men har nå vokst til et godkjent bilverksted med godkjenning fra Statens Vegvesen.",
+      description2:
+        "I dag har vi to bukker for verkstedet, èn for dekkservice og kan tilby alt fra EU kontroll, full service, bremseservice, girkasseservice, diagnostikk og masse annet.",
       experience: "10+ Års Erfaring",
       certified: "Godkjent Verksted",
       modern: "Moderne Utstyr",
@@ -21,12 +23,14 @@ export default function AboutSection() {
       feature1: "Erfarne Teknikere",
       feature2: "Kvalitetsgaranti",
       feature3: "Konkurransedyktige Priser",
-      feature4: "Rask Service"
+      feature4: "Rask Service",
     },
     en: {
       title: "About 4Dekk AS",
-      description1: "For 10 years, 4Dekk AS has been the reliable choice for car and tire service in Larvik. It started as a tire and rim business, but has now grown into an approved car workshop with approval from the Norwegian Public Roads Administration.",
-      description2: "Today we have two lifts for the workshop, one for tire service and can offer everything from EU inspection, full service, brake service, transmission service, diagnostics and much more.",
+      description1:
+        "For 10 years, 4Dekk AS has been the reliable choice for car and tire service in Larvik. It started as a tire and rim business, but has now grown into an approved car workshop with approval from the Norwegian Public Roads Administration.",
+      description2:
+        "Today we have two lifts for the workshop, one for tire service and can offer everything from EU inspection, full service, brake service, transmission service, diagnostics and much more.",
       experience: "10+ Years Experience",
       certified: "Certified Workshop",
       modern: "Modern Equipment",
@@ -36,11 +40,11 @@ export default function AboutSection() {
       feature1: "Experienced Technicians",
       feature2: "Quality Guarantee",
       feature3: "Competitive Prices",
-      feature4: "Fast Service"
-    }
-  }
-  
-  const t = content[language]
+      feature4: "Fast Service",
+    },
+  };
+
+  const t = content[language];
   return (
     <section className="section-padding section-light">
       <div className="container-custom">
@@ -55,7 +59,7 @@ export default function AboutSection() {
             <p className="mb-8 text-lg leading-relaxed text-text">
               {t.description2}
             </p>
-            
+
             <div className="grid grid-cols-1 gap-4 mb-8 md:grid-cols-2">
               <div className="flex items-center">
                 <div className="mr-3 text-2xl text-accent">✅</div>
@@ -74,15 +78,21 @@ export default function AboutSection() {
                 <span className="text-text">{t.feature4}</span>
               </div>
             </div>
-            
-                   <div className="flex flex-col gap-4 sm:flex-row">
-                     <Link href="/about" className="btn-primary whitespace-nowrap min-w-[180px]">
-                       {t.learnMore}
-                     </Link>
-                     <Link href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
-                       {t.contactUs}
-                     </Link>
-                   </div>
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/about"
+                className="btn-primary whitespace-nowrap min-w-[180px]"
+              >
+                {t.learnMore}
+              </Link>
+              <Link
+                href="/contact"
+                className="btn-secondary whitespace-nowrap min-w-[120px]"
+              >
+                {t.contactUs}
+              </Link>
+            </div>
           </div>
 
           <div className="relative">
@@ -93,9 +103,9 @@ export default function AboutSection() {
                 fill
                 className="object-cover"
                 onError={(e) => {
-                  const target = e.target as HTMLImageElement
-                  target.style.display = 'none'
-                  target.parentElement!.style.backgroundColor = '#1a1a1a'
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                  target.parentElement!.style.backgroundColor = "#1a1a1a";
                   target.parentElement!.innerHTML = `
                     <div class="flex items-center justify-center h-full text-gray-400">
                       <div class="text-center">
@@ -105,11 +115,11 @@ export default function AboutSection() {
                         <div class="text-lg">Verksted Bilde</div>
                       </div>
                     </div>
-                  `
+                  `;
                 }}
               />
             </div>
-            
+
             <div className="absolute px-6 py-4 rounded-lg shadow-lg -bottom-6 -left-6 bg-accent text-gray-darker">
               <div className="text-2xl font-bold font-headings">10</div>
               <div className="text-sm">Års Erfaring</div>
@@ -118,5 +128,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
-} 
+  );
+}

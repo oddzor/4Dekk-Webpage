@@ -1,52 +1,58 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Icon from './Icon'
-import { getPricingData } from '@/utils/dataLoader'
-import { useLanguage } from '@/contexts/LanguageContext'
+import { useState } from "react";
+import Icon from "./Icon";
+import { getPricingData } from "@/utils/dataLoader";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function PricingSection() {
-  const { language } = useLanguage()
-  const pricingItems = getPricingData(language)
-  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set())
+  const { language } = useLanguage();
+  const pricingItems = getPricingData(language);
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
 
   const toggleExpanded = (index: number) => {
-    setExpandedItems(prev => {
-      const newSet = new Set(prev)
+    setExpandedItems((prev) => {
+      const newSet = new Set(prev);
       if (newSet.has(index)) {
-        newSet.delete(index)
+        newSet.delete(index);
       } else {
-        newSet.add(index)
+        newSet.add(index);
       }
-      return newSet
-    })
-  }
+      return newSet;
+    });
+  };
 
   const content = {
     no: {
       title: "Våre Priser",
-      description: "Transparente og konkurransedyktige priser for alle våre tjenester. Alle priser er inkludert mva og materialer.",
+      description:
+        "Transparente og konkurransedyktige priser for alle våre tjenester. Alle priser er inkludert mva og materialer.",
       importantInfo: "Viktig Informasjon",
-      info1: "Dersom du ikke finner det du leter etter, kontakt oss gjerne for et uforpliktende pristilbud",
-      info2: "Deler til service som bremsedeler, filtere o.l. må ofte bestilles i forveien grunnet begrenset delelager",
+      info1:
+        "Dersom du ikke finner det du leter etter, kontakt oss gjerne for et uforpliktende pristilbud",
+      info2:
+        "Deler til service som bremsedeler, filtere o.l. må ofte bestilles i forveien grunnet begrenset delelager",
       bookButton: "Bestill Time",
-      contactButton: "Kontakt Oss"
+      contactButton: "Kontakt Oss",
     },
     en: {
       title: "Our Prices",
-      description: "Transparent and competitive prices for all our services. All prices include VAT and materials.",
+      description:
+        "Transparent and competitive prices for all our services. All prices include VAT and materials.",
       importantInfo: "Important Information",
-      info1: "If you don't find what you're looking for, please contact us for a non-binding price quote",
-      info2: "Service parts such as brake parts, filters etc. often need to be ordered in advance due to limited parts inventory",
+      info1:
+        "If you don't find what you're looking for, please contact us for a non-binding price quote",
+      info2:
+        "Service parts such as brake parts, filters etc. often need to be ordered in advance due to limited parts inventory",
       bookButton: "Book Appointment",
-      contactButton: "Contact Us"
-    }
-  }
-  
-  const t = content[language]
+      contactButton: "Contact Us",
+    },
+  };
+
+  const t = content[language];
   const getIcon = (iconType: string) => {
-    return <Icon name={iconType} className="w-6 h-6" />
-  }
+    return <Icon name={iconType} className="w-6 h-6" />;
+  };
 
   return (
     <section id="pricing" className="section-padding section-light">
@@ -55,17 +61,18 @@ export default function PricingSection() {
           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings text-headings">
             {t.title}
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-text">
-            {t.description}
-          </p>
+          <p className="max-w-3xl mx-auto text-lg text-text">{t.description}</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {pricingItems.map((item, index) => {
-            const isExpanded = expandedItems.has(index)
-            
+            const isExpanded = expandedItems.has(index);
+
             return (
-              <div key={index} className="overflow-hidden transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg">
+              <div
+                key={index}
+                className="overflow-hidden transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg"
+              >
                 <div className="md:hidden">
                   <button
                     onClick={() => toggleExpanded(index)}
@@ -84,23 +91,23 @@ export default function PricingSection() {
                         <div className="text-lg font-bold text-accent">
                           {item.price}
                         </div>
-                        <Icon 
-                          name="chevron" 
+                        <Icon
+                          name="chevron"
                           className={`w-5 h-5 text-text transition-transform duration-200 ${
-                            isExpanded ? 'rotate-180' : ''
-                          }`} 
+                            isExpanded ? "rotate-180" : ""
+                          }`}
                         />
                       </div>
                     </div>
                   </button>
-                  
-                  <div className={`transition-all duration-300 overflow-hidden ${
-                    isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}>
+
+                  <div
+                    className={`transition-all duration-300 overflow-hidden ${
+                      isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
                     <div className="px-4 pb-4">
-                      <p className="text-sm text-text">
-                        {item.description}
-                      </p>
+                      <p className="text-sm text-text">{item.description}</p>
                     </div>
                   </div>
                 </div>
@@ -121,12 +128,10 @@ export default function PricingSection() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-sm text-text">
-                    {item.description}
-                  </p>
+                  <p className="text-sm text-text">{item.description}</p>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
 
@@ -142,16 +147,22 @@ export default function PricingSection() {
           </div>
         </div>
         <div className="mt-12 text-center">
-                 <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                   <a href="/booking" className="btn-accent whitespace-nowrap min-w-[200px]">
-                     {t.bookButton}
-                   </a>
-                   <a href="/contact" className="btn-secondary whitespace-nowrap min-w-[120px]">
-                     {t.contactButton}
-                   </a>
-                 </div>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+            <a
+              href="/booking"
+              className="btn-accent whitespace-nowrap min-w-[200px]"
+            >
+              {t.bookButton}
+            </a>
+            <a
+              href="/contact"
+              className="btn-secondary whitespace-nowrap min-w-[120px]"
+            >
+              {t.contactButton}
+            </a>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -36,16 +36,21 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
     background-color: #0f0f23;
     color: #e0e0e0;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald", sans-serif;
     font-weight: 600;
     color: #ffffff;
   }
@@ -55,19 +60,19 @@
   .btn-primary {
     @apply px-6 py-3 font-medium text-white transition-colors duration-200 rounded-lg bg-primary hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
   }
-  
+
   .btn-secondary {
     @apply px-6 py-3 font-medium text-white transition-colors duration-200 rounded-lg bg-secondary hover:bg-secondary-light focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
   }
-  
+
   .btn-accent {
     @apply px-6 py-3 font-medium transition-colors duration-200 rounded-lg bg-accent hover:bg-accent-dark text-gray-darker focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-gray-darker;
   }
-  
+
   .container-custom {
     @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
   }
-  
+
   .section-padding {
     @apply py-16 md:py-24;
   }
@@ -89,7 +94,7 @@
   .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
-  
+
   .text-shadow-lg {
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
   }
@@ -107,4 +112,4 @@
     border: 2px solid rgba(255, 215, 0, 0.7);
     box-sizing: border-box;
   }
-} 
+}
