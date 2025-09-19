@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
     }
 
 
-    const placeId = process.env['4DEKK_PLACES_ID'] || 'ChIJ1fptqozARkYRRLwkYKop0Eg'
+    const placeId = process.env.DEKK_PLACES_ID || 'ChIJ1fptqozARkYRRLwkYKop0Eg'
     const apiKey = process.env.OUTSCRAPER_API_KEY
 
     if (!apiKey) {

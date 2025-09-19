@@ -21,8 +21,8 @@ module.exports = {
         'gray-darker': '#0a0a0a'
       },
       fontFamily: {
-        'body': ['Roboto', 'sans-serif'],
-        'headings': ['Oswald', 'sans-serif'],
+        'body': ['var(--font-roboto)', 'sans-serif'],
+        'headings': ['var(--font-oswald)', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

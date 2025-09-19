@@ -1,7 +1,9 @@
 type Language = 'no' | 'en'
 
 export function getMetadata(language: Language = 'no', path: string = '/') {
-  const baseUrl = 'https://4dekk.no'
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://4dekk-web.vercel.app')
+    : 'http://localhost:3000'
   const currentUrl = `${baseUrl}${path}${language === 'en' ? '?lang=en' : ''}`
 
   const metadata = {

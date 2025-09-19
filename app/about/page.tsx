@@ -13,25 +13,21 @@ export default function AboutPage() {
       {
         name: "Saulius",
         position: "Eier & Mekaniker",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/saulius.webp"
       },
       {
         name: "Henrikas",
         position: "Mekaniker",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/henrikas.webp"
       },
       {
         name: "Elidijus",
         position: "Mekaniker",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/elidijus.webp"
       },
       {
         name: "Odd",
         position: "Dekk og IT-ansvarlig",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/odd.webp"
       }
     ],
@@ -39,25 +35,21 @@ export default function AboutPage() {
       {
         name: "Saulius",
         position: "Owner & Technician",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/saulius.webp"
       },
       {
         name: "Henrikas",
         position: "Technician",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/henrikas.webp"
       },
       {
         name: "Elidijus",
         position: "Technician",
-        bio: "lorem ipsum dolor sit amet.",
         photo: "/images/elidijus.webp"
       },
       {
         name: "Odd",
-        position: "Tire Technician",
-        bio: "lorem ipsum dolor sit amet.",
+        position: "Tire and IT Technician ",
         photo: "/images/odd.webp"
       }
     ]
@@ -172,7 +164,7 @@ export default function AboutPage() {
                 />
               </div>
               
-              <div className="absolute px-6 py-4 rounded-lg shadow-lg -bottom-6 -left-6 bg-accent text-gray-darker">
+              <div className="absolute px-6 py-4 text-black rounded-lg shadow-lg -bottom-6 -left-6 bg-accent">
                 <div className="text-2xl font-bold font-headings">10</div>
                 <div className="text-sm">Års Erfaring</div>
               </div>
@@ -258,11 +250,8 @@ export default function AboutPage() {
                 <h3 className="mb-2 text-xl font-semibold font-headings text-headings">
                   {member.name}
                 </h3>
-                <p className="mb-4 font-medium text-accent">
+                <p className="font-medium text-accent">
                   {member.position}
-                </p>
-                <p className="text-sm text-text">
-                  {member.bio}
                 </p>
               </div>
             ))}

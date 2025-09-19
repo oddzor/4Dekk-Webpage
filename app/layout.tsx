@@ -1,16 +1,85 @@
-import { Inter } from 'next/font/google'
+import { Inter, Roboto, Oswald } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import FullScreenLoader from '@/components/FullScreenLoader'
-import FontLoader from '@/components/FontLoader'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import dynamic from 'next/dynamic'
+import type { Metadata } from 'next'
 
 const Footer = dynamic(() => import('@/components/Footer'), {
   ssr: false
 })
 
 const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto'
+})
+const oswald = Oswald({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-oswald'
+})
+
+export const metadata: Metadata = {
+  title: {
+    default: '4Dekk Larvik - Bilverksted og Dekkservice',
+    template: '%s | 4Dekk Larvik'
+  },
+  description: 'Profesjonell bilverksted og dekkservice i Larvik. EU-kontroll, reparasjoner, hjulskift og mer. Kvalitetsarbeid til konkurransedyktige priser.',
+  keywords: ['bilverksted larvik', 'dekk service', 'eu kontroll', 'hjulskift', 'bilreparasjon', '4dekk'],
+  authors: [{ name: '4Dekk Larvik' }],
+  creator: '4Dekk Larvik',
+  publisher: '4Dekk Larvik',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL(process.env.NODE_ENV === 'production' 
+    ? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://4dekk-web.vercel.app')
+    : 'http://localhost:3000'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'no': '/',
+      'en': '/?lang=en',
+    },
+  },
+  openGraph: {
+    title: '4Dekk Larvik - Bilverksted og Dekkservice',
+    description: 'Profesjonell bilverksted og dekkservice i Larvik. Kvalitetsarbeid til konkurransedyktige priser.',
+    url: process.env.NODE_ENV === 'production' 
+      ? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://4dekk-web.vercel.app')
+      : 'http://localhost:3000',
+    siteName: '4Dekk Larvik',
+    locale: 'no_NO',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '4Dekk Larvik - Bilverksted og Dekkservice',
+    description: 'Profesjonell bilverksted og dekkservice i Larvik. Kvalitetsarbeid til konkurransedyktige priser.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
 
 export default function RootLayout({
   children,
@@ -25,30 +94,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script src="/task-breaker.js" defer></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            if ('scheduler' in window && 'postTask' in window.scheduler) {
-              window.scheduler.postTask(() => {
-                if ('serviceWorker' in navigator) {
-                  navigator.serviceWorker.register('/sw.js')
-                    .catch(() => {});
-                }
-              }, { priority: 'background' });
-            } else if ('serviceWorker' in navigator) {
-              window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                  .catch(() => {});
-              });
-            }
-          `
-        }} />
         <style dangerouslySetInnerHTML={{
           __html: `
             body { 
-              font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+              font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, sans-serif;
               line-height: 1.6; 
               background-color: #0f0f23; 
               color: #e0e0e0; 
@@ -65,20 +114,19 @@ export default function RootLayout({
             }
             .text-shadow-lg { text-shadow: 2px 4px 8px rgba(0,0,0,0.7); }
             .font-headings { 
-              font-family: 'Oswald', -apple-system, BlinkMacSystemFont, sans-serif;
+              font-family: var(--font-oswald), -apple-system, BlinkMacSystemFont, sans-serif;
               font-weight: 600;
               color: #ffffff;
             }
-            .font-body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif; }
+            .font-body { font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, sans-serif; }
             .container-custom { padding-left: 1rem; padding-right: 1rem; margin: 0 auto; max-width: 80rem; }
             @media (min-width: 640px) { .container-custom { padding-left: 1.5rem; padding-right: 1.5rem; } }
             @media (min-width: 1024px) { .container-custom { padding-left: 2rem; padding-right: 2rem; } }
           `
         }} />
       </head>
-      <body className={`${inter.className} font-body text-text bg-background`}>
+      <body className={`${inter.className} ${roboto.variable} ${oswald.variable} font-body text-text bg-background`}>
         <LanguageProvider>
-          <FontLoader />
           <FullScreenLoader />
           <Header />
           {children}

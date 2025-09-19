@@ -14,10 +14,6 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ['@heroicons/react', 'react-country-flag'],
-    optimizeCss: false,
-    webpackBuildWorker: true,
-    scrollRestoration: true,
-    esmExternals: 'loose',
   },
   swcMinify: true,
   eslint: {

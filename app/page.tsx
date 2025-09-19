@@ -6,13 +6,13 @@ import HeroSection from '@/components/HeroSection'
 import DynamicMetadata from '@/components/DynamicMetadata'
 
 const ServicesSection = dynamic(() => import('@/components/ServicesSection'), {
-  loading: () => <div className="h-96 animate-pulse bg-gray-800" />
+  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />
 })
 const PricingSection = dynamic(() => import('@/components/PricingSection'), {
-  loading: () => <div className="h-96 animate-pulse bg-gray-800" />
+  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />
 })
 const GoogleReviewsSection = dynamic(() => import('@/components/GoogleReviews'), {
-  loading: () => <div className="h-96 animate-pulse bg-gray-800" />
+  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />
 })
 const FloatingPriceButton = dynamic(() => import('@/components/FloatingPriceButton'), {
   ssr: false
@@ -24,8 +24,22 @@ export default function Home() {
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
-      if ((window as unknown as { scheduleTask?: Function }).scheduleTask) {
-        ((window as unknown as { scheduleTask: Function }).scheduleTask)(() => setShowContent(true), 'background');
+      interface SchedulerPostTaskOptions {
+        priority?: 'user-blocking' | 'user-visible' | 'background';
+      }
+      
+      interface Scheduler {
+        postTask(callback: () => void, options?: SchedulerPostTaskOptions): void;
+      }
+      
+      interface WindowWithScheduler extends Window {
+        scheduler?: Scheduler;
+      }
+      
+      const windowWithScheduler = window as WindowWithScheduler;
+      
+      if ('scheduler' in window && windowWithScheduler.scheduler?.postTask) {
+        windowWithScheduler.scheduler.postTask(() => setShowContent(true), { priority: 'background' });
       } else {
         setShowContent(true);
       }
@@ -39,17 +53,17 @@ export default function Home() {
       <DynamicMetadata page="home" />
       <HeroSection />
       {deferredShowContent && (
-        <Suspense fallback={<div className="h-96 animate-pulse bg-gray-800" />}>
+        <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
           <ServicesSection />
         </Suspense>
       )}
       {deferredShowContent && (
-        <Suspense fallback={<div className="h-96 animate-pulse bg-gray-800" />}>
+        <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
           <PricingSection />
         </Suspense>
       )}
       {deferredShowContent && (
-        <Suspense fallback={<div className="h-96 animate-pulse bg-gray-800" />}>
+        <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
           <GoogleReviewsSection />
         </Suspense>
       )}
