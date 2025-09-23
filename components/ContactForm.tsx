@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { getBusinessData } from "../utils/dataLoader";
 import { useLanguage } from "../contexts/LanguageContext";
+import { trackContactForm } from "./GoogleAnalytics";
 
 interface FormData {
   name: string;
@@ -107,6 +108,8 @@ export default function ContactForm() {
     setSubmitStatus("idle");
 
     try {
+      trackContactForm();
+      
       const selectedSubject = currentEmailSubjects.find(
         (subject) => subject.value === data.subject,
       );

@@ -3,9 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NODE_ENV === "production"
-      ? process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "https://4dekk-web.vercel.app"
+      ? "https://4dekk.no"
       : "http://localhost:3000";
 
   return [

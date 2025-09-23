@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Icon from "./Icon";
+import { trackServiceInquiry, trackBookingClick } from "./GoogleAnalytics";
 
 interface ServiceCardProps {
   id: string;
@@ -60,6 +61,7 @@ export default function ServiceCard({
       setShowModal(false);
       setIsFlipping(false);
     } else {
+      trackServiceInquiry(title);
       setIsFlipping(true);
       setTimeout(() => {
         setShowModal(true);
@@ -230,6 +232,7 @@ export default function ServiceCard({
                             href={booking.url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackBookingClick(`${title} - ${booking.label}`)}
                             className="px-3 py-2 text-sm font-medium text-center text-black transition-all duration-200 rounded-md sm:px-4 sm:py-3 bg-accent hover:bg-accent-dark hover:shadow-md"
                           >
                             {booking.label}
@@ -241,6 +244,7 @@ export default function ServiceCard({
                         href={bookingLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => trackBookingClick(title)}
                         className="inline-block w-full sm:w-auto sm:min-w-[200px] px-3 py-2 sm:px-4 sm:py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
                       >
                         {t.bookButton}
@@ -248,6 +252,7 @@ export default function ServiceCard({
                     ) : showContactButton ? (
                       <a
                         href="/contact"
+                        onClick={() => trackBookingClick(`${title} - Contact`)}
                         className="inline-block w-full sm:w-auto sm:min-w-[200px] px-3 py-2 sm:px-4 sm:py-3 text-sm font-medium text-center text-white transition-all duration-200 bg-red-500 rounded-md hover:bg-red-600 hover:shadow-md"
                       >
                         {t.contactButton}
