@@ -137,7 +137,6 @@
     }
   }
 
-  /* Custom scrollbar for service card modal */
   .service-card-scroll::-webkit-scrollbar {
     width: 4px;
   }
@@ -156,7 +155,6 @@
     background: rgba(255, 215, 0, 0.7);
   }
 
-  /* Ensure proper height calculation on mobile */
   @media (max-height: 600px) {
     .service-modal-mobile {
       max-height: 98vh !important;
