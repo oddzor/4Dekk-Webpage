@@ -44,11 +44,6 @@ export default function HeroSection() {
           quality={80}
           sizes="100vw"
           fetchPriority="high"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = "none";
-            target.parentElement!.style.backgroundColor = "#1a1a2e";
-          }}
         />
       </div>
 

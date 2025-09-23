@@ -181,7 +181,7 @@ export default function AboutPage() {
               </div>
 
               <div className="absolute px-6 py-4 text-black rounded-lg shadow-lg -bottom-6 -left-6 bg-accent">
-                <div className="text-2xl font-bold font-headings">10</div>
+                <div className="text-2xl font-bold font-headings-black">10</div>
                 <div className="text-sm">Års Erfaring</div>
               </div>
             </div>
@@ -248,7 +248,17 @@ export default function AboutPage() {
                     src={member.photo}
                     alt={`${member.name} - ${member.position}`}
                     fill
-                    className="object-cover"
+                    className={`object-cover ${
+                      member.name === "Saulius"
+                        ? "object-[center_20%]"
+                        : member.name === "Henrikas"
+                          ? "object-[center_65%]"
+                          : member.name === "Elidijus"
+                            ? "object-[center_50%]"
+                            : member.name === "Odd"
+                              ? "object-[center_50%]"
+                              : ""
+                    }`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;

@@ -18,6 +18,10 @@
   transform: rotateY(180deg);
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -111,5 +115,25 @@
   .border-glow-strong {
     border: 2px solid rgba(255, 215, 0, 0.7);
     box-sizing: border-box;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUpZoom {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }

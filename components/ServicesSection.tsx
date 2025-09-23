@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ServiceCard from "./ServiceCard";
 import { getServicesData } from "@/utils/dataLoader";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -100,6 +100,7 @@ export default function ServicesSection() {
   const bookingLinks = getBookingLinks(language);
 
   const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const handleCardExpand = (cardId: string) => {
     if (expandedCardId === cardId) {
@@ -108,6 +109,23 @@ export default function ServicesSection() {
       setExpandedCardId(cardId);
     }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        expandedCardId &&
+        sectionRef.current &&
+        !sectionRef.current.contains(event.target as Node)
+      ) {
+        setExpandedCardId(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [expandedCardId]);
 
   const content = {
     no: {
@@ -149,8 +167,9 @@ export default function ServicesSection() {
 
   return (
     <section
+      ref={sectionRef}
       id="services"
-      className="section-padding section-dark mt-4 md:mt-0"
+      className="mt-4 section-padding section-dark md:mt-0"
     >
       <div className="container-custom">
         <div className="mb-16 text-center">
