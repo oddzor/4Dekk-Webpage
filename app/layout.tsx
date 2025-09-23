@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import StructuredData from "@/components/StructuredData";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 const Footer = dynamic(() => import("@/components/Footer"), {
   ssr: false,
@@ -238,6 +239,76 @@ export default function RootLayout({
         className={`${inter.className} ${roboto.variable} ${oswald.variable} font-body text-text bg-background`}
       >
         <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
+        <LocalBusinessSchema
+          businessName="4Dekk Larvik"
+          businessDescription="4Dekk AS i Larvik tilbyr profesjonell bil-og-dekk-service i Larvik. Med over 10 år erfaring og sertifiserte teknikere, kan du forvente kvalitetsarbeid til konkurransedyktige priser."
+          businessAddress={{
+            streetAddress: "Haakon VII's vei 9",
+            addressLocality: "Larvik",
+            postalCode: "3269",
+            addressCountry: "NO",
+          }}
+          businessPhone="+47 93 99 55 55"
+          businessEmail="4dekk4@gmail.com"
+          businessWebsite="https://4dekk.no"
+          businessHours={[
+            "Monday:08:00-16:00",
+            "Tuesday:08:00-16:00",
+            "Wednesday:08:00-16:00",
+            "Thursday:08:00-16:00",
+            "Friday:08:00-16:00",
+            "Saturday:Closed",
+            "Sunday:Closed",
+          ]}
+          services={[
+            "EU-kontroll",
+            "Etterkontroll",
+            "4Hjulskontroll",
+            "Oljeskift",
+            "Diagnose av Bilproblemer",
+            "Dekkservice",
+            "Hjulskift",
+            "Dekkhotell",
+            "Reparasjoner av Bil",
+            "Generell Service",
+            "Bilreparasjon",
+            "Bremse Reparasjon",
+            "Motor Diagnostikk",
+            "Inspeksjon",
+            "Dekk og Felg",
+            "Balansering",
+            "Hjulutbalansering",
+            "Dekkmontering",
+            "Dekkreparasjon",
+            "Vinterdekk",
+            "Sommerdekk",
+            "Hjuljustering",
+            "Kamber kontroll",
+            "Spissing",
+            "Caster kontroll",
+            "Oljefilterbytte",
+            "Luftfilterbytte",
+            "Feilkode lesing",
+            "Bilsystemer test",
+            "Teknisk inspeksjon",
+            "Feilsøking",
+            "Dekksalg",
+            "Omlegging og balansering",
+            "Digital balansering",
+            "Kontroll av lufttrykk",
+            "Dekkvask",
+            "Kontroll av dekkslitasje",
+            "Vedlikehold",
+            "Servicepakke",
+            "Kontroll av væsker",
+            "Filterbytte",
+            "Inspeksjon av bremser",
+            "Hjuloppheng inspeksjon",
+          ]}
+          priceRange="$$"
+          latitude={59.0533}
+          longitude={10.0297}
+        />
         <StructuredData
           businessName="4Dekk Larvik"
           businessDescription="4Dekk AS i Larvik tilbyr profesjonell bil-og-dekk-service i Larvik. Med over 10 år erfaring og sertifiserte teknikere, kan du forvente kvalitetsarbeid til konkurransedyktige priser."
