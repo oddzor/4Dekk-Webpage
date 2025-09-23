@@ -1,12 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/about/page": "app/about/page.js",
-  "/api/cron/refresh-reviews/route": "app/api/cron/refresh-reviews/route.js",
-  "/blog/page": "app/blog/page.js",
-  "/api/reviews/route": "app/api/reviews/route.js",
-  "/contact/page": "app/contact/page.js",
-  "/api/reviews-cached/route": "app/api/reviews-cached/route.js",
   "/page": "app/page.js",
-  "/booking/page": "app/booking/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js"
+  "/api/reviews-cached/route": "app/api/reviews-cached/route.js"
 }
