@@ -135,11 +135,11 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} {businessData.name}. {t.copyright}{" "}
             <a
-              href="http://www.grimholt.me"
+              href="mailto:oddgrimholt@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <strong>grimholt.me</strong>
+              <strong>oddgrimholt@gmail.com</strong>
             </a>{" "}
             {t.websiteServices}.
           </p>
