@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Icon from "./Icon";
-import { trackServiceInquiry, trackBookingClick } from "./GoogleAnalytics";
 
 interface ServiceCardProps {
   id: string;
@@ -61,7 +60,6 @@ export default function ServiceCard({
       setShowModal(false);
       setIsFlipping(false);
     } else {
-      trackServiceInquiry(title);
       setIsFlipping(true);
       setTimeout(() => {
         setShowModal(true);
@@ -156,44 +154,34 @@ export default function ServiceCard({
           onClick={handleToggle}
         >
           <div
-            className="relative w-full max-w-6xl max-h-[95vh] overflow-hidden card-dark border-glow-strong service-modal-mobile"
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden card-dark border-glow-strong"
             style={{ animation: "slideUpZoom 0.5s ease-out" }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col h-full lg:flex-row">
-              <div className="relative w-full h-32 sm:h-40 md:h-48 lg:w-1/2 lg:h-auto lg:min-h-0 lg:flex-1 bg-gray-dark">
-                <Image
-                  src={image}
-                  alt={title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 25vw"
-                  className="object-cover object-center"
-                />
-              </div>
-              <div className="flex flex-col flex-1 lg:flex-[2] min-h-0 p-4 sm:p-6 lg:p-8">
-                <div className="flex items-center justify-between flex-shrink-0 mb-4 sm:mb-6">
-                  <h3 className="pr-2 text-xl font-semibold sm:text-2xl lg:text-3xl font-headings text-headings">
+            <div className="flex flex-col h-full p-6 lg:p-8">
+                <div className="flex items-center justify-between flex-shrink-0 mb-6">
+                  <h3 className="text-2xl font-semibold lg:text-3xl font-headings text-headings">
                     {title}
                   </h3>
                   <button
                     onClick={handleToggle}
-                    className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 transition-all duration-200 rounded-full sm:w-10 sm:h-10 bg-accent/10 hover:bg-accent/20 text-accent hover:text-accent-dark hover:scale-105"
+                    className="inline-flex items-center justify-center w-10 h-10 transition-all duration-200 rounded-full bg-accent/10 hover:bg-accent/20 text-accent hover:text-accent-dark hover:scale-105"
                     aria-label={
                       language === "no"
                         ? "Lukk tjeneste detaljer"
                         : "Close service details"
                     }
                   >
-                    <Icon name="close" className="w-5 h-5 sm:w-6 sm:h-6" />
+                    <Icon name="close" className="w-6 h-6" />
                   </button>
                 </div>
-                <div className="flex-1 min-h-0 pr-1 space-y-4 overflow-y-auto sm:space-y-6 service-card-scroll">
-                  <p className="text-base leading-relaxed sm:text-lg text-text">
+                <div className="flex-1 min-h-0 space-y-6 overflow-y-auto">
+                  <p className="text-lg leading-relaxed text-text">
                     {description}
                   </p>
                   {longDescription && (
-                    <div className="p-3 border rounded-lg sm:p-4 bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
-                      <h4 className="mb-2 text-sm font-semibold tracking-wide uppercase sm:mb-3 text-accent">
+                    <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
+                      <h4 className="mb-3 text-sm font-semibold tracking-wide uppercase text-accent">
                         {t.description}
                       </h4>
                       <p className="text-sm leading-relaxed text-text">
@@ -202,8 +190,8 @@ export default function ServiceCard({
                     </div>
                   )}
                   {features && features.length > 0 && (
-                    <div className="p-3 border rounded-lg sm:p-4 bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
-                      <h4 className="mb-2 text-sm font-semibold tracking-wide uppercase sm:mb-3 text-accent">
+                    <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
+                      <h4 className="mb-3 text-sm font-semibold tracking-wide uppercase text-accent">
                         {t.overview}
                       </h4>
                       <ul className="space-y-2">
@@ -223,17 +211,16 @@ export default function ServiceCard({
                   )}
                 </div>
                 {(bookingLink || bookingLinks || showContactButton) && (
-                  <div className="flex justify-end flex-shrink-0 pt-4 mt-4 border-t sm:pt-6 sm:mt-6 border-gray-700/50">
+                  <div className="flex justify-end flex-shrink-0 pt-6 mt-6 border-t border-gray-700/50">
                     {bookingLinks && bookingLinks.length > 0 ? (
-                      <div className="grid w-full grid-cols-1 gap-2 sm:gap-3 sm:w-auto sm:grid-cols-2">
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {bookingLinks.map((booking, index) => (
                           <a
                             key={index}
                             href={booking.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={() => trackBookingClick(`${title} - ${booking.label}`)}
-                            className="px-3 py-2 text-sm font-medium text-center text-black transition-all duration-200 rounded-md sm:px-4 sm:py-3 bg-accent hover:bg-accent-dark hover:shadow-md"
+                            className="px-4 py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
                           >
                             {booking.label}
                           </a>
@@ -244,23 +231,20 @@ export default function ServiceCard({
                         href={bookingLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => trackBookingClick(title)}
-                        className="inline-block w-full sm:w-auto sm:min-w-[200px] px-3 py-2 sm:px-4 sm:py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
+                        className="inline-block w-full lg:w-auto lg:min-w-[200px] px-4 py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
                       >
                         {t.bookButton}
                       </a>
                     ) : showContactButton ? (
                       <a
                         href="/contact"
-                        onClick={() => trackBookingClick(`${title} - Contact`)}
-                        className="inline-block w-full sm:w-auto sm:min-w-[200px] px-3 py-2 sm:px-4 sm:py-3 text-sm font-medium text-center text-white transition-all duration-200 bg-red-500 rounded-md hover:bg-red-600 hover:shadow-md"
+                        className="inline-block w-full lg:w-auto lg:min-w-[200px] px-4 py-3 text-sm font-medium text-center text-white transition-all duration-200 bg-red-500 rounded-md hover:bg-red-600 hover:shadow-md"
                       >
                         {t.contactButton}
                       </a>
                     ) : null}
                   </div>
                 )}
-              </div>
             </div>
           </div>
         </div>
