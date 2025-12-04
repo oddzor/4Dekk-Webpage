@@ -47,9 +47,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
-      ? process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "https://4dekk-web.vercel.app"
+      ? process.env.NEXT_PUBLIC_SITE_URL || "https://4dekk.no"
       : "http://localhost:3000",
   ),
   alternates: {
@@ -65,9 +63,7 @@ export const metadata: Metadata = {
       "Profesjonell bilverksted og dekkservice i Larvik. Kvalitetsarbeid til konkurransedyktige priser.",
     url:
       process.env.NODE_ENV === "production"
-        ? process.env.VERCEL_URL
-          ? `https://${process.env.VERCEL_URL}`
-          : "https://4dekk-web.vercel.app"
+        ? process.env.NEXT_PUBLIC_SITE_URL || "https://4dekk.no"
         : "http://localhost:3000",
     siteName: "4Dekk Larvik",
     locale: "no_NO",

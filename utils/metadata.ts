@@ -3,9 +3,7 @@ type Language = "no" | "en";
 export function getMetadata(language: Language = "no", path: string = "/") {
   const baseUrl =
     process.env.NODE_ENV === "production"
-      ? process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "https://4dekk-web.vercel.app"
+      ? process.env.NEXT_PUBLIC_SITE_URL || "https://4dekk.no"
       : "http://localhost:3000";
   const currentUrl = `${baseUrl}${path}${language === "en" ? "?lang=en" : ""}`;
 
