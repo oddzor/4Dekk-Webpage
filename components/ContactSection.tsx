@@ -121,6 +121,12 @@ export default function ContactSection() {
                         {businessData.hours.sunday}
                       </span>
                     </div>
+                    <div className="flex justify-between pt-1 mt-1 border-t border-gray-700/50">
+                      <span className="min-w-[80px]">Lunsj:</span>
+                      <span className="font-medium text-text">
+                        {businessData.hours.lunch}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

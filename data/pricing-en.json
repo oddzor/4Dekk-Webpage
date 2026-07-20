@@ -30,6 +30,12 @@
     "description": "Advanced diagnostics and inspection for identifying car problems"
   },
   {
+    "service": "A/C Service",
+    "price": "1500,- + 3,-/gram",
+    "icon": "wrench",
+    "description": "1500,- for pressure test/diagnosis, plus 3,- per gram of refrigerant refilled. R134a refrigerant vehicles only"
+  },
+  {
     "service": "Tire Balancing",
     "price": "500,-",
     "icon": "tire",

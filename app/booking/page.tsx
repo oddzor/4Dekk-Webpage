@@ -20,8 +20,12 @@ export default function BookingPage() {
       diagnostics: "Diagnose av Bilproblemer",
       diagnosticsDesc:
         "Avansert diagnostikk for identifisering av bilproblemer",
-      oilChange: "Oljeskift",
-      oilChangeDesc: "Oljeskift med valgfritt bytte av luftfilter",
+      oilChange: "Service",
+      oilChangeDesc:
+        "Service med oljeskift og flere andre servicealternativer.",
+      acService: "AC-service",
+      acServiceDesc:  
+        "Trykktest, diagnose og påfyll av kuldemedium (kun biler med R134a)",
       tireChangeHotel: "Hjulskift (Dekkhotell)",
       tireChangeHotelDesc: "Hjulskift med lagring av dekk i vårt dekkhotell",
       tireChangeOwn: "Hjulskift (Egne Dekk)",
@@ -51,8 +55,12 @@ export default function BookingPage() {
       euControlDesc: "Annual vehicle inspection and safety check",
       diagnostics: "Car Diagnostics",
       diagnosticsDesc: "Advanced diagnostics for identifying car problems",
-      oilChange: "Oil Change",
-      oilChangeDesc: "Oil change and optional air filter change",
+      oilChange: "Service",
+      oilChangeDesc:
+        "Oil change and several other service options - choose what suits you when booking",
+      acService: "A/C Service",
+      acServiceDesc:
+        "Pressure test, diagnosis and refrigerant refill (R134a vehicles only)",
       tireChangeHotel: "Tire Change (Tire Hotel)",
       tireChangeHotelDesc: "Tire change with tire storage in our tire hotel",
       tireChangeOwn: "Tire Change (Own Tires)",
@@ -179,6 +187,33 @@ export default function BookingPage() {
                 <div className="font-semibold text-accent">{t.bookTime}</div>
                 <div className="text-sm font-semibold text-accent">
                   {t.priceVaries}
+                </div>
+              </div>
+            </a>
+
+            <a
+              href={
+                language === "no"
+                  ? "https://calendly.com/4dekk-service/a-c-service"
+                  : "https://calendly.com/4dekk-service/a-c-maintenance"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+            >
+              <div className="flex items-start mb-4">
+                <div className="flex items-center">
+                  <div className="mr-3 text-accent">{getIcon("wrench")}</div>
+                  <h3 className="text-lg font-semibold transition-colors duration-200 font-headings text-headings group-hover:text-accent">
+                    {t.acService}
+                  </h3>
+                </div>
+              </div>
+              <p className="mb-4 text-sm text-text">{t.acServiceDesc}</p>
+              <div className="flex items-center justify-between">
+                <div className="font-semibold text-accent">{t.bookTime}</div>
+                <div className="text-sm font-semibold text-accent">
+                  1500,- + 3,-/gram
                 </div>
               </div>
             </a>

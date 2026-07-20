@@ -18,7 +18,8 @@
     "thursday": "08:00 - 16:00",
     "friday": "08:00 - 16:00",
     "saturday": "Stengt",
-    "sunday": "Stengt"
+    "sunday": "Stengt",
+    "lunch": "12:00 - 12:30"
   },
   "location": {
     "latitude": 59.0533,

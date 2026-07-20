@@ -30,6 +30,12 @@
     "description": "Avansert diagnostikk og inspeksjon for identifisering av bilproblemer"
   },
   {
+    "service": "AC-service",
+    "price": "1500,- + 3,-/gram",
+    "icon": "wrench",
+    "description": "1500,- for trykktest/diagnose, i tillegg 3,- per gram kuldemedium som fylles på. Kun biler med kuldemedium R134a"
+  },
+  {
     "service": "Balansering av dekk",
     "price": "500,-",
     "icon": "tire",

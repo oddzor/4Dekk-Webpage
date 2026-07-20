@@ -33,6 +33,7 @@ export default function ContactPage() {
       friday: "Fredag",
       saturday: "Lørdag",
       sunday: "Søndag",
+      lunch: "Lunsj",
       mapTitle: "4Dekk Larvik Plassering",
       ctaTitle: "Klar til å Komme I Gang?",
       ctaDescription:
@@ -61,6 +62,7 @@ export default function ContactPage() {
       friday: "Friday",
       saturday: "Saturday",
       sunday: "Sunday",
+      lunch: "Lunch",
       mapTitle: "4Dekk Larvik Location",
       ctaTitle: "Ready to Get Started?",
       ctaDescription:
@@ -207,6 +209,12 @@ export default function ContactPage() {
                         <span className="min-w-[100px]">{t.sunday}:</span>
                         <span className="text-accent font-medium">
                           {businessData.hours.sunday}
+                        </span>
+                      </div>
+                      <div className="flex justify-between pt-1 mt-1 border-t border-gray-700/50">
+                        <span className="min-w-[100px]">{t.lunch}:</span>
+                        <span className="text-text font-medium">
+                          {businessData.hours.lunch}
                         </span>
                       </div>
                     </div>

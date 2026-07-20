@@ -31,6 +31,10 @@ const getBookingLinks = (language: "no" | "en"): { [key: string]: string } => ({
     language === "no"
       ? "https://calendly.com/4dekk/omlegging-av-dekk"
       : "https://calendly.com/4dekk/omlegging-av-dekk-selvbestilling-via-internet-clone",
+  "ac-service":
+    language === "no"
+      ? "https://calendly.com/4dekk-service/a-c-service"
+      : "https://calendly.com/4dekk-service/a-c-maintenance",
 });
 
 const multipleBookingLinks: {
@@ -62,7 +66,6 @@ const multipleBookingLinks: {
 
 const contactServices: { [key: string]: boolean } = {
   bilreparasjoner: true,
-  "generell-service": true,
 };
 
 const featuredServices = [
@@ -87,8 +90,9 @@ const featuredServices = [
     serviceId: "hjulskift",
   },
   {
-    title: "Oljeskift",
-    description: "Bytte av olje og oljefilter, valgfritt luftfilterbytte.",
+    title: "Service",
+    description:
+      "Service med oljeskift og flere andre servicealternativer.",
     image: "/images/oil-change.webp",
     serviceId: "workshop-hourly",
   },

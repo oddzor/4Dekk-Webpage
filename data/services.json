@@ -46,18 +46,35 @@
   },
   {
     "id": "workshop-hourly",
-    "title": "Oljeskift",
-    "description": "Bytte av olje og oljefilter, valgfritt luftfilterbytte.",
-    "longDescription": "Regelmessig oljeskift er avgjørende for motorens levetid og ytelse. Vi bruker kvalitetsoljer og filtere for optimal beskyttelse.",
+    "title": "Service",
+    "description": "Service med oljeskift og flere andre servicealternativer.",
+    "longDescription": "Regelmessig service er avgjørende for motorens levetid og ytelse. Ved bestilling velger du blant flere servicealternativer, fra enkelt oljeskift til mer omfattende service. Vi bruker kvalitetsoljer og filtere for optimal beskyttelse.",
     "icon": "wrench",
     "image": "/images/oil-change.webp",
     "features": [
       "Oljeskift med kvalitetsolje",
       "Oljefilterbytte",
-      "Valgfritt luftfilterbytte"
+      "Valgfritt luftfilterbytte",
+      "Flere servicealternativer å velge mellom ved booking"
     ],
     "pricing": "Fra 1500,-",
-    "pricingDescription": "Oljeskift inkludert olje og filter, pris avhenger av biltype og oljetype"
+    "pricingDescription": "Pris avhenger av valgt servicealternativ, biltype og oljetype"
+  },
+  {
+    "id": "ac-service",
+    "title": "AC-service",
+    "description": "Trykktest, diagnose og påfyll av kuldemedium på bilens klimaanlegg.",
+    "longDescription": "Vi trykktester og diagnostiserer klimaanlegget ditt, og fyller på kuldemedium ved behov. Merk at vi kun kan tilby AC-service på biler som bruker kuldemedium R134a, ikke den nyere typen R1234yf.",
+    "icon": "wrench",
+    "image": "/images/ACservice.webp",
+    "features": [
+      "Trykktest og lekkasjesøk",
+      "Diagnose av klimaanlegg",
+      "Påfyll av kuldemedium (R134a)",
+      "Kun biler med kuldemedium R134a"
+    ],
+    "pricing": "1500,- + 3,- per gram kuldemedium",
+    "pricingDescription": "1500,- for trykktest/diagnose, i tillegg 3,- per gram kuldemedium som fylles på. Gjelder kun biler med kuldemedium R134a (ikke det nyere R1234yf)."
   },
   {
     "id": "diagnostics",
@@ -137,22 +154,5 @@
     ],
     "pricing": "1400,-",
     "pricingDescription": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
-  },
-  {
-    "id": "generell-service",
-    "title": "Generell Service",
-    "description": "Komplett service og vedlikehold av bilen din.",
-    "longDescription": "Regelmessig service er avgjørende for bilens ytelse og levetid. Vi tilbyr omfattende servicepakker tilpasset din biltype og kjøremønster.",
-    "icon": "wrench",
-    "image": "/images/timeprisverksted.webp",
-    "features": [
-      "Komplett servicepakke",
-      "Kontroll av alle væsker",
-      "Filterbytte",
-      "Inspeksjon av bremser og hjuloppheng",
-      "Ta kontakt for skreddersydd tilbud"
-    ],
-    "pricing": "Fra 2500,-",
-    "pricingDescription": "Pris avhenger av biltype og servicepakke"
   }
 ]
