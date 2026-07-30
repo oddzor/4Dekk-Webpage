@@ -143,6 +143,12 @@ export default function Footer() {
             </a>{" "}
             {t.websiteServices}.
           </p>
+          <Link
+            href="/dekkhotell/login"
+            className="inline-block mt-2 text-xs text-gray-600 transition-colors duration-200 hover:text-gray-400"
+          >
+            Dekkhotell login
+          </Link>
         </div>
       </div>
     </footer>

@@ -3,11 +3,18 @@
     {
       "path": "/api/cron/refresh-reviews",
       "schedule": "0 2 1 * *"
+    },
+    {
+      "path": "/api/cron/dekkhotell-backup",
+      "schedule": "0 3 * * 1"
     }
   ],
   "functions": {
     "app/api/cron/refresh-reviews/route.ts": {
       "maxDuration": 60
+    },
+    "app/api/cron/dekkhotell-backup/route.ts": {
+      "maxDuration": 30
     }
   },
   "headers": [

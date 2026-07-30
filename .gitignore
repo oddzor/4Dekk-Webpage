@@ -50,3 +50,7 @@ Thumbs.db
 *.tmp
 *.temp
 .vercel
+
+# Real customer data exports - never commit PII
+/dekkhotell-export-current/
+/public/tmp-import/

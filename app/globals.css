@@ -137,3 +137,35 @@
     }
   }
 }
+
+@media print {
+  @page {
+    size: 60mm 100mm;
+    margin: 0;
+  }
+  html,
+  body {
+    width: 60mm !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #dekkhotell-printable,
+  #dekkhotell-printable * {
+    visibility: visible;
+  }
+  #dekkhotell-printable {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: auto !important;
+    margin: 0 !important;
+    width: 60mm !important;
+    height: 100mm !important;
+    box-sizing: border-box !important;
+  }
+}

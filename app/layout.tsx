@@ -1,14 +1,8 @@
 import { Inter, Roboto, Oswald } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import FullScreenLoader from "@/components/FullScreenLoader";
+import SiteChrome from "@/components/SiteChrome";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import dynamic from "next/dynamic";
 import type { Metadata } from "next";
-
-const Footer = dynamic(() => import("@/components/Footer"), {
-  ssr: false,
-});
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({
@@ -154,10 +148,7 @@ export default function RootLayout({
         className={`${inter.className} ${roboto.variable} ${oswald.variable} font-body text-text bg-background`}
       >
         <LanguageProvider>
-          <FullScreenLoader />
-          <Header />
-          {children}
-          <Footer />
+          <SiteChrome>{children}</SiteChrome>
         </LanguageProvider>
       </body>
     </html>
