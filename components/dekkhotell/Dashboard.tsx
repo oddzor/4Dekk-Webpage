@@ -77,6 +77,19 @@ export default function Dashboard({ userEmail }: DashboardProps) {
   const [page, setPage] = useState(1);
   const [statsFilter, setStatsFilter] = useState<StatsFilter>("all");
   const [isSwitchingTireType, setIsSwitchingTireType] = useState(false);
+  const [sortColumn, setSortColumn] = useState<"name" | "position" | null>(
+    null,
+  );
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
+
+  const handleSort = (column: "name" | "position") => {
+    if (sortColumn === column) {
+      setSortDirection((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortColumn(column);
+      setSortDirection("asc");
+    }
+  };
 
   const fetchEntries = async () => {
     setIsLoading(true);
@@ -133,14 +146,27 @@ export default function Dashboard({ userEmail }: DashboardProps) {
             .some((field) => field!.toLowerCase().includes(query)),
         );
 
+    if (sortColumn) {
+      return [...searched].sort((a, b) => {
+        const aVal = (a[sortColumn] || "").toLowerCase();
+        const bVal = (b[sortColumn] || "").toLowerCase();
+        const cmp = aVal.localeCompare(bVal, "no");
+        return sortDirection === "asc" ? cmp : -cmp;
+      });
+    }
+
     if (statsFilter === "glemt") {
       return [...searched].sort(
         (a, b) =>
           new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime(),
       );
     }
-    return searched;
-  }, [entries, search, statsFilter]);
+
+    return [...searched].sort(
+      (a, b) =>
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
+    );
+  }, [entries, search, statsFilter, sortColumn, sortDirection]);
 
   useEffect(() => {
     setPage(1);
@@ -332,12 +358,26 @@ export default function Dashboard({ userEmail }: DashboardProps) {
               <table className="w-full text-sm text-left">
                 <thead>
                   <tr className="text-gray-400 border-b border-gray-600">
-                    <th className="px-4 py-3 font-medium">Navn</th>
+                    <th
+                      className="px-4 py-3 font-medium cursor-pointer select-none hover:text-white"
+                      onClick={() => handleSort("name")}
+                    >
+                      Navn
+                      {sortColumn === "name" &&
+                        (sortDirection === "asc" ? " ▲" : " ▼")}
+                    </th>
                     <th className="px-4 py-3 font-medium">Telefon</th>
                     <th className="px-4 py-3 font-medium">Sist endret</th>
                     <th className="px-4 py-3 font-medium">Reg.nr</th>
                     <th className="px-4 py-3 font-medium">Type Dekk</th>
-                    <th className="px-4 py-3 font-medium">Posisjon</th>
+                    <th
+                      className="px-4 py-3 font-medium cursor-pointer select-none hover:text-white"
+                      onClick={() => handleSort("position")}
+                    >
+                      Posisjon
+                      {sortColumn === "position" &&
+                        (sortDirection === "asc" ? " ▲" : " ▼")}
+                    </th>
                     <th className="px-4 py-3 font-medium"></th>
                   </tr>
                 </thead>
