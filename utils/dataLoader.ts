@@ -34,11 +34,13 @@ interface BlogData {
   no: {
     title: string;
     excerpt: string;
+    metaDescription?: string;
     content: BlogContent[];
   };
   en: {
     title: string;
     excerpt: string;
+    metaDescription?: string;
     content: BlogContent[];
   };
 }
@@ -79,6 +81,7 @@ export function getBlogData() {
 
       return {
         id: blogData.id,
+        slug: blogData.slug,
         title: {
           no: blogData.no.title,
           en: blogData.en.title,
@@ -86,6 +89,10 @@ export function getBlogData() {
         excerpt: {
           no: blogData.no.excerpt,
           en: blogData.en.excerpt,
+        },
+        metaDescription: {
+          no: blogData.no.metaDescription || blogData.no.excerpt,
+          en: blogData.en.metaDescription || blogData.en.excerpt,
         },
         content: {
           no: blogData.no.content,
@@ -105,6 +112,10 @@ export function getBlogData() {
       };
     })
     .filter((blog): blog is NonNullable<typeof blog> => blog !== null);
+}
+
+export function getBlogArticleBySlug(slug: string) {
+  return getBlogData().find((article) => article.slug === slug) || null;
 }
 
 export function getAllData(language: Language = "no") {

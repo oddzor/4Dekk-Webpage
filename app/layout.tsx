@@ -1,6 +1,7 @@
 import { Inter, Roboto, Oswald } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/SiteChrome";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import type { Metadata } from "next";
 
@@ -41,7 +42,10 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
-      ? process.env.NEXT_PUBLIC_SITE_URL || "https://4dekk.no"
+      ? (process.env.NEXT_PUBLIC_SITE_URL || "https://www.4dekk.no").replace(
+          /\/+$/,
+          "",
+        )
       : "http://localhost:3000",
   ),
   alternates: {
@@ -55,19 +59,25 @@ export const metadata: Metadata = {
     title: "4Dekk Larvik - Bilverksted og Dekkservice",
     description:
       "Profesjonell bilverksted og dekkservice i Larvik. Kvalitetsarbeid til konkurransedyktige priser.",
-    url:
-      process.env.NODE_ENV === "production"
-        ? process.env.NEXT_PUBLIC_SITE_URL || "https://4dekk.no"
-        : "http://localhost:3000",
+    url: "/",
     siteName: "4Dekk Larvik",
     locale: "no_NO",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-image-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "4Dekk Larvik - Bilverksted og Dekkservice",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "4Dekk Larvik - Bilverksted og Dekkservice",
     description:
       "Profesjonell bilverksted og dekkservice i Larvik. Kvalitetsarbeid til konkurransedyktige priser.",
+    images: ["/images/hero-image-1.webp"],
   },
   robots: {
     index: true,
@@ -111,6 +121,7 @@ export default function RootLayout({
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <LocalBusinessSchema />
         <style
           dangerouslySetInnerHTML={{
             __html: `

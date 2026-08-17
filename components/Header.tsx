@@ -62,12 +62,6 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
-  const handleBlogClick = () => {
-    if (pathname === "/blog") {
-      window.dispatchEvent(new CustomEvent("closeBlogArticle"));
-    }
-  };
-
   const handlePricingClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string,
@@ -120,11 +114,9 @@ export default function Header() {
                   href={item.href}
                   className="relative text-sm font-medium transition-all duration-200 text-text hover:text-accent group"
                   onClick={
-                    item.href === "/blog"
-                      ? handleBlogClick
-                      : item.href === "/#pricing"
-                        ? (e) => handlePricingClick(e, item.href)
-                        : undefined
+                    item.href === "/#pricing"
+                      ? (e) => handlePricingClick(e, item.href)
+                      : undefined
                   }
                 >
                   {item.name}
@@ -196,9 +188,7 @@ export default function Header() {
                         }`}
                         onClick={(e) => {
                           closeMobileMenu();
-                          if (item.href === "/blog") {
-                            handleBlogClick();
-                          } else if (item.href === "/#pricing") {
+                          if (item.href === "/#pricing") {
                             handlePricingClick(e, item.href);
                           }
                         }}

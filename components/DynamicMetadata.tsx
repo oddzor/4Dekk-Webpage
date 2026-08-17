@@ -57,40 +57,6 @@ export default function DynamicMetadata({
       meta.content = metadata.ogDescription;
       document.head.appendChild(meta);
     }
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute("href", metadata.canonical);
-    } else {
-      const link = document.createElement("link");
-      link.rel = "canonical";
-      link.href = metadata.canonical;
-      document.head.appendChild(link);
-    }
-    const alternateEn = document.querySelector(
-      'link[rel="alternate"][hreflang="en"]',
-    );
-    if (alternateEn) {
-      alternateEn.setAttribute("href", metadata.alternateEn);
-    } else {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.setAttribute("hreflang", "en");
-      link.href = metadata.alternateEn;
-      document.head.appendChild(link);
-    }
-
-    const alternateNo = document.querySelector(
-      'link[rel="alternate"][hreflang="no"]',
-    );
-    if (alternateNo) {
-      alternateNo.setAttribute("href", metadata.alternateNo);
-    } else {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.setAttribute("hreflang", "no");
-      link.href = metadata.alternateNo;
-      document.head.appendChild(link);
-    }
     document.documentElement.lang = language;
   }, [language, page]);
 

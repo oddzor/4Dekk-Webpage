@@ -1,79 +1,65 @@
-interface LocalBusinessSchemaProps {
-  businessName: string;
-  businessDescription: string;
-  businessAddress: {
-    streetAddress: string;
-    addressLocality: string;
-    postalCode: string;
-    addressCountry: string;
-  };
-  businessPhone: string;
-  businessEmail: string;
-  businessWebsite: string;
-  businessHours: string[];
-  services: string[];
-  priceRange: string;
-  latitude: number;
-  longitude: number;
+import businessData from "@/data/business.json";
+
+const SITE_URL = "https://www.4dekk.no";
+
+const DAY_NAMES: Record<string, string> = {
+  monday: "Monday",
+  tuesday: "Tuesday",
+  wednesday: "Wednesday",
+  thursday: "Thursday",
+  friday: "Friday",
+  saturday: "Saturday",
+  sunday: "Sunday",
+};
+
+function buildOpeningHours() {
+  return Object.entries(businessData.hours)
+    .filter(([day]) => day in DAY_NAMES)
+    .filter(([, value]) => value !== "Stengt")
+    .map(([day, value]) => {
+      const [opens, closes] = value.split(" - ");
+      return {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: `https://schema.org/${DAY_NAMES[day]}`,
+        opens,
+        closes,
+      };
+    });
 }
 
-export default function LocalBusinessSchema({
-  businessName,
-  businessDescription,
-  businessAddress,
-  businessPhone,
-  businessEmail,
-  businessWebsite,
-  businessHours,
-  services,
-  priceRange,
-  latitude,
-  longitude,
-}: LocalBusinessSchemaProps) {
-  const localBusinessData = {
+export default function LocalBusinessSchema() {
+  const data = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": businessName,
-    "description": businessDescription,
-    "url": businessWebsite,
-    "telephone": businessPhone,
-    "email": businessEmail,
-    "priceRange": priceRange,
-    "address": {
+    "@type": "AutoRepair",
+    name: businessData.name,
+    description: businessData.description,
+    url: SITE_URL,
+    telephone: businessData.contact.phone,
+    email: businessData.contact.email,
+    image: `${SITE_URL}/images/4dekk-logo-white-red.webp`,
+    logo: `${SITE_URL}/images/4dekk-logo-white-red.webp`,
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": businessAddress.streetAddress,
-      "addressLocality": businessAddress.addressLocality,
-      "postalCode": businessAddress.postalCode,
-      "addressCountry": businessAddress.addressCountry,
+      streetAddress: businessData.address.street,
+      addressLocality: businessData.address.city,
+      postalCode: businessData.address.postalCode,
+      addressCountry: "NO",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": latitude,
-      "longitude": longitude,
+      latitude: businessData.location.latitude,
+      longitude: businessData.location.longitude,
     },
-    "openingHoursSpecification": businessHours.map((hours) => ({
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": hours.split(":")[0],
-      "opens": hours.split(":")[1]?.split("-")[0] || "09:00",
-      "closes": hours.split(":")[1]?.split("-")[1] || "17:00",
-    })),
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Automotive Services",
-      "itemListElement": services.map((service, index) => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": service,
-        },
-        "position": index + 1,
-      })),
+    openingHoursSpecification: buildOpeningHours(),
+    hasMap: businessData.location.googleMapsUrl,
+    areaServed: {
+      "@type": "City",
+      name: "Larvik",
     },
-    "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-    "currenciesAccepted": "NOK",
-    "image": `${businessWebsite}/images/4dekk-logo-white-red.webp`,
-    "logo": `${businessWebsite}/images/4dekk-logo-white-red.webp`,
-    "sameAs": [
+    priceRange: "$$",
+    currenciesAccepted: "NOK",
+    paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
+    sameAs: [
       "https://www.facebook.com/4dekk.no",
       "https://www.instagram.com/4dekk/",
     ],
@@ -82,7 +68,7 @@ export default function LocalBusinessSchema({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
 }

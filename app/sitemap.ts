@@ -1,10 +1,18 @@
 import { MetadataRoute } from "next";
+import { getBlogData } from "@/utils/dataLoader";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
     process.env.NODE_ENV === "production"
-      ? "https://4dekk.no"
+      ? "https://www.4dekk.no"
       : "http://localhost:3000";
+
+  const blogUrls: MetadataRoute.Sitemap = getBlogData().map((article) => ({
+    url: `${baseUrl}/blog/${article.slug}`,
+    lastModified: new Date(article.publishDate),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
 
   return [
     {
@@ -37,5 +45,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    ...blogUrls,
   ];
 }

@@ -1,11 +1,17 @@
 type Language = "no" | "en";
 
-export function getMetadata(language: Language = "no", path: string = "/") {
-  const baseUrl =
+function getBaseUrl() {
+  const raw =
     process.env.NODE_ENV === "production"
-      ? process.env.NEXT_PUBLIC_SITE_URL || "https://4dekk.no"
+      ? process.env.NEXT_PUBLIC_SITE_URL || "https://www.4dekk.no"
       : "http://localhost:3000";
-  const currentUrl = `${baseUrl}${path}${language === "en" ? "?lang=en" : ""}`;
+  return raw.replace(/\/+$/, "");
+}
+
+export function getMetadata(language: Language = "no", path: string = "/") {
+  const baseUrl = getBaseUrl();
+  const normalizedPath = path === "/" ? "" : path;
+  const currentUrl = `${baseUrl}${normalizedPath}${language === "en" ? "?lang=en" : ""}`;
 
   const metadata = {
     no: {
@@ -42,7 +48,8 @@ export function getMetadata(language: Language = "no", path: string = "/") {
 type Page = "home" | "about" | "contact" | "booking" | "blog";
 
 export function generatePageMetadata(language: Language, page: Page = "home") {
-  const baseMetadata = getMetadata(language, `/${page}`);
+  const path = page === "home" ? "/" : `/${page}`;
+  const baseMetadata = getMetadata(language, path);
 
   const pageSpecific: Record<
     Language,

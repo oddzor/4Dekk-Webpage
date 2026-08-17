@@ -35,6 +35,25 @@ const nextConfig = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: "/felgpakker{/}?",
+        destination: "/booking",
+        permanent: true,
+      },
+      {
+        source: "/sommerdekk{/}?",
+        destination: "/blog/valg-av-dekk-sommer-vinter",
+        permanent: true,
+      },
+      {
+        source: "/uncategorized/lagertomming-sommerdekk{/}?",
+        destination: "/booking",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
