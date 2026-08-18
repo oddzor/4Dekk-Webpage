@@ -5,6 +5,7 @@ import { getBusinessData } from "../../utils/dataLoader";
 import { useLanguage } from "../../contexts/LanguageContext";
 import ContactForm from "../../components/ContactForm";
 import DynamicMetadata from "../../components/DynamicMetadata";
+import { trackPhoneCall } from "../../components/GoogleAnalytics";
 
 export default function ContactPage() {
   const { language } = useLanguage();
@@ -119,6 +120,7 @@ export default function ContactPage() {
                     </h3>
                     <a
                       href={`tel:${businessData.contact.phone}`}
+                      onClick={trackPhoneCall}
                       className="transition-colors duration-200 text-accent hover:text-accent-dark"
                     >
                       {businessData.contact.phone}

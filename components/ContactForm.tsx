@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { getBusinessData } from "../utils/dataLoader";
 import { useLanguage } from "../contexts/LanguageContext";
-import { trackContactForm } from "./GoogleAnalytics";
+import { trackContactForm, trackPhoneCall } from "./GoogleAnalytics";
 
 interface FormData {
   name: string;
@@ -414,6 +414,7 @@ export default function ContactForm() {
             </div>
             <a
               href={`tel:${businessData.contact.phone}`}
+              onClick={trackPhoneCall}
               className="transition-colors duration-200 text-accent hover:text-accent-dark"
             >
               {businessData.contact.phone}

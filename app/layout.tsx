@@ -2,6 +2,7 @@ import { Inter, Roboto, Oswald } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/SiteChrome";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import type { Metadata } from "next";
 
@@ -158,6 +159,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${roboto.variable} ${oswald.variable} font-body text-text bg-background`}
       >
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics
+            measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+          />
+        )}
         <LanguageProvider>
           <SiteChrome>{children}</SiteChrome>
         </LanguageProvider>

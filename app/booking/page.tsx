@@ -3,6 +3,7 @@
 import Icon from "../../components/Icon";
 import { useLanguage } from "../../contexts/LanguageContext";
 import DynamicMetadata from "../../components/DynamicMetadata";
+import { trackBookingClick } from "../../components/GoogleAnalytics";
 
 export default function BookingPage() {
   const { language } = useLanguage();
@@ -118,6 +119,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk-service2/eu-kontroll"
                   : "https://calendly.com/4dekk-service2/eu-kontroll-clone"
               }
+              onClick={() => trackBookingClick("repair_eu_kontroll")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -143,6 +145,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/d/cr7j-wcf-8qy/diagnose-av-bilproblemer"
                   : "https://calendly.com/d/cwby-hk5-8d4/car-issue-diagnostics"
               }
+              onClick={() => trackBookingClick("repair_diagnostics")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -170,6 +173,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/d/cw8m-3w4-8yy/oljeskift"
                   : "https://calendly.com/d/csmh-bdz-qwd/oil-change"
               }
+              onClick={() => trackBookingClick("repair_service_oil_change")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -197,6 +201,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk-service/a-c-service"
                   : "https://calendly.com/4dekk-service/a-c-maintenance"
               }
+              onClick={() => trackBookingClick("repair_ac_service")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -224,6 +229,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk/dekkskift-dekkhotell"
                   : "https://calendly.com/4dekk/hjulskift-dekkhotell-clone"
               }
+              onClick={() => trackBookingClick("tire_hjulskift_dekkhotell")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -251,6 +257,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk/hjulskift-egne-dekk"
                   : "https://calendly.com/4dekk/hjulskift-egne-dekk-clone"
               }
+              onClick={() => trackBookingClick("tire_hjulskift_egne_dekk")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -278,6 +285,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk/omlegging-av-dekk"
                   : "https://calendly.com/4dekk/omlegging-av-dekk-selvbestilling-via-internet-clone"
               }
+              onClick={() => trackBookingClick("tire_omlegging_dekk")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -303,6 +311,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk-service2/etterkontroll"
                   : "https://calendly.com/4dekk-service2/etterkontroll-clone"
               }
+              onClick={() => trackBookingClick("repair_eu_etterkontroll")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
@@ -328,6 +337,7 @@ export default function BookingPage() {
                   ? "https://calendly.com/4dekk-service2/4hjulskontroll"
                   : "https://calendly.com/4dekk-service2/4hjulskontroll-clone"
               }
+              onClick={() => trackBookingClick("repair_wheel_alignment")}
               target="_blank"
               rel="noopener noreferrer"
               className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
