@@ -389,9 +389,34 @@ export default function ServiceLandingPage({
                 </ul>
               </div>
             )}
+
+            <p className="pt-6 mt-10 text-sm border-t border-gray-300 text-gray-500">
+              Innhold av 4Dekk Larvik. Faglig gjennomgått av Henrikas, teknisk
+              leder og godkjent kjøretøykontrollør hos Statens vegvesen.{" "}
+              <Link href="/about" className="underline hover:text-accent">
+                Om verkstedet
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
+
+      {/* Fast handlingslinje på mobil */}
+      <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 p-2 border-t bg-gray-darker/95 backdrop-blur-sm border-accent/20 md:hidden">
+        <a
+          href={`tel:${PHONE}`}
+          className="flex-1 py-3 text-sm font-semibold text-center btn-secondary"
+        >
+          📞 Ring
+        </a>
+        <BookingButton
+          href={page.bookingUrl}
+          className="flex-1 py-3 text-sm font-semibold text-center btn-accent"
+        >
+          Bestill {page.name.toLowerCase()}
+        </BookingButton>
+      </div>
     </div>
   );
 }

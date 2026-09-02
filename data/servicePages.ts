@@ -97,7 +97,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster EU-kontroll hos 4Dekk Larvik?",
-        a: "EU-kontroll koster 1150,- uansett bilmerke. Trenger bilen etterkontroll etter utbedring, koster den 400,-.",
+        a: "Hos 4Dekk Larvik koster EU-kontroll 1150,- uansett bilmerke. Trenger bilen etterkontroll etter utbedring, koster den 400,-.",
       },
       {
         q: "Hvor lang tid tar EU-kontrollen?",
@@ -113,6 +113,11 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "eu-kontroll-guide-frist-sjekkliste-tips",
+    relatedServiceSlugs: [
+      "bilverksted-larvik",
+      "bildiagnose-larvik",
+      "service-og-oljeskift-larvik",
+    ],
   },
   {
     slug: "hjulskift-larvik",
@@ -162,7 +167,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster hjulskift i Larvik?",
-        a: "Hjulskift av ferdig monterte hjul koster fra 600,- for personbil, 650,- for SUV og varebil, og 700,- for bobil.",
+        a: "Hos 4Dekk Larvik i Larvik koster hjulskift av ferdig monterte hjul 600,- for personbil, 650,- for SUV og varebil, og 700,- for bobil.",
       },
       {
         q: "Hvor lang tid tar et hjulskift?",
@@ -178,6 +183,11 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "valg-av-dekk-sommer-vinter",
+    relatedServiceSlugs: [
+      "dekkhotell-larvik",
+      "dekkservice-larvik",
+      "hjulstilling-larvik",
+    ],
   },
   {
     slug: "hjulstilling-larvik",
@@ -240,6 +250,10 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "hjulstilling-og-hjulbalansering",
+    relatedServiceSlugs: [
+      "dekkservice-larvik",
+      "hjulskift-larvik",
+    ],
   },
   {
     slug: "ac-service-larvik",
@@ -289,7 +303,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster AC-service i Larvik?",
-        a: "1500,- for trykktest og diagnose, pluss 3,- per gram kuldemedium som fylles på.",
+        a: "Hos 4Dekk Larvik koster AC-service 1500,- for trykktest og diagnose, pluss 3,- per gram kuldemedium som fylles på.",
       },
       {
         q: "Gjør dere service på alle biler?",
@@ -350,7 +364,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster dekkhotell i Larvik?",
-        a: "Oppbevaring koster fra 500,-. Totalpris per sesong inkludert hjulskift og hjulvask er fra 1300,- for personbil.",
+        a: "Hos 4Dekk Larvik koster oppbevaring på dekkhotell fra 500,-. Totalpris per sesong inkludert hjulskift og hjulvask er fra 1300,- for personbil.",
       },
       {
         q: "Hva skjer hvis dekkene mine blir for dårlige?",
@@ -362,6 +376,10 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "valg-av-dekk-sommer-vinter",
+    relatedServiceSlugs: [
+      "hjulskift-larvik",
+      "dekkservice-larvik",
+    ],
   },
   {
     slug: "bilverksted-larvik",
@@ -428,6 +446,11 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "bilvedlikehold-tips-og-rad",
+    relatedServiceSlugs: [
+      "eu-kontroll-larvik",
+      "service-og-oljeskift-larvik",
+      "bremseservice-larvik",
+    ],
   },
   {
     slug: "service-og-oljeskift-larvik",
@@ -476,7 +499,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster et oljeskift i Larvik?",
-        a: "Et oljeskift med olje, oljefilter og arbeid starter på rundt 2000,-. Prisen varierer med biltype, oljemengde og oljetype, og om du legger til luftfilter, kupéfilter eller mer omfattende service.",
+        a: "Hos 4Dekk Larvik starter et oljeskift med olje, oljefilter og arbeid på rundt 2000,-. Prisen varierer med biltype, oljemengde og oljetype, og om du legger til luftfilter, kupéfilter eller mer omfattende service.",
       },
       {
         q: "Bruker dere original olje?",
@@ -488,6 +511,10 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "oljeskift-guide-hvor-ofte-og-hvorfor",
+    relatedServiceSlugs: [
+      "bilverksted-larvik",
+      "eu-kontroll-larvik",
+    ],
   },
   {
     slug: "bildiagnose-larvik",
@@ -542,7 +569,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster feilsøking hos 4Dekk Larvik?",
-        a: "Diagnose starter på 700,- for cirka en halvtime. Krever feilen mer omfattende feilsøking, avtaler vi det med deg først.",
+        a: "Hos 4Dekk Larvik starter diagnose på 700,- for cirka en halvtime. Krever feilen mer omfattende feilsøking, avtaler vi det med deg først.",
       },
       {
         q: "Trekkes diagnoseprisen fra hvis jeg reparerer hos dere?",
@@ -614,7 +641,7 @@ export const servicePages: ServicePage[] = [
       },
       {
         q: "Hva koster det å legge om dekk?",
-        a: "Omlegging med balansering koster fra 1000,-. Er dekkene levert via Dekkonline, Dekk365 eller lignende, er prisen fra 1800,-.",
+        a: "Hos 4Dekk Larvik koster omlegging med balansering fra 1000,-. Er dekkene levert via Dekkonline, Dekk365 eller lignende, er prisen fra 1800,-.",
       },
       {
         q: "Kan dere montere dekk jeg har kjøpt på nett?",
@@ -767,7 +794,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster bremseservice i Larvik?",
-        a: "Prisen varierer med bilmerke og hva som må byttes, så vi gir pristilbud per bil. Timeprisen for arbeidet er 1400,-, og du får et overslag på deler og arbeid før vi starter.",
+        a: "Hos 4Dekk Larvik varierer prisen med bilmerke og hva som må byttes, så vi gir pristilbud per bil. Timeprisen for arbeidet er 1400,-, og du får et overslag på deler og arbeid før vi starter.",
       },
       {
         q: "Hvor ofte bør bremsevæsken byttes?",

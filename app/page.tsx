@@ -1,64 +1,149 @@
-"use client";
-
-import dynamic from "next/dynamic";
-import { Suspense, useEffect } from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
-import DynamicMetadata from "@/components/DynamicMetadata";
+import ServicesSection from "@/components/ServicesSection";
+import PricingSection from "@/components/PricingSection";
+import GoogleReviewsSection from "@/components/GoogleReviews";
+import HomeClient from "@/components/HomeClient";
+import businessData from "@/data/business.json";
 
-const ServicesSection = dynamic(() => import("@/components/ServicesSection"), {
-  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />,
-});
-const PricingSection = dynamic(() => import("@/components/PricingSection"), {
-  loading: () => <div className="bg-gray-800 h-96 animate-pulse" />,
-});
-const GoogleReviewsSection = dynamic(
-  () => import("@/components/GoogleReviews"),
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const HOME_FAQ = [
   {
-    loading: () => <div className="bg-gray-800 h-96 animate-pulse" />,
+    q: "Hvor ligger 4Dekk Larvik?",
+    a: "4Dekk Larvik holder til i Haakon VII's vei 9, 3269 Larvik, på Nanset – få minutter fra E18.",
   },
-);
-const FloatingPriceButton = dynamic(
-  () => import("@/components/FloatingPriceButton"),
   {
-    ssr: false,
+    q: "Hva er åpningstidene?",
+    a: "Vi har åpent mandag til fredag 08:00–16:00, med lunsjstengt 12:00–12:30. Lørdag og søndag er stengt.",
   },
-);
+  {
+    q: "Må jeg bestille time?",
+    a: "Ja, vi anbefaler at du bestiller time på nett eller ringer 93 99 55 55, spesielt i sesongrushet for hjulskift.",
+  },
+  {
+    q: "Tar dere alle bilmerker?",
+    a: "Vi utfører service, reparasjon, EU-kontroll og dekkservice på de fleste bilmerker og modeller. Er du usikker, ta kontakt før du bestiller.",
+  },
+  {
+    q: "Hva koster EU-kontroll hos 4Dekk Larvik?",
+    a: "EU-kontroll koster 1150,- uansett bilmerke. Etterkontroll etter utbedring koster 400,-. Vi er godkjent kontrollorgan hos Statens vegvesen.",
+  },
+];
 
 export default function Home() {
-  useEffect(() => {
-    const handleHashScroll = () => {
-      if (window.location.hash === "#pricing") {
-        setTimeout(() => {
-          const pricingSection = document.getElementById("pricing");
-          if (pricingSection) {
-            pricingSection.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        }, 1000);
-      }
-    };
-
-    handleHashScroll();
-    window.addEventListener("hashchange", handleHashScroll);
-    return () => window.removeEventListener("hashchange", handleHashScroll);
-  }, []);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: "nb-NO",
+    mainEntity: HOME_FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
 
   return (
     <div>
-      <DynamicMetadata page="home" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <HeroSection />
-      <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
-        <ServicesSection />
-      </Suspense>
-      <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
-        <PricingSection />
-      </Suspense>
-      <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
-        <GoogleReviewsSection />
-      </Suspense>
-      <FloatingPriceButton />
+      <ServicesSection />
+      <PricingSection />
+      <GoogleReviewsSection />
+
+      <section className="section-padding section-dark">
+        <div className="container-custom">
+          <div className="grid gap-8 md:grid-cols-2 md:items-start">
+            <div>
+              <h2 className="mb-4 text-2xl font-bold md:text-3xl font-headings text-headings">
+                Finn oss i Larvik
+              </h2>
+              <dl className="space-y-3 text-text">
+                <div>
+                  <dt className="text-sm tracking-wide uppercase text-gray-400">
+                    Adresse
+                  </dt>
+                  <dd>
+                    {businessData.address.street},{" "}
+                    {businessData.address.postalCode} {businessData.address.city}{" "}
+                    (Nanset)
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-sm tracking-wide uppercase text-gray-400">
+                    Åpningstider
+                  </dt>
+                  <dd>Mandag–fredag 08:00–16:00 (lunsj 12:00–12:30)</dd>
+                </div>
+                <div>
+                  <dt className="text-sm tracking-wide uppercase text-gray-400">
+                    Telefon
+                  </dt>
+                  <dd>
+                    <a
+                      href={`tel:${businessData.contact.phoneE164}`}
+                      className="hover:text-accent"
+                    >
+                      {businessData.contact.phone}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+              <div className="flex flex-col gap-3 mt-6 sm:flex-row">
+                <Link href="/booking" className="text-center btn-accent">
+                  Bestill time
+                </Link>
+                <a
+                  href={`tel:${businessData.contact.phoneE164}`}
+                  className="text-center btn-secondary"
+                >
+                  Ring {businessData.contact.phone}
+                </a>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <iframe
+                src={businessData.location.googleMapsEmbedUrl}
+                title="Kart til 4Dekk Larvik"
+                width="100%"
+                height="300"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="border-0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding section-light">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mb-8 text-2xl font-bold md:text-3xl font-headings text-headings">
+              Ofte stilte spørsmål
+            </h2>
+            <dl className="space-y-6">
+              {HOME_FAQ.map((item) => (
+                <div key={item.q}>
+                  <dt className="mb-2 text-lg font-semibold font-headings text-headings">
+                    {item.q}
+                  </dt>
+                  <dd className="leading-relaxed text-text">{item.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <HomeClient />
     </div>
   );
 }
