@@ -667,7 +667,7 @@ export const servicePages: ServicePage[] = [
       "Kjøpe nye dekk i Larvik hos 4Dekk. Sommerdekk, vinterdekk, piggdekk og helårsdekk fra store leverandører, skaffet på kort varsel. Vi hjelper deg å velge riktig. Kontakt oss for pristilbud.",
     h1: "Kjøpe nye dekk i Larvik",
     intro: [
-      "Trenger du nye dekk? Hos 4Dekk Larvik får du hjelp med hele jobben – fra å velge riktig dekk til montering og balansering. Vi har avtaler med store leverandører og henter inn de fleste merker og dimensjoner på kort varsel: sommerdekk, vinterdekk, piggdekk og helårsdekk.",
+      "Hos 4Dekk i Larvik kjøper du nye dekk med montering og balansering – omlegging fra 1000,-, og fast pristilbud på selve dekket per bil. Vi skaffer de fleste merker og dimensjoner på kort varsel: sommerdekk, vinterdekk, piggdekk og helårsdekk, og hjelper deg å velge riktig dekk til bil, kjøremønster og budsjett.",
       "Vi har ikke faste listepriser på dekk siden de varierer med merke, dimensjon og sesong. Ta kontakt med bil og ønsket dekktype, så gir vi deg et konkret pristilbud – og du får ærlige råd om hva som faktisk passer bilen din og kjøremønsteret ditt.",
     ],
     image: "/images/tire-service.webp",
@@ -747,7 +747,7 @@ export const servicePages: ServicePage[] = [
       "Bremseservice i Larvik hos 4Dekk: kontroll og bytte av bremseklosser, bremseskiver og bremsevæske på de fleste bilmerker. Timepris 1400,-. Kontakt oss for pristilbud.",
     h1: "Bremseservice i Larvik",
     intro: [
-      "Piper eller skurrer bremsene, er pedalen svampete eller trekker bilen til siden ved bremsing? Da bør bremsene sjekkes. 4Dekk Larvik utfører bremseservice på de fleste bilmerker – kontroll og bytte av bremseklosser, bremseskiver og bremsevæske.",
+      "Bremseservice hos 4Dekk i Larvik utføres til timepris 1400,-, med prisoverslag på deler før arbeidet starter. Vi kontrollerer og bytter bremseklosser, bremseskiver og bremsevæske på de fleste bilmerker. Piper eller skurrer bremsene, er pedalen svampete eller trekker bilen til siden ved bremsing, bør de sjekkes.",
       "Pris avhenger av bil, hvilke deler som må byttes og om det er foran, bak eller begge deler, så vi gir pristilbud per bil. Timeprisen for verkstedarbeid er 1400,-, og du får et overslag på deler og arbeid før vi begynner.",
     ],
     image: "/images/brake-repair.webp",

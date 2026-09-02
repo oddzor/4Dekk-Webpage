@@ -50,11 +50,7 @@ const HOME_FAQ = [
   {
     q: "Tar dere alle bilmerker?",
     a: "Vi utfører service, reparasjon, EU-kontroll og dekkservice på de fleste bilmerker og modeller. Er du usikker, ta kontakt før du bestiller.",
-  },
-  {
-    q: "Hva koster EU-kontroll hos 4Dekk Larvik?",
-    a: "EU-kontroll koster 1150,- uansett bilmerke. Etterkontroll etter utbedring koster 400,-. Vi er godkjent kontrollorgan hos Statens vegvesen.",
-  },
+  }
 ];
 
 export default function Home() {

@@ -288,6 +288,22 @@ export default function ServiceLandingPage({
                     ))}
                   </ul>
                 )}
+                {section.id === "etterkontroll" && (
+                  <div className="flex flex-col gap-3 mt-6 sm:flex-row">
+                    <BookingButton
+                      href={page.bookingUrl}
+                      className="text-center btn-accent"
+                    >
+                      Bestill etterkontroll (400,-)
+                    </BookingButton>
+                    <a
+                      href={`tel:${PHONE}`}
+                      className="text-center btn-secondary"
+                    >
+                      Ring {PHONE_DISPLAY}
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
 

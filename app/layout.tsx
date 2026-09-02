@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       "Profesjonell bilverksted og dekkservice i Larvik. Kvalitetsarbeid til konkurransedyktige priser.",
     url: "/",
     siteName: "4Dekk Larvik",
-    locale: "no_NO",
+    locale: "nb_NO",
     type: "website",
     images: [
       {
@@ -91,7 +91,6 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
 };
 
 export default function RootLayout({

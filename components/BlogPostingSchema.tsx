@@ -24,12 +24,15 @@ export default function BlogPostingSchema({ slug }: { slug: string }) {
       article.lastUpdated || article.publishDate,
     ).toISOString(),
     author: {
-      "@type": "Organization",
-      name: "4Dekk Larvik",
-      url: SITE_URL,
+      "@type": "Person",
+      "@id": `${SITE_URL}/#henrikas`,
+      name: "Henrikas",
+      jobTitle: "Teknisk leder og godkjent kjøretøykontrollør",
+      worksFor: { "@id": `${SITE_URL}/#business` },
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#business`,
       name: "4Dekk Larvik",
       logo: { "@type": "ImageObject", url: LOGO_URL },
     },
@@ -46,7 +49,7 @@ export default function BlogPostingSchema({ slug }: { slug: string }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Hjem", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "Hjem", item: `${SITE_URL}/` },
       {
         "@type": "ListItem",
         position: 2,

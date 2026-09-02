@@ -30,17 +30,32 @@ const AREA_SERVED = [
 ];
 
 function buildOpeningHours() {
+  const [lunchStart, lunchEnd] = (businessData.hours.lunch || "").split(" - ");
   return Object.entries(businessData.hours)
     .filter(([day]) => day in DAY_NAMES)
     .filter(([, value]) => value !== "Stengt")
-    .map(([day, value]) => {
+    .flatMap(([day, value]) => {
       const [opens, closes] = value.split(" - ");
-      return {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: `https://schema.org/${DAY_NAMES[day]}`,
-        opens,
-        closes,
-      };
+      const dayOfWeek = `https://schema.org/${DAY_NAMES[day]}`;
+      if (lunchStart && lunchEnd) {
+        return [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek,
+            opens,
+            closes: lunchStart,
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek,
+            opens: lunchEnd,
+            closes,
+          },
+        ];
+      }
+      return [
+        { "@type": "OpeningHoursSpecification", dayOfWeek, opens, closes },
+      ];
     });
 }
 

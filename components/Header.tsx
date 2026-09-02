@@ -93,7 +93,23 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="flex lg:hidden">
+          <div className="flex items-center gap-1 lg:hidden">
+            <a
+              href="tel:+4793995555"
+              className="inline-flex items-center justify-center p-2.5 rounded-md text-text hover:text-accent transition-colors duration-200"
+              aria-label={
+                language === "no" ? "Ring 4Dekk Larvik" : "Call 4Dekk Larvik"
+              }
+            >
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+            </a>
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-text hover:text-accent transition-colors duration-200"
