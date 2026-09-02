@@ -16,9 +16,9 @@ export default function BookingPage() {
       bookingTypesTitle: "Våre Bookingtyper",
       bookingTypesDescription:
         "Velg den servicen som passer best for dine behov. Klikk på en service for å bestille time.",
-      euControl: "EU Kontroll",
+      euControl: "EU-kontroll",
       euControlDesc: "Årlig kjøretøyinspeksjon og sikkerhetskontroll",
-      diagnostics: "Diagnose av Bilproblemer",
+      diagnostics: "Diagnose av bilproblemer",
       diagnosticsDesc:
         "Avansert diagnostikk for identifisering av bilproblemer",
       oilChange: "Service",
@@ -35,8 +35,8 @@ export default function BookingPage() {
       tireMountingDesc: "Omlegging av dekk som du har bestilt på nett",
       afterControl: "EU-Etterkontroll",
       afterControlDesc:
-        "Etterkontroll av reparasjoner og service ifbm ikke-godkjent EU Kontroll",
-      wheelAlignment: "4Hjulskontroll",
+        "Etterkontroll av reparasjoner og service ifbm ikke-godkjent EU-kontroll",
+      wheelAlignment: "4-hjulskontroll",
       wheelAlignmentDesc: "Kontroll og justering av hjulgeometri",
       bookTime: "Bestill time →",
       priceVaries: "Pris varierer med biltype",

@@ -1,7 +1,7 @@
 [
   {
     "id": "eu-control",
-    "title": "EU Kontroll",
+    "title": "EU-kontroll",
     "description": "Lovpålagt sikkerhetskontroll av kjøretøy.",
     "longDescription": "EU-kontroll sjekker bilens trafikksikkerhet og miljøpåvirkning gjennom ca. 150 kontrollpunkter",
     "icon": "check",
@@ -20,17 +20,17 @@
   {
     "id": "after-control",
     "title": "Etterkontroll",
-    "description": "Dersom du har gjort reparasjoner i forbindelse med en ikke-godkjent EU Kontroll",
+    "description": "Dersom du har gjort reparasjoner i forbindelse med en ikke-godkjent EU-kontroll",
     "longDescription": "Vi går over bilen for å se at feilene som ble avdekket på EU kontrollen er utbedret.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
     "features": ["Etterkontroll", "Reparasjonsverifikasjon", "Godkjenning"],
     "pricing": "400,-",
-    "pricingDescription": "Etterkontroll av reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
+    "pricingDescription": "Etterkontroll av reparasjoner gjort i forbindelse med ikke-godkjent EU-kontroll"
   },
   {
     "id": "wheel-alignment",
-    "title": "4Hjulskontroll",
+    "title": "4-hjulskontroll",
     "description": "Kontroll og justering av hjulstillingsvinkel.",
     "longDescription": "Nøyaktig hjuljustering for optimal sikkerhet og dekklevetid.",
     "icon": "check",
@@ -78,7 +78,7 @@
   },
   {
     "id": "diagnostics",
-    "title": "Diagnose av Bilproblemer",
+    "title": "Diagnose av bilproblemer",
     "description": "Avansert diagnostikk for identifisering av bilproblemer.",
     "longDescription": "Moderne diagnostisk utstyr og god gammeldags mekanikererfaring for rask identifisering av bil og systemproblemer.",
     "icon": "wrench",

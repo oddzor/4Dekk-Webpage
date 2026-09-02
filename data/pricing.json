@@ -1,6 +1,6 @@
 [
   {
-    "service": "EU Kontroll",
+    "service": "EU-kontroll",
     "price": "1150,-",
     "icon": "check",
     "description": "Komplett EU kontroll med ca. 150 kontrollpunkter, direkte forbindelse med Statens Vegvesen"
@@ -9,10 +9,10 @@
     "service": "Etterkontroll",
     "price": "400,-",
     "icon": "check",
-    "description": "Etterkontroll av reparasjoner gjort i forbindelse med ikke-godkjent EU Kontroll"
+    "description": "Etterkontroll av reparasjoner gjort i forbindelse med ikke-godkjent EU-kontroll"
   },
   {
-    "service": "4Hjulskontroll",
+    "service": "4-hjulskontroll",
     "price": "1875,-",
     "icon": "check",
     "description": "Kontroll og justering av hjulstillingsvinkel på bilen din"
@@ -24,7 +24,7 @@
     "description": "Vår konkurransedyktige timepris for verkstedarbeid og reparasjoner"
   },
   {
-    "service": "Diagnose av Bilproblemer",
+    "service": "Diagnose av bilproblemer",
     "price": "Fra 700,-",
     "icon": "wrench",
     "description": "Avansert diagnostikk og inspeksjon for identifisering av bilproblemer"

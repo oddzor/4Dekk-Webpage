@@ -1,0 +1,353 @@
+{
+  "summary": {
+    "health_score": 59,
+    "business_type": "Local Service - auto repair & tyre shop (single location, Larvik, Norway)",
+    "top_findings": [
+      "No dedicated service landing pages - services exist only as homepage sections, so nothing can rank for 'EU-kontroll Larvik', 'hjulskift Larvik', etc.",
+      "hreflang is invalid: 'no' and 'en' both point to the same URL; English is a client-only ?lang=en toggle with no crawlable URL",
+      "Only one schema type (AutoRepair LocalBusiness) - no Service, FAQPage, BlogPosting, BreadcrumbList or AggregateRating despite cached Google reviews being available",
+      "Blog posts are thin (~375 words) with inflated readTime, no visible author/date, no internal links to services",
+      "Homepage body content (services, pricing, reviews) is client-gated behind a 200ms timer and absent from server HTML"
+    ],
+    "quick_wins": [
+      "Remove or fix the invalid hreflang tags in app/layout.tsx",
+      "Add aggregateRating + @id + E.164 telephone + wider areaServed to LocalBusinessSchema.tsx",
+      "Reconcile schema geo coordinates (59.0533,10.0297) with the Maps embed (59.0648,10.0426)",
+      "Rewrite blog <title> tags to include the target query and 'Larvik'",
+      "Set next.config.js images.minimumCacheTTL to 2678400 and drop the unused Inter font",
+      "Make the apex -> www redirect a permanent 301/308 in Vercel domain settings"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 70,
+      "what_works": [
+        "Server-rendered title, meta description, canonical and Open Graph on every route",
+        "Generated sitemap.xml and correct robots.txt (dekkhotell and api disallowed)",
+        "HTTPS with HSTS, X-Frame-Options DENY, Referrer-Policy set",
+        "Legacy WordPress URLs 301-redirected"
+      ],
+      "findings": [
+        {
+          "title": "Homepage body content is client-gated behind a timer",
+          "severity": "High",
+          "description": "app/page.tsx is a client component; Services/Pricing/Reviews render only after setTimeout(200ms) + useDeferredValue at scheduler background priority. Only the hero is in server HTML.",
+          "recommendation": "Server-render the sections (they take no props, read static JSON) and remove the deferredShowContent gate."
+        },
+        {
+          "title": "Invalid hreflang implementation",
+          "severity": "High",
+          "description": "Live HTML emits rel=alternate hreflang 'no' and 'en' both pointing at https://www.4dekk.no, with no x-default. English has no crawlable URL, no SSR, no distinct canonical.",
+          "recommendation": "Go Norwegian-only: remove alternates.languages and the hreflang output and stop bundling the en JSON. Or build real /en/ routes with reciprocal hreflang + x-default."
+        },
+        {
+          "title": "Apex to www redirect is 307 temporary",
+          "severity": "High",
+          "description": "https://4dekk.no/ returns 307 Temporary Redirect to https://www.4dekk.no/. Search engines want a permanent redirect to consolidate link equity.",
+          "recommendation": "Set www as primary with a permanent 301/308 redirect in Vercel domain settings."
+        },
+        {
+          "title": "images.minimumCacheTTL set to 0",
+          "severity": "Medium",
+          "description": "next.config.js forces the image optimizer to re-optimize on every request - slower delivery and more function cost.",
+          "recommendation": "Set minimumCacheTTL to 2678400 (31 days) or similar."
+        },
+        {
+          "title": "Partial security headers",
+          "severity": "Medium",
+          "description": "HSTS, X-Frame-Options and Referrer-Policy are present. X-Content-Type-Options, Permissions-Policy and CSP are missing.",
+          "recommendation": "Add X-Content-Type-Options: nosniff and a Permissions-Policy header at minimum."
+        },
+        {
+          "title": "sitemap lastModified is always today",
+          "severity": "Medium",
+          "description": "app/sitemap.ts sets lastModified: new Date() on static routes every build, regardless of real change.",
+          "recommendation": "Use a real per-route content date; align changeFrequency with reality."
+        },
+        {
+          "title": "ESLint disabled during builds",
+          "severity": "Low",
+          "description": "next.config.js eslint.ignoreDuringBuilds: true lets regressions (including metadata regressions) ship unnoticed.",
+          "recommendation": "Re-enable, or run eslint in CI as a gate."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 55,
+      "what_works": [
+        "About page names the actual technicians with photos - real E-E-A-T for a workshop",
+        "About copy has concrete specifics (10 years, Statens Vegvesen approval, growth story, quality guarantee)",
+        "Norwegian, descriptive alt text on key images"
+      ],
+      "findings": [
+        {
+          "title": "Blog posts are thin",
+          "severity": "High",
+          "description": "eu-control.json is ~375 words across 13 short paragraphs and 9 headings; stored readTime is 7 minutes (actual ~2). Too thin to rank against NAF, Statens Vegvesen and Mekonomen.",
+          "recommendation": "Rebuild priority posts to 900-1,500 words of specific, locally framed content; correct readTime."
+        },
+        {
+          "title": "No on-page author, publish date or updated date",
+          "severity": "High",
+          "description": "app/blog/[slug]/page.tsx renders only the h1 and body - no byline, no visible date, no freshness cue on a vehicle-safety topic.",
+          "recommendation": "Show Publisert/Oppdatert dates and attribute posts to a named technician."
+        },
+        {
+          "title": "No FAQ content anywhere",
+          "severity": "High",
+          "description": "Auto-repair search is dominated by question queries; the site has no FAQ blocks and no FAQPage markup.",
+          "recommendation": "Add 5-8 real Q&A on the homepage and each service page, marked up as FAQPage."
+        },
+        {
+          "title": "Blog-list image fallback can 404",
+          "severity": "Medium",
+          "description": "utils/dataLoader.ts maps tyre-category posts to /images/tire-service.webp, which is not present in public/images/.",
+          "recommendation": "Fix the mapping or add the missing file; ideally give each post a unique image."
+        },
+        {
+          "title": "English content ships with no SEO return",
+          "severity": "Medium",
+          "description": "Every content JSON carries a full en tree sent to the browser but invisible to search (see hreflang finding).",
+          "recommendation": "Drop the en trees if going Norwegian-only, or expose them on real /en/ URLs."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 60,
+      "what_works": [
+        "Clean, keyword-relevant Norwegian URL slugs",
+        "Unique server-rendered title and description per route",
+        "One h1 per page; sensible h2 structure on About"
+      ],
+      "findings": [
+        {
+          "title": "No dedicated service pages",
+          "severity": "High",
+          "description": "EU-kontroll, etterkontroll, 4-hjulskontroll, AC-service, hjulskift, omlegging, dekkhotell, verkstedarbeid and diagnose exist only as homepage sections. No URL can rank for '<service> Larvik' queries.",
+          "recommendation": "Create one indexable page per core service with unique title/description, price, inclusions, booking CTA, and Service + FAQPage + BreadcrumbList schema; add to sitemap and internal links."
+        },
+        {
+          "title": "Blog titles don't target the query or location",
+          "severity": "High",
+          "description": "Live title 'EU Kontroll: Hva innebaerer det?' is weaker than its own slug and shows no '| 4Dekk Larvik' suffix.",
+          "recommendation": "Rewrite to e.g. 'EU-kontroll i Larvik: frister, sjekkliste og pris (2026)' and confirm the template suffix renders."
+        },
+        {
+          "title": "No breadcrumbs",
+          "severity": "Medium",
+          "description": "No BreadcrumbList markup and no UI breadcrumb trail on blog or future service pages.",
+          "recommendation": "Add both a visible trail and BreadcrumbList JSON-LD."
+        },
+        {
+          "title": "Weak internal linking",
+          "severity": "Medium",
+          "description": "Blog posts link only to /contact and /booking. No blog->service, service->blog or blog->blog links.",
+          "recommendation": "Build a small topic cluster linking seasonal-tyres <-> hjulskift <-> dekkhotell <-> tyre-wear, etc."
+        },
+        {
+          "title": "format-detection telephone=no",
+          "severity": "Low",
+          "description": "Disables automatic phone linking on mobile; explicit tel: links exist on the contact page but not verified everywhere.",
+          "recommendation": "Confirm the phone number is one tap in the header, footer and homepage."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 45,
+      "what_works": [
+        "One valid AutoRepair LocalBusiness block with address, geo, opening hours, sameAs, priceRange, hasMap"
+      ],
+      "findings": [
+        {
+          "title": "Only one schema type across the whole site",
+          "severity": "High",
+          "description": "The same AutoRepair block is output on every page, including blog posts. No Service, FAQPage, BlogPosting/Article, BreadcrumbList or AggregateRating.",
+          "recommendation": "Add Service (service pages), FAQPage (FAQ blocks), BlogPosting (blog posts), BreadcrumbList (blog + service), and aggregateRating on the business."
+        },
+        {
+          "title": "AggregateRating missing despite cached reviews",
+          "severity": "High",
+          "description": "data/cached-reviews.json is fetched and cached server-side but no rating value or count is exposed in schema or on the page.",
+          "recommendation": "Add aggregateRating + a few review objects; also render the rating visibly to comply with Google policy."
+        },
+        {
+          "title": "Geo coordinates likely wrong",
+          "severity": "Medium",
+          "description": "Schema geo is 59.0533,10.0297 but the Google Maps embed in the same business.json encodes 59.0648,10.0426 - roughly 1.5 km apart.",
+          "recommendation": "Verify the real coordinates of Haakon VII's vei 9 and make schema, hasMap and the embed agree."
+        },
+        {
+          "title": "areaServed too narrow",
+          "severity": "Medium",
+          "description": "areaServed is a single City 'Larvik'.",
+          "recommendation": "Use an array: Larvik, Stavern, Kvelde, Helgeroa, Tjolling, Sandefjord."
+        },
+        {
+          "title": "telephone not in E.164; NAP inconsistencies",
+          "severity": "Medium",
+          "description": "telephone is '93 99 55 55'; business.json contact.website is https://4dekk.no while SITE_URL is https://www.4dekk.no.",
+          "recommendation": "Use +4793995555; pick one canonical NAP string and use it verbatim in schema, footer, contact page and Google Business Profile."
+        },
+        {
+          "title": "No @id / additionalType / offer catalog",
+          "severity": "Low",
+          "description": "Business is not a linkable entity node; no tyre-shop additionalType; price list not expressed as offers.",
+          "recommendation": "Add @id, a tyre-shop additionalType alongside AutoRepair, and hasOfferCatalog from pricing.json."
+        }
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "score": 60,
+      "what_works": [
+        "next/font self-hosting",
+        "WebP images with next/image, priority and fetchPriority on the hero",
+        "Long-cache immutable headers on _next/static"
+      ],
+      "findings": [
+        {
+          "title": "Client-component homepage with deferred sections",
+          "severity": "Medium",
+          "description": "Below-the-fold sections mount after a 200ms timer, adding JS work and potentially delaying LCP.",
+          "recommendation": "Server-render the sections and remove the timer gate."
+        },
+        {
+          "title": "Three font families loaded",
+          "severity": "Medium",
+          "description": "Inter, Roboto and Oswald with multiple weights; body uses Roboto and Inter appears unused though applied to body.",
+          "recommendation": "Drop Inter; keep Roboto + Oswald."
+        },
+        {
+          "title": "Oversized images",
+          "severity": "Medium",
+          "description": "car-wash.webp 449 KB, tire-change.webp 354 KB, several IMG_30xx.webp ~300 KB.",
+          "recommendation": "Re-encode to ~1600px max width, target under 150 KB."
+        },
+        {
+          "title": "Two priority images in the hero",
+          "severity": "Low",
+          "description": "hero-image-1.webp plus the logo at quality 95 both marked priority.",
+          "recommendation": "Keep one true LCP image at priority; drop the logo to quality 80."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 50,
+      "what_works": [
+        "LocalBusiness + sameAs + named team provide a clear entity anchor"
+      ],
+      "findings": [
+        {
+          "title": "Thin, non-specific passages",
+          "severity": "Medium",
+          "description": "Blog paragraphs are short but vague; AI engines quote self-contained chunks with concrete facts.",
+          "recommendation": "Add exact prices, durations, the EU-kontroll frist rule, and what a Larvik customer should bring."
+        },
+        {
+          "title": "No structured Q&A",
+          "severity": "Medium",
+          "description": "No FAQPage or Q&A formatting - the format AI Overviews and chat assistants quote most readily.",
+          "recommendation": "Add FAQ blocks with FAQPage markup on the homepage and service pages."
+        },
+        {
+          "title": "No llms.txt",
+          "severity": "Low",
+          "description": "Optional and ignored by Google, but cheap to provide.",
+          "recommendation": "Add a short llms.txt pointing at services, prices, hours and contact."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 65,
+      "what_works": [
+        "WebP format throughout",
+        "Alt text present on hero, About and blog images",
+        "next/image used consistently"
+      ],
+      "findings": [
+        {
+          "title": "Oversized source files",
+          "severity": "Medium",
+          "description": "Several images 300-450 KB.",
+          "recommendation": "Re-encode to under 150 KB."
+        },
+        {
+          "title": "Blog posts have no unique og:image",
+          "severity": "Medium",
+          "description": "Article social/preview cards all fall back to the homepage hero.",
+          "recommendation": "Give each post its own image and wire it into generateMetadata."
+        },
+        {
+          "title": "Missing tyre-category fallback image",
+          "severity": "Low",
+          "description": "utils/dataLoader.ts references /images/tire-service.webp which does not exist.",
+          "recommendation": "Fix the mapping or add the file."
+        },
+        {
+          "title": "images.minimumCacheTTL 0",
+          "severity": "Low",
+          "description": "Optimizer re-processes images every request.",
+          "recommendation": "Raise to ~31 days."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Highest ranking upside",
+        "timeframe": "Weeks 1-3",
+        "items": [
+          "Build dedicated service landing pages (/tjenester/eu-kontroll-larvik, hjulskift-larvik, 4-hjulskontroll-larvik, ac-service-larvik, dekkhotell-larvik, bilverksted-larvik) with SSR metadata, price, inclusions, booking CTA and Service + FAQPage + BreadcrumbList schema; add to sitemap",
+          "Fix or remove the invalid hreflang tags and decide the English strategy (recommend Norwegian-only)",
+          "Server-render the homepage body (remove the client component + 200ms defer gate)",
+          "Expand LocalBusinessSchema: aggregateRating + @id + E.164 telephone + wider areaServed + verified geo + hasOfferCatalog",
+          "Google Business Profile pass: categories, hours, NAP, photos, review replies, services + prices"
+        ]
+      },
+      {
+        "name": "Phase 2: High-impact improvements",
+        "timeframe": "Weeks 3-6",
+        "items": [
+          "Add FAQ content + FAQPage schema on homepage and service pages",
+          "Rebuild the 8 blog posts as 900-1,500 word content with dates, bylines, BlogPosting + BreadcrumbList schema, unique og:image and links to service pages (start with eu-control, seasonal-tires, wheel-alignment)",
+          "Rewrite blog titles for target query + location",
+          "Add breadcrumbs (UI + BreadcrumbList) to blog and service pages"
+        ]
+      },
+      {
+        "name": "Phase 3: Cleanup & polish",
+        "timeframe": "Month 2",
+        "items": [
+          "Make apex -> www a permanent 301/308",
+          "Set images.minimumCacheTTL to 2678400 and drop the unused Inter font",
+          "Re-encode oversized images to under 150 KB",
+          "Fix the tyre-category image fallback in dataLoader.ts",
+          "Real per-route lastModified in sitemap.ts; align changeFrequency",
+          "Add X-Content-Type-Options and Permissions-Policy headers; re-enable eslint on builds",
+          "Optional llms.txt; deploy the two staged blog posts once rewritten"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Connect Google Search Console (verification files already in public/) and submit sitemap.xml",
+          "Run PageSpeed Insights on / and a service page after the server-render change; record LCP/INP/CLS",
+          "Re-run this audit after Phase 2 to re-score (target 75+)",
+          "Track GBP insights (calls, direction requests, booking clicks) as the primary local KPI"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

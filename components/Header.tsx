@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Icon from "./Icon";
-import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Header() {
@@ -133,7 +132,7 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex lg:items-center lg:gap-4">
-            <LanguageToggle />
+            
             <a
               href="tel:+4793995555"
               className="text-sm font-semibold whitespace-nowrap text-text hover:text-accent transition-colors duration-200"
@@ -169,7 +168,7 @@ export default function Header() {
                 />
               </Link>
               <div className="flex items-center gap-4">
-                <LanguageToggle />
+                
                 <button
                   type="button"
                   className="-m-2.5 rounded-md p-3 text-white bg-gray-800/80 backdrop-blur-sm hover:bg-gray-700/80 transition-all duration-200 border border-gray-600/50"

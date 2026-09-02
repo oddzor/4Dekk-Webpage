@@ -167,6 +167,40 @@ export default function AboutPage() {
                   <span className="text-text">{t.feature4}</span>
                 </div>
               </div>
+
+              <div className="p-6 border rounded-lg border-accent/30 card-dark">
+                <h3 className="mb-3 text-lg font-semibold font-headings text-headings">
+                  Godkjenninger fra Statens vegvesen
+                </h3>
+                <ul className="space-y-2 text-text">
+                  <li>
+                    <span className="mr-2 text-accent">✓</span>
+                    Bilverksted 01 – kjøretøy ≤ 3500 kg (unntatt MC, moped og
+                    traktor)
+                  </li>
+                  <li>
+                    <span className="mr-2 text-accent">✓</span>
+                    Kontrollorgan 01 – EU-kontroll av kjøretøy ≤ 3500 kg
+                  </li>
+                  <li>
+                    <span className="mr-2 text-accent">✓</span>
+                    Særlig arbeidstillatelse for arbeid på hjul
+                  </li>
+                </ul>
+                <p className="mt-3 text-sm text-gray-400">
+                  Teknisk leder Henrikas har kontrollørgodkjenningen fra Statens
+                  vegvesen. 4DEKK AS (org.nr 916 696 744) er oppført i{" "}
+                  <a
+                    href="https://www.vegvesen.no/kjoretoy/eie-og-vedlikeholde/finn-godkjent-verksted"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-accent"
+                  >
+                    Statens vegvesens register over godkjente verksteder
+                  </a>
+                  .
+                </p>
+              </div>
             </div>
 
             <div className="relative">

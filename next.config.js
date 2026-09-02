@@ -13,11 +13,11 @@ const nextConfig = {
     minimumCacheTTL: 2678400,
   },
   experimental: {
-    optimizePackageImports: ["@heroicons/react", "react-country-flag"],
+    optimizePackageImports: ["@heroicons/react"],
   },
   swcMinify: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
