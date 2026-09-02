@@ -4,8 +4,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { servicePages, getServicePage } from "@/data/servicePages";
 import { getBlogArticleBySlug } from "@/utils/dataLoader";
+import businessData from "@/data/business.json";
 
 const SITE_URL = "https://www.4dekk.no";
+const PHONE = businessData.contact.phoneE164;
+const PHONE_DISPLAY = businessData.contact.phone;
 
 export function generateStaticParams() {
   return servicePages.map((page) => ({ slug: page.slug }));
@@ -30,15 +33,47 @@ export async function generateMetadata({
       url,
       type: "website",
       images: [
-        {
-          url: page.image,
-          width: 1200,
-          height: 630,
-          alt: page.imageAlt,
-        },
+        { url: page.image, width: 1200, height: 630, alt: page.imageAlt },
       ],
     },
   };
+}
+
+function parsePriceLabel(
+  label: string,
+): { value: string; isFrom: boolean } | null {
+  const isFrom = /\bfra\b/i.test(label);
+  const match = label.replace(/\s/g, "").match(/(\d[\d.]*)/);
+  if (!match) return null;
+  return { value: match[1].replace(/\./g, ""), isFrom };
+}
+
+function BookingButton({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className: string;
+  children: React.ReactNode;
+}) {
+  if (href.startsWith("http")) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  );
 }
 
 export default function ServiceLandingPage({
@@ -52,13 +87,22 @@ export default function ServiceLandingPage({
   }
 
   const url = `${SITE_URL}/tjenester/${page.slug}`;
-  const relatedArticle = page.relatedBlogSlug
-    ? getBlogArticleBySlug(page.relatedBlogSlug)
-    : null;
+  const relatedSlugs =
+    page.relatedBlogSlugs ??
+    (page.relatedBlogSlug ? [page.relatedBlogSlug] : []);
+  const relatedArticles = relatedSlugs
+    .map((slug) => getBlogArticleBySlug(slug))
+    .filter((a): a is NonNullable<typeof a> => a !== null);
+  const siblingServices = (page.relatedServiceSlugs ?? [])
+    .map((slug) => getServicePage(slug))
+    .filter((s): s is NonNullable<typeof s> => s !== undefined);
+
+  const price = parsePriceLabel(page.priceLabel);
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     name: page.name,
     serviceType: page.serviceType,
     description: page.metaDescription,
@@ -71,18 +115,31 @@ export default function ServiceLandingPage({
       "Tjølling",
       "Sandefjord",
     ].map((name) => ({ "@type": "City", name })),
-    provider: {
-      "@type": "AutoRepair",
-      "@id": `${SITE_URL}/#business`,
-      name: "4Dekk Larvik",
-      url: SITE_URL,
-      telephone: "+4793995555",
-    },
+    provider: { "@id": `${SITE_URL}/#business` },
+    ...(price
+      ? {
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "NOK",
+            url: `${SITE_URL}/booking`,
+            ...(price.isFrom
+              ? {
+                  priceSpecification: {
+                    "@type": "PriceSpecification",
+                    priceCurrency: "NOK",
+                    minPrice: price.value,
+                  },
+                }
+              : { price: price.value }),
+          },
+        }
+      : {}),
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: "nb-NO",
     mainEntity: page.faq.map((item) => ({
       "@type": "Question",
       name: item.q,
@@ -94,7 +151,7 @@ export default function ServiceLandingPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Hjem", item: SITE_URL },
+      { "@type": "ListItem", position: 1, name: "Hjem", item: `${SITE_URL}/` },
       {
         "@type": "ListItem",
         position: 2,
@@ -138,39 +195,59 @@ export default function ServiceLandingPage({
               <span className="text-gray-400">{page.name}</span>
             </nav>
 
-            <h1 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
+            <h1 className="mb-3 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
               {page.h1}
             </h1>
 
-            <div className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-start">
-              <div className="space-y-4 text-lg text-gray-200">
+            <p className="mb-6 text-sm text-gray-300">
+              Statens vegvesen-godkjent bilverksted og kontrollorgan
+              <span className="mx-2">·</span>
+              4,8 ★ på Google (233 anmeldelser)
+              <span className="mx-2">·</span>
+              10+ år på Torstrand i Larvik
+            </p>
+
+            <div className="flex flex-col gap-8 md:grid md:grid-cols-[1.4fr_1fr] md:items-start">
+              <div className="order-2 space-y-4 text-lg text-gray-200 md:order-1">
                 {page.intro.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
 
-              <div className="p-6 card-dark">
+              <div className="order-1 p-6 card-dark md:order-2">
                 <p className="text-sm tracking-wide uppercase text-gray-300">
                   Pris
                 </p>
                 <p className="mb-2 text-3xl font-bold text-accent">
                   {page.priceLabel}
                 </p>
-                <p className="mb-6 text-sm text-gray-300">{page.priceNote}</p>
+                <p className="mb-5 text-sm text-gray-300">{page.priceNote}</p>
                 <div className="flex flex-col gap-3">
-                  <Link
+                  <BookingButton
                     href={page.bookingUrl}
                     className="text-center btn-accent"
                   >
                     Bestill time
-                  </Link>
-                  <Link
-                    href="/contact"
+                  </BookingButton>
+                  <a
+                    href={`tel:${PHONE}`}
                     className="text-center btn-secondary"
                   >
-                    Kontakt oss
-                  </Link>
+                    Ring {PHONE_DISPLAY}
+                  </a>
                 </div>
+                <dl className="pt-5 mt-5 space-y-1 text-sm border-t border-gray-700 text-gray-300">
+                  <div className="flex justify-between gap-3">
+                    <dt>Adresse</dt>
+                    <dd className="text-right">
+                      Haakon VII&apos;s vei 9, 3269 Larvik
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-3">
+                    <dt>Åpningstider</dt>
+                    <dd className="text-right">Man–fre 08:00–16:00</dd>
+                  </div>
+                </dl>
               </div>
             </div>
           </div>
@@ -191,11 +268,7 @@ export default function ServiceLandingPage({
             </div>
 
             {page.sections.map((section, index) => (
-              <div
-                key={index}
-                id={section.id}
-                className="mb-10 scroll-mt-28"
-              >
+              <div key={index} id={section.id} className="mb-10 scroll-mt-28">
                 <h2 className="mb-4 text-2xl font-bold font-headings text-headings">
                   {section.heading}
                 </h2>
@@ -237,30 +310,84 @@ export default function ServiceLandingPage({
                 Bestill {page.name.toLowerCase()} i Larvik
               </h2>
               <p className="mb-6 text-text">
-                4Dekk Larvik holder til i Haakon VII&apos;s vei 9 på Torstrand.
-                Bestill time på nett, eller ta kontakt hvis du er usikker på hva
+                4Dekk Larvik holder til i Haakon VII&apos;s vei 9 på Torstrand,
+                få minutter fra E18. Åpent mandag til fredag 08:00–16:00. Bestill
+                time på nett, eller ring {PHONE_DISPLAY} hvis du er usikker på hva
                 bilen din trenger.
               </p>
               <div className="flex flex-col justify-start gap-4 sm:flex-row">
-                <Link href={page.bookingUrl} className="text-center btn-accent">
+                <BookingButton
+                  href={page.bookingUrl}
+                  className="text-center btn-accent"
+                >
                   Bestill time
-                </Link>
-                <Link href="/contact" className="text-center btn-secondary">
-                  Kontakt oss
-                </Link>
+                </BookingButton>
+                <a
+                  href={`tel:${PHONE}`}
+                  className="text-center btn-secondary"
+                >
+                  Ring {PHONE_DISPLAY}
+                </a>
               </div>
+              <div className="mt-6 overflow-hidden rounded-lg">
+                <iframe
+                  src={businessData.location.googleMapsEmbedUrl}
+                  title="Kart til 4Dekk Larvik"
+                  width="100%"
+                  height="240"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="border-0"
+                ></iframe>
+              </div>
+              <p className="mt-3 text-sm">
+                <a
+                  href={businessData.location.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-accent"
+                >
+                  Åpne veibeskrivelse i Google Maps
+                </a>
+              </p>
             </div>
 
-            {relatedArticle && (
-              <p className="mt-8 text-text">
-                Les mer:{" "}
-                <Link
-                  href={`/blog/${relatedArticle.slug}`}
-                  className="underline hover:text-accent"
-                >
-                  {relatedArticle.title.no}
-                </Link>
-              </p>
+            {siblingServices.length > 0 && (
+              <div className="mt-12">
+                <h2 className="mb-4 text-xl font-semibold font-headings text-headings">
+                  Andre tjenester
+                </h2>
+                <ul className="ml-6 list-disc text-text">
+                  {siblingServices.map((s) => (
+                    <li key={s.slug} className="mb-2">
+                      <Link
+                        href={`/tjenester/${s.slug}`}
+                        className="underline hover:text-accent"
+                      >
+                        {s.h1}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {relatedArticles.length > 0 && (
+              <div className="mt-8 text-text">
+                <p className="mb-2 font-semibold">Les mer:</p>
+                <ul className="ml-6 list-disc">
+                  {relatedArticles.map((a) => (
+                    <li key={a.slug} className="mb-1">
+                      <Link
+                        href={`/blog/${a.slug}`}
+                        className="underline hover:text-accent"
+                      >
+                        {a.title.no}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
         </div>

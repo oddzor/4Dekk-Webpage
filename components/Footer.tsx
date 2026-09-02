@@ -64,7 +64,7 @@ export default function Footer() {
   return (
     <footer className="text-white bg-gray-darker">
       <div className="py-12 container-custom">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="col-span-1 md:col-span-2">
             <p className="max-w-md mb-4 text-gray-300">
               {businessData.description}
@@ -74,7 +74,15 @@ export default function Footer() {
                 📍 {businessData.address.street},{" "}
                 {businessData.address.postalCode} {businessData.address.city}
               </p>
-              <p>📞 {businessData.contact.phone}</p>
+              <p>
+                📞{" "}
+                <a
+                  href={`tel:${businessData.contact.phoneE164}`}
+                  className="transition-colors duration-200 hover:text-accent"
+                >
+                  {businessData.contact.phone}
+                </a>
+              </p>
               <p>✉️ {businessData.contact.email}</p>
             </div>
           </div>
@@ -91,6 +99,39 @@ export default function Footer() {
                     className="text-gray-300 transition-colors duration-200 hover:text-accent"
                   >
                     {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-lg font-semibold font-headings text-headings">
+              {language === "no" ? "Tjenester" : "Services"}
+            </h3>
+            <ul className="space-y-2 text-sm">
+              {[
+                ["EU-kontroll", "/tjenester/eu-kontroll-larvik"],
+                ["Hjulskift", "/tjenester/hjulskift-larvik"],
+                ["4-hjulskontroll", "/tjenester/hjulstilling-larvik"],
+                ["AC-service", "/tjenester/ac-service-larvik"],
+                ["Dekkhotell", "/tjenester/dekkhotell-larvik"],
+                ["Dekkservice", "/tjenester/dekkservice-larvik"],
+                ["Nye dekk", "/tjenester/dekk-larvik"],
+                [
+                  "Service og oljeskift",
+                  "/tjenester/service-og-oljeskift-larvik",
+                ],
+                ["Bremseservice", "/tjenester/bremseservice-larvik"],
+                ["Bildiagnose", "/tjenester/bildiagnose-larvik"],
+                ["Bilverksted", "/tjenester/bilverksted-larvik"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-gray-300 transition-colors duration-200 hover:text-accent"
+                  >
+                    {label}
                   </Link>
                 </li>
               ))}

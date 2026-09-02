@@ -2,8 +2,19 @@
 
 > Statens vegvesen-godkjent bilverksted og dekkverksted i Larvik (Torstrand).
 > EU-kontroll, hjulskift, 4-hjulskontroll, AC-service, dekkhotell, service og
-> reparasjon av de fleste bilmerker. Over 10 år i drift, 4,8 i snitt på 200+
+> reparasjon av de fleste bilmerker. Over 10 år i drift, 4,8 i snitt på 230+
 > Google-anmeldelser.
+
+## Om bedriften
+
+- Juridisk navn: 4DEKK AS
+- Organisasjonsnummer: 916 696 744
+- Etablert: 2015
+- Statens vegvesen-godkjenninger: Bilverksted 01 (kjøretøy ≤ 3500 kg) og
+  Kontrollorgan 01 (EU-kontroll av kjøretøy ≤ 3500 kg), samt særlig
+  arbeidstillatelse for arbeid på hjul. Oppført i Statens vegvesens register
+  over godkjente verksteder.
+- Sist oppdatert: 2026-09-02
 
 ## Kontakt og åpningstider
 
@@ -16,15 +27,30 @@
 ## Tjenester og veiledende priser
 
 - EU-kontroll: 1150,- (etterkontroll 400,-): https://www.4dekk.no/tjenester/eu-kontroll-larvik
-- Hjulskift / sesongskifte: fra 600,- (SUV 650,-, bobil 700,-): https://www.4dekk.no/tjenester/hjulskift-larvik
+- Hjulskift / sesongskifte: personbil 600,-, SUV/varebil 650,-, bobil 700,-: https://www.4dekk.no/tjenester/hjulskift-larvik
 - Hjulstilling / 4-hjulskontroll: 1875,-: https://www.4dekk.no/tjenester/hjulstilling-larvik
-- AC-service: 1500,- + 3,-/gram kuldemedium (kun R134a): https://www.4dekk.no/tjenester/ac-service-larvik
-- Dekkhotell m/hjulvask: fra 500,-, totalpris per sesong fra 1300,-: https://www.4dekk.no/tjenester/dekkhotell-larvik
-- Bilverksted / reparasjon: timepris 1400,-, diagnose fra 700,-: https://www.4dekk.no/tjenester/bilverksted-larvik
-- Omlegging av dekk med balansering: fra 1000,-
-- Plugging av dekk: utvendig 300,-, innvendig 600,-
+- AC-service: 1500,- for trykktest/diagnose + 3,-/gram kuldemedium (kun R134a): https://www.4dekk.no/tjenester/ac-service-larvik
+- Dekkhotell m/hjulvask: fra 500,-, totalpris per sesong inkl. hjulskift fra 1300,-: https://www.4dekk.no/tjenester/dekkhotell-larvik
+- Service og oljeskift: fra ca. 2000,- (olje, filter og arbeid): https://www.4dekk.no/tjenester/service-og-oljeskift-larvik
+- Feilsøking / bildiagnose: fra 700,-: https://www.4dekk.no/tjenester/bildiagnose-larvik
+- Dekkservice (omlegging, balansering, plugging): omlegging fra 1000,-, balansering fra 500,-: https://www.4dekk.no/tjenester/dekkservice-larvik
+- Nye dekk (sommer/vinter/pigg): kontakt oss for pristilbud: https://www.4dekk.no/tjenester/dekk-larvik
+- Bremseservice: timepris 1400,-, kontakt oss for pristilbud: https://www.4dekk.no/tjenester/bremseservice-larvik
+- Bilverksted / reparasjon: timepris 1400,-: https://www.4dekk.no/tjenester/bilverksted-larvik
 
 Alle priser inkluderer mva. Prisoverslag gis før arbeid starter.
+
+## Ofte stilte spørsmål
+
+- Hva koster EU-kontroll i Larvik? Hos 4Dekk Larvik koster EU-kontroll 1150,- uansett bilmerke. Etterkontroll etter utbedring koster 400,-.
+- Hvor mye koster hjulskift i Larvik? Hjulskift av ferdig monterte hjul koster 600,- for personbil, 650,- for SUV/varebil og 700,- for bobil.
+- Hva koster 4-hjulskontroll? 4-hjulskontroll med justering av hjulstilling koster 1875,-.
+- Hva koster AC-service? 1500,- for trykktest og diagnose, pluss 3,- per gram kuldemedium. Gjelder biler med R134a.
+- Hva koster dekkhotell i Larvik? Oppbevaring fra 500,-. Totalpris per sesong inkludert hjulskift og hjulvask fra 1300,- for personbil.
+- Er 4Dekk Larvik godkjent for EU-kontroll? Ja. 4DEKK AS er godkjent kontrollorgan hos Statens vegvesen (Kontrollorgan 01) for kjøretøy opptil 3500 kg.
+- Hvor ligger 4Dekk Larvik? Haakon VII's vei 9, 3269 Larvik, på Torstrand, få minutter fra E18.
+- Har dere åpent i helgen? Nei, åpningstidene er mandag til fredag 08:00–16:00.
+- Tar dere alle bilmerker? Vi utfører service, reparasjon og kontroll på de fleste merker og modeller.
 
 ## Nøkkelsider
 
@@ -35,6 +61,13 @@ Alle priser inkluderer mva. Prisoverslag gis før arbeid starter.
 - Kontakt: https://www.4dekk.no/contact
 - Blogg: https://www.4dekk.no/blog
 - Sitemap: https://www.4dekk.no/sitemap.xml
+
+## Guider
+
+- EU-kontroll – frist, sjekkliste og pris: https://www.4dekk.no/blog/eu-kontroll-guide-frist-sjekkliste-tips
+- Sommerdekk vs vinterdekk: https://www.4dekk.no/blog/valg-av-dekk-sommer-vinter
+- Hjulstilling og hjulbalansering: https://www.4dekk.no/blog/hjulstilling-og-hjulbalansering
+- Oljeskift – hvor ofte og hvorfor: https://www.4dekk.no/blog/oljeskift-guide-hvor-ofte-og-hvorfor
 
 ## Dekningsområde
 

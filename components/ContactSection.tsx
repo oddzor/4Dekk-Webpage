@@ -45,7 +45,7 @@ export default function ContactSection() {
                     Telefon
                   </h3>
                   <a
-                    href={`tel:${businessData.contact.phone}`}
+                    href={`tel:${businessData.contact.phoneE164}`}
                     className="transition-colors duration-200 text-accent hover:text-accent-dark"
                   >
                     {businessData.contact.phone}

@@ -8,9 +8,13 @@
   },
   "contact": {
     "phone": "93 99 55 55",
+    "phoneE164": "+4793995555",
     "email": "4dekk4@gmail.com",
-    "website": "https://4dekk.no"
+    "website": "https://www.4dekk.no"
   },
+  "orgNumber": "916696744",
+  "legalName": "4DEKK AS",
+  "foundingYear": "2015",
   "hours": {
     "monday": "08:00 - 16:00",
     "tuesday": "08:00 - 16:00",
@@ -22,9 +26,9 @@
     "lunch": "12:00 - 12:30"
   },
   "location": {
-    "latitude": 59.0533,
-    "longitude": 10.0297,
-    "googleMapsUrl": "https://www.google.com/maps/place/4Dekk+Larvik/@59.0533,10.0297,17z",
+    "latitude": 59.0648026,
+    "longitude": 10.0426241,
+    "googleMapsUrl": "https://www.google.com/maps/place/4Dekk+Larvik/@59.0648026,10.0426241,17z",
     "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4102.078030415878!2d10.0426241!3d59.06480259999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4646c08caa6dfad5%3A0x48d029aa6024bc44!2s4dekk%20AS!5e0!3m2!1sen!2sno!4v1756979259507!5m2!1sen!2sno&t=k&v=2"
   },
   "services": [
@@ -35,5 +39,5 @@
     "Engine Diagnostics",
     "Inspection"
   ],
-  "description": "4Dekk AS in Larvik offers professional car and tire service in Larvik. With over 10 years of experience and certified technicians, you can expect quality work at competitive prices."
+  "description": "4Dekk Larvik is a Statens vegvesen-approved car and tire workshop in Larvik (Torstrand), with over 10 years of experience. We do EU inspection, service and oil changes, brakes, diagnostics, A/C service and repairs on most makes, plus tire change, mounting, balancing, tire sales and tire hotel."
 }

@@ -9,9 +9,9 @@ export default function HeroSection() {
 
   const content = {
     no: {
-      title: "Bilverksted og Dekkservice",
+      title: "Bilverksted og dekkservice i Larvik",
       description:
-        "Kvalitetsarbeid, konkurransedyktig prising og utmerket kundeservice. Din samarbeidspartner for bil-og-dekkservice i Larvik.",
+        "Statens vegvesen-godkjent bilverksted og kontrollorgan på Torstrand. 4,8 ★ av 233 Google-anmeldelser. EU-kontroll 1150,-, hjulskift fra 600,-.",
       cta1: "Bestill Time Nå",
       cta2: "Se Våre Tjenester",
       trust1: "Års Erfaring",

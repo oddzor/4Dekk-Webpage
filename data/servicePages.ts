@@ -32,7 +32,11 @@ export interface ServicePage {
   serviceType: string;
   sections: ServicePageSection[];
   faq: ServicePageFaq[];
+  // Én eller flere relaterte bloggposter.
   relatedBlogSlug?: string;
+  relatedBlogSlugs?: string[];
+  // Søsken-tjenester som vises i "Andre tjenester"-blokka.
+  relatedServiceSlugs?: string[];
 }
 
 export const servicePages: ServicePage[] = [
@@ -44,15 +48,15 @@ export const servicePages: ServicePage[] = [
       "EU-kontroll i Larvik hos 4Dekk til 1150,-. Autorisert kontrollorgan med direkte forbindelse til Statens vegvesen. Bestill time på Torstrand i dag.",
     h1: "EU-kontroll i Larvik",
     intro: [
-      "4Dekk Larvik er godkjent kontrollorgan og utfører EU-kontroll (periodisk kjøretøykontroll) for personbiler og varebiler under 3 500 kg. Kontrollen har rundt 150 kontrollpunkter og dekker bremser, styring, lys, hjuloppheng, dekk, understell, avgass og sikkerhetsutstyr.",
-      "Resultatet registreres direkte hos Statens vegvesen mens bilen står hos oss, slik at godkjenningen er på plass med en gang. Prisen er 1150,- uansett bilmerke.",
+      "EU-kontroll hos 4Dekk Larvik koster 1150,- uansett bilmerke. Vi er godkjent kontrollorgan hos Statens vegvesen (Kontrollorgan 01, kjøretøy ≤ 3500 kg) og utfører den periodiske kjøretøykontrollen for personbiler og varebiler.",
+      "Kontrollen har rundt 150 kontrollpunkter og dekker bremser, styring, lys, hjuloppheng, dekk, understell, avgass og sikkerhetsutstyr. Resultatet registreres direkte hos Statens vegvesen mens bilen står hos oss, så godkjenningen er på plass med en gang. Du finner 4Dekk AS i Statens vegvesens oversikt over godkjente verksteder.",
     ],
     image: "/images/eucontrol.webp",
     imageAlt: "Bil inne til EU-kontroll hos 4Dekk Larvik",
     priceLabel: "1150,-",
     priceNote:
       "Fast pris uansett bilmerke. Etterkontroll etter utbedring koster 400,-.",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/4dekk-service2/eu-kontroll",
     serviceType: "EU-kontroll / periodisk kjøretøykontroll",
     sections: [
       {
@@ -191,7 +195,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "1875,-",
     priceNote:
       "Inkluderer måling og justering av hjulstilling på alle fire hjul.",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/4dekk-service2/4hjulskontroll",
     serviceType: "Hjulstilling / 4-hjulskontroll",
     sections: [
       {
@@ -253,7 +257,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "1500,- + 3,-/gram",
     priceNote:
       "1500,- for trykktest og diagnose. Kuldemedium 3,- per gram. Gjelder kun biler med R134a.",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/4dekk-service/a-c-service",
     serviceType: "AC-service / klimaanleggservice",
     sections: [
       {
@@ -296,7 +300,8 @@ export const servicePages: ServicePage[] = [
         a: "Et sted mellom hvert andre og hvert fjerde år er vanlig, eller når kjøleeffekten blir merkbart dårligere.",
       },
     ],
-    relatedBlogSlug: "bilvedlikehold-tips-og-rad",
+    relatedBlogSlug: "klimaanlegg-ac-service-bil-tegn-vedlikehold",
+    relatedServiceSlugs: ["bilverksted-larvik", "bildiagnose-larvik"],
   },
   {
     slug: "dekkhotell-larvik",
@@ -314,7 +319,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "fra 500,-",
     priceNote:
       "Oppbevaring fra 500,-. Totalpris per sesong inkl. hjulskift og hjulvask fra 1300,- (SUV 1350,-, bobil <3,5t 1400,-).",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/4dekk/dekkskift-dekkhotell",
     serviceType: "Dekkhotell / dekkoppbevaring",
     sections: [
       {
@@ -440,7 +445,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "fra 2000,-",
     priceNote:
       "Oljeskift med olje, oljefilter og arbeid fra ca. 2000,-. Pris varierer med biltype, oljetype og valgte tillegg.",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/d/cw8m-3w4-8yy/oljeskift",
     serviceType: "Bilservice / oljeskift",
     sections: [
       {
@@ -500,7 +505,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "fra 700,-",
     priceNote:
       "Startpris 700,- for ca. 0,5 time. Trekkes normalt fra hvis du bestiller reparasjonen hos oss.",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/d/cr7j-wcf-8qy/diagnose-av-bilproblemer",
     serviceType: "Feilsøking / bildiagnose",
     sections: [
       {
@@ -548,7 +553,8 @@ export const servicePages: ServicePage[] = [
         a: "Vi leser av og feilsøker de fleste merker og modeller. Er du usikker, ta kontakt før du bestiller.",
       },
     ],
-    relatedBlogSlug: "bilvedlikehold-tips-og-rad",
+    relatedBlogSlug: "varsellamper-bilproblemer-diagnostikk-guide",
+    relatedServiceSlugs: ["bilverksted-larvik", "service-og-oljeskift-larvik"],
   },
   {
     slug: "dekkservice-larvik",
@@ -566,7 +572,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "omlegging fra 1000,-",
     priceNote:
       "Omlegging med balansering fra 1000,-. Balansering fra 500,-. Dekk levert via Dekkonline/Dekk365 o.l.: fra 1800,-. Punkteringsreparasjon fra 300,-.",
-    bookingUrl: "/booking",
+    bookingUrl: "https://calendly.com/4dekk/omlegging-av-dekk",
     serviceType: "Dekkservice / dekksalg og montering",
     sections: [
       {
@@ -620,6 +626,168 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "valg-av-dekk-sommer-vinter",
+    relatedServiceSlugs: [
+      "hjulstilling-larvik",
+      "hjulskift-larvik",
+      "dekkhotell-larvik",
+    ],
+  },
+  {
+    slug: "dekk-larvik",
+    name: "Nye dekk",
+    metaTitle: "Kjøpe dekk i Larvik – sommerdekk, vinterdekk, piggdekk | 4Dekk",
+    metaDescription:
+      "Kjøpe nye dekk i Larvik hos 4Dekk. Sommerdekk, vinterdekk, piggdekk og helårsdekk fra store leverandører, skaffet på kort varsel. Vi hjelper deg å velge riktig. Kontakt oss for pristilbud.",
+    h1: "Kjøpe nye dekk i Larvik",
+    intro: [
+      "Trenger du nye dekk? Hos 4Dekk Larvik får du hjelp med hele jobben – fra å velge riktig dekk til montering og balansering. Vi har avtaler med store leverandører og henter inn de fleste merker og dimensjoner på kort varsel: sommerdekk, vinterdekk, piggdekk og helårsdekk.",
+      "Vi har ikke faste listepriser på dekk siden de varierer med merke, dimensjon og sesong. Ta kontakt med bil og ønsket dekktype, så gir vi deg et konkret pristilbud – og du får ærlige råd om hva som faktisk passer bilen din og kjøremønsteret ditt.",
+    ],
+    image: "/images/tire-service.webp",
+    imageAlt: "Nye bildekk til salgs hos 4Dekk Larvik",
+    priceLabel: "Kontakt oss for pristilbud",
+    priceNote:
+      "Dekkpris varierer med merke, dimensjon og sesong. Montering og balansering kommer i tillegg (omlegging fra 1000,-).",
+    bookingUrl: "/contact",
+    serviceType: "Dekksalg / kjøpe nye dekk",
+    sections: [
+      {
+        heading: "Sommerdekk, vinterdekk eller helårsdekk?",
+        body: [
+          "Valget avhenger av hvor og hvor mye du kjører. Vi går gjennom alternativene med deg ut fra bil, budsjett og forhold.",
+        ],
+        bullets: [
+          "Sommerdekk: best grep og kjørekomfort på bar og varm asfalt",
+          "Vinterdekk uten pigg: godt vintergrep, lavere støy, kan brukes hele vinteren",
+          "Piggdekk: best på is og hardpakket snø – tillatt 1. november til første søndag etter påske",
+          "Helårsdekk: praktisk for lite vinterkjøring, men et kompromiss i begge sesonger",
+        ],
+      },
+      {
+        heading: "Vi skaffer og monterer alt på ett sted",
+        body: [
+          "Du slipper å bestille dekk selv og frakte dem rundt.",
+        ],
+        bullets: [
+          "Kjøpshjelp – vi anbefaler dekk ut fra bil, kjøremønster og pris",
+          "Bestilling og henting fra store leverandører på kort varsel",
+          "Montering på felg og digital balansering innenfor 5 gram",
+          "Vurdering og avhending av de gamle dekkene",
+          "Dekkhotell hvis du vil oppbevare det andre settet hos oss",
+        ],
+      },
+      {
+        heading: "Slik får du pristilbud",
+        body: [
+          "Ring 93 99 55 55 eller send oss en melding med registreringsnummer og hvilken dekktype du ser etter. Da finner vi riktig dimensjon og gir deg pris på dekk montert og balansert.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Hva koster nye dekk hos 4Dekk Larvik?",
+        a: "Dekkpris varierer med merke, dimensjon og sesong, så vi gir pristilbud per bil. Ta kontakt med registreringsnummer og ønsket dekktype. Montering og balansering (omlegging fra 1000,-) kommer i tillegg.",
+      },
+      {
+        q: "Kan dere skaffe akkurat det dekket jeg vil ha?",
+        a: "Som regel ja. Vi henter inn de fleste merker og dimensjoner fra store leverandører, ofte i løpet av en dag eller to.",
+      },
+      {
+        q: "Kan dere hjelpe meg å velge riktig dekk?",
+        a: "Ja. Vi anbefaler dekk ut fra bilen din, hvor mye du kjører om vinteren og hva du vil bruke på det – uten å presse deg mot det dyreste.",
+      },
+      {
+        q: "Tar dere de gamle dekkene?",
+        a: "Ja, vi tar hånd om og avhender de gamle dekkene når du kjøper nye hos oss.",
+      },
+    ],
+    relatedBlogSlug: "valg-av-dekk-sommer-vinter",
+    relatedBlogSlugs: [
+      "valg-av-dekk-sommer-vinter",
+      "dekkslitasje-arsaker-forebygging-tips",
+    ],
+    relatedServiceSlugs: [
+      "hjulskift-larvik",
+      "dekkhotell-larvik",
+      "dekkservice-larvik",
+    ],
+  },
+  {
+    slug: "bremseservice-larvik",
+    name: "Bremseservice",
+    metaTitle: "Bremseservice i Larvik – bremseklosser og skiver | 4Dekk Larvik",
+    metaDescription:
+      "Bremseservice i Larvik hos 4Dekk: kontroll og bytte av bremseklosser, bremseskiver og bremsevæske på de fleste bilmerker. Timepris 1400,-. Kontakt oss for pristilbud.",
+    h1: "Bremseservice i Larvik",
+    intro: [
+      "Piper eller skurrer bremsene, er pedalen svampete eller trekker bilen til siden ved bremsing? Da bør bremsene sjekkes. 4Dekk Larvik utfører bremseservice på de fleste bilmerker – kontroll og bytte av bremseklosser, bremseskiver og bremsevæske.",
+      "Pris avhenger av bil, hvilke deler som må byttes og om det er foran, bak eller begge deler, så vi gir pristilbud per bil. Timeprisen for verkstedarbeid er 1400,-, og du får et overslag på deler og arbeid før vi begynner.",
+    ],
+    image: "/images/brake-repair.webp",
+    imageAlt: "Bremseservice med bytte av bremseklosser hos 4Dekk Larvik",
+    priceLabel: "Kontakt oss for pristilbud",
+    priceNote:
+      "Timepris verksted 1400,-. Delekostnad varierer med bilmerke og omfang. Prisoverslag før arbeidet starter.",
+    bookingUrl: "/booking",
+    serviceType: "Bremseservice / bremsereparasjon",
+    sections: [
+      {
+        heading: "Tegn på at bremsene trenger service",
+        body: [
+          "Bremsene er den viktigste sikkerhetskomponenten på bilen. Ta kontakt hvis du kjenner igjen noe av dette:",
+        ],
+        bullets: [
+          "Piping, skuring eller metallisk lyd ved bremsing",
+          "Lengre bremsevei eller svampete bremsepedal",
+          "Bilen trekker til én side når du bremser",
+          "Vibrasjon i pedal eller ratt ved nedbremsing",
+          "Bremsevarsellampe på dashbordet",
+        ],
+      },
+      {
+        heading: "Hva bremseservice omfatter",
+        body: [
+          "Vi starter med en kontroll og gir deg pris på det som faktisk må gjøres.",
+        ],
+        bullets: [
+          "Måling av bremseklosser og bremseskiver mot slitasjegrense",
+          "Bytte av bremseklosser og eventuelt skiver, foran og/eller bak",
+          "Bytte av bremsevæske ved behov (anbefales hvert andre år)",
+          "Kontroll av bremsekalipere, slanger og håndbrekk",
+          "Prøvekjøring etter arbeidet",
+        ],
+      },
+      {
+        heading: "Bestill bremseservice",
+        body: [
+          "Bestill time på nett eller ring 93 99 55 55 og beskriv symptomene. Slitte bremser bør ikke vente – kjør forsiktig til bilen er inne.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Hva koster bremseservice i Larvik?",
+        a: "Prisen varierer med bilmerke og hva som må byttes, så vi gir pristilbud per bil. Timeprisen for arbeidet er 1400,-, og du får et overslag på deler og arbeid før vi starter.",
+      },
+      {
+        q: "Hvor ofte bør bremsevæsken byttes?",
+        a: "Et vanlig intervall er hvert andre år. Bremsevæske trekker fukt over tid, noe som senker kokepunktet og svekker bremseeffekten.",
+      },
+      {
+        q: "Kan jeg kjøre med slitte bremser?",
+        a: "Kjør så lite som mulig og forsiktig. Slitte klosser kan skade skivene og gir lengre bremsevei – få bilen inn så snart du kan.",
+      },
+      {
+        q: "Bytter dere bremser på alle bilmerker?",
+        a: "Vi utfører bremseservice på de fleste merker og modeller. Er du usikker, ta kontakt før du bestiller.",
+      },
+    ],
+    relatedBlogSlug: "bilvedlikehold-tips-og-rad",
+    relatedServiceSlugs: [
+      "bilverksted-larvik",
+      "eu-kontroll-larvik",
+      "bildiagnose-larvik",
+    ],
   },
 ];
 

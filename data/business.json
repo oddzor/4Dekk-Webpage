@@ -8,9 +8,13 @@
   },
   "contact": {
     "phone": "93 99 55 55",
+    "phoneE164": "+4793995555",
     "email": "4dekk4@gmail.com",
     "website": "https://www.4dekk.no"
   },
+  "orgNumber": "916696744",
+  "legalName": "4DEKK AS",
+  "foundingYear": "2015",
   "hours": {
     "monday": "08:00 - 16:00",
     "tuesday": "08:00 - 16:00",
@@ -35,5 +39,5 @@
     "Motor Diagnostikk",
     "Inspeksjon"
   ],
-  "description": "4Dekk AS i Larvik tilbyr profesjonell bil-og-dekk-service i Larvik. Med over 10 år erfaring og sertifiserte teknikere, kan du forvente kvalitetsarbeid til konkurransedyktige priser."
+  "description": "4Dekk Larvik er et Statens vegvesen-godkjent bilverksted og dekkverksted på Torstrand i Larvik, med over 10 års erfaring. Vi utfører EU-kontroll, service og oljeskift, bremser, feilsøking og diagnose, AC-service og reparasjoner på de fleste bilmerker, samt hjulskift, omlegging, balansering, dekksalg og dekkhotell."
 }

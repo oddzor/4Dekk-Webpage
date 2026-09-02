@@ -134,6 +134,13 @@ export default function Header() {
 
           <div className="hidden lg:flex lg:items-center lg:gap-4">
             <LanguageToggle />
+            <a
+              href="tel:+4793995555"
+              className="text-sm font-semibold whitespace-nowrap text-text hover:text-accent transition-colors duration-200"
+              aria-label="Ring 4Dekk Larvik"
+            >
+              📞 93 99 55 55
+            </a>
             <Link
               href="/booking"
               className="btn-accent whitespace-nowrap min-w-[200px] text-center transition-all duration-300"
@@ -201,6 +208,15 @@ export default function Header() {
                   })}
                 </div>
                 <div className="py-6 space-y-4">
+                  <div className="flex justify-center">
+                    <a
+                      href="tel:+4793995555"
+                      className="btn-secondary whitespace-nowrap min-w-[200px] text-center"
+                      onClick={closeMobileMenu}
+                    >
+                      📞 Ring 93 99 55 55
+                    </a>
+                  </div>
                   <div className="flex justify-center">
                     <Link
                       href="/booking"

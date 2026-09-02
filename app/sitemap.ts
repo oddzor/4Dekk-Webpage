@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/blog`,
       lastModified: STATIC_LAST_MODIFIED,
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     ...serviceUrls,
