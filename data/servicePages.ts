@@ -41,7 +41,7 @@ export const servicePages: ServicePage[] = [
       "EU-kontroll i Larvik hos 4Dekk til 1150,-. Autorisert kontrollorgan med direkte forbindelse til Statens vegvesen. Bestill time på Torstrand i dag.",
     h1: "EU-kontroll i Larvik",
     intro: [
-      "4Dekk Larvik er godkjent kontrollorgan og utfører EU-kontroll (periodisk kjøretøykontroll) for personbiler og varebiler under 7 500 kg. Kontrollen har rundt 150 kontrollpunkter og dekker bremser, styring, lys, hjuloppheng, dekk, understell, avgass og sikkerhetsutstyr.",
+      "4Dekk Larvik er godkjent kontrollorgan og utfører EU-kontroll (periodisk kjøretøykontroll) for personbiler og varebiler under 3 500 kg. Kontrollen har rundt 150 kontrollpunkter og dekker bremser, styring, lys, hjuloppheng, dekk, understell, avgass og sikkerhetsutstyr.",
       "Resultatet registreres direkte hos Statens vegvesen mens bilen står hos oss, slik at godkjenningen er på plass med en gang. Prisen er 1150,- uansett bilmerke.",
     ],
     image: "/images/eucontrol.webp",
