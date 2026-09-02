@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Icon from "./Icon";
+import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Header() {
@@ -131,17 +132,25 @@ export default function Header() {
             })}
           </div>
 
-          <div className="hidden lg:flex lg:items-center lg:gap-4">
-            
+          <div className="hidden lg:flex lg:items-center lg:gap-3">
+            <LanguageToggle />
             <a
               href="tel:+4793995555"
-              className="text-sm font-semibold whitespace-nowrap text-text hover:text-accent transition-colors duration-200"
+              className="inline-flex items-center gap-2 btn-secondary whitespace-nowrap"
             >
-              <span aria-hidden="true">📞 </span>Ring 93 99 55 55
+              <svg
+                className="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Ring oss
             </a>
             <Link
               href="/booking"
-              className="btn-accent whitespace-nowrap min-w-[200px] text-center transition-all duration-300"
+              className="btn-accent whitespace-nowrap min-w-[180px] text-center transition-all duration-300"
             >
               {t.bookButton}
             </Link>
@@ -168,7 +177,7 @@ export default function Header() {
                 />
               </Link>
               <div className="flex items-center gap-4">
-                
+                <LanguageToggle />
                 <button
                   type="button"
                   className="-m-2.5 rounded-md p-3 text-white bg-gray-800/80 backdrop-blur-sm hover:bg-gray-700/80 transition-all duration-200 border border-gray-600/50"
@@ -209,10 +218,18 @@ export default function Header() {
                   <div className="flex justify-center">
                     <a
                       href="tel:+4793995555"
-                      className="btn-secondary whitespace-nowrap min-w-[200px] text-center"
+                      className="inline-flex items-center justify-center gap-2 btn-secondary whitespace-nowrap min-w-[200px] text-center"
                       onClick={closeMobileMenu}
                     >
-                      📞 Ring 93 99 55 55
+                      <svg
+                        className="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                      >
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                      </svg>
+                      Ring oss
                     </a>
                   </div>
                   <div className="flex justify-center">

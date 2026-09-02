@@ -1,10 +1,10 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-// Nettstedet er norsk-only. Konteksten beholdes så eksisterende komponenter
-// som kaller useLanguage() fortsatt fungerer uten endring; den returnerer
-// alltid "no".
+// Norsk er standard og alt SEO-relevant serveres på norsk. Engelsk er kun en
+// klient-side visning for besøkende – ingen URL-endring, ingen hreflang, så
+// søkemotorer ser alltid den norske versjonen.
 type Language = "no" | "en";
 
 interface LanguageContextType {
@@ -13,19 +13,43 @@ interface LanguageContextType {
   toggleLanguage: () => void;
 }
 
-const noop = () => {};
-
-const VALUE: LanguageContextType = {
+const LanguageContext = createContext<LanguageContextType>({
   language: "no",
-  setLanguage: noop,
-  toggleLanguage: noop,
-};
-
-const LanguageContext = createContext<LanguageContextType>(VALUE);
+  setLanguage: () => {},
+  toggleLanguage: () => {},
+});
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [language, setLanguageState] = useState<Language>("no");
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("language");
+      if (stored === "en") {
+        setLanguageState("en");
+        document.documentElement.lang = "en";
+      }
+    } catch {
+      // localStorage utilgjengelig – behold norsk
+    }
+  }, []);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    try {
+      localStorage.setItem("language", lang);
+    } catch {
+      // ignorer
+    }
+    document.documentElement.lang = lang === "en" ? "en" : "no";
+  };
+
+  const toggleLanguage = () => setLanguage(language === "no" ? "en" : "no");
+
   return (
-    <LanguageContext.Provider value={VALUE}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage, toggleLanguage }}
+    >
       {children}
     </LanguageContext.Provider>
   );

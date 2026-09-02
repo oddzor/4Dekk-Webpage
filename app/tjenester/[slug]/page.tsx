@@ -406,9 +406,17 @@ export default function ServiceLandingPage({
       <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 p-2 border-t bg-gray-darker/95 backdrop-blur-sm border-accent/20 md:hidden">
         <a
           href={`tel:${PHONE}`}
-          className="flex-1 py-3 text-sm font-semibold text-center btn-secondary"
+          className="flex items-center justify-center flex-1 gap-2 py-3 text-sm font-semibold text-center btn-secondary"
         >
-          📞 Ring
+          <svg
+            className="w-4 h-4"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          Ring oss
         </a>
         <BookingButton
           href={page.bookingUrl}
