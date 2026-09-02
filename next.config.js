@@ -38,6 +38,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Apex -> www, handled by the app so security headers (HSTS with
+        // includeSubDomains/preload) apply to the redirect itself.
+        // Requires the 4dekk.no domain to be attached WITHOUT a Vercel
+        // dashboard redirect.
+        source: "/:path*",
+        has: [{ type: "host", value: "4dekk.no" }],
+        destination: "https://www.4dekk.no/:path*",
+        permanent: true,
+      },
+      {
         source: "/felgpakker{/}?",
         destination: "/booking",
         permanent: true,
