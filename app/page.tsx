@@ -11,6 +11,29 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+const REVIEW_EXCERPTS = [
+  {
+    name: "Per Anders Hem",
+    when: "Nylig",
+    text: "Greit å bestille time, personlig kontakt og 100 kr billigere enn verkstedet jeg har brukt i Sandefjord – for EU-kontroll.",
+  },
+  {
+    name: "Hans Kristian Pedersen",
+    when: "Nylig",
+    text: "Veldig hyggelige folk, raske og flinke. Avtalt pris ble også holdt, så jeg vil absolutt anbefale å ta kontakt med 4Dekk hvis du skal fikse dekk til bilen din.",
+  },
+  {
+    name: "Svend Kolstad",
+    when: "Nylig",
+    text: "Er alltid velkommen til 4dekk i Larvik. Topp priser og god jobb! Anbefaler dette firmaet for EU-kontroll og reparasjon av bil.",
+  },
+  {
+    name: "Anders Nevland",
+    when: "Nylig",
+    text: "Skaffet dekkene innen 24 timer og hadde tid til å legge om samme dag. Perfekt service i en stressa hverdag.",
+  },
+];
+
 const HOME_FAQ = [
   {
     q: "Hvor ligger 4Dekk Larvik?",
@@ -57,6 +80,35 @@ export default function Home() {
       <ServicesSection />
       <PricingSection />
       <GoogleReviewsSection />
+
+      <section className="section-padding section-light">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="mb-2 text-2xl font-bold md:text-3xl font-headings text-headings">
+              Utvalgte omtaler
+            </h2>
+            <p className="mb-8 text-text">
+              4Dekk Larvik har 4,8 av 5 stjerner på 233 Google-anmeldelser.
+            </p>
+            <div className="grid gap-6 md:grid-cols-2">
+              {REVIEW_EXCERPTS.map((r) => (
+                <blockquote
+                  key={r.name}
+                  className="p-6 border border-gray-600 rounded-lg card-dark"
+                >
+                  <p className="mb-3 text-accent">★★★★★</p>
+                  <p className="mb-3 leading-relaxed text-text">
+                    &ldquo;{r.text}&rdquo;
+                  </p>
+                  <footer className="text-sm text-gray-400">
+                    – {r.name}, Google-anmeldelse
+                  </footer>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding section-dark">
         <div className="container-custom">
