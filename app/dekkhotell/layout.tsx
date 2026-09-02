@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Dekkhotell",
@@ -8,13 +8,22 @@ export const metadata: Metadata = {
   },
 };
 
+// Internal, login-gated tool (noindex). Lock zoom so the compact mobile
+// layout stays put and controls keep a predictable size on phones.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function DekkhotellLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background text-text font-body">
+    <div className="min-h-[100dvh] bg-background text-text font-body">
       {children}
     </div>
   );

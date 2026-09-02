@@ -248,9 +248,9 @@ export default function Dashboard({ userEmail }: DashboardProps) {
   };
 
   return (
-    <div className="container-custom section-padding">
+    <div className="container-custom py-6 sm:py-12">
       <div className="print:hidden">
-        <div className="flex flex-col justify-between gap-4 mb-8 sm:flex-row sm:items-center">
+        <div className="flex flex-col justify-between gap-4 mb-6 sm:flex-row sm:items-center">
           <div>
             <h1 className="text-2xl text-headings sm:text-3xl">Dekkhotell</h1>
             <p className="mt-1 text-sm text-gray-400">{userEmail}</p>
@@ -335,7 +335,7 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                         e.stopPropagation();
                         setDeletingEntry(entry);
                       }}
-                      className="text-xs text-red-400 shrink-0"
+                      className="px-2 py-1 -my-1 -mr-1 text-xs text-red-400 shrink-0"
                     >
                       Slett
                     </button>

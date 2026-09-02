@@ -69,7 +69,7 @@ export default function StatsCards({
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 mb-8 sm:grid-cols-3 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-2 mb-6 sm:grid-cols-3 sm:gap-4 sm:mb-8 lg:grid-cols-5">
       {stats.map((stat) => {
         const isActive = activeFilter === stat.filter;
         return (
@@ -77,16 +77,16 @@ export default function StatsCards({
             key={stat.label}
             type="button"
             onClick={() => onFilterChange(isActive ? "all" : stat.filter)}
-            className={`flex items-center gap-3 p-4 text-left rounded-lg card-dark transition-colors duration-200 hover:bg-gray-800/70 ${
+            className={`flex items-center gap-2 p-3 text-left rounded-lg card-dark transition-colors duration-200 hover:bg-gray-800/70 sm:gap-3 sm:p-4 ${
               isActive ? "ring-2 ring-accent" : ""
             }`}
           >
-            <span className="text-2xl">{stat.icon}</span>
+            <span className="text-xl sm:text-2xl">{stat.icon}</span>
             <div>
-              <p className="text-2xl font-bold text-headings">
+              <p className="text-xl font-bold leading-tight text-headings sm:text-2xl">
                 {stat.value}
               </p>
-              <p className="text-sm text-gray-400">{stat.label}</p>
+              <p className="text-xs text-gray-400 sm:text-sm">{stat.label}</p>
             </div>
           </button>
         );

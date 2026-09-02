@@ -39,23 +39,23 @@ export default function CustomerDetailModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-2 bg-black/70 sm:p-4 print:h-0 print:overflow-hidden print:bg-white print:p-0"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4 print:h-0 print:overflow-hidden print:bg-white print:p-0"
       onClick={onClose}
     >
       <div
         className="relative w-full max-w-[67.2rem] print:h-0 print:overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Lukk"
-          className="absolute z-10 flex items-center justify-center w-8 h-8 text-white bg-gray-800 border border-gray-600 rounded-full -top-3 -right-3 hover:bg-gray-700 print:hidden"
-        >
-          ✕
-        </button>
+        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto rounded-lg card-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row print:h-0 print:max-h-0 print:overflow-hidden print:bg-white print:p-0">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Lukk"
+            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 text-white bg-gray-800 border border-gray-600 rounded-full shadow-lg top-0 hover:bg-gray-700 sm:absolute sm:-top-3 sm:-right-3 sm:m-0 sm:w-8 sm:h-8 print:hidden"
+          >
+            ✕
+          </button>
 
-        <div className="flex flex-col gap-5 p-4 overflow-y-auto rounded-lg card-dark max-h-[95vh] sm:p-5 sm:flex-row print:h-0 print:max-h-0 print:overflow-hidden print:bg-white print:p-0">
           <div className="flex-1">
             <h2 className="mb-1 text-lg text-headings">{entry.name}</h2>
             {entry.updated_at && (
@@ -94,18 +94,16 @@ export default function CustomerDetailModal({
                 <Field label="Posisjon" value={entry.position} />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 <Field label="Type dekk" value={tireLabel} />
-                <div className="grid grid-cols-2 gap-3">
-                  <Field
-                    label="☀️ Sommer dim."
-                    value={entry.dimensions_sommer}
-                  />
-                  <Field
-                    label="❄️ Vinter dim."
-                    value={entry.dimensions_vinter}
-                  />
-                </div>
+                <Field
+                  label="☀️ Sommer dim."
+                  value={entry.dimensions_sommer}
+                />
+                <Field
+                  label="❄️ Vinter dim."
+                  value={entry.dimensions_vinter}
+                />
               </div>
 
               <Field label="Adresse" value={entry.address} />
@@ -135,14 +133,14 @@ export default function CustomerDetailModal({
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3 mt-4 print:hidden">
+            <div className="flex flex-col gap-2 mt-4 sm:flex-row sm:flex-wrap sm:gap-3 print:hidden">
               {(entry.tire_type === "sommer" ||
                 entry.tire_type === "vinter") && (
                 <button
                   type="button"
                   onClick={onSwitchTireType}
                   disabled={isSwitchingTireType}
-                  className="flex-1 px-6 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2.5 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg sm:flex-1 sm:px-6 sm:py-2 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSwitchingTireType
                     ? "Bytter..."
@@ -154,21 +152,22 @@ export default function CustomerDetailModal({
               <button
                 type="button"
                 onClick={onEdit}
-                className="flex-1 px-6 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg hover:bg-gray-800"
+                className="px-4 py-2.5 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg sm:flex-1 sm:px-6 sm:py-2 hover:bg-gray-800"
               >
                 Rediger
               </button>
               <button
                 type="button"
                 onClick={onDelete}
-                className="flex-1 px-6 py-2 text-sm font-medium text-red-400 transition-colors duration-200 border border-red-700/50 rounded-lg hover:bg-red-900/30"
+                className="px-4 py-2.5 text-sm font-medium text-red-400 transition-colors duration-200 border rounded-lg border-red-700/50 sm:flex-1 sm:px-6 sm:py-2 hover:bg-red-900/30"
               >
                 Slett
               </button>
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3 sm:border-l sm:border-gray-700 sm:pl-5">
+          {/* Label preview + print is a shop-counter (desktop) action; hidden on phones to keep the sheet compact. */}
+          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5">
             <div
               id="dekkhotell-printable"
               className="relative box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white rounded-lg shrink-0 print:rounded-none"

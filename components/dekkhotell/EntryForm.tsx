@@ -16,7 +16,7 @@ interface EntryFormProps {
 }
 
 const inputClass =
-  "w-full px-3 py-1.5 text-sm bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-200 text-white placeholder-gray-400 hover:border-gray-500";
+  "w-full px-3 py-2 text-sm bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-200 text-white placeholder-gray-400 hover:border-gray-500 sm:py-1.5";
 
 const labelClass = "block mb-1 text-xs font-medium text-headings";
 
@@ -98,9 +98,17 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 bg-black/70 sm:p-4">
-      <div className="w-full max-w-2xl p-4 overflow-y-auto rounded-lg card-dark max-h-[98vh] sm:p-5">
-        <h2 className="mb-3 text-lg text-headings">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4">
+      <div className="relative w-full max-w-2xl p-4 overflow-y-auto rounded-lg card-dark max-h-[88dvh] sm:max-h-[95vh] sm:p-5">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Lukk"
+          className="absolute z-10 flex items-center justify-center w-9 h-9 text-white bg-gray-800 border border-gray-600 rounded-full right-3 top-3 hover:bg-gray-700 sm:w-8 sm:h-8"
+        >
+          ✕
+        </button>
+        <h2 className="mb-3 text-lg text-headings pr-10">
           {isEditing ? "Rediger Kunde" : "Ny Kunde"}
         </h2>
 
