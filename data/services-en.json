@@ -116,8 +116,8 @@
     "icon": "tire",
     "image": "/images/hjulskift.webp",
     "features": ["Fast", "Tire inspection", "Air pressure check if desired"],
-    "pricing": "500,-",
-    "pricingDescription": "Complete tire change of summer and winter tires"
+    "pricing": "600,-",
+    "pricingDescription": "Passenger car 600,-, SUV/van 650,-, motorhome 700,-"
   },
   {
     "id": "tire-hotel",
@@ -132,7 +132,7 @@
       "Tire wear check",
       "Tire change"
     ],
-    "pricing": "400,-",
+    "pricing": "500,-",
     "pricingDescription": "Simple and safe storage of your tires when you switch over for the season"
   },
   {

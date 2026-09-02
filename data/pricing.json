@@ -50,9 +50,9 @@
   },
   {
     "service": "Hjulskift",
-    "price": "500,-",
+    "price": "600,-",
     "icon": "tire",
-    "description": "Sesongbytte eller generell hjulskift"
+    "description": "Personbil 600,-, SUV/Varebil 650,-, Bobil 700,-. Sesongbytte eller generell hjulskift"
   },
   {
     "service": "Plugging av dekk (utvendig)",
@@ -74,7 +74,7 @@
   },
   {
     "service": "Dekkhotell m/ Hjulvask",
-    "price": "600,-",
+    "price": "500,-",
     "icon": "hotel",
     "description": "Totalpris per sesong inkl hjulskift: 1100,- (SUV 1150,-, Bobil <3,5T 1200,-)"
   }

@@ -246,7 +246,7 @@ export default function BookingPage() {
               <div className="flex items-center justify-between">
                 <div className="font-semibold text-accent">{t.bookTime}</div>
                 <div className="text-sm font-semibold text-accent">
-                  {language === "no" ? "500,- til 600,-" : "500,- to 600,-"}
+                  {language === "no" ? "600,- til 700,-" : "600,- to 700,-"}
                 </div>
               </div>
             </a>
@@ -274,7 +274,7 @@ export default function BookingPage() {
               <div className="flex items-center justify-between">
                 <div className="font-semibold text-accent">{t.bookTime}</div>
                 <div className="text-sm font-semibold text-accent">
-                  {language === "no" ? "500,- til 600,-" : "500,- to 600,-"}
+                  {language === "no" ? "600,- til 700,-" : "600,- to 700,-"}
                 </div>
               </div>
             </a>

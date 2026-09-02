@@ -120,8 +120,8 @@
       "Inspeksjon av dekk",
       "Kontroll av lufttrykk hvis ønskelig"
     ],
-    "pricing": "500,-",
-    "pricingDescription": "Komplett hjulskift av sommer- og vinterdekk"
+    "pricing": "600,-",
+    "pricingDescription": "Personbil 600,-, SUV/Varebil 650,-, Bobil 700,-"
   },
   {
     "id": "tire-hotel",
@@ -136,7 +136,7 @@
       "Kontroll av dekkslitasje",
       "Hjulskift"
     ],
-    "pricing": "400,-",
+    "pricing": "500,-",
     "pricingDescription": "Enkel og trygg lagring av dekkene dine når du bytter over for sesongen"
   },
   {

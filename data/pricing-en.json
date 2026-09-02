@@ -50,9 +50,9 @@
   },
   {
     "service": "Tire Change",
-    "price": "500,-",
+    "price": "600,-",
     "icon": "tire",
-    "description": "Seasonal change or general tire change"
+    "description": "Passenger car 600,-, SUV/van 650,-, motorhome 700,-. Seasonal change or general tire change"
   },
   {
     "service": "Tire Plugging (External)",
@@ -74,7 +74,7 @@
   },
   {
     "service": "Tire Hotel w/ Tire Wash",
-    "price": "600,-",
+    "price": "500,-",
     "icon": "hotel",
     "description": "Total price per season incl tire change: 1100,- (SUV 1150,-, Motorhome <3.5T 1200,-)"
   }
