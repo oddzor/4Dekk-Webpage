@@ -45,7 +45,7 @@ export const servicePages: ServicePage[] = [
     name: "EU-kontroll",
     metaTitle: "EU-kontroll i Larvik – 1150,- | 4Dekk Larvik",
     metaDescription:
-      "EU-kontroll i Larvik hos 4Dekk til 1150,-. Autorisert kontrollorgan med direkte forbindelse til Statens vegvesen. Bestill time på Torstrand i dag.",
+      "EU-kontroll i Larvik hos 4Dekk til 1150,-. Autorisert kontrollorgan med direkte forbindelse til Statens vegvesen. Bestill time på Nanset i dag.",
     h1: "EU-kontroll i Larvik",
     intro: [
       "EU-kontroll hos 4Dekk Larvik koster 1150,- uansett bilmerke. Vi er godkjent kontrollorgan hos Statens vegvesen (Kontrollorgan 01, kjøretøy ≤ 3500 kg) og utfører den periodiske kjøretøykontrollen for personbiler og varebiler.",
@@ -119,7 +119,7 @@ export const servicePages: ServicePage[] = [
     name: "Hjulskift",
     metaTitle: "Hjulskift i Larvik – fra 600,- | 4Dekk Larvik",
     metaDescription:
-      "Rask hjulskift mellom sommer- og vinterdekk i Larvik. Fra 600,- for personbil. Dekksjekk og lufttrykk inkludert. Bestill time hos 4Dekk på Torstrand.",
+      "Rask hjulskift mellom sommer- og vinterdekk i Larvik. Fra 600,- for personbil. Dekksjekk og lufttrykk inkludert. Bestill time hos 4Dekk på Nanset.",
     h1: "Hjulskift i Larvik",
     intro: [
       "Sesongskifte mellom sommer- og vinterdekk på ferdig monterte hjul. Vi løfter bilen på hydraulisk løftebukk, kontrollerer dekkene for slitasje og skader, og trekker til hjulboltene med riktig moment.",
@@ -308,7 +308,7 @@ export const servicePages: ServicePage[] = [
     name: "Dekkhotell",
     metaTitle: "Dekkhotell i Larvik – fra 500,- | 4Dekk Larvik",
     metaDescription:
-      "Dekkhotell i Larvik med hjulvask, slitasjekontroll og sesongskifte. Fra 500,-, totalpris per sesong fra 1300,-. Slipp å oppbevare dekk hjemme – 4Dekk på Torstrand.",
+      "Dekkhotell i Larvik med hjulvask, slitasjekontroll og sesongskifte. Fra 500,-, totalpris per sesong fra 1300,-. Slipp å oppbevare dekk hjemme – 4Dekk på Nanset.",
     h1: "Dekkhotell i Larvik",
     intro: [
       "Vi oppbevarer sommer- og vinterhjulene dine trygt og tørt mellom sesongene. Hjulene vaskes, kontrolleres for slitasje og skader, og merkes før de settes på lager.",
@@ -368,7 +368,7 @@ export const servicePages: ServicePage[] = [
     name: "Bilverksted",
     metaTitle: "Bilverksted i Larvik – timepris 1400,- | 4Dekk Larvik",
     metaDescription:
-      "Bilverksted i Larvik for reparasjon, service og vedlikehold. Konkurransedyktig timepris på 1400,-. Statens vegvesen-godkjent verksted på Torstrand. Bestill time.",
+      "Bilverksted i Larvik for reparasjon, service og vedlikehold. Konkurransedyktig timepris på 1400,-. Statens vegvesen-godkjent verksted på Nanset. Bestill time.",
     h1: "Bilverksted i Larvik",
     intro: [
       "4Dekk Larvik er et fullverdig bilverksted som utfører service, reparasjon og vedlikehold på de fleste bilmerker. Vi har bred erfaring med ulike biltyper og bruker moderne diagnoseutstyr for å finne feil raskt.",
@@ -434,7 +434,7 @@ export const servicePages: ServicePage[] = [
     name: "Service og oljeskift",
     metaTitle: "Service og oljeskift i Larvik – fra 2000,- | 4Dekk Larvik",
     metaDescription:
-      "Oljeskift og service i Larvik hos 4Dekk. Fra 2000,- for oljeskift med kvalitetsolje, filter og arbeid. Velg servicenivå ved booking. Bestill time på Torstrand.",
+      "Oljeskift og service i Larvik hos 4Dekk. Fra 2000,- for oljeskift med kvalitetsolje, filter og arbeid. Velg servicenivå ved booking. Bestill time på Nanset.",
     h1: "Service og oljeskift i Larvik",
     intro: [
       "Regelmessig service er avgjørende for motorens levetid og ytelse. Ved bestilling velger du servicenivå – fra et enkelt oljeskift til mer omfattende service med flere filtre og kontrollpunkter. Vi bruker kvalitetsoljer og -filtre etter bilprodusentens spesifikasjon.",
@@ -561,7 +561,7 @@ export const servicePages: ServicePage[] = [
     name: "Dekkservice",
     metaTitle: "Dekkservice i Larvik – nye dekk, montering og balansering | 4Dekk",
     metaDescription:
-      "Dekkservice i Larvik: vi skaffer nye dekk fra de store leverandørene, monterer, balanserer og reparerer. Omlegging fra 1000,-, balansering fra 500,-. 4Dekk på Torstrand.",
+      "Dekkservice i Larvik: vi skaffer nye dekk fra de store leverandørene, monterer, balanserer og reparerer. Omlegging fra 1000,-, balansering fra 500,-. 4Dekk på Nanset.",
     h1: "Dekkservice i Larvik",
     intro: [
       "Vi er først og fremst et dekkverksted. Vi selger og skaffer nye dekk fra de store leverandørene – mange merker og dimensjoner kan hentes inn på kort varsel – og hjelper deg med å velge riktig dekk til bil, kjøremønster og budsjett.",

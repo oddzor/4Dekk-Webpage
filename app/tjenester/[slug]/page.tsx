@@ -204,7 +204,7 @@ export default function ServiceLandingPage({
               <span className="mx-2">·</span>
               4,8 ★ på Google (233 anmeldelser)
               <span className="mx-2">·</span>
-              10+ år på Torstrand i Larvik
+              10+ år på Nanset i Larvik
             </p>
 
             <div className="flex flex-col gap-8 md:grid md:grid-cols-[1.4fr_1fr] md:items-start">
@@ -310,7 +310,7 @@ export default function ServiceLandingPage({
                 Bestill {page.name.toLowerCase()} i Larvik
               </h2>
               <p className="mb-6 text-text">
-                4Dekk Larvik holder til i Haakon VII&apos;s vei 9 på Torstrand,
+                4Dekk Larvik holder til i Haakon VII&apos;s vei 9 på Nanset,
                 få minutter fra E18. Åpent mandag til fredag 08:00–16:00. Bestill
                 time på nett, eller ring {PHONE_DISPLAY} hvis du er usikker på hva
                 bilen din trenger.

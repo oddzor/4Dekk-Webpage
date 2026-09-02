@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     absolute: "Tjenester i Larvik – EU-kontroll, dekk og verksted | 4Dekk",
   },
   description:
-    "Oversikt over tjenestene til 4Dekk Larvik: EU-kontroll, hjulskift, 4-hjulskontroll, AC-service, dekkhotell og bilverksted. Priser og booking på Torstrand i Larvik.",
+    "Oversikt over tjenestene til 4Dekk Larvik: EU-kontroll, hjulskift, 4-hjulskontroll, AC-service, dekkhotell og bilverksted. Priser og booking på Nanset i Larvik.",
   alternates: { canonical: "/tjenester" },
   openGraph: {
     title: "Tjenester hos 4Dekk Larvik",
@@ -75,7 +75,7 @@ export default function ServicesIndexPage() {
             </h1>
             <p className="max-w-3xl text-lg text-gray-200">
               4Dekk Larvik er et Statens vegvesen-godkjent bilverksted og
-              dekkverksted på Torstrand. Under finner du de vanligste tjenestene
+              dekkverksted på Nanset. Under finner du de vanligste tjenestene
               våre med pris og mulighet for å bestille time.
             </p>
           </div>

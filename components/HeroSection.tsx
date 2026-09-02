@@ -11,7 +11,7 @@ export default function HeroSection() {
     no: {
       title: "Bilverksted og dekkservice i Larvik",
       description:
-        "Statens vegvesen-godkjent bilverksted og kontrollorgan på Torstrand. 4,8 ★ av 233 Google-anmeldelser. EU-kontroll 1150,-, hjulskift fra 600,-.",
+        "Statens vegvesen-godkjent bilverksted og kontrollorgan på Nanset. 4,8 ★ av 233 Google-anmeldelser. EU-kontroll 1150,-, hjulskift fra 600,-.",
       cta1: "Bestill Time Nå",
       cta2: "Se Våre Tjenester",
       trust1: "Års Erfaring",

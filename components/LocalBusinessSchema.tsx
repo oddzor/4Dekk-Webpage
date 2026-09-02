@@ -17,7 +17,7 @@ const DAY_NAMES: Record<string, string> = {
 };
 
 // Larvik kommune tettsteder + nærmeste nabokommune – reelt nedslagsfelt for et
-// verksted på Torstrand i Larvik.
+// verksted på Nanset i Larvik.
 const AREA_SERVED = [
   "Larvik",
   "Stavern",
