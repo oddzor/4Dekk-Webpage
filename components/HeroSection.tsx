@@ -60,7 +60,7 @@ export default function HeroSection() {
               fill
               className="object-contain"
               priority
-              quality={95}
+              quality={75}
               sizes="(max-width: 768px) 320px, (max-width: 1024px) 448px, 512px"
               fetchPriority="high"
               style={{

@@ -16,7 +16,17 @@ export const metadata: Metadata = {
     description:
       "EU-kontroll, hjulskift, 4-hjulskontroll, AC-service, dekkhotell og bilverksted i Larvik.",
     url: "/tjenester",
+    siteName: "4Dekk Larvik",
+    locale: "no_NO",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-image-1.webp",
+        width: 1200,
+        height: 630,
+        alt: "4Dekk Larvik – bilverksted og dekkservice",
+      },
+    ],
   },
 };
 
