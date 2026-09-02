@@ -68,12 +68,16 @@ const contactServices: { [key: string]: boolean } = {
   bilreparasjoner: true,
 };
 
-// Tjenester som har en egen landingsside – disse kortene lenker dit i stedet
-// for å vise flip/detaljvisning.
+// Hvert tjeneste-kort lenker til sin egen landingsside i stedet for
+// flip/detaljvisning. Etterkontroll peker til en seksjon på EU-kontroll-siden.
 const servicePageSlugs: { [key: string]: string } = {
   "eu-control": "eu-kontroll-larvik",
+  "after-control": "eu-kontroll-larvik#etterkontroll",
   "wheel-alignment": "hjulstilling-larvik",
+  "workshop-hourly": "service-og-oljeskift-larvik",
   "ac-service": "ac-service-larvik",
+  diagnostics: "bildiagnose-larvik",
+  tires: "dekkservice-larvik",
   hjulskift: "hjulskift-larvik",
   "tire-hotel": "dekkhotell-larvik",
   bilreparasjoner: "bilverksted-larvik",

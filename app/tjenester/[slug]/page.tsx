@@ -191,7 +191,11 @@ export default function ServiceLandingPage({
             </div>
 
             {page.sections.map((section, index) => (
-              <div key={index} className="mb-10">
+              <div
+                key={index}
+                id={section.id}
+                className="mb-10 scroll-mt-28"
+              >
                 <h2 className="mb-4 text-2xl font-bold font-headings text-headings">
                   {section.heading}
                 </h2>

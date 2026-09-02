@@ -7,6 +7,9 @@ export interface ServicePageSection {
   heading: string;
   body: string[];
   bullets?: string[];
+  // Valgfri anker-id for lenker som skal scrolle til seksjonen,
+  // f.eks. /tjenester/eu-kontroll-larvik#etterkontroll
+  id?: string;
 }
 
 export interface ServicePageFaq {
@@ -79,10 +82,11 @@ export const servicePages: ServicePage[] = [
         ],
       },
       {
-        heading: "Hvis bilen ikke blir godkjent",
+        id: "etterkontroll",
+        heading: "Etterkontroll – hvis bilen ikke blir godkjent",
         body: [
-          "Får bilen merknad med krav om etterkontroll, må feilene utbedres og bilen framstilles på nytt. Etterkontroll kan tas hos hvilket som helst godkjent verksted og går normalt raskt.",
-          "Vi utfører selv reparasjonene som trengs for å få bilen gjennom kontrollen, slik at du slipper å kjøre mellom flere verksteder.",
+          "Får bilen merknad med krav om etterkontroll, må feilene utbedres før bilen framstilles på nytt. Ved etterkontrollen sjekker vi kun at de anmerkede punktene er rettet – det er ikke en ny full kontroll, så den går som regel raskt.",
+          "Etterkontroll hos 4Dekk Larvik koster 400,-. Du kan ta den hos hvilket som helst godkjent verksted, men vi utfører gjerne både reparasjonen og etterkontrollen på samme sted, slik at du slipper å kjøre mellom flere verksteder. Fristen for etterkontroll er normalt to måneder etter EU-kontrollen.",
         ],
       },
     ],
@@ -419,6 +423,203 @@ export const servicePages: ServicePage[] = [
       },
     ],
     relatedBlogSlug: "bilvedlikehold-tips-og-rad",
+  },
+  {
+    slug: "service-og-oljeskift-larvik",
+    name: "Service og oljeskift",
+    metaTitle: "Service og oljeskift i Larvik – fra 2000,- | 4Dekk Larvik",
+    metaDescription:
+      "Oljeskift og service i Larvik hos 4Dekk. Fra 2000,- for oljeskift med kvalitetsolje, filter og arbeid. Velg servicenivå ved booking. Bestill time på Torstrand.",
+    h1: "Service og oljeskift i Larvik",
+    intro: [
+      "Regelmessig service er avgjørende for motorens levetid og ytelse. Ved bestilling velger du servicenivå – fra et enkelt oljeskift til mer omfattende service med flere filtre og kontrollpunkter. Vi bruker kvalitetsoljer og -filtre etter bilprodusentens spesifikasjon.",
+      "Et oljeskift med olje, oljefilter og arbeid starter på rundt 2000,-. Endelig pris avhenger av biltype, oljemengde og oljetype, og av hva du legger til av filtre og vedlikehold.",
+    ],
+    image: "/images/oil-change.webp",
+    imageAlt: "Oljeskift og service på bil hos 4Dekk Larvik",
+    priceLabel: "fra 2000,-",
+    priceNote:
+      "Oljeskift med olje, oljefilter og arbeid fra ca. 2000,-. Pris varierer med biltype, oljetype og valgte tillegg.",
+    bookingUrl: "/booking",
+    serviceType: "Bilservice / oljeskift",
+    sections: [
+      {
+        heading: "Hva som er med i et oljeskift",
+        body: [
+          "Grunnpakken dekker det motoren trenger oftest. Du kan bygge på med flere filtre og kontrollpunkter når du bestiller.",
+        ],
+        bullets: [
+          "Tapping av gammel olje og bytte av oljefilter",
+          "Påfylling av ny kvalitetsolje etter bilprodusentens spesifikasjon",
+          "Nullstilling av serviceintervall der bilen støtter det",
+          "Valgfritt: luftfilter, kupéfilter, drivstoffilter og nivåkontroll av øvrige væsker",
+        ],
+      },
+      {
+        heading: "Hvor ofte bør du skifte olje?",
+        body: [
+          "De fleste nyere biler har serviceintervall på 1–2 år eller 15 000–30 000 km, men mye kortkjøring, tilhengerdrag og kaldt klima trekker intervallet ned. Følg intervallet i servicheftet, og sjekk oljenivået selv mellom servicene.",
+        ],
+      },
+      {
+        heading: "Bestill service",
+        body: [
+          "Velg servicenivå når du bestiller time. Er du usikker på hva bilen din trenger, ta kontakt, så finner vi riktig pakke ut fra kilometerstand og servicehistorikk.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Hva koster et oljeskift i Larvik?",
+        a: "Et oljeskift med olje, oljefilter og arbeid starter på rundt 2000,-. Prisen varierer med biltype, oljemengde og oljetype, og om du legger til luftfilter, kupéfilter eller mer omfattende service.",
+      },
+      {
+        q: "Bruker dere original olje?",
+        a: "Vi bruker kvalitetsolje som oppfyller bilprodusentens spesifikasjon for din motor.",
+      },
+      {
+        q: "Kan jeg få full service, ikke bare oljeskift?",
+        a: "Ja. Ved booking velger du mellom flere servicenivåer, fra enkelt oljeskift til mer omfattende service med flere filtre og kontroller.",
+      },
+    ],
+    relatedBlogSlug: "oljeskift-guide-hvor-ofte-og-hvorfor",
+  },
+  {
+    slug: "bildiagnose-larvik",
+    name: "Feilsøking og diagnose",
+    metaTitle: "Feilsøking og bildiagnose i Larvik – fra 700,- | 4Dekk Larvik",
+    metaDescription:
+      "Feilsøking og bildiagnose i Larvik. Fra 700,- for avlesning av feilkoder og systemtest. Moderne diagnoseutstyr og lang mekanikererfaring. Bestill hos 4Dekk.",
+    h1: "Feilsøking og bildiagnose i Larvik",
+    intro: [
+      "Varsellampe på dashbordet, ulyd, dårlig gange eller uforklarlig høyt forbruk? Vi kombinerer moderne diagnoseutstyr med lang mekanikererfaring for å finne årsaken – ikke bare lese en feilkode.",
+      "Diagnose starter på 700,- (ca. 0,5 time). Bestiller du reparasjonen hos oss, trekkes beløpet normalt fra på sluttregningen.",
+    ],
+    image: "/images/engine-diagnostics.webp",
+    imageAlt: "Feilsøking med diagnoseutstyr på bil hos 4Dekk Larvik",
+    priceLabel: "fra 700,-",
+    priceNote:
+      "Startpris 700,- for ca. 0,5 time. Trekkes normalt fra hvis du bestiller reparasjonen hos oss.",
+    bookingUrl: "/booking",
+    serviceType: "Feilsøking / bildiagnose",
+    sections: [
+      {
+        heading: "Hva diagnosen omfatter",
+        body: [
+          "Vi tar utgangspunkt i symptomene dine og jobber oss systematisk fram til årsaken.",
+        ],
+        bullets: [
+          "Avlesning og tolking av feilkoder fra bilens styreenheter",
+          "Test av bilsystemer, sensorer og ytelse under drift",
+          "Teknisk inspeksjon av mistenkte komponenter",
+          "Nøye feilsøking der feilkoden alene ikke gir svaret",
+          "Klar tilbakemelding på hva som er galt og hva utbedring vil koste",
+        ],
+      },
+      {
+        heading: "Typiske grunner til å bestille diagnose",
+        body: [],
+        bullets: [
+          "Motorlampe, ABS-lampe eller annen varsellampe lyser",
+          "Bilen rykker, mister krefter eller går ujevnt på tomgang",
+          "Uforklarlig høyt drivstofforbruk",
+          "Feil som kommer og går, eller ulyd du ikke får plassert",
+          "Kontroll før kjøp av bruktbil",
+        ],
+      },
+      {
+        heading: "Bestill diagnose",
+        body: [
+          "Beskriv symptomene så presist du kan når du bestiller – når det oppstår, ved hvilken hastighet, kaldt eller varmt – det korter ned feilsøkingen.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Hva koster feilsøking hos 4Dekk Larvik?",
+        a: "Diagnose starter på 700,- for cirka en halvtime. Krever feilen mer omfattende feilsøking, avtaler vi det med deg først.",
+      },
+      {
+        q: "Trekkes diagnoseprisen fra hvis jeg reparerer hos dere?",
+        a: "Ja, som regel trekkes diagnosebeløpet fra på sluttregningen når du bestiller reparasjonen hos oss.",
+      },
+      {
+        q: "Kan dere lese av alle bilmerker?",
+        a: "Vi leser av og feilsøker de fleste merker og modeller. Er du usikker, ta kontakt før du bestiller.",
+      },
+    ],
+    relatedBlogSlug: "bilvedlikehold-tips-og-rad",
+  },
+  {
+    slug: "dekkservice-larvik",
+    name: "Dekkservice",
+    metaTitle: "Dekkservice i Larvik – nye dekk, montering og balansering | 4Dekk",
+    metaDescription:
+      "Dekkservice i Larvik: vi skaffer nye dekk fra de store leverandørene, monterer, balanserer og reparerer. Omlegging fra 1000,-, balansering fra 500,-. 4Dekk på Torstrand.",
+    h1: "Dekkservice i Larvik",
+    intro: [
+      "Vi er først og fremst et dekkverksted. Vi selger og skaffer nye dekk fra de store leverandørene – mange merker og dimensjoner kan hentes inn på kort varsel – og hjelper deg med å velge riktig dekk til bil, kjøremønster og budsjett.",
+      "I tillegg gjør vi omlegging (montering av nye dekk på felg), digital balansering, punkteringsreparasjon og lufttrykkontroll.",
+    ],
+    image: "/images/tire-service.webp",
+    imageAlt: "Dekkservice med montering og balansering hos 4Dekk Larvik",
+    priceLabel: "omlegging fra 1000,-",
+    priceNote:
+      "Omlegging med balansering fra 1000,-. Balansering fra 500,-. Dekk levert via Dekkonline/Dekk365 o.l.: fra 1800,-. Punkteringsreparasjon fra 300,-.",
+    bookingUrl: "/booking",
+    serviceType: "Dekkservice / dekksalg og montering",
+    sections: [
+      {
+        heading: "Nye dekk – vi skaffer og monterer",
+        body: [
+          "Trenger du nye dekk, ordner vi hele jobben. Vi har avtaler med store leverandører og får inn de fleste merker og dimensjoner raskt, både sommer-, vinter- og helårsdekk.",
+        ],
+        bullets: [
+          "Kjøpshjelp – vi anbefaler dekk ut fra bil, kjøremønster og pris",
+          "Bestilling og henting av dekk på kort varsel",
+          "Montering på felg og digital balansering innenfor 5 gram",
+          "Vurdering og avhending av de gamle dekkene",
+        ],
+      },
+      {
+        heading: "Omlegging, balansering og reparasjon",
+        body: [
+          "Har du dekk fra før, eller har fått dem levert fra en nettbutikk, monterer vi dem på felgene dine.",
+        ],
+        bullets: [
+          "Omlegging med balansering: fra 1000,-",
+          "Dekk levert via Dekkonline, Dekk365 og lignende: fra 1800,-",
+          "Balansering av løse hjul: fra 500,-",
+          "Punkteringsreparasjon: plugg utvendig 300,-, innvendig 600,-",
+          "Kontroll av mønsterdybde og lufttrykk",
+        ],
+      },
+      {
+        heading: "Når bør du bytte dekk?",
+        body: [
+          "Bytt vinterdekk når mønsterdybden nærmer seg 3 mm og sommerdekk ved 1,6 mm – men merkbart dårligere grep, sprekker i gummien eller dekk eldre enn rundt ti år er også god grunn. Vi sier fra ved sesongskifte og dekkhotell hvis settet nærmer seg grensen.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Kan 4Dekk skaffe meg nye dekk?",
+        a: "Ja. Vi selger dekk og henter inn de fleste merker og dimensjoner fra store leverandører på kort varsel, og hjelper deg med å velge riktig dekk.",
+      },
+      {
+        q: "Hva koster det å legge om dekk?",
+        a: "Omlegging med balansering koster fra 1000,-. Er dekkene levert via Dekkonline, Dekk365 eller lignende, er prisen fra 1800,-.",
+      },
+      {
+        q: "Kan dere montere dekk jeg har kjøpt på nett?",
+        a: "Ja, vi monterer og balanserer dekk du har fått levert fra nettbutikk. Pris fra 1800,- for et komplett sett.",
+      },
+      {
+        q: "Reparerer dere punktering?",
+        a: "Ja. Utvendig plugg koster 300,-, innvendig reparasjon 600,-. Om reparasjon er forsvarlig avhenger av skadens plassering og dekkslitasjen.",
+      },
+    ],
+    relatedBlogSlug: "valg-av-dekk-sommer-vinter",
   },
 ];
 
