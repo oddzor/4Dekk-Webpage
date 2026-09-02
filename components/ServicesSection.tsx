@@ -68,6 +68,20 @@ const contactServices: { [key: string]: boolean } = {
   bilreparasjoner: true,
 };
 
+// Tjenester som har en egen landingsside – disse kortene lenker dit i stedet
+// for å vise flip/detaljvisning.
+const servicePageSlugs: { [key: string]: string } = {
+  "eu-control": "eu-kontroll-larvik",
+  "wheel-alignment": "hjulstilling-larvik",
+  "ac-service": "ac-service-larvik",
+  hjulskift: "hjulskift-larvik",
+  "tire-hotel": "dekkhotell-larvik",
+  bilreparasjoner: "bilverksted-larvik",
+};
+
+const servicePageHref = (id: string) =>
+  servicePageSlugs[id] ? `/tjenester/${servicePageSlugs[id]}` : undefined;
+
 const featuredServices = [
   {
     title: "EU Kontroll",
@@ -214,6 +228,7 @@ export default function ServicesSection() {
                   }
                   showContactButton={contactServices[serviceData.id]}
                   language={language}
+                  href={servicePageHref(serviceData.id)}
                 />
               );
             })}
@@ -240,6 +255,7 @@ export default function ServicesSection() {
                 bookingLinks={multipleBookingLinks[service.id]?.[language]}
                 showContactButton={contactServices[service.id]}
                 language={language}
+                href={servicePageHref(service.id)}
               />
             ))}
           </div>

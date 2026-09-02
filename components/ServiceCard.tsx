@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Icon from "./Icon";
 
 interface ServiceCardProps {
@@ -17,6 +18,7 @@ interface ServiceCardProps {
   bookingLinks?: { label: string; url: string }[];
   showContactButton?: boolean;
   language?: "no" | "en";
+  href?: string;
 }
 
 export default function ServiceCard({
@@ -32,6 +34,7 @@ export default function ServiceCard({
   bookingLinks,
   showContactButton,
   language = "no",
+  href,
 }: ServiceCardProps) {
   const content = {
     no: {
@@ -74,6 +77,43 @@ export default function ServiceCard({
       setIsFlipping(false);
     }
   }, [isExpanded]);
+
+  if (href) {
+    return (
+      <div className="relative w-full h-96 perspective-1000">
+        <Link
+          href={href}
+          className="flex flex-col h-full overflow-hidden card-dark border-glow sm:hover:border-glow-strong sm:active:border-glow"
+          aria-label={`${t.readMore} ${title}`}
+        >
+          <div className="relative flex-shrink-0 w-full overflow-hidden h-52 bg-gray-dark">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 12vw"
+              className="object-cover object-center"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </div>
+          <div className="flex flex-col flex-grow p-6">
+            <h3 className="mb-3 text-xl font-semibold font-headings text-headings line-clamp-2">
+              {title}
+            </h3>
+            <p className="flex-grow mb-4 text-sm leading-relaxed text-text line-clamp-3">
+              {description}
+            </p>
+            <div className="pt-2 mt-auto">
+              <div className="inline-flex items-center font-medium transition-colors duration-200 text-accent">
+                {t.readMore}
+                <Icon name="chevron" className="w-4 h-4 ml-2" />
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <>
