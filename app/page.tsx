@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Suspense, useDeferredValue, useState, useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import DynamicMetadata from "@/components/DynamicMetadata";
 
@@ -25,35 +25,6 @@ const FloatingPriceButton = dynamic(
 );
 
 export default function Home() {
-  const [showContent, setShowContent] = useState(false);
-  const deferredShowContent = useDeferredValue(showContent);
-
-  useEffect(() => {
-    const timer1 = setTimeout(() => {
-      interface SchedulerPostTaskOptions {
-        priority?: "user-blocking" | "user-visible" | "background";
-      }
-      interface Scheduler {
-        postTask(
-          callback: () => void,
-          options?: SchedulerPostTaskOptions,
-        ): void;
-      }
-      interface WindowWithScheduler extends Window {
-        scheduler?: Scheduler;
-      }
-      const windowWithScheduler = window as WindowWithScheduler;
-      if ("scheduler" in window && windowWithScheduler.scheduler?.postTask) {
-        windowWithScheduler.scheduler.postTask(() => setShowContent(true), {
-          priority: "background",
-        });
-      } else {
-        setShowContent(true);
-      }
-    }, 200);
-    return () => clearTimeout(timer1);
-  }, []);
-
   useEffect(() => {
     const handleHashScroll = () => {
       if (window.location.hash === "#pricing") {
@@ -78,21 +49,15 @@ export default function Home() {
     <div>
       <DynamicMetadata page="home" />
       <HeroSection />
-      {deferredShowContent && (
-        <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
-          <ServicesSection />
-        </Suspense>
-      )}
-      {deferredShowContent && (
-        <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
-          <PricingSection />
-        </Suspense>
-      )}
-      {deferredShowContent && (
-        <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
-          <GoogleReviewsSection />
-        </Suspense>
-      )}
+      <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
+        <ServicesSection />
+      </Suspense>
+      <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
+        <PricingSection />
+      </Suspense>
+      <Suspense fallback={<div className="bg-gray-800 h-96 animate-pulse" />}>
+        <GoogleReviewsSection />
+      </Suspense>
       <FloatingPriceButton />
     </div>
   );

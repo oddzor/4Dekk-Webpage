@@ -11,6 +11,8 @@ import carMaintenanceBlog from "@/data/blogs/car-maintenance.json";
 import oilChangeBlog from "@/data/blogs/oil-change.json";
 import euControlBlog from "@/data/blogs/eu-control.json";
 import tireWearBlog from "@/data/blogs/tire-wear.json";
+import acServiceBlog from "@/data/blogs/ac-service.json";
+import carDiagnosticsBlog from "@/data/blogs/car-diagnostics.json";
 
 type Language = "no" | "en";
 
@@ -29,6 +31,7 @@ interface BlogData {
   slug: string;
   category: string;
   publishDate: string;
+  lastUpdated?: string;
   featured: boolean;
   readTime: number;
   no: {
@@ -65,6 +68,8 @@ export function getBlogData() {
     "oil-change": oilChangeBlog,
     "eu-control": euControlBlog,
     "tire-wear": tireWearBlog,
+    "ac-service": acServiceBlog,
+    "car-diagnostics": carDiagnosticsBlog,
   };
 
   const getCategoryName = (categoryId: string) => {
@@ -106,8 +111,10 @@ export function getBlogData() {
               : "eucontrol.webp"
         }`,
         category: categoryName,
+        categoryId: blogData.category,
         readTime: `${blogData.readTime}`,
         publishDate: blogData.publishDate,
+        lastUpdated: blogData.lastUpdated || blogData.publishDate,
         featured: blogData.featured || false,
       };
     })

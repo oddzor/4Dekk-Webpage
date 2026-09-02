@@ -15,6 +15,7 @@ export default function Header() {
   const navigation = {
     no: [
       { name: "Hjem", href: "/" },
+      { name: "Tjenester", href: "/tjenester" },
       { name: "Om Oss", href: "/about" },
       { name: "Timebestilling", href: "/booking" },
       { name: "Priser", href: "/#pricing" },
@@ -23,6 +24,7 @@ export default function Header() {
     ],
     en: [
       { name: "Home", href: "/" },
+      { name: "Services", href: "/tjenester" },
       { name: "About Us", href: "/about" },
       { name: "Book Appointment", href: "/booking" },
       { name: "Prices", href: "/#pricing" },

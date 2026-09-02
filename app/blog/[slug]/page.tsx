@@ -93,18 +93,42 @@ export default function BlogArticlePage({
   }
 
   const t = {
-    no: { backToBlog: "Tilbake til Blogg" },
-    en: { backToBlog: "Back to Blog" },
+    no: { backToBlog: "Tilbake til Blogg", home: "Hjem", blog: "Blogg" },
+    en: { backToBlog: "Back to Blog", home: "Home", blog: "Blog" },
   }[language];
+
+  const publishedLabel = new Date(article.publishDate).toLocaleDateString(
+    language === "no" ? "nb-NO" : "en-GB",
+    { year: "numeric", month: "long", day: "numeric" },
+  );
 
   return (
     <div>
       <section className="py-20 text-white bg-gradient-dark">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <h1 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
+            <nav
+              aria-label={language === "no" ? "Brødsmulesti" : "Breadcrumb"}
+              className="mb-4 text-sm text-gray-300"
+            >
+              <Link href="/" className="hover:text-accent">
+                {t.home}
+              </Link>
+              <span className="mx-2">/</span>
+              <Link href="/blog" className="hover:text-accent">
+                {t.blog}
+              </Link>
+            </nav>
+            <h1 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-headings">
               {article.title[language]}
             </h1>
+            <p className="text-sm text-gray-300">
+              <time dateTime={article.publishDate}>{publishedLabel}</time>
+              <span className="mx-2">·</span>
+              {article.readTime} min {language === "no" ? "lesetid" : "read"}
+              <span className="mx-2">·</span>
+              4Dekk Larvik
+            </p>
           </div>
         </div>
       </section>

@@ -35,6 +35,18 @@
       "file": "tire-wear.json",
       "featured": false,
       "category": "tires"
+    },
+    {
+      "id": "ac-service",
+      "file": "ac-service.json",
+      "featured": false,
+      "category": "maintenance"
+    },
+    {
+      "id": "car-diagnostics",
+      "file": "car-diagnostics.json",
+      "featured": false,
+      "category": "maintenance"
     }
   ],
   "categories": [

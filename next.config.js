@@ -10,7 +10,7 @@ const nextConfig = {
       },
     ],
     formats: ["image/webp"],
-    minimumCacheTTL: 0,
+    minimumCacheTTL: 2678400,
   },
   experimental: {
     optimizePackageImports: ["@heroicons/react", "react-country-flag"],
@@ -75,6 +75,14 @@ const nextConfig = {
           {
             key: "Referrer-Policy",
             value: "origin-when-cross-origin",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
           },
         ],
       },

@@ -1,4 +1,4 @@
-import { Inter, Roboto, Oswald } from "next/font/google";
+import { Roboto, Oswald } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/SiteChrome";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
@@ -6,7 +6,6 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
@@ -51,10 +50,6 @@ export const metadata: Metadata = {
   ),
   alternates: {
     canonical: "/",
-    languages: {
-      no: "/",
-      en: "/?lang=en",
-    },
   },
   openGraph: {
     title: "4Dekk Larvik - Bilverksted og Dekkservice",
@@ -157,7 +152,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} ${roboto.variable} ${oswald.variable} font-body text-text bg-background`}
+        className={`${roboto.variable} ${oswald.variable} font-body text-text bg-background`}
       >
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics

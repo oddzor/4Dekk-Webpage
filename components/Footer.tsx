@@ -24,6 +24,7 @@ export default function Footer() {
   const quickLinks = {
     no: [
       { name: "Hjem", href: "/" },
+      { name: "Tjenester", href: "/tjenester" },
       { name: "Om Oss", href: "/about" },
       { name: "Bestilling", href: "/booking" },
       { name: "Kontakt", href: "/contact" },
@@ -31,6 +32,7 @@ export default function Footer() {
     ],
     en: [
       { name: "Home", href: "/" },
+      { name: "Services", href: "/tjenester" },
       { name: "About Us", href: "/about" },
       { name: "Booking", href: "/booking" },
       { name: "Contact", href: "/contact" },
