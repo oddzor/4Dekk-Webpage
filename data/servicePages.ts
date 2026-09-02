@@ -127,7 +127,7 @@ export const servicePages: ServicePage[] = [
       "Rask hjulskift mellom sommer- og vinterdekk i Larvik. Fra 600,- for personbil. Dekksjekk og lufttrykk inkludert. Bestill time hos 4Dekk på Nanset.",
     h1: "Hjulskift i Larvik",
     intro: [
-      "Hjulskift av ferdig monterte hjul hos 4Dekk Larvik i Larvik koster 600,- for personbil, 650,- for SUV og varebil, og 700,- for bobil – kontroll av lufttrykk er inkludert.",
+      "Hjulskift av ferdig monterte hjul hos 4Dekk i Larvik koster 600,- for personbil, 650,- for SUV og varebil, og 700,- for bobil – kontroll av lufttrykk er inkludert.",
       "Vi tar sesongskiftet mellom sommer- og vinterdekk raskt: bilen løftes på hydraulisk løftebukk, dekkene kontrolleres for slitasje og skader, og hjulboltene trekkes til med riktig moment.",
     ],
     image: "/images/hjulskift.webp",
@@ -167,7 +167,7 @@ export const servicePages: ServicePage[] = [
     faq: [
       {
         q: "Hva koster hjulskift i Larvik?",
-        a: "Hos 4Dekk Larvik i Larvik koster hjulskift av ferdig monterte hjul 600,- for personbil, 650,- for SUV og varebil, og 700,- for bobil.",
+        a: "Hos 4Dekk i Larvik koster hjulskift av ferdig monterte hjul 600,- for personbil, 650,- for SUV og varebil, og 700,- for bobil.",
       },
       {
         q: "Hvor lang tid tar et hjulskift?",
@@ -197,7 +197,7 @@ export const servicePages: ServicePage[] = [
       "4-hjulskontroll og justering av hjulstilling i Larvik. 1875,- med digitalt måleutstyr. Reduser ujevn dekkslitasje og skjevtrekk. Bestill hos 4Dekk Larvik.",
     h1: "Hjulstilling og 4-hjulskontroll i Larvik",
     intro: [
-      "4-hjulskontroll med justering av hjulstilling hos 4Dekk Larvik i Larvik koster 1875,-. Feil hjulstilling gir ujevn og rask dekkslitasje, skjevtrekk og tyngre styring.",
+      "4-hjulskontroll med justering av hjulstilling hos 4Dekk i Larvik koster 1875,-. Feil hjulstilling gir ujevn og rask dekkslitasje, skjevtrekk og tyngre styring.",
       "Vi måler og justerer camber, toe (spissing) og caster på alle fire hjul med digitalt måleutstyr, og sammenligner mot bilprodusentens verdier.",
     ],
     image: "/images/4hjulskontroll.webp",
@@ -263,7 +263,7 @@ export const servicePages: ServicePage[] = [
       "AC-service i Larvik: trykktest, lekkasjesøk og påfylling av kuldemedium. 1500,- for diagnose pluss 3,-/gram gass. Kun biler med R134a. Bestill hos 4Dekk.",
     h1: "AC-service i Larvik",
     intro: [
-      "AC-service hos 4Dekk Larvik i Larvik koster 1500,- for trykktest og diagnose, i tillegg 3,- per gram kuldemedium som fylles på. Vi utfører service på anlegg med kuldemedium R134a, ikke den nyere typen R1234yf.",
+      "AC-service hos 4Dekk i Larvik koster 1500,- for trykktest og diagnose, i tillegg 3,- per gram kuldemedium som fylles på. Vi utfører service på anlegg med kuldemedium R134a, ikke den nyere typen R1234yf.",
       "Dårlig kjøling, vond lukt eller dugg som ikke forsvinner er typiske tegn på at klimaanlegget trenger service. Vi trykktester anlegget, gjør lekkasjesøk og fyller på kuldemedium ved behov.",
     ],
     image: "/images/ACservice.webp",
@@ -325,7 +325,7 @@ export const servicePages: ServicePage[] = [
       "Dekkhotell i Larvik med hjulvask, slitasjekontroll og sesongskifte. Fra 500,-, totalpris per sesong fra 1300,-. Slipp å oppbevare dekk hjemme – 4Dekk på Nanset.",
     h1: "Dekkhotell i Larvik",
     intro: [
-      "Dekkhotell hos 4Dekk Larvik i Larvik koster fra 500,- for oppbevaring. Totalpris per sesong inkludert hjulskift er fra 1300,- for personbil (SUV 1350,-, bobil under 3,5 tonn 1400,-).",
+      "Dekkhotell hos 4Dekk i Larvik koster fra 500,- for oppbevaring. Totalpris per sesong inkludert hjulskift er fra 1300,- for personbil (SUV 1350,-, bobil under 3,5 tonn 1400,-).",
       "Vi oppbevarer sommer- og vinterhjulene dine trygt og tørt mellom sesongene. Hjulene vaskes, kontrolleres for slitasje og skader, og merkes før de settes på lager.",
     ],
     image: "/images/dekkhotell.webp",
@@ -389,7 +389,7 @@ export const servicePages: ServicePage[] = [
       "Bilverksted i Larvik for reparasjon, service og vedlikehold. Konkurransedyktig timepris på 1400,-. Statens vegvesen-godkjent verksted på Nanset. Bestill time.",
     h1: "Bilverksted i Larvik",
     intro: [
-      "Timeprisen for verkstedarbeid hos 4Dekk Larvik i Larvik er 1400,-, og du får alltid et prisoverslag før arbeidet starter. Vi er et fullverdig, Statens vegvesen-godkjent bilverksted som utfører service, reparasjon og vedlikehold på de fleste bilmerker.",
+      "Timeprisen for verkstedarbeid hos 4Dekk i Larvik er 1400,-, og du får alltid et prisoverslag før arbeidet starter. Vi er et fullverdig, Statens vegvesen-godkjent bilverksted som utfører service, reparasjon og vedlikehold på de fleste bilmerker.",
       "Vi har bred erfaring med ulike biltyper og bruker moderne diagnoseutstyr for å finne feil raskt. Deler som bremseklosser, filtre og lignende bør ofte bestilles på forhånd på grunn av begrenset delelager.",
     ],
     image: "/images/brake-repair.webp",
@@ -397,7 +397,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "1400,- / time",
     priceNote:
       "Timepris for verkstedarbeid. Diagnose fra 700,-. Prisoverslag før arbeidet starter.",
-    bookingUrl: "/booking",
+    bookingUrl: "/contact",
     serviceType: "Bilverksted / bilreparasjon og service",
     sections: [
       {
@@ -460,7 +460,7 @@ export const servicePages: ServicePage[] = [
       "Oljeskift og service i Larvik hos 4Dekk. Fra 2000,- for oljeskift med kvalitetsolje, filter og arbeid. Velg servicenivå ved booking. Bestill time på Nanset.",
     h1: "Service og oljeskift i Larvik",
     intro: [
-      "Et oljeskift med olje, oljefilter og arbeid hos 4Dekk Larvik i Larvik starter på rundt 2000,-. Endelig pris avhenger av biltype, oljemengde og oljetype, og av hva du legger til av filtre og vedlikehold.",
+      "Et oljeskift med olje, oljefilter og arbeid hos 4Dekk i Larvik starter på rundt 2000,-. Endelig pris avhenger av biltype, oljemengde og oljetype, og av hva du legger til av filtre og vedlikehold.",
       "Regelmessig service er avgjørende for motorens levetid og ytelse. Ved bestilling velger du servicenivå – fra et enkelt oljeskift til mer omfattende service med flere filtre og kontrollpunkter. Vi bruker kvalitetsoljer og -filtre etter bilprodusentens spesifikasjon.",
     ],
     image: "/images/oil-change.webp",
@@ -524,7 +524,7 @@ export const servicePages: ServicePage[] = [
       "Feilsøking og bildiagnose i Larvik. Fra 700,- for avlesning av feilkoder og systemtest. Moderne diagnoseutstyr og lang mekanikererfaring. Bestill hos 4Dekk.",
     h1: "Feilsøking og bildiagnose i Larvik",
     intro: [
-      "Feilsøking og bildiagnose hos 4Dekk Larvik i Larvik starter på 700,- (ca. 0,5 time). Bestiller du reparasjonen hos oss, trekkes beløpet normalt fra på sluttregningen.",
+      "Feilsøking og bildiagnose hos 4Dekk i Larvik starter på 700,- (ca. 0,5 time). Bestiller du reparasjonen hos oss, trekkes beløpet normalt fra på sluttregningen.",
       "Varsellampe på dashbordet, ulyd, dårlig gange eller uforklarlig høyt forbruk? Vi kombinerer moderne diagnoseutstyr med lang mekanikererfaring for å finne årsaken – ikke bare lese en feilkode.",
     ],
     image: "/images/engine-diagnostics.webp",
@@ -591,7 +591,7 @@ export const servicePages: ServicePage[] = [
       "Dekkservice i Larvik: vi skaffer nye dekk fra de store leverandørene, monterer, balanserer og reparerer. Omlegging fra 1000,-, balansering fra 500,-. 4Dekk på Nanset.",
     h1: "Dekkservice i Larvik",
     intro: [
-      "Dekkservice hos 4Dekk Larvik i Larvik dekker alt fra kjøp av nye dekk til omlegging fra 1000,-, digital balansering fra 500,-, punkteringsreparasjon og lufttrykkontroll.",
+      "Dekkservice hos 4Dekk i Larvik dekker alt fra kjøp av nye dekk til omlegging fra 1000,-, digital balansering fra 500,-, punkteringsreparasjon og lufttrykkontroll.",
       "Vi er først og fremst et dekkverksted. Vi selger og skaffer nye dekk fra de store leverandørene – mange merker og dimensjoner kan hentes inn på kort varsel – og hjelper deg med å velge riktig dekk til bil, kjøremønster og budsjett.",
     ],
     image: "/images/tire-service.webp",
@@ -755,7 +755,7 @@ export const servicePages: ServicePage[] = [
     priceLabel: "Kontakt oss for pristilbud",
     priceNote:
       "Timepris verksted 1400,-. Delekostnad varierer med bilmerke og omfang. Prisoverslag før arbeidet starter.",
-    bookingUrl: "/booking",
+    bookingUrl: "/contact",
     serviceType: "Bremseservice / bremsereparasjon",
     sections: [
       {

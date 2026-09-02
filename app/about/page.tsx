@@ -189,7 +189,7 @@ export default function AboutPage() {
                 </ul>
                 <p className="mt-3 text-sm text-gray-400">
                   Teknisk leder Henrikas har kontrollørgodkjenningen fra Statens
-                  vegvesen. 4DEKK AS (org.nr 916 696 744) er oppført i{" "}
+                  vegvesen. 4DEKK AS (org.nr 916 690 142) er oppført i{" "}
                   <a
                     href="https://www.vegvesen.no/kjoretoy/eie-og-vedlikeholde/finn-godkjent-verksted"
                     target="_blank"

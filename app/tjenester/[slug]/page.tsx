@@ -98,6 +98,8 @@ export default function ServiceLandingPage({
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
 
   const price = parsePriceLabel(page.priceLabel);
+  const isQuote = page.bookingUrl.startsWith("/contact");
+  const ctaLabel = isQuote ? "Be om pristilbud" : "Bestill time";
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -163,7 +165,7 @@ export default function ServiceLandingPage({
   };
 
   return (
-    <div>
+    <div className="pb-24 md:pb-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
@@ -227,7 +229,7 @@ export default function ServiceLandingPage({
                     href={page.bookingUrl}
                     className="text-center btn-accent"
                   >
-                    Bestill time
+                    {ctaLabel}
                   </BookingButton>
                   <a
                     href={`tel:${PHONE}`}
@@ -320,7 +322,7 @@ export default function ServiceLandingPage({
                   href={page.bookingUrl}
                   className="text-center btn-accent"
                 >
-                  Bestill time
+                  {ctaLabel}
                 </BookingButton>
                 <a
                   href={`tel:${PHONE}`}
@@ -403,7 +405,7 @@ export default function ServiceLandingPage({
       </section>
 
       {/* Fast handlingslinje på mobil */}
-      <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 p-2 border-t bg-gray-darker/95 backdrop-blur-sm border-accent/20 md:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 p-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] border-t bg-gray-darker/95 backdrop-blur-sm border-accent/20 md:hidden">
         <a
           href={`tel:${PHONE}`}
           className="flex items-center justify-center flex-1 gap-2 py-3 text-sm font-semibold text-center btn-secondary"
@@ -422,7 +424,7 @@ export default function ServiceLandingPage({
           href={page.bookingUrl}
           className="flex-1 py-3 text-sm font-semibold text-center btn-accent"
         >
-          Bestill {page.name.toLowerCase()}
+          {isQuote ? "Be om pristilbud" : `Bestill ${page.name.toLowerCase()}`}
         </BookingButton>
       </div>
     </div>
