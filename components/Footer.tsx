@@ -188,7 +188,7 @@ export default function Footer() {
           </p>
           <Link
             href="/dekkhotell/login"
-            className="inline-block mt-2 text-xs text-gray-600 transition-colors duration-200 hover:text-gray-400"
+            className="inline-block mt-2 text-xs text-gray-400 transition-colors duration-200 hover:text-gray-200"
           >
             Dekkhotell login
           </Link>

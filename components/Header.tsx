@@ -137,9 +137,8 @@ export default function Header() {
             <a
               href="tel:+4793995555"
               className="text-sm font-semibold whitespace-nowrap text-text hover:text-accent transition-colors duration-200"
-              aria-label="Ring 4Dekk Larvik"
             >
-              📞 93 99 55 55
+              <span aria-hidden="true">📞 </span>Ring 93 99 55 55
             </a>
             <Link
               href="/booking"

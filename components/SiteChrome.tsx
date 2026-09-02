@@ -1,13 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
 import Header from "./Header";
-import FullScreenLoader from "./FullScreenLoader";
-
-const Footer = dynamic(() => import("./Footer"), {
-  ssr: false,
-});
+import Footer from "./Footer";
 
 export default function SiteChrome({
   children,
@@ -18,14 +13,13 @@ export default function SiteChrome({
   const isAdminRoute = pathname?.startsWith("/dekkhotell");
 
   if (isAdminRoute) {
-    return <>{children}</>;
+    return <main>{children}</main>;
   }
 
   return (
     <>
-      <FullScreenLoader />
       <Header />
-      {children}
+      <main id="main">{children}</main>
       <Footer />
     </>
   );
