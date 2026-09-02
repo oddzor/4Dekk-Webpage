@@ -11,7 +11,9 @@ export default function HeroSection() {
     no: {
       title: "Bilverksted og dekkservice i Larvik",
       description:
-        "Statens vegvesen-godkjent bilverksted og kontrollorgan på Nanset. 4,8 ★ av 233 Google-anmeldelser. EU-kontroll 1150,-, hjulskift fra 600,-.",
+        "Statens vegvesen-godkjent bilverksted og kontrollorgan på Nanset.",
+      highlights:
+        "4,8 ★ av 233 Google-anmeldelser  ·  EU-kontroll 1150,-  ·  Verksted timepris 1400,-",
       cta1: "Bestill Time Nå",
       cta2: "Se Våre Tjenester",
       trust1: "Års Erfaring",
@@ -22,6 +24,8 @@ export default function HeroSection() {
       title: "Automotive Repair & Tire Service",
       description:
         "Quality work, competitive pricing and excellent customer service. Your partner for car and tire service in Larvik.",
+      highlights:
+        "4.8 ★ from 233 Google reviews  ·  EU inspection 1150,-  ·  Workshop rate 1400,-",
       cta1: "Book Appointment Now",
       cta2: "See Our Services",
       trust1: "Years Experience",
@@ -69,8 +73,11 @@ export default function HeroSection() {
           {t.title}
         </h1>
 
-        <p className="max-w-2xl mx-auto mb-8 text-base text-gray-200 md:mb-12 md:text-xl text-shadow">
+        <p className="max-w-2xl mx-auto mb-3 text-base text-gray-200 md:text-xl text-shadow">
           {t.description}
+        </p>
+        <p className="max-w-2xl mx-auto mb-8 text-sm font-medium text-accent md:mb-12 md:text-base text-shadow">
+          {t.highlights}
         </p>
 
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
