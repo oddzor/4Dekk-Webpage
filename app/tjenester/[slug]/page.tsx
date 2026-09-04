@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { servicePages, getServicePage } from "@/data/servicePages";
 import { getBlogArticleBySlug } from "@/utils/dataLoader";
 import businessData from "@/data/business.json";
+import LazyMapEmbed from "@/components/LazyMapEmbed";
 
 const SITE_URL = "https://www.4dekk.no";
 const PHONE = businessData.contact.phoneE164;
@@ -348,15 +349,11 @@ export default function ServiceLandingPage({
                 </a>
               </div>
               <div className="mt-6 overflow-hidden rounded-lg">
-                <iframe
+                <LazyMapEmbed
                   src={businessData.location.googleMapsEmbedUrl}
                   title="Kart til 4Dekk Larvik"
-                  width="100%"
-                  height="240"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0"
-                ></iframe>
+                  height={240}
+                />
               </div>
               <p className="mt-3 text-sm">
                 <a

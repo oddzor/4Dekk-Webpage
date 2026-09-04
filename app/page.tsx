@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import PricingSection from "@/components/PricingSection";
 import GoogleReviewsSection from "@/components/GoogleReviews";
 import HomeClient from "@/components/HomeClient";
+import LazyMapEmbed from "@/components/LazyMapEmbed";
 import businessData from "@/data/business.json";
 
 export const metadata: Metadata = {
@@ -160,15 +161,11 @@ export default function Home() {
               </div>
             </div>
             <div className="overflow-hidden border rounded-2xl border-white/10 shadow-xl">
-              <iframe
+              <LazyMapEmbed
                 src={businessData.location.googleMapsEmbedUrl}
                 title="Kart til 4Dekk Larvik"
-                width="100%"
-                height="300"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="border-0"
-              ></iframe>
+                height={300}
+              />
             </div>
           </div>
         </div>

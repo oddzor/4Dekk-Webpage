@@ -6,6 +6,7 @@ import { useLanguage } from "../../contexts/LanguageContext";
 import ContactForm from "../../components/ContactForm";
 import DynamicMetadata from "../../components/DynamicMetadata";
 import { trackPhoneCall } from "../../components/GoogleAnalytics";
+import LazyMapEmbed from "../../components/LazyMapEmbed";
 
 export default function ContactPage() {
   const { language } = useLanguage();
@@ -227,15 +228,10 @@ export default function ContactPage() {
               <div className="mt-8">
                 <div className="overflow-hidden card-dark">
                   <div className="h-[500px] lg:h-[600px] relative">
-                    <iframe
+                    <LazyMapEmbed
                       src={businessData.location.googleMapsEmbedUrl}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
                       title={t.mapTitle}
+                      height="100%"
                     />
                   </div>
                 </div>

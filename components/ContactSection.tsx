@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Icon from "./Icon";
+import LazyMapEmbed from "./LazyMapEmbed";
 import businessData from "../data/business.json";
 
 export default function ContactSection() {
@@ -151,15 +152,10 @@ export default function ContactSection() {
           <div className="relative">
             <div className="overflow-hidden card-dark">
               <div className="h-96 lg:h-[500px] relative">
-                <iframe
+                <LazyMapEmbed
                   src={businessData.location.googleMapsEmbedUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
                   title="4Dekk Larvik Plassering"
+                  height="100%"
                 />
               </div>
             </div>
