@@ -145,24 +145,19 @@
   }
   html,
   body {
-    width: 60mm !important;
-    height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
-    overflow: hidden !important;
   }
-  body * {
-    visibility: hidden;
-  }
-  #dekkhotell-printable,
-  #dekkhotell-printable * {
-    visibility: visible;
+  /* iOS Safari/WebKit (incl. "Chrome" on iPhone, which is WebKit under the
+     hood) unreliably renders position:fixed content when printing, so
+     instead of the usual visibility trick we remove every other top-level
+     element from the page and let the label render in normal flow. */
+  body > :not(#dekkhotell-printable) {
+    display: none !important;
   }
   #dekkhotell-printable {
-    position: fixed !important;
-    left: 0 !important;
-    top: 0 !important;
-    right: auto !important;
+    display: flex !important;
+    position: static !important;
     margin: 0 !important;
     width: 60mm !important;
     height: 100mm !important;
