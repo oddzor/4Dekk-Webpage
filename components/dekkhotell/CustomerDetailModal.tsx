@@ -39,19 +39,28 @@ export default function CustomerDetailModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4 print:h-0 print:overflow-hidden print:bg-white print:p-0"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4 print:bg-white print:p-0"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-[67.2rem] print:h-0 print:overflow-hidden"
+        className="relative w-full max-w-[67.2rem]"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto rounded-lg card-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row print:h-0 print:max-h-0 print:overflow-hidden print:bg-white print:p-0">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Lukk"
+          className="absolute z-20 items-center justify-center hidden w-8 h-8 text-white bg-gray-800 border border-gray-600 rounded-full -top-3 -right-3 hover:bg-gray-700 sm:flex print:hidden"
+        >
+          ✕
+        </button>
+
+        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto rounded-lg card-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row print:bg-white print:p-0">
           <button
             type="button"
             onClick={onClose}
             aria-label="Lukk"
-            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 text-white bg-gray-800 border border-gray-600 rounded-full shadow-lg top-0 hover:bg-gray-700 sm:absolute sm:-top-3 sm:-right-3 sm:m-0 sm:w-8 sm:h-8 print:hidden"
+            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 text-white bg-gray-800 border border-gray-600 rounded-full shadow-lg top-0 hover:bg-gray-700 sm:hidden print:hidden"
           >
             ✕
           </button>
@@ -133,7 +142,7 @@ export default function CustomerDetailModal({
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 mt-4 sm:flex-row sm:flex-wrap sm:gap-3 print:hidden">
+            <div className="grid grid-cols-2 gap-2 mt-4 sm:flex sm:flex-row sm:flex-wrap sm:gap-3 print:hidden">
               {(entry.tire_type === "sommer" ||
                 entry.tire_type === "vinter") && (
                 <button
@@ -163,11 +172,18 @@ export default function CustomerDetailModal({
               >
                 Slett
               </button>
+              <button
+                type="button"
+                onClick={() => window.print()}
+                className="px-4 py-2.5 text-sm btn-accent sm:hidden"
+              >
+                Print
+              </button>
             </div>
           </div>
 
-          {/* Label preview + print is a shop-counter (desktop) action; hidden on phones to keep the sheet compact. */}
-          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5">
+          {/* Label preview + print is a shop-counter (desktop) action; hidden on phones to keep the sheet compact, but always rendered for print. */}
+          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5 print:flex">
             <div
               id="dekkhotell-printable"
               className="relative box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white rounded-lg shrink-0 print:rounded-none"
