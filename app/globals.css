@@ -147,6 +147,8 @@
   body {
     margin: 0 !important;
     padding: 0 !important;
+    height: 100mm !important;
+    overflow: hidden !important;
   }
   /* iOS Safari/WebKit (incl. "Chrome" on iPhone, which is WebKit under the
      hood) unreliably renders position:fixed content when printing, so
@@ -161,6 +163,7 @@
     margin: 0 !important;
     width: 60mm !important;
     height: 100mm !important;
+    overflow: hidden !important;
     box-sizing: border-box !important;
   }
 }
