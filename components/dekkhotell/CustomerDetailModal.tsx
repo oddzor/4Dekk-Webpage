@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { createPortal } from "react-dom";
 import type { DekkhotellEntry } from "@/lib/supabase/types";
 
 interface CustomerDetailModalProps {
@@ -76,94 +76,6 @@ function LabelContent({
   );
 }
 
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-// The main document's print pipeline can't be made reliable across mobile
-// browsers (iOS "Chrome" is WebKit under the hood, and WebKit's printing
-// support for position:fixed and page-break math is buggy/inconsistent).
-// So printing renders a tiny, self-contained document into a hidden iframe
-// and prints that instead — nothing about the app's own layout, hidden
-// elements, or CSS can interfere with it.
-function buildLabelDocument(
-  entry: DekkhotellEntry,
-  tireLabel: string,
-  today: string,
-): string {
-  const position = escapeHtml(entry.position || "—");
-  const name = escapeHtml(entry.name);
-  const reg = escapeHtml(entry.registration_number || "—");
-  const tire = escapeHtml(tireLabel);
-  const imageUrl = `${window.location.origin}/android-chrome-192x192.png`;
-
-  return `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />
-<title>Etikett</title>
-<style>
-  @page { size: 60mm 100mm; margin: 0; }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 60mm;
-    height: 100mm;
-    overflow: hidden;
-  }
-  body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2mm;
-    padding: 3mm;
-    text-align: center;
-    background: #ffffff;
-    color: #000000;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  }
-  .position {
-    position: absolute;
-    top: 2mm;
-    left: 0;
-    right: 0;
-    padding: 0 3mm;
-    font-size: 6mm;
-    font-weight: 700;
-  }
-  .brand { display: flex; align-items: center; gap: 1mm; }
-  .brand img { width: 5mm; height: 5mm; }
-  .brand span { font-size: 4mm; font-weight: 700; }
-  .name { font-size: 9mm; font-weight: 700; line-height: 1.1; margin: 0; }
-  hr { width: 20mm; border: none; border-top: 1px solid #9ca3af; margin: 0; }
-  .reg { font-size: 9mm; font-weight: 700; line-height: 1; margin: 0; }
-  .tire { font-size: 4.5mm; margin: 0; }
-  .date { font-size: 3.25mm; color: #6b7280; margin: 1mm 0 0; }
-</style>
-</head>
-<body>
-  <p class="position">${position}</p>
-  <div class="brand">
-    <img src="${imageUrl}" alt="" />
-    <span>4Dekk AS</span>
-  </div>
-  <p class="name">${name}</p>
-  <hr />
-  <p class="reg">${reg}</p>
-  <p class="tire">${tire}</p>
-  <p class="date">${today}</p>
-</body>
-</html>`;
-}
-
 export default function CustomerDetailModal({
   entry,
   onClose,
@@ -174,26 +86,10 @@ export default function CustomerDetailModal({
 }: CustomerDetailModalProps) {
   const tireLabel = entry.tire_type ? TIRE_TYPE_LABELS[entry.tire_type] : "—";
   const today = new Date().toLocaleDateString("no-NO");
-  const printFrameRef = useRef<HTMLIFrameElement>(null);
-
-  const handlePrint = () => {
-    const iframe = printFrameRef.current;
-    const doc = iframe?.contentDocument;
-    if (!iframe || !doc) return;
-
-    iframe.onload = () => {
-      iframe.contentWindow?.focus();
-      iframe.contentWindow?.print();
-    };
-
-    doc.open();
-    doc.write(buildLabelDocument(entry, tireLabel, today));
-    doc.close();
-  };
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4 print:bg-white print:p-0"
       onClick={onClose}
     >
       <div
@@ -204,17 +100,17 @@ export default function CustomerDetailModal({
           type="button"
           onClick={onClose}
           aria-label="Lukk"
-          className="absolute z-20 items-center justify-center hidden w-8 h-8 text-white bg-gray-800 border border-gray-600 rounded-full -top-3 -right-3 hover:bg-gray-700 sm:flex"
+          className="absolute z-20 items-center justify-center hidden w-8 h-8 text-white bg-gray-800 border border-gray-600 rounded-full -top-3 -right-3 hover:bg-gray-700 sm:flex print:hidden"
         >
           ✕
         </button>
 
-        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto rounded-lg card-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row">
+        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto rounded-lg card-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row print:bg-white print:p-0">
           <button
             type="button"
             onClick={onClose}
             aria-label="Lukk"
-            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 text-white bg-gray-800 border border-gray-600 rounded-full shadow-lg top-0 hover:bg-gray-700 sm:hidden"
+            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 text-white bg-gray-800 border border-gray-600 rounded-full shadow-lg top-0 hover:bg-gray-700 sm:hidden print:hidden"
           >
             ✕
           </button>
@@ -295,7 +191,7 @@ export default function CustomerDetailModal({
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 mt-4 sm:flex sm:flex-row sm:flex-wrap sm:gap-3">
+            <div className="grid grid-cols-2 gap-2 mt-4 sm:flex sm:flex-row sm:flex-wrap sm:gap-3 print:hidden">
               {(entry.tire_type === "sommer" ||
                 entry.tire_type === "vinter") && (
                 <button
@@ -327,7 +223,7 @@ export default function CustomerDetailModal({
               </button>
               <button
                 type="button"
-                onClick={handlePrint}
+                onClick={() => window.print()}
                 className="px-4 py-2.5 text-sm btn-accent sm:hidden"
               >
                 Print
@@ -335,7 +231,7 @@ export default function CustomerDetailModal({
             </div>
           </div>
 
-          {/* Label preview is a shop-counter (desktop) convenience; hidden on phones to keep the sheet compact. Printing itself never prints this page — see buildLabelDocument. */}
+          {/* Label preview is a shop-counter (desktop) convenience; hidden on phones to keep the sheet compact. It's decorative only — the actual print source below is portaled to <body> so it isn't affected by this panel's display state. */}
           <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5">
             <div
               aria-hidden="true"
@@ -346,8 +242,8 @@ export default function CustomerDetailModal({
 
             <button
               type="button"
-              onClick={handlePrint}
-              className="w-full py-2 text-sm btn-accent"
+              onClick={() => window.print()}
+              className="w-full py-2 text-sm btn-accent print:hidden"
             >
               Print
             </button>
@@ -355,18 +251,18 @@ export default function CustomerDetailModal({
         </div>
       </div>
 
-      <iframe
-        ref={printFrameRef}
-        title="Etikett"
-        style={{
-          position: "fixed",
-          left: "-9999px",
-          top: 0,
-          width: 0,
-          height: 0,
-          border: "none",
-        }}
-      />
+      {/* Actual print source: portaled to <body> so it's a direct sibling of the document, not nested inside this modal's overflow/hidden ancestors — those are what caused mobile printing to render blank. */}
+      {typeof document !== "undefined" &&
+        createPortal(
+          <div
+            id="dekkhotell-printable"
+            className="fixed box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white print:rounded-none"
+            style={{ left: "-9999px", top: 0 }}
+          >
+            <LabelContent entry={entry} tireLabel={tireLabel} today={today} />
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }

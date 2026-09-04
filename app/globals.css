@@ -282,3 +282,33 @@
     }
   }
 }
+
+@media print {
+  @page {
+    size: 60mm 100mm;
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100mm !important;
+    overflow: hidden !important;
+  }
+  /* iOS Safari/WebKit (incl. "Chrome" on iPhone, which is WebKit under the
+     hood) unreliably renders position:fixed content when printing, so
+     instead of the usual visibility trick we remove every other top-level
+     element from the page and let the label render in normal flow. */
+  body > :not(#dekkhotell-printable) {
+    display: none !important;
+  }
+  #dekkhotell-printable {
+    display: flex !important;
+    position: static !important;
+    margin: 0 !important;
+    width: 60mm !important;
+    height: 100mm !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+}
