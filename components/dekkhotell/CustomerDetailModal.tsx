@@ -1,5 +1,6 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import type { DekkhotellEntry } from "@/lib/supabase/types";
 
 interface CustomerDetailModalProps {
@@ -23,6 +24,55 @@ function Field({ label, value }: { label: string; value: React.ReactNode }) {
       <p className="text-xs font-medium text-gray-400">{label}</p>
       <p className="text-sm text-white">{value || "—"}</p>
     </div>
+  );
+}
+
+function LabelContent({
+  entry,
+  tireLabel,
+  today,
+}: {
+  entry: DekkhotellEntry;
+  tireLabel: string;
+  today: string;
+}) {
+  return (
+    <>
+      <p
+        className="absolute top-[2mm] left-0 right-0 px-[3mm] text-[6mm] font-bold text-center"
+        style={{ color: "#000000" }}
+      >
+        {entry.position || "—"}
+      </p>
+      <div className="flex items-center gap-[1mm]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/android-chrome-192x192.png"
+          alt=""
+          className="w-[5mm] h-[5mm]"
+        />
+        <p className="text-[4mm] font-bold" style={{ color: "#000000" }}>
+          4Dekk AS
+        </p>
+      </div>
+      <p
+        className="text-[9mm] font-bold leading-tight"
+        style={{ color: "#000000" }}
+      >
+        {entry.name}
+      </p>
+      <hr className="w-[20mm] border-t border-gray-400" />
+      <p
+        className="text-[9mm] font-bold leading-none"
+        style={{ color: "#000000" }}
+      >
+        {entry.registration_number || "—"}
+      </p>
+      <p className="text-[4.5mm]" style={{ color: "#000000" }}>
+        {tireLabel}
+      </p>
+      <p className="text-[3.25mm] text-gray-500 mt-[1mm]">{today}</p>
+    </>
   );
 }
 
@@ -181,49 +231,13 @@ export default function CustomerDetailModal({
             </div>
           </div>
 
-          {/* Label preview + print is a shop-counter (desktop) action; hidden on phones to keep the sheet compact, but always rendered for print. */}
-          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5 print:flex">
+          {/* Label preview is a shop-counter (desktop) convenience; hidden on phones to keep the sheet compact. It's decorative only — the actual print source below is portaled to <body> so it isn't affected by this panel's display state. */}
+          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5">
             <div
-              id="dekkhotell-printable"
-              className="relative box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white rounded-lg shrink-0 print:rounded-none"
+              aria-hidden="true"
+              className="relative box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white rounded-lg shrink-0"
             >
-              <p
-                className="absolute top-[2mm] left-0 right-0 px-[3mm] text-[6mm] font-bold text-center"
-                style={{ color: "#000000" }}
-              >
-                {entry.position || "—"}
-              </p>
-              <div className="flex items-center gap-[1mm]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/android-chrome-192x192.png"
-                  alt=""
-                  className="w-[5mm] h-[5mm]"
-                />
-                <p
-                  className="text-[4mm] font-bold"
-                  style={{ color: "#000000" }}
-                >
-                  4Dekk AS
-                </p>
-              </div>
-              <p
-                className="text-[9mm] font-bold leading-tight"
-                style={{ color: "#000000" }}
-              >
-                {entry.name}
-              </p>
-              <hr className="w-[20mm] border-t border-gray-400" />
-              <p
-                className="text-[9mm] font-bold leading-none"
-                style={{ color: "#000000" }}
-              >
-                {entry.registration_number || "—"}
-              </p>
-              <p className="text-[4.5mm]" style={{ color: "#000000" }}>
-                {tireLabel}
-              </p>
-              <p className="text-[3.25mm] text-gray-500 mt-[1mm]">{today}</p>
+              <LabelContent entry={entry} tireLabel={tireLabel} today={today} />
             </div>
 
             <button
@@ -236,6 +250,19 @@ export default function CustomerDetailModal({
           </div>
         </div>
       </div>
+
+      {/* Actual print source: portaled to <body> so it's a direct sibling of the document, not nested inside this modal's overflow/hidden ancestors — those are what caused mobile printing to render blank. */}
+      {typeof document !== "undefined" &&
+        createPortal(
+          <div
+            id="dekkhotell-printable"
+            className="fixed box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white print:rounded-none"
+            style={{ left: "-9999px", top: 0 }}
+          >
+            <LabelContent entry={entry} tireLabel={tireLabel} today={today} />
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }
