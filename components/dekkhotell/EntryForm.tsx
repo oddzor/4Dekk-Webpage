@@ -41,7 +41,6 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
       dimensions_sommer: entry?.dimensions_sommer ?? "",
       dimensions_vinter: entry?.dimensions_vinter ?? "",
       position: entry?.position ?? "",
-      address: entry?.address ?? "",
       notes: entry?.notes ?? "",
       contacted_about_worn_tires: entry?.contacted_about_worn_tires ?? false,
       contacted_about_worn_tires_at:
@@ -67,7 +66,6 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
       dimensions_sommer: data.dimensions_sommer?.trim() || null,
       dimensions_vinter: data.dimensions_vinter?.trim() || null,
       position: data.position?.trim() || null,
-      address: data.address?.trim() || null,
       notes: data.notes?.trim() || null,
       contacted_about_worn_tires: Boolean(data.contacted_about_worn_tires),
       contacted_about_worn_tires_at: data.contacted_about_worn_tires
@@ -227,16 +225,6 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
                 </label>
               </div>
             </div>
-          </div>
-
-          <div>
-            <label className={labelClass}>Adresse</label>
-            <textarea
-              rows={1}
-              {...register("address")}
-              className={`${inputClass} resize-none`}
-              placeholder="Kundens adresse"
-            />
           </div>
 
           <div className="grid grid-cols-2 gap-3">

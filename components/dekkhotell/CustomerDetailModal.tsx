@@ -19,7 +19,7 @@ const TIRE_TYPE_LABELS: Record<string, string> = {
 
 function Field({ label, value }: { label: string; value: React.ReactNode }) {
   return (
-    <div>
+    <div className={value ? undefined : "hidden sm:block"}>
       <p className="text-xs font-medium text-gray-400">{label}</p>
       <p className="text-sm text-white">{value || "—"}</p>
     </div>
@@ -115,7 +115,6 @@ export default function CustomerDetailModal({
                 />
               </div>
 
-              <Field label="Adresse" value={entry.address} />
               <Field label="Notater" value={entry.notes} />
 
               <div className="grid grid-cols-2 gap-3">
