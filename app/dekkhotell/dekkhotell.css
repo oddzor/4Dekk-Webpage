@@ -1,0 +1,219 @@
+/* ===========================================================
+   Dekkhotell – designsystem
+   Ported from dekkhotell-styles.css (Tailwind v4 syntax) to
+   plain CSS compatible with this project's Tailwind v3 setup.
+   Everything is scoped under .dh-theme so it only applies to
+   the /dekkhotell tool and never touches the public site.
+   =========================================================== */
+
+.dh-theme {
+  /* Bakgrunn og overflater */
+  --dh-bg: oklch(0.17 0.008 260);
+  --dh-surface: oklch(0.215 0.009 260);
+  --dh-surface-2: oklch(0.26 0.01 260);
+
+  /* Kanter */
+  --dh-line: oklch(1 0 0 / 8%);
+  --dh-line-strong: oklch(1 0 0 / 16%);
+
+  /* Tekst */
+  --dh-text: oklch(0.83 0.008 260);
+  --dh-headings: oklch(0.985 0 0);
+  --dh-muted: oklch(0.66 0.012 260);
+
+  /* Aksent */
+  --dh-accent: oklch(0.8 0.16 82);
+  --dh-accent-soft: oklch(0.8 0.16 82 / 14%);
+
+  /* Tilstandsfarger */
+  --dh-danger: oklch(0.68 0.19 22);
+  --dh-warn: oklch(0.82 0.16 88);
+  --dh-info: oklch(0.75 0.12 235);
+
+  /* Diverse */
+  --dh-radius: 0.875rem;
+  --dh-shadow: 0 1px 2px oklch(0 0 0 / 40%), 0 8px 24px -12px oklch(0 0 0 / 60%);
+  --dh-shadow-lg: 0 24px 60px -20px oklch(0 0 0 / 75%);
+  --dh-font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  background-color: var(--dh-bg);
+  color: var(--dh-text);
+  font-family: var(--dh-font-body);
+}
+
+.dh-theme .container-custom {
+    width: 100%;
+    max-width: 82rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .dh-theme .container-custom {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  .dh-theme .card-dark {
+    background-color: var(--dh-surface);
+    border: 1px solid var(--dh-line);
+    border-radius: var(--dh-radius);
+    box-shadow: var(--dh-shadow);
+  }
+
+  .dh-theme .card-hover {
+    transition: background-color 0.18s ease, border-color 0.18s ease,
+      transform 0.18s ease;
+  }
+  .dh-theme .card-hover:hover {
+    background-color: var(--dh-surface-2);
+    border-color: var(--dh-line-strong);
+  }
+
+  .dh-theme .sheet-dark {
+    background-color: var(--dh-surface);
+    border: 1px solid var(--dh-line-strong);
+    border-radius: 1.15rem;
+    box-shadow: var(--dh-shadow-lg);
+  }
+
+  .dh-theme .btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.625rem 1rem;
+    white-space: nowrap;
+    transition: background-color 0.18s ease, border-color 0.18s ease,
+      color 0.18s ease, opacity 0.18s ease;
+  }
+  .dh-theme .btn-base:focus-visible {
+    outline: 2px solid var(--dh-accent);
+    outline-offset: 2px;
+  }
+  .dh-theme .btn-base:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .dh-theme .btn-accent {
+    background-color: var(--dh-accent);
+    color: oklch(0.2 0.02 82);
+    border: 1px solid transparent;
+  }
+  .dh-theme .btn-accent:hover:not(:disabled) {
+    background-color: oklch(0.86 0.16 84);
+  }
+
+  .dh-theme .btn-ghost {
+    background-color: transparent;
+    color: var(--dh-headings);
+    border: 1px solid var(--dh-line-strong);
+  }
+  .dh-theme .btn-ghost:hover:not(:disabled) {
+    background-color: var(--dh-surface-2);
+  }
+
+  .dh-theme .btn-danger-ghost {
+    background-color: transparent;
+    color: var(--dh-danger);
+    border: 1px solid oklch(0.68 0.19 22 / 40%);
+  }
+  .dh-theme .btn-danger-ghost:hover:not(:disabled) {
+    background-color: oklch(0.68 0.19 22 / 14%);
+  }
+
+  .dh-theme .btn-danger {
+    background-color: oklch(0.55 0.2 25);
+    color: oklch(0.99 0 0);
+    border: 1px solid transparent;
+  }
+  .dh-theme .btn-danger:hover:not(:disabled) {
+    background-color: oklch(0.61 0.21 25);
+  }
+
+  .dh-theme .input-dark {
+    width: 100%;
+    border-radius: 0.75rem;
+    background-color: oklch(0.19 0.008 260);
+    border: 1px solid var(--dh-line-strong);
+    color: var(--dh-headings);
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .dh-theme .input-dark::placeholder {
+    color: var(--dh-muted);
+  }
+  .dh-theme .input-dark:hover {
+    border-color: oklch(1 0 0 / 26%);
+  }
+  .dh-theme .input-dark:focus {
+    outline: none;
+    border-color: var(--dh-accent);
+    box-shadow: 0 0 0 3px var(--dh-accent-soft);
+  }
+
+  .dh-theme .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 999px;
+    border: 1px solid var(--dh-line-strong);
+    background-color: oklch(1 0 0 / 5%);
+    padding: 0.15rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--dh-text);
+    white-space: nowrap;
+  }
+
+  .dh-theme .chip-vinter {
+    border-color: oklch(0.75 0.12 235 / 45%);
+    background-color: oklch(0.75 0.12 235 / 14%);
+    color: oklch(0.86 0.09 235);
+  }
+
+  .dh-theme .chip-sommer {
+    border-color: oklch(0.82 0.16 88 / 45%);
+    background-color: oklch(0.82 0.16 88 / 14%);
+    color: oklch(0.9 0.12 88);
+  }
+
+  .dh-theme .chip-danger {
+    border-color: oklch(0.68 0.19 22 / 45%);
+    background-color: oklch(0.68 0.19 22 / 14%);
+    color: oklch(0.82 0.13 22);
+  }
+
+  .dh-theme .label-dark {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dh-muted);
+  }
+
+  .dh-theme .overlay-dark {
+    background-color: oklch(0.12 0.01 260 / 78%);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  .dh-theme .alert-danger {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid oklch(0.68 0.19 22 / 40%);
+    background-color: oklch(0.68 0.19 22 / 14%);
+    color: oklch(0.82 0.13 22);
+  }
+

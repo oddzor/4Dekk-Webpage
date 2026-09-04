@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import "./dekkhotell.css";
 
 export const metadata: Metadata = {
   title: "Dekkhotell",
@@ -23,7 +24,7 @@ export default function DekkhotellLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-[100dvh] bg-background text-text font-body">
+    <div className="dh-theme min-h-[100dvh]">
       {children}
     </div>
   );

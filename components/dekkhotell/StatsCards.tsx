@@ -77,16 +77,18 @@ export default function StatsCards({
             key={stat.label}
             type="button"
             onClick={() => onFilterChange(isActive ? "all" : stat.filter)}
-            className={`flex items-center gap-2 p-3 text-left rounded-lg card-dark transition-colors duration-200 hover:bg-gray-800/70 sm:gap-3 sm:p-4 ${
-              isActive ? "ring-2 ring-accent" : ""
+            className={`flex items-center gap-2 p-3 text-left card-dark card-hover sm:gap-3 sm:p-4 ${
+              isActive ? "ring-2 ring-[var(--dh-accent)]" : ""
             }`}
           >
             <span className="text-xl sm:text-2xl">{stat.icon}</span>
             <div>
-              <p className="text-xl font-bold leading-tight text-headings sm:text-2xl">
+              <p className="text-xl font-bold leading-tight text-[var(--dh-headings)] sm:text-2xl">
                 {stat.value}
               </p>
-              <p className="text-xs text-gray-400 sm:text-sm">{stat.label}</p>
+              <p className="text-xs text-[var(--dh-muted)] sm:text-sm">
+                {stat.label}
+              </p>
             </div>
           </button>
         );

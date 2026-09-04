@@ -41,14 +41,14 @@ export default function DekkhotellLoginPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen px-4">
-      <div className="w-full max-w-md p-8 rounded-lg card-dark">
-        <h1 className="mb-6 text-2xl text-center text-headings">
+      <div className="w-full max-w-md p-8 sheet-dark">
+        <h1 className="mb-6 text-2xl text-center text-[var(--dh-headings)]">
           Dekkhotell Innlogging
         </h1>
 
         {errorMessage && (
-          <div className="p-4 mb-5 border border-red-500 rounded-lg bg-red-900/20">
-            <p className="text-sm text-red-300">{errorMessage}</p>
+          <div className="mb-5 alert-danger">
+            <p className="text-sm">{errorMessage}</p>
           </div>
         )}
 

@@ -21,8 +21,8 @@ const TIRE_TYPE_LABELS: Record<string, string> = {
 function Field({ label, value }: { label: string; value: React.ReactNode }) {
   return (
     <div className={value ? undefined : "hidden sm:block"}>
-      <p className="text-xs font-medium text-gray-400">{label}</p>
-      <p className="text-sm text-white">{value || "—"}</p>
+      <p className="text-xs font-medium text-[var(--dh-muted)]">{label}</p>
+      <p className="text-sm text-[var(--dh-headings)]">{value || "—"}</p>
     </div>
   );
 }
@@ -89,7 +89,7 @@ export default function CustomerDetailModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4 print:bg-white print:p-0"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 overlay-dark sm:p-4 print:bg-white print:p-0"
       onClick={onClose}
     >
       <div
@@ -100,25 +100,27 @@ export default function CustomerDetailModal({
           type="button"
           onClick={onClose}
           aria-label="Lukk"
-          className="absolute z-20 items-center justify-center hidden w-8 h-8 text-white bg-gray-800 border border-gray-600 rounded-full -top-3 -right-3 hover:bg-gray-700 sm:flex print:hidden"
+          className="absolute z-20 items-center justify-center hidden w-8 h-8 btn-base btn-ghost !p-0 rounded-full -top-3 -right-3 sm:flex print:hidden"
         >
           ✕
         </button>
 
-        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto rounded-lg card-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row print:bg-white print:p-0">
+        <div className="relative flex flex-col gap-4 p-3 overflow-y-auto sheet-dark max-h-[85dvh] sm:gap-5 sm:p-5 sm:max-h-[95vh] sm:flex-row print:bg-white print:p-0">
           <button
             type="button"
             onClick={onClose}
             aria-label="Lukk"
-            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 text-white bg-gray-800 border border-gray-600 rounded-full shadow-lg top-0 hover:bg-gray-700 sm:hidden print:hidden"
+            className="sticky z-20 flex items-center self-end justify-center flex-shrink-0 w-10 h-10 -mt-1 -mb-2 btn-base btn-ghost !p-0 rounded-full shadow-lg top-0 sm:hidden print:hidden"
           >
             ✕
           </button>
 
           <div className="flex-1">
-            <h2 className="mb-1 text-lg text-headings">{entry.name}</h2>
+            <h2 className="mb-1 text-lg text-[var(--dh-headings)]">
+              {entry.name}
+            </h2>
             {entry.updated_at && (
-              <p className="mb-3 text-xs text-gray-500">
+              <p className="mb-3 text-xs text-[var(--dh-muted)]">
                 Sist endret:{" "}
                 {new Date(entry.updated_at).toLocaleString("no-NO", {
                   day: "2-digit",
@@ -131,8 +133,8 @@ export default function CustomerDetailModal({
             )}
 
             {Number(entry.amount_owed) > 0 && (
-              <div className="p-3 mb-3 border border-red-500 rounded-lg bg-red-900/30">
-                <p className="text-sm font-medium text-red-300">
+              <div className="p-3 mb-3 alert-danger">
+                <p className="text-sm font-medium">
                   ⚠️ Kunden skylder{" "}
                   {Number(entry.amount_owed).toLocaleString("no-NO")} kr
                 </p>
@@ -154,7 +156,24 @@ export default function CustomerDetailModal({
               </div>
 
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                <Field label="Type dekk" value={tireLabel} />
+                <div>
+                  <p className="text-xs font-medium text-[var(--dh-muted)]">
+                    Type dekk
+                  </p>
+                  <p className="mt-0.5">
+                    <span
+                      className={`chip ${
+                        entry.tire_type === "vinter"
+                          ? "chip-vinter"
+                          : entry.tire_type === "sommer"
+                            ? "chip-sommer"
+                            : ""
+                      }`}
+                    >
+                      {tireLabel}
+                    </span>
+                  </p>
+                </div>
                 <Field
                   label="☀️ Sommer dim."
                   value={entry.dimensions_sommer}
@@ -198,7 +217,7 @@ export default function CustomerDetailModal({
                   type="button"
                   onClick={onSwitchTireType}
                   disabled={isSwitchingTireType}
-                  className="px-4 py-2.5 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg sm:flex-1 sm:px-6 sm:py-2 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-base btn-ghost sm:flex-1"
                 >
                   {isSwitchingTireType
                     ? "Bytter..."
@@ -210,21 +229,21 @@ export default function CustomerDetailModal({
               <button
                 type="button"
                 onClick={onEdit}
-                className="px-4 py-2.5 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg sm:flex-1 sm:px-6 sm:py-2 hover:bg-gray-800"
+                className="btn-base btn-ghost sm:flex-1"
               >
                 Rediger
               </button>
               <button
                 type="button"
                 onClick={onDelete}
-                className="px-4 py-2.5 text-sm font-medium text-red-400 transition-colors duration-200 border rounded-lg border-red-700/50 sm:flex-1 sm:px-6 sm:py-2 hover:bg-red-900/30"
+                className="btn-base btn-danger-ghost sm:flex-1"
               >
                 Slett
               </button>
               <button
                 type="button"
                 onClick={() => window.print()}
-                className="px-4 py-2.5 text-sm btn-accent sm:hidden"
+                className="btn-base btn-accent sm:hidden"
               >
                 Print
               </button>
@@ -232,7 +251,7 @@ export default function CustomerDetailModal({
           </div>
 
           {/* Label preview is a shop-counter (desktop) convenience; hidden on phones to keep the sheet compact. It's decorative only — the actual print source below is portaled to <body> so it isn't affected by this panel's display state. */}
-          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-gray-700 sm:pl-5">
+          <div className="flex-col items-center hidden gap-3 sm:flex sm:border-l sm:border-[var(--dh-line-strong)] sm:pl-5">
             <div
               aria-hidden="true"
               className="relative box-border w-[60mm] h-[100mm] flex flex-col items-center justify-center gap-[2mm] p-[3mm] text-center bg-white rounded-lg shrink-0"
@@ -243,7 +262,7 @@ export default function CustomerDetailModal({
             <button
               type="button"
               onClick={() => window.print()}
-              className="w-full py-2 text-sm btn-accent print:hidden"
+              className="w-full btn-base btn-accent print:hidden"
             >
               Print
             </button>

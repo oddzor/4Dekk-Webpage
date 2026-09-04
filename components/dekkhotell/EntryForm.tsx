@@ -15,10 +15,9 @@ interface EntryFormProps {
   onSaved: () => void;
 }
 
-const inputClass =
-  "w-full px-3 py-2 text-sm bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-200 text-white placeholder-gray-400 hover:border-gray-500 sm:py-1.5";
+const inputClass = "input-dark sm:py-1.5";
 
-const labelClass = "block mb-1 text-xs font-medium text-headings";
+const labelClass = "label-dark";
 
 export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,23 +95,23 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/70 sm:p-4">
-      <div className="relative w-full max-w-2xl p-4 overflow-y-auto rounded-lg card-dark max-h-[88dvh] sm:max-h-[95vh] sm:p-5">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 overlay-dark sm:p-4">
+      <div className="relative w-full max-w-2xl p-4 overflow-y-auto sheet-dark max-h-[88dvh] sm:max-h-[95vh] sm:p-5">
         <button
           type="button"
           onClick={onClose}
           aria-label="Lukk"
-          className="absolute z-10 flex items-center justify-center w-9 h-9 text-white bg-gray-800 border border-gray-600 rounded-full right-3 top-3 hover:bg-gray-700 sm:w-8 sm:h-8"
+          className="absolute z-10 flex items-center justify-center w-9 h-9 btn-base btn-ghost !p-0 rounded-full right-3 top-3 sm:w-8 sm:h-8"
         >
           ✕
         </button>
-        <h2 className="mb-3 text-lg text-headings pr-10">
+        <h2 className="mb-3 text-lg text-[var(--dh-headings)] pr-10">
           {isEditing ? "Rediger Kunde" : "Ny Kunde"}
         </h2>
 
         {Number(amountOwed) > 0 && (
-          <div className="p-3 mb-3 border border-red-500 rounded-lg bg-red-900/30">
-            <p className="text-sm font-medium text-red-300">
+          <div className="mb-3 alert-danger">
+            <p className="text-sm font-medium">
               ⚠️ Kunden skylder {Number(amountOwed).toLocaleString("no-NO")} kr
             </p>
           </div>
@@ -124,11 +123,15 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
             <input
               type="text"
               {...register("name", { required: "Dette feltet er påkrevd" })}
-              className={`${inputClass} ${errors.name ? "border-red-500" : ""}`}
+              className={`${inputClass} ${
+                errors.name ? "!border-[var(--dh-danger)]" : ""
+              }`}
               placeholder="Kunde Kundesen"
             />
             {errors.name && (
-              <p className="mt-1 text-xs text-red-400">{errors.name.message}</p>
+              <p className="mt-1 text-xs text-[var(--dh-danger)]">
+                {errors.name.message}
+              </p>
             )}
           </div>
 
@@ -180,12 +183,12 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
             <label className={labelClass}>Dekk type og dimensjoner</label>
             <div className="space-y-1.5">
               <div className="flex items-center gap-2">
-                <label className="flex items-center flex-shrink-0 w-28 gap-1.5 text-sm text-white whitespace-nowrap">
+                <label className="flex items-center flex-shrink-0 w-28 gap-1.5 text-sm text-[var(--dh-headings)] whitespace-nowrap">
                   <input
                     type="radio"
                     value="sommer"
                     {...register("tire_type")}
-                    className="w-4 h-4 accent-accent"
+                    className="w-4 h-4 accent-[var(--dh-accent)]"
                   />
                   ☀️ Sommer
                 </label>
@@ -197,12 +200,12 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
                 />
               </div>
               <div className="flex items-center gap-2">
-                <label className="flex items-center flex-shrink-0 w-28 gap-1.5 text-sm text-white whitespace-nowrap">
+                <label className="flex items-center flex-shrink-0 w-28 gap-1.5 text-sm text-[var(--dh-headings)] whitespace-nowrap">
                   <input
                     type="radio"
                     value="vinter"
                     {...register("tire_type")}
-                    className="w-4 h-4 accent-accent"
+                    className="w-4 h-4 accent-[var(--dh-accent)]"
                   />
                   ❄️ Vinter
                 </label>
@@ -214,12 +217,12 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
                 />
               </div>
               <div className="flex items-center gap-2">
-                <label className="flex items-center flex-shrink-0 w-28 gap-1.5 text-sm text-white whitespace-nowrap">
+                <label className="flex items-center flex-shrink-0 w-28 gap-1.5 text-sm text-[var(--dh-headings)] whitespace-nowrap">
                   <input
                     type="radio"
                     value="na"
                     {...register("tire_type")}
-                    className="w-4 h-4 accent-accent"
+                    className="w-4 h-4 accent-[var(--dh-accent)]"
                   />
                   🚫 N/A
                 </label>
@@ -230,7 +233,7 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className={labelClass}>Kunde kontaktet</label>
-              <label className="flex items-center h-[30px] gap-2 text-sm text-white">
+              <label className="flex items-center h-[30px] gap-2 text-sm text-[var(--dh-headings)]">
                 <input
                   type="checkbox"
                   {...register("contacted_about_worn_tires", {
@@ -240,12 +243,12 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
                         e.target.checked ? new Date().toISOString() : null,
                       ),
                   })}
-                  className="w-4 h-4 accent-accent"
+                  className="w-4 h-4 accent-[var(--dh-accent)]"
                 />
                 Kontaktet om slitte dekk
               </label>
               {contactedAt && (
-                <p className="mt-1 text-xs text-gray-400">
+                <p className="mt-1 text-xs text-[var(--dh-muted)]">
                   {new Date(contactedAt).toLocaleString("no-NO")}
                 </p>
               )}
@@ -274,8 +277,8 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
           </div>
 
           {error && (
-            <div className="p-3 border border-red-500 rounded-lg bg-red-900/20">
-              <p className="text-xs text-red-300">{error}</p>
+            <div className="p-3 alert-danger">
+              <p className="text-xs">{error}</p>
             </div>
           )}
 
@@ -283,14 +286,14 @@ export default function EntryForm({ entry, onClose, onSaved }: EntryFormProps) {
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 px-6 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg hover:bg-gray-800"
+              className="flex-1 btn-base btn-ghost py-2"
             >
               Avbryt
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 py-2 text-sm btn-accent disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 btn-base btn-accent py-2"
             >
               {isSubmitting ? "Lagrer..." : "Lagre"}
             </button>

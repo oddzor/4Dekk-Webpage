@@ -252,25 +252,27 @@ export default function Dashboard({ userEmail }: DashboardProps) {
       <div className="print:hidden">
         <div className="flex flex-col justify-between gap-4 mb-6 sm:flex-row sm:items-center">
           <div>
-            <h1 className="text-2xl text-headings sm:text-3xl">Dekkhotell</h1>
-            <p className="mt-1 text-sm text-gray-400">{userEmail}</p>
+            <h1 className="text-2xl text-[var(--dh-headings)] sm:text-3xl">
+              Dekkhotell
+            </h1>
+            <p className="mt-1 text-sm text-[var(--dh-muted)]">{userEmail}</p>
           </div>
           <div className="flex flex-wrap gap-2 sm:gap-3">
             <button
               onClick={() => setIsAdding(true)}
-              className="px-4 py-2 text-sm sm:text-base sm:px-6 sm:py-3 btn-accent"
+              className="btn-base btn-accent sm:text-base sm:px-6 sm:py-3"
             >
               + Ny Kunde
             </button>
             <button
               onClick={handleDownloadBackup}
-              className="px-4 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg sm:px-6 sm:py-3 sm:text-base hover:bg-gray-800"
+              className="btn-base btn-ghost sm:text-base sm:px-6 sm:py-3"
             >
               Last ned backup
             </button>
             <button
               onClick={handleSignOut}
-              className="px-4 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg sm:px-6 sm:py-3 sm:text-base hover:bg-gray-800"
+              className="btn-base btn-ghost sm:text-base sm:px-6 sm:py-3"
             >
               Logg ut
             </button>
@@ -289,20 +291,20 @@ export default function Dashboard({ userEmail }: DashboardProps) {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Søk etter navn, telefon, e-post, reg.nr eller posisjon..."
-            className="w-full max-w-xl px-4 py-3 text-white placeholder-gray-400 transition-colors duration-200 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent hover:border-gray-500"
+            className="max-w-xl input-dark py-3"
           />
         </div>
-  
+
         {loadError && (
-          <div className="p-4 mb-6 border border-red-500 rounded-lg bg-red-900/20">
-            <p className="text-sm text-red-300">{loadError}</p>
+          <div className="p-4 mb-6 alert-danger">
+            <p className="text-sm">{loadError}</p>
           </div>
         )}
-  
+
         {isLoading ? (
-          <p className="text-gray-400">Laster inn...</p>
+          <p className="text-[var(--dh-muted)]">Laster inn...</p>
         ) : filteredEntries.length === 0 ? (
-          <p className="text-gray-400">
+          <p className="text-[var(--dh-muted)]">
             {entries.length === 0
               ? "Ingen oppføringer ennå."
               : "Ingen treff på søket."}
@@ -315,7 +317,7 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                   statsFilter === "glemt" ? getAgeTier(entry.updated_at) : null;
                 const borderClass =
                   Number(entry.amount_owed) > 0
-                    ? "border border-red-500"
+                    ? "border border-[var(--dh-danger)]"
                     : ageTier
                       ? `border ${AGE_BORDER_CLASS[ageTier]}`
                       : "";
@@ -323,10 +325,10 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                   <div
                     key={entry.id}
                     onClick={() => setViewingEntry(entry)}
-                    className={`p-3 rounded-lg card-dark cursor-pointer ${borderClass}`}
+                    className={`p-3 card-dark cursor-pointer ${borderClass}`}
                   >
                   <div className="flex items-start justify-between gap-2">
-                    <p className="font-medium text-white truncate">
+                    <p className="font-medium text-[var(--dh-headings)] truncate">
                       {Number(entry.amount_owed) > 0 && "💰 "}
                       {entry.name}
                     </p>
@@ -335,18 +337,18 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                         e.stopPropagation();
                         setDeletingEntry(entry);
                       }}
-                      className="px-2 py-1 -my-1 -mr-1 text-xs text-red-400 shrink-0"
+                      className="px-2 py-1 -my-1 -mr-1 text-xs text-[var(--dh-danger)] shrink-0"
                     >
                       Slett
                     </button>
                   </div>
-                  <p className="mt-1 text-xs text-gray-400">
+                  <p className="mt-1 text-xs text-[var(--dh-muted)]">
                     {entry.tire_type
                       ? TIRE_TYPE_LABELS[entry.tire_type]
                       : "—"}{" "}
                     · {entry.position || "—"} · {entry.phone || "—"}
                   </p>
-                  <p className="mt-0.5 text-xs text-gray-500">
+                  <p className="mt-0.5 text-xs text-[var(--dh-muted)]">
                     Sist endret: {formatDateTime(entry.updated_at)}
                   </p>
                 </div>
@@ -354,12 +356,12 @@ export default function Dashboard({ userEmail }: DashboardProps) {
               })}
             </div>
   
-            <div className="hidden overflow-x-auto rounded-lg card-dark sm:block">
+            <div className="hidden overflow-x-auto card-dark sm:block">
               <table className="w-full text-sm text-left">
                 <thead>
-                  <tr className="text-gray-400 border-b border-gray-600">
+                  <tr className="text-[var(--dh-muted)] border-b border-[var(--dh-line-strong)]">
                     <th
-                      className="px-4 py-3 font-medium cursor-pointer select-none hover:text-white"
+                      className="px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--dh-headings)]"
                       onClick={() => handleSort("name")}
                     >
                       Navn
@@ -371,7 +373,7 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                     <th className="px-4 py-3 font-medium">Reg.nr</th>
                     <th className="px-4 py-3 font-medium">Type Dekk</th>
                     <th
-                      className="px-4 py-3 font-medium cursor-pointer select-none hover:text-white"
+                      className="px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--dh-headings)]"
                       onClick={() => handleSort("position")}
                     >
                       Posisjon
@@ -391,7 +393,7 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                       <tr
                         key={entry.id}
                         onClick={() => setViewingEntry(entry)}
-                        className={`border-b border-gray-700 cursor-pointer last:border-0 hover:bg-gray-800/50 ${
+                        className={`border-b border-[var(--dh-line)] cursor-pointer last:border-0 hover:bg-[var(--dh-surface-2)] ${
                           ageTier ? AGE_LEFT_BORDER_CLASS[ageTier] : ""
                         }`}
                       >
@@ -399,29 +401,41 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                         <span
                           className={
                             Number(entry.amount_owed) > 0
-                              ? "px-2 py-0.5 text-white border border-red-500 rounded"
-                              : "text-white"
+                              ? "px-2 py-0.5 text-[var(--dh-headings)] border border-[var(--dh-danger)] rounded"
+                              : "text-[var(--dh-headings)]"
                           }
                         >
                           {Number(entry.amount_owed) > 0 && "💰 "}
                           {entry.name}
                         </span>
                       </td>
-                      <td className="px-4 py-3 text-gray-300 whitespace-nowrap">
+                      <td className="px-4 py-3 text-[var(--dh-text)] whitespace-nowrap">
                         {entry.phone || "—"}
                       </td>
-                      <td className="px-4 py-3 text-gray-300 whitespace-nowrap">
+                      <td className="px-4 py-3 text-[var(--dh-text)] whitespace-nowrap">
                         {formatDateTime(entry.updated_at)}
                       </td>
-                      <td className="px-4 py-3 text-gray-300 whitespace-nowrap">
+                      <td className="px-4 py-3 text-[var(--dh-text)] whitespace-nowrap">
                         {entry.registration_number || "—"}
                       </td>
-                      <td className="px-4 py-3 text-gray-300 whitespace-nowrap">
-                        {entry.tire_type
-                          ? TIRE_TYPE_LABELS[entry.tire_type]
-                          : "—"}
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        {entry.tire_type ? (
+                          <span
+                            className={`chip ${
+                              entry.tire_type === "vinter"
+                                ? "chip-vinter"
+                                : entry.tire_type === "sommer"
+                                  ? "chip-sommer"
+                                  : ""
+                            }`}
+                          >
+                            {TIRE_TYPE_LABELS[entry.tire_type]}
+                          </span>
+                        ) : (
+                          "—"
+                        )}
                       </td>
-                      <td className="px-4 py-3 text-gray-300 whitespace-nowrap">
+                      <td className="px-4 py-3 text-[var(--dh-text)] whitespace-nowrap">
                         {entry.position || "—"}
                       </td>
                       <td
@@ -430,7 +444,7 @@ export default function Dashboard({ userEmail }: DashboardProps) {
                       >
                         <button
                           onClick={() => setDeletingEntry(entry)}
-                          className="text-red-400 hover:text-red-300"
+                          className="text-[var(--dh-danger)] hover:opacity-80"
                         >
                           Slett
                         </button>
@@ -446,7 +460,7 @@ export default function Dashboard({ userEmail }: DashboardProps) {
   
         {!isLoading && filteredEntries.length > 0 && (
           <div className="flex flex-wrap items-center justify-between gap-2 mt-4 sm:gap-4">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-[var(--dh-muted)]">
               Side {currentPage} av {totalPages} ({filteredEntries.length}{" "}
               oppføringer)
             </p>
@@ -454,14 +468,14 @@ export default function Dashboard({ userEmail }: DashboardProps) {
               <button
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="px-4 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+                className="btn-base btn-ghost"
               >
                 Forrige
               </button>
               <button
                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="px-4 py-2 text-sm font-medium text-white transition-colors duration-200 border border-gray-600 rounded-lg hover:bg-gray-800 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+                className="btn-base btn-ghost"
               >
                 Neste
               </button>
