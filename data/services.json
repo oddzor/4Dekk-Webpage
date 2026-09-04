@@ -6,6 +6,7 @@
     "longDescription": "EU-kontroll sjekker bilens trafikksikkerhet og miljøpåvirkning gjennom ca. 150 kontrollpunkter",
     "icon": "check",
     "image": "/images/eucontrol.webp",
+    "imageAlt": "EU-kontroll av bil hos 4Dekk Larvik",
     "features": [
       "Bremser og styring",
       "Lys og elektrisk system",
@@ -24,6 +25,7 @@
     "longDescription": "Vi går over bilen for å se at feilene som ble avdekket på EU kontrollen er utbedret.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
+    "imageAlt": "Mekaniker med lykt som kontrollerer motorrommet under etterkontroll hos 4Dekk Larvik",
     "features": ["Etterkontroll", "Reparasjonsverifikasjon", "Godkjenning"],
     "pricing": "400,-",
     "pricingDescription": "Etterkontroll av reparasjoner gjort i forbindelse med ikke-godkjent EU-kontroll"
@@ -35,6 +37,7 @@
     "longDescription": "Nøyaktig hjuljustering for optimal sikkerhet og dekklevetid.",
     "icon": "check",
     "image": "/images/4hjulskontroll.webp",
+    "imageAlt": "Måleutstyr for 4-hjulskontroll montert på framhjulet til en bil hos 4Dekk Larvik",
     "features": [
       "Hjuljustering",
       "Kamber kontroll",
@@ -51,6 +54,7 @@
     "longDescription": "Regelmessig service er avgjørende for motorens levetid og ytelse. Ved bestilling velger du blant flere servicealternativer, fra enkelt oljeskift til mer omfattende service. Vi bruker kvalitetsoljer og filtere for optimal beskyttelse.",
     "icon": "wrench",
     "image": "/images/oil-change.webp",
+    "imageAlt": "Påfylling av motorolje i motorrommet ved bilservice hos 4Dekk Larvik",
     "features": [
       "Oljeskift med kvalitetsolje",
       "Oljefilterbytte",
@@ -67,6 +71,7 @@
     "longDescription": "Vi trykktester og diagnostiserer klimaanlegget ditt, og fyller på kuldemedium ved behov. Merk at vi kun kan tilby AC-service på biler som bruker kuldemedium R134a, ikke den nyere typen R1234yf.",
     "icon": "wrench",
     "image": "/images/ACservice.webp",
+    "imageAlt": "AC-service med trykktest og påfyll av kuldemedium hos 4Dekk Larvik",
     "features": [
       "Trykktest og lekkasjesøk",
       "Diagnose av klimaanlegg",
@@ -83,6 +88,7 @@
     "longDescription": "Moderne diagnostisk utstyr og god gammeldags mekanikererfaring for rask identifisering av bil og systemproblemer.",
     "icon": "wrench",
     "image": "/images/engine-diagnostics.webp",
+    "imageAlt": "Diagnoseverktøy koblet til en bilmotor for feilsøking hos 4Dekk Larvik",
     "features": [
       "Lesing av feilkoder",
       "Test av bilsystemer og ytelse",
@@ -98,6 +104,7 @@
     "longDescription": "Gode priser på dekk og tjenester, store leverandører med mange ulike dekkprodusenter og dimensjoner som kan skaffes på kort varsel. Vi tilbyr også balansering med digitalt utstyr for nøyaktig justering og omlegging av dekk på felgene dine.",
     "icon": "tire",
     "image": "/images/tire-service.webp",
+    "imageAlt": "Nærbilde av mønsteret på et nytt bildekk hos 4Dekk Larvik",
     "features": [
       "Dekksalg",
       "Omlegging og balansering",
@@ -115,6 +122,7 @@
     "longDescription": "Rask hjulskift med hydraulisk løftebukk",
     "icon": "tire",
     "image": "/images/hjulskift.webp",
+    "imageAlt": "Hjulskift mellom sommer- og vinterdekk hos 4Dekk Larvik",
     "features": [
       "Raskt",
       "Inspeksjon av dekk",
@@ -130,6 +138,7 @@
     "longDescription": "Praktisk lagring med vask og skifte av hjul når du trenger det.",
     "icon": "hotel",
     "image": "/images/dekkhotell.webp",
+    "imageAlt": "Dekk lagret i stabler på dekkhotellet hos 4Dekk Larvik",
     "features": [
       "Sikker lagring",
       "Dekkvask",
@@ -146,6 +155,7 @@
     "longDescription": "Transparente priser og bred erfaring med ulike biltyper og produsenter. Vi kan håndtere alt fra små reparasjoner til større vedlikeholdsarbeid.",
     "icon": "wrench",
     "image": "/images/brake-repair.webp",
+    "imageAlt": "Nymontert bremsekaliper og bremseskive på en bil hos 4Dekk Larvik",
     "features": [
       "Diagnostikk",
       "Reparasjoner",

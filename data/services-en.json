@@ -6,6 +6,7 @@
     "longDescription": "EU inspection checks the vehicle's traffic safety and environmental impact through approximately 150 control points",
     "icon": "check",
     "image": "/images/eucontrol.webp",
+    "imageAlt": "EU inspection of a car at 4Dekk Larvik",
     "features": [
       "Brakes and steering",
       "Lights and electrical system",
@@ -24,6 +25,7 @@
     "longDescription": "We go through the car to see that the faults discovered during the EU inspection have been repaired.",
     "icon": "check",
     "image": "/images/etterkontroll.webp",
+    "imageAlt": "Mechanic with a flashlight inspecting an engine bay during re-inspection at 4Dekk Larvik",
     "features": ["Re-inspection", "Repair verification", "Approval"],
     "pricing": "400,-",
     "pricingDescription": "Re-inspection of repairs made in connection with a failed EU Inspection"
@@ -35,6 +37,7 @@
     "longDescription": "Precise wheel alignment for optimal safety and tire life.",
     "icon": "check",
     "image": "/images/4hjulskontroll.webp",
+    "imageAlt": "Wheel alignment measuring equipment mounted on a car's front wheel at 4Dekk Larvik",
     "features": [
       "Wheel alignment",
       "Camber control",
@@ -51,6 +54,7 @@
     "longDescription": "Regular service is crucial for engine life and performance. When booking, you choose between several service options, from a simple oil change to more comprehensive service. We use quality oils and filters for optimal protection.",
     "icon": "wrench",
     "image": "/images/oil-change.webp",
+    "imageAlt": "Topping up engine oil in the engine bay during a car service at 4Dekk Larvik",
     "features": [
       "Oil change with quality oil",
       "Oil filter replacement",
@@ -67,6 +71,7 @@
     "longDescription": "We pressure test and diagnose your A/C system, and refill refrigerant if needed. Note that we can only service A/C systems using R134a refrigerant, not the newer R1234yf type.",
     "icon": "wrench",
     "image": "/images/ACservice.webp",
+    "imageAlt": "A/C service with pressure test and refrigerant refill at 4Dekk Larvik",
     "features": [
       "Pressure test and leak detection",
       "A/C system diagnosis",
@@ -83,6 +88,7 @@
     "longDescription": "Modern diagnostic equipment and good old-fashioned mechanic experience for quick identification of car and system problems.",
     "icon": "wrench",
     "image": "/images/engine-diagnostics.webp",
+    "imageAlt": "Diagnostic scan tool connected to a car engine at 4Dekk Larvik",
     "features": [
       "Error code reading",
       "Testing of car systems and performance",
@@ -98,6 +104,7 @@
     "longDescription": "Good prices on tires and services, large suppliers with many different tire manufacturers and dimensions that can be obtained at short notice. We also offer balancing with digital equipment for precise adjustment and tire fitting on your rims.",
     "icon": "tire",
     "image": "/images/tire-service.webp",
+    "imageAlt": "Close-up of the tread on a new car tyre at 4Dekk Larvik",
     "features": [
       "Tire sales",
       "Fitting and balancing",
@@ -115,6 +122,7 @@
     "longDescription": "Quick tire change with hydraulic jack",
     "icon": "tire",
     "image": "/images/hjulskift.webp",
+    "imageAlt": "Seasonal tyre change between summer and winter tyres at 4Dekk Larvik",
     "features": ["Fast", "Tire inspection", "Air pressure check if desired"],
     "pricing": "600,-",
     "pricingDescription": "Passenger car 600,-, SUV/van 650,-, motorhome 700,-"
@@ -126,6 +134,7 @@
     "longDescription": "Practical storage with washing and tire change when you need it.",
     "icon": "hotel",
     "image": "/images/dekkhotell.webp",
+    "imageAlt": "Tyres stored in stacks at the 4Dekk Larvik tyre hotel",
     "features": [
       "Safe storage",
       "Tire washing",
@@ -142,6 +151,7 @@
     "longDescription": "Transparent prices and broad experience with different car types and manufacturers. We can handle everything from small repairs to major maintenance work.",
     "icon": "wrench",
     "image": "/images/brake-repair.webp",
+    "imageAlt": "Newly fitted brake caliper and disc on a car at 4Dekk Larvik",
     "features": [
       "Diagnostics",
       "Repairs",

@@ -10,6 +10,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   image: string;
+  imageAlt?: string;
   longDescription?: string;
   features?: string[];
   isExpanded: boolean;
@@ -26,6 +27,7 @@ export default function ServiceCard({
   title,
   description,
   image,
+  imageAlt,
   longDescription,
   features,
   isExpanded,
@@ -89,9 +91,9 @@ export default function ServiceCard({
           <div className="relative flex-shrink-0 w-full overflow-hidden h-52 bg-gray-dark">
             <Image
               src={image}
-              alt={title}
+              alt={imageAlt || title}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 12vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px"
               className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
               style={{ width: "100%", height: "100%" }}
             />
@@ -143,9 +145,9 @@ export default function ServiceCard({
               <div className="relative flex-shrink-0 w-full overflow-hidden h-52 bg-gray-dark">
                 <Image
                   src={image}
-                  alt={title}
+                  alt={imageAlt || title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 12vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px"
                   className="object-cover object-center"
                   style={{ width: "100%", height: "100%" }}
                 />
@@ -171,9 +173,9 @@ export default function ServiceCard({
               <div className="relative w-full overflow-hidden h-52 bg-gray-dark">
                 <Image
                   src={image}
-                  alt={title}
+                  alt={imageAlt || title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 12vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px"
                   className="object-cover object-center"
                   style={{ width: "100%", height: "100%" }}
                 />

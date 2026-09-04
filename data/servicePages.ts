@@ -329,7 +329,7 @@ export const servicePages: ServicePage[] = [
       "Vi oppbevarer sommer- og vinterhjulene dine trygt og tørt mellom sesongene. Hjulene vaskes, kontrolleres for slitasje og skader, og merkes før de settes på lager.",
     ],
     image: "/images/dekkhotell.webp",
-    imageAlt: "Dekkhotell med merkede hjul på lager hos 4Dekk Larvik",
+    imageAlt: "Bildekk stablet på lager på dekkhotellet hos 4Dekk Larvik",
     priceLabel: "fra 500,-",
     priceNote:
       "Oppbevaring fra 500,-. Totalpris per sesong inkl. hjulskift og hjulvask fra 1300,- (SUV 1350,-, bobil <3,5t 1400,-).",
@@ -393,7 +393,7 @@ export const servicePages: ServicePage[] = [
       "Vi har bred erfaring med ulike biltyper og bruker moderne diagnoseutstyr for å finne feil raskt. Deler som bremseklosser, filtre og lignende bør ofte bestilles på forhånd på grunn av begrenset delelager.",
     ],
     image: "/images/brake-repair.webp",
-    imageAlt: "Mekaniker som utfører reparasjon på bilverksted hos 4Dekk Larvik",
+    imageAlt: "Nymontert bremsekaliper og bremseskive på en bil hos 4Dekk Larvik",
     priceLabel: "1400,- / time",
     priceNote:
       "Timepris for verkstedarbeid. Diagnose fra 700,-. Prisoverslag før arbeidet starter.",
@@ -595,7 +595,7 @@ export const servicePages: ServicePage[] = [
       "Vi er først og fremst et dekkverksted. Vi selger og skaffer nye dekk fra de store leverandørene – mange merker og dimensjoner kan hentes inn på kort varsel – og hjelper deg med å velge riktig dekk til bil, kjøremønster og budsjett.",
     ],
     image: "/images/tire-service.webp",
-    imageAlt: "Dekkservice med montering og balansering hos 4Dekk Larvik",
+    imageAlt: "Nærbilde av mønsteret på et nytt bildekk hos 4Dekk Larvik",
     priceLabel: "omlegging fra 1000,-",
     priceNote:
       "Omlegging med balansering fra 1000,-. Balansering 1000,- med hjulene på bilen, 500,- for løse hjul. Dekk levert via Dekkonline/Dekk365 o.l.: fra 1800,-. Punkteringsreparasjon fra 300,-.",
@@ -751,7 +751,7 @@ export const servicePages: ServicePage[] = [
       "Pris avhenger av bil, hvilke deler som må byttes og om det er foran, bak eller begge deler, så vi gir pristilbud per bil. Timeprisen for verkstedarbeid er 1400,-, og du får et overslag på deler og arbeid før vi begynner.",
     ],
     image: "/images/brake-repair.webp",
-    imageAlt: "Bremseservice med bytte av bremseklosser hos 4Dekk Larvik",
+    imageAlt: "Bremsekaliper, bremseklosser og bremseskive ved bremseservice hos 4Dekk Larvik",
     priceLabel: "Kontakt oss for pristilbud",
     priceNote:
       "Timepris verksted 1400,-. Delekostnad varierer med bilmerke og omfang. Prisoverslag før arbeidet starter.",

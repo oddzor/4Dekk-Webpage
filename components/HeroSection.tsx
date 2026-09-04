@@ -41,7 +41,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 z-10 bg-black/70" />
         <Image
           src="/images/hero-image-1.webp"
-          alt="Bilverksted med teknikere som arbeider"
+          alt="4Dekk sitt bilverksted og dekkservice i Larvik med biler parkert utenfor lokalene"
           fill
           className="object-cover"
           priority

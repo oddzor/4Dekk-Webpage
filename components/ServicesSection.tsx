@@ -224,6 +224,7 @@ export default function ServicesSection() {
                   longDescription={serviceData.longDescription}
                   features={serviceData.features}
                   image={service.image}
+                  imageAlt={serviceData.imageAlt}
                   isExpanded={expandedCardId === serviceData.id}
                   onExpand={handleCardExpand}
                   bookingLink={bookingLinks[serviceData.id]}
@@ -253,6 +254,7 @@ export default function ServicesSection() {
                 longDescription={service.longDescription}
                 features={service.features}
                 image={service.image}
+                imageAlt={service.imageAlt}
                 isExpanded={expandedCardId === service.id}
                 onExpand={handleCardExpand}
                 bookingLink={bookingLinks[service.id]}
