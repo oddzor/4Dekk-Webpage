@@ -122,7 +122,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("repair_eu_kontroll")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -148,7 +148,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("repair_diagnostics")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -176,7 +176,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("repair_service_oil_change")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -204,7 +204,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("repair_ac_service")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -232,7 +232,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("tire_hjulskift_dekkhotell")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -260,7 +260,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("tire_hjulskift_egne_dekk")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -288,7 +288,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("tire_omlegging_dekk")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -314,7 +314,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("repair_eu_etterkontroll")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">
@@ -340,7 +340,7 @@ export default function BookingPage() {
               onClick={() => trackBookingClick("repair_wheel_alignment")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg group"
+              className="block p-6 card-dark card-modern-interactive hover:border-accent group"
             >
               <div className="flex items-start mb-4">
                 <div className="flex items-center">

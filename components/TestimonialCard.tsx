@@ -18,7 +18,7 @@ export default function TestimonialCard({
   title,
 }: TestimonialCardProps) {
   return (
-    <div className="flex flex-col p-6 card-dark md:p-8 h-80">
+    <div className="flex flex-col p-6 card-modern md:p-8 h-80">
       {rating && (
         <div className="flex mb-4">
           {[...Array(5)].map((_, i) => (

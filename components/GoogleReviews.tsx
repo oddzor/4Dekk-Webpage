@@ -286,7 +286,7 @@ export default function GoogleReviewsSection() {
           </p>
 
           {overallRating > 0 && (
-            <div className="inline-block p-4 mt-6 rounded-lg bg-white/10">
+            <div className="inline-block p-5 mt-6 card-modern-glass">
               <div className="flex items-center justify-center mb-2 space-x-2">
                 {renderStars(overallRating)}
                 <span className="text-2xl font-bold text-accent">
@@ -318,7 +318,7 @@ export default function GoogleReviewsSection() {
               <>
                 <button
                   onClick={goToPrevious}
-                  className="absolute p-2 transition-colors duration-200 transform -translate-y-1/2 rounded-full left-2 sm:left-0 sm:-translate-x-12 top-1/2 bg-white/10 hover:bg-white/20"
+                  className="absolute p-2 transition-colors duration-200 transform -translate-y-1/2 border rounded-full left-2 sm:left-0 sm:-translate-x-12 top-1/2 border-white/15 bg-white/10 backdrop-blur hover:bg-white/20"
                   aria-label={
                     language === "no" ? "Forrige anmeldelse" : "Previous review"
                   }
@@ -340,7 +340,7 @@ export default function GoogleReviewsSection() {
 
                 <button
                   onClick={goToNext}
-                  className="absolute p-2 transition-colors duration-200 transform -translate-y-1/2 rounded-full right-2 sm:right-0 sm:translate-x-12 top-1/2 bg-white/20"
+                  className="absolute p-2 transition-colors duration-200 transform -translate-y-1/2 border rounded-full right-2 sm:right-0 sm:translate-x-12 top-1/2 border-white/15 bg-white/10 backdrop-blur hover:bg-white/20"
                   aria-label={
                     language === "no" ? "Neste anmeldelse" : "Next review"
                   }
@@ -365,8 +365,10 @@ export default function GoogleReviewsSection() {
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-4 h-4 rounded-full transition-colors duration-200 ${
-                        index === currentIndex ? "bg-accent" : "bg-white/30"
+                      className={`h-2.5 rounded-full transition-all duration-200 ${
+                        index === currentIndex
+                          ? "w-6 bg-accent"
+                          : "w-2.5 bg-white/30 hover:bg-white/50"
                       }`}
                       aria-label={
                         language === "no"
@@ -389,7 +391,7 @@ export default function GoogleReviewsSection() {
           </p>
           <a
             href="/booking"
-            className="btn-accent whitespace-nowrap min-w-[180px]"
+            className="btn-modern-accent whitespace-nowrap min-w-[180px]"
           >
             {language === "no"
               ? "Bestill Din Time I Dag"

@@ -57,7 +57,7 @@ export default function BlogPage() {
               <Link
                 key={article.id}
                 href={`/blog/${article.slug}`}
-                className={`group overflow-hidden transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg hover:shadow-accent/10 ${
+                className={`group block overflow-hidden card-dark card-modern-interactive hover:border-accent ${
                   article.featured ? "lg:col-span-2 xl:col-span-1" : ""
                 }`}
               >

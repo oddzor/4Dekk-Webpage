@@ -168,7 +168,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-6 border rounded-lg border-accent/30 card-dark">
+              <div className="p-6 card-dark border-accent/30">
                 <h3 className="mb-3 text-lg font-semibold font-headings text-headings">
                   Godkjenninger fra Statens vegvesen
                 </h3>
@@ -204,7 +204,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl card-dark">
+              <div className="relative h-96 lg:h-[500px] overflow-hidden card-dark">
                 <Image
                   src="/images/om-4dekk.webp"
                   alt="4Dekk Auto Repair verksted interiør"

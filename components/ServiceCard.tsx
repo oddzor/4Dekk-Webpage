@@ -83,7 +83,7 @@ export default function ServiceCard({
       <div className="relative w-full h-96 perspective-1000">
         <Link
           href={href}
-          className="flex flex-col h-full overflow-hidden card-dark border-glow sm:hover:border-glow-strong sm:active:border-glow"
+          className="flex flex-col h-full overflow-hidden group card-modern card-modern-interactive"
           aria-label={`${t.readMore} ${title}`}
         >
           <div className="relative flex-shrink-0 w-full overflow-hidden h-52 bg-gray-dark">
@@ -92,7 +92,7 @@ export default function ServiceCard({
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 12vw"
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
               style={{ width: "100%", height: "100%" }}
             />
           </div>
@@ -106,7 +106,10 @@ export default function ServiceCard({
             <div className="pt-2 mt-auto">
               <div className="inline-flex items-center font-medium transition-colors duration-200 text-accent">
                 {t.readMore}
-                <Icon name="chevron" className="w-4 h-4 ml-2" />
+                <Icon
+                  name="chevron"
+                  className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                />
               </div>
             </div>
           </div>
@@ -125,7 +128,7 @@ export default function ServiceCard({
         >
           <div className="absolute inset-0 w-full h-full backface-hidden">
             <div
-              className="flex flex-col h-full overflow-hidden cursor-pointer card-dark border-glow sm:hover:border-glow-strong sm:active:border-glow"
+              className="flex flex-col h-full overflow-hidden cursor-pointer group card-modern card-modern-interactive"
               onClick={handleToggle}
               role="button"
               tabIndex={0}
@@ -164,7 +167,7 @@ export default function ServiceCard({
             </div>
           </div>
           <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
-            <div className="flex flex-col h-full overflow-hidden card-dark border-glow-strong">
+            <div className="flex flex-col h-full overflow-hidden card-modern">
               <div className="relative w-full overflow-hidden h-52 bg-gray-dark">
                 <Image
                   src={image}
@@ -194,7 +197,7 @@ export default function ServiceCard({
           onClick={handleToggle}
         >
           <div
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden card-dark border-glow-strong"
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden card-modern"
             style={{ animation: "slideUpZoom 0.5s ease-out" }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -220,7 +223,7 @@ export default function ServiceCard({
                     {description}
                   </p>
                   {longDescription && (
-                    <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
+                    <div className="p-4 border rounded-xl bg-white/[0.03] border-white/10 backdrop-blur-sm">
                       <h4 className="mb-3 text-sm font-semibold tracking-wide uppercase text-accent">
                         {t.description}
                       </h4>
@@ -230,7 +233,7 @@ export default function ServiceCard({
                     </div>
                   )}
                   {features && features.length > 0 && (
-                    <div className="p-4 border rounded-lg bg-gray-800/50 border-gray-700/50 backdrop-blur-sm">
+                    <div className="p-4 border rounded-xl bg-white/[0.03] border-white/10 backdrop-blur-sm">
                       <h4 className="mb-3 text-sm font-semibold tracking-wide uppercase text-accent">
                         {t.overview}
                       </h4>
@@ -251,7 +254,7 @@ export default function ServiceCard({
                   )}
                 </div>
                 {(bookingLink || bookingLinks || showContactButton) && (
-                  <div className="flex justify-end flex-shrink-0 pt-6 mt-6 border-t border-gray-700/50">
+                  <div className="flex justify-end flex-shrink-0 pt-6 mt-6 border-t border-white/10">
                     {bookingLinks && bookingLinks.length > 0 ? (
                       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                         {bookingLinks.map((booking, index) => (
@@ -260,7 +263,7 @@ export default function ServiceCard({
                             href={booking.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-4 py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
+                            className="px-4 py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-xl bg-accent hover:brightness-110 hover:shadow-lg"
                           >
                             {booking.label}
                           </a>
@@ -271,14 +274,14 @@ export default function ServiceCard({
                         href={bookingLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block w-full lg:w-auto lg:min-w-[200px] px-4 py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-md bg-accent hover:bg-accent-dark hover:shadow-md"
+                        className="inline-block w-full lg:w-auto lg:min-w-[200px] px-4 py-3 text-sm font-medium text-center text-black transition-all duration-200 rounded-xl bg-accent hover:brightness-110 hover:shadow-lg"
                       >
                         {t.bookButton}
                       </a>
                     ) : showContactButton ? (
                       <a
                         href="/contact"
-                        className="inline-block w-full lg:w-auto lg:min-w-[200px] px-4 py-3 text-sm font-medium text-center text-white transition-all duration-200 bg-red-500 rounded-md hover:bg-red-600 hover:shadow-md"
+                        className="inline-block w-full lg:w-auto lg:min-w-[200px] px-4 py-3 text-sm font-medium text-center text-white transition-all duration-200 bg-secondary rounded-xl hover:bg-secondary-light hover:shadow-lg"
                       >
                         {t.contactButton}
                       </a>

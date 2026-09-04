@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -48,6 +48,14 @@ export default function Header() {
   const t = content[language];
   const navItems = navigation[language];
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const openMobileMenu = useCallback(() => {
     setMobileMenuOpen(true);
@@ -78,8 +86,18 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-[50] bg-gray-darker/80 backdrop-blur-md border-b border-accent/20">
-        <nav className="flex items-center justify-between py-4 container-custom">
+      <header
+        className={`sticky top-0 z-[50] backdrop-blur-md transition-all duration-300 ${
+          scrolled
+            ? "bg-gray-darker/90 border-b border-white/10 shadow-lg shadow-black/30"
+            : "bg-gray-darker/70 border-b border-white/5"
+        }`}
+      >
+        <nav
+          className={`flex items-center justify-between container-custom transition-all duration-300 ${
+            scrolled ? "py-2" : "py-4"
+          }`}
+        >
           <div className="flex">
             <Link href="/" className="-m-1.5 p-1.5 group">
               <Image
@@ -87,7 +105,9 @@ export default function Header() {
                 alt="4Dekk Logo"
                 width={200}
                 height={60}
-                className="w-auto transition-all duration-300 h-14 group-hover:scale-105"
+                className={`w-auto transition-all duration-300 group-hover:scale-105 ${
+                  scrolled ? "h-11" : "h-14"
+                }`}
                 priority
               />
             </Link>
@@ -96,7 +116,7 @@ export default function Header() {
           <div className="flex items-center gap-1 lg:hidden">
             <a
               href="tel:+4793995555"
-              className="inline-flex items-center justify-center p-2.5 rounded-md text-text hover:text-accent transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2.5 rounded-lg text-text hover:text-accent hover:bg-white/5 active:scale-90 transition-all duration-200"
               aria-label={
                 language === "no" ? "Ring 4Dekk Larvik" : "Call 4Dekk Larvik"
               }
@@ -112,7 +132,7 @@ export default function Header() {
             </a>
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-text hover:text-accent transition-colors duration-200"
+              className="-m-2.5 inline-flex items-center justify-center rounded-lg p-2.5 text-text hover:text-accent hover:bg-white/5 active:scale-90 transition-all duration-200"
               onClick={openMobileMenu}
             >
               <span className="sr-only">{t.openMenu}</span>
@@ -130,7 +150,9 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative text-sm font-medium transition-all duration-200 text-text hover:text-accent group"
+                  className={`relative inline-block text-sm font-medium transition-all duration-200 group hover:-translate-y-0.5 ${
+                    isActive ? "text-accent" : "text-text hover:text-accent"
+                  }`}
                   onClick={
                     item.href === "/#pricing"
                       ? (e) => handlePricingClick(e, item.href)
@@ -139,7 +161,7 @@ export default function Header() {
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                    className={`absolute -bottom-1.5 left-0 h-0.5 rounded-full bg-accent transition-all duration-300 ease-out ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>
@@ -152,7 +174,7 @@ export default function Header() {
             <LanguageToggle />
             <a
               href="tel:+4793995555"
-              className="inline-flex items-center gap-2 btn-secondary whitespace-nowrap"
+              className="gap-2 text-sm px-5 py-2.5 btn-modern-secondary whitespace-nowrap"
             >
               <svg
                 className="w-4 h-4"
@@ -166,7 +188,7 @@ export default function Header() {
             </a>
             <Link
               href="/booking"
-              className="btn-accent whitespace-nowrap min-w-[180px] text-center transition-all duration-300"
+              className="text-sm px-5 py-2.5 btn-modern-accent whitespace-nowrap min-w-[180px]"
             >
               {t.bookButton}
             </Link>
@@ -178,9 +200,13 @@ export default function Header() {
         <div className="lg:hidden">
           <div
             className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm"
+            style={{ animation: "fadeInFast 0.2s ease-out" }}
             onClick={closeMobileMenu}
           />
-          <div className="fixed inset-y-0 right-0 z-[110] w-80 max-w-[90vw] overflow-y-auto bg-gray-darker/95 backdrop-blur-md px-6 py-6 shadow-2xl border-l border-accent/20 transform transition-all duration-300 ease-in-out">
+          <div
+            className="fixed inset-y-0 right-0 z-[110] w-80 max-w-[90vw] overflow-y-auto bg-gray-darker/95 backdrop-blur-md px-6 py-6 shadow-2xl border-l border-white/10"
+            style={{ animation: "drawerIn 0.3s ease-out" }}
+          >
             <div className="flex items-center justify-between mb-6">
               <Link href="/" className="-m-1.5 p-1.5">
                 <Image
@@ -196,7 +222,7 @@ export default function Header() {
                 <LanguageToggle />
                 <button
                   type="button"
-                  className="-m-2.5 rounded-md p-3 text-white bg-gray-800/80 backdrop-blur-sm hover:bg-gray-700/80 transition-all duration-200 border border-gray-600/50"
+                  className="-m-2.5 rounded-xl p-3 text-white bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:text-accent active:scale-90 transition-all duration-200 border border-white/10"
                   onClick={closeMobileMenu}
                 >
                   <span className="sr-only">{t.closeMenu}</span>
@@ -234,7 +260,7 @@ export default function Header() {
                   <div className="flex justify-center">
                     <a
                       href="tel:+4793995555"
-                      className="inline-flex items-center justify-center gap-2 btn-secondary whitespace-nowrap min-w-[200px] text-center"
+                      className="gap-2 btn-modern-secondary whitespace-nowrap min-w-[200px]"
                       onClick={closeMobileMenu}
                     >
                       <svg
@@ -251,7 +277,7 @@ export default function Header() {
                   <div className="flex justify-center">
                     <Link
                       href="/booking"
-                      className="btn-accent whitespace-nowrap min-w-[200px] text-center"
+                      className="btn-modern-accent whitespace-nowrap min-w-[200px]"
                       onClick={closeMobileMenu}
                     >
                       {t.bookButton}

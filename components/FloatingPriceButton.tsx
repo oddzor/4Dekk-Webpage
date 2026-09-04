@@ -42,7 +42,7 @@ export default function FloatingPriceButton() {
   return (
     <button
       onClick={scrollToPricing}
-      className="fixed z-50 flex items-center gap-1 px-3 py-2 text-xs font-medium text-black transition-all duration-300 ease-in-out transform border rounded-md shadow-lg opacity-75 bottom-6 right-4 sm:right-6 bg-accent/80 hover:bg-accent hover:shadow-xl hover:scale-105 backdrop-blur-sm border-accent/20 hover:opacity-100"
+      className="fixed z-50 flex items-center gap-1 px-4 py-2.5 text-xs font-medium text-black transition-all duration-300 ease-in-out transform border rounded-full shadow-lg opacity-75 bottom-6 right-4 sm:right-6 bg-accent/80 hover:bg-accent hover:shadow-xl hover:-translate-y-0.5 hover:scale-105 backdrop-blur-sm border-accent/20 hover:opacity-100"
       aria-label="Se våre priser"
     >
       Priser

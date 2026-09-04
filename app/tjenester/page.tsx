@@ -99,7 +99,7 @@ export default function ServicesIndexPage() {
               <Link
                 key={page.slug}
                 href={`/tjenester/${page.slug}`}
-                className="block p-6 transition-all duration-300 border border-gray-600 rounded-lg card-dark hover:border-accent hover:shadow-lg"
+                className="block p-6 card-dark card-modern-interactive hover:border-accent"
               >
                 <h2 className="mb-2 text-xl font-semibold font-headings text-headings">
                   {page.name} i Larvik

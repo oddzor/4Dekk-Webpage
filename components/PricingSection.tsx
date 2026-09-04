@@ -54,16 +54,18 @@ export default function PricingSection() {
           {pricingItems.map((item, index) => (
             <div
               key={index}
-              className="p-4 transition-all duration-300 border border-gray-600 rounded-lg md:p-6 card-dark hover:border-accent hover:shadow-lg"
+              className="p-4 md:p-6 card-modern card-modern-interactive"
             >
               <div className="flex items-start justify-between gap-3 mb-3">
                 <div className="flex items-center">
-                  <div className="mr-3 text-accent">{getIcon(item.icon)}</div>
+                  <div className="flex items-center justify-center mr-3 rounded-lg shrink-0 h-9 w-9 bg-accent/10 text-accent">
+                    {getIcon(item.icon)}
+                  </div>
                   <h3 className="text-lg font-semibold font-headings text-headings">
                     {item.service}
                   </h3>
                 </div>
-                <div className="text-lg font-bold text-right text-accent md:text-xl">
+                <div className="inline-flex items-center rounded-lg bg-accent/10 px-2.5 py-1 text-base font-bold text-right text-accent md:text-lg">
                   {item.price}
                 </div>
               </div>
@@ -73,7 +75,7 @@ export default function PricingSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="max-w-2xl p-6 mx-auto card-dark">
+          <div className="max-w-2xl p-6 mx-auto card-modern">
             <h3 className="mb-4 text-xl font-semibold font-headings text-accent">
               {t.importantInfo}
             </h3>
@@ -87,13 +89,13 @@ export default function PricingSection() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="/booking"
-              className="btn-accent whitespace-nowrap min-w-[200px]"
+              className="btn-modern-accent whitespace-nowrap min-w-[200px]"
             >
               {t.bookButton}
             </a>
             <a
               href="/contact"
-              className="btn-secondary whitespace-nowrap min-w-[120px]"
+              className="btn-modern-secondary whitespace-nowrap min-w-[120px]"
             >
               {t.contactButton}
             </a>

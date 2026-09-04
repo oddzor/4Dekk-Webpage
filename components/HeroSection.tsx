@@ -83,32 +83,32 @@ export default function HeroSection() {
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/booking"
-            className="px-8 py-4 text-lg text-center btn-accent border-glow whitespace-nowrap min-w-[240px]"
+            className="px-9 py-4 text-lg btn-modern-accent whitespace-nowrap min-w-[240px]"
           >
             {t.cta1}
           </Link>
           <a
             href="#services"
-            className="px-8 py-4 text-lg text-center btn-secondary whitespace-nowrap min-w-[200px]"
+            className="px-9 py-4 text-lg btn-modern-secondary whitespace-nowrap min-w-[200px]"
           >
             {t.cta2}
           </a>
         </div>
 
         <div className="grid max-w-4xl grid-cols-1 gap-4 mx-auto mt-8 md:gap-8 md:mt-16 md:grid-cols-3">
-          <div className="p-4 text-center md:p-6 card-dark">
+          <div className="p-4 text-center md:p-6 card-modern-glass">
             <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">
               10+
             </div>
             <div className="text-sm text-gray-300 md:text-base">{t.trust1}</div>
           </div>
-          <div className="p-4 text-center md:p-6 card-dark">
+          <div className="p-4 text-center md:p-6 card-modern-glass">
             <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">
               1000+
             </div>
             <div className="text-sm text-gray-300 md:text-base">{t.trust2}</div>
           </div>
-          <div className="p-4 text-center md:p-6 card-dark">
+          <div className="p-4 text-center md:p-6 card-modern-glass">
             <div className="mb-2 text-2xl font-bold md:text-3xl text-accent">
               08-16
             </div>

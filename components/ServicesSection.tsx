@@ -270,13 +270,13 @@ export default function ServicesSection() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/booking"
-              className="btn-accent whitespace-nowrap min-w-[200px]"
+              className="btn-modern-accent whitespace-nowrap min-w-[200px]"
             >
               {t.bookTimeButton}
             </Link>
             <Link
               href="/contact"
-              className="btn-secondary whitespace-nowrap min-w-[120px]"
+              className="btn-modern-secondary whitespace-nowrap min-w-[120px]"
             >
               {t.contactUsButton}
             </Link>

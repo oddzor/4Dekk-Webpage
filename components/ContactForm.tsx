@@ -336,7 +336,7 @@ export default function ContactForm() {
       </button>
 
       {submitStatus === "success" && (
-        <div className="p-6 border border-green-500 rounded-lg bg-green-900/20 card-dark">
+        <div className="p-6 border border-green-500 bg-green-900/20 card-dark">
           <div className="flex items-start">
             <div className="flex-shrink-0">
               <svg
@@ -364,7 +364,7 @@ export default function ContactForm() {
       )}
 
       {submitStatus === "error" && (
-        <div className="p-6 border border-red-500 rounded-lg bg-red-900/20 card-dark">
+        <div className="p-6 border border-red-500 bg-red-900/20 card-dark">
           <div className="flex items-start">
             <div className="flex-shrink-0">
               <svg
@@ -391,7 +391,7 @@ export default function ContactForm() {
         </div>
       )}
 
-      <div className="p-6 rounded-lg card-dark">
+      <div className="p-6 card-dark">
         <h3 className="mb-4 text-lg font-semibold text-headings">
           {t.preferDirectContact}
         </h3>

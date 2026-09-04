@@ -90,7 +90,7 @@ export default function Home() {
               {REVIEW_EXCERPTS.map((r) => (
                 <blockquote
                   key={r.name}
-                  className="p-6 border border-gray-600 rounded-lg card-dark"
+                  className="p-6 card-modern card-modern-interactive"
                 >
                   <p className="mb-3 text-accent">★★★★★</p>
                   <p className="mb-3 leading-relaxed text-text">
@@ -145,18 +145,21 @@ export default function Home() {
                 </div>
               </dl>
               <div className="flex flex-col gap-3 mt-6 sm:flex-row">
-                <Link href="/booking" className="text-center btn-accent">
+                <Link
+                  href="/booking"
+                  className="w-full btn-modern-accent sm:w-auto"
+                >
                   Bestill time
                 </Link>
                 <a
                   href={`tel:${businessData.contact.phoneE164}`}
-                  className="text-center btn-secondary"
+                  className="w-full btn-modern-secondary sm:w-auto"
                 >
                   Ring {businessData.contact.phone}
                 </a>
               </div>
             </div>
-            <div className="overflow-hidden rounded-lg shadow-md">
+            <div className="overflow-hidden border rounded-2xl border-white/10 shadow-xl">
               <iframe
                 src={businessData.location.googleMapsEmbedUrl}
                 title="Kart til 4Dekk Larvik"
@@ -177,9 +180,9 @@ export default function Home() {
             <h2 className="mb-8 text-2xl font-bold md:text-3xl font-headings text-headings">
               Ofte stilte spørsmål
             </h2>
-            <dl className="space-y-6">
+            <dl className="divide-y divide-white/10">
               {HOME_FAQ.map((item) => (
-                <div key={item.q}>
+                <div key={item.q} className="py-6 first:pt-0 last:pb-0">
                   <dt className="mb-2 text-lg font-semibold font-headings text-headings">
                     {item.q}
                   </dt>

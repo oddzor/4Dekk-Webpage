@@ -96,7 +96,7 @@ export default function AboutSection() {
           </div>
 
           <div className="relative">
-            <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl card-dark">
+            <div className="relative h-96 lg:h-[500px] overflow-hidden card-dark">
               <Image
                 src="/images/om-4dekk.webp"
                 alt="4Dekk Auto Repair verksted interiør"
