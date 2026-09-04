@@ -588,17 +588,17 @@ export const servicePages: ServicePage[] = [
     name: "Dekkservice",
     metaTitle: "Dekkservice i Larvik – nye dekk, montering og balansering | 4Dekk",
     metaDescription:
-      "Dekkservice i Larvik: vi skaffer nye dekk fra de store leverandørene, monterer, balanserer og reparerer. Omlegging fra 1000,-, balansering fra 500,-. 4Dekk på Nanset.",
+      "Dekkservice i Larvik: vi skaffer nye dekk fra de store leverandørene, monterer, balanserer og reparerer. Omlegging fra 1000,-, balansering 1000,- (500,- for løse hjul). 4Dekk på Nanset.",
     h1: "Dekkservice i Larvik",
     intro: [
-      "Dekkservice hos 4Dekk i Larvik dekker alt fra kjøp av nye dekk til omlegging fra 1000,-, digital balansering fra 500,-, punkteringsreparasjon og lufttrykkontroll.",
+      "Dekkservice hos 4Dekk i Larvik dekker alt fra kjøp av nye dekk til omlegging fra 1000,-, digital balansering fra 1000,- (500,- for løse hjul), punkteringsreparasjon og lufttrykkontroll.",
       "Vi er først og fremst et dekkverksted. Vi selger og skaffer nye dekk fra de store leverandørene – mange merker og dimensjoner kan hentes inn på kort varsel – og hjelper deg med å velge riktig dekk til bil, kjøremønster og budsjett.",
     ],
     image: "/images/tire-service.webp",
     imageAlt: "Dekkservice med montering og balansering hos 4Dekk Larvik",
     priceLabel: "omlegging fra 1000,-",
     priceNote:
-      "Omlegging med balansering fra 1000,-. Balansering fra 500,-. Dekk levert via Dekkonline/Dekk365 o.l.: fra 1800,-. Punkteringsreparasjon fra 300,-.",
+      "Omlegging med balansering fra 1000,-. Balansering 1000,- med hjulene på bilen, 500,- for løse hjul. Dekk levert via Dekkonline/Dekk365 o.l.: fra 1800,-. Punkteringsreparasjon fra 300,-.",
     bookingUrl: "https://calendly.com/4dekk/omlegging-av-dekk",
     serviceType: "Dekkservice / dekksalg og montering",
     sections: [
@@ -622,7 +622,7 @@ export const servicePages: ServicePage[] = [
         bullets: [
           "Omlegging med balansering: fra 1000,-",
           "Dekk levert via Dekkonline, Dekk365 og lignende: fra 1800,-",
-          "Balansering av løse hjul: fra 500,-",
+          "Balansering: 1000,- med hjulene på bilen, 500,- for løse hjul",
           "Punkteringsreparasjon: plugg utvendig 300,-, innvendig 600,-",
           "Kontroll av mønsterdybde og lufttrykk",
         ],
